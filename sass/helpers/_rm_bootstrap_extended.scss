@@ -1,0 +1,136 @@
+//Five Columns
+// 20% Column
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-15 {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+}
+
+// 40% Column
+.col-xs-25,
+.col-sm-25,
+.col-md-25,
+.col-lg-25 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-25 {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-25 {
+    width: 40%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-25 {
+    width: 40%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-25 {
+    width: 40%;
+    float: left;
+  }
+}
+
+// 60% Column
+.col-xs-35,
+.col-sm-35,
+.col-md-35,
+.col-lg-35 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-35 {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-35 {
+    width: 60%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-35 {
+    width: 60%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-35 {
+    width: 60%;
+    float: left;
+  }
+}
+
+// 80% Column
+.col-xs-45,
+.col-sm-45,
+.col-md-45,
+.col-lg-45 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-45 {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-45 {
+    width: 80%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-45 {
+    width: 80%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-45 {
+    width: 80%;
+    float: left;
+  }
+}

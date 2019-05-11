@@ -1,0 +1,285 @@
+
+#wpstats {
+  display: none;
+}
+
+/* Naviagation bar */
+
+.home header {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+header {
+  top:0;
+  left: 0;
+  right: 0;
+  z-index: 9999 !important;
+}
+
+.nav-bar {
+  width: 100%;
+  position: relative;
+  background: rgba($lightColor, 1);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 5px solid #000;
+
+  @include media($tablet) {
+    width: auto;
+    left: 0px;
+    right: 0px;
+  }
+
+  @include media($desktop) {
+    z-index: 2;
+    height: 85px;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    nav {
+    }
+  }
+}
+
+.nav-down {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0px);
+}
+
+.nav-up {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-100px);
+}
+
+.site-logo {
+  position: relative;
+  top: 5px;
+    @include media(350px) {
+      top: 8px;
+    }
+  h1 {
+    margin: 0 !important;
+  }
+  img {
+    width: 110px;
+    height: auto;
+    @include media(350px) {
+      width: 160px;
+    }
+    @include media($desktop) {
+      width: 200px;
+    }
+  }
+}
+
+.menu-trigger {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  height: 100%;
+  @include media($desktop) {
+    display: none;
+  }
+  .hamburger {
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    background: $darkColor;
+    display: block;
+    margin-bottom: 4px;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+  i {
+    color: $secondaryAlt;
+    font-size: 27px;
+    display: none;
+  }
+  @include media($desktop) {
+    
+  &.open {
+    .hamburger {
+      z-index: 9999;
+      display: none;
+    }
+    i {
+      color: #fff;
+      display: block;
+      position: fixed;
+      right: 20px;
+    }
+  }
+  }
+  > div {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .touch-button-text {
+    margin-right: 15px;
+    display: none;
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 100;
+    color: $darkColor;
+    text-transform: uppercase;
+    @include media(370px) {
+      display: block;
+    }
+    @include media($tablet) {
+    }
+  }
+}
+
+a.show-form {
+  i {
+    color: #15cf1e !important;
+    font-weight: 900;
+  }
+}
+
+.get-social {
+  margin-left: 0px;
+  header & {
+    position: absolute;
+    right: 55px;
+    @include media(350px) {
+      right: 60px;
+    }
+    @include media($desktop) {
+      top: auto;
+      right: 40px;
+    }
+  }
+  a {
+    margin: 0 5px;
+  }
+  a i {
+    header & {
+      font-size: 25px;
+    }
+    color: $primaryAlt;
+    font-size: 35px;
+    &:hover {
+      color: $secondaryAlt;
+    }
+    &.fa-twitter {
+      color: #1da1f2;
+    }
+    &.fa-facebook {
+      color: #3b5998;
+    }
+  }
+  @include media($tablet) {
+    display: inline-block;
+    position: relative;
+    display: block;
+  }
+}
+
+
+.header-images {
+  margin-top: 80px;
+  height: 120px;
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid #000;
+
+  // display: none;
+  @include media($tablet) {
+    border-bottom: none;
+    background-size: cover;
+    height: 300px;
+  }
+  @include media(2000px) {
+    height: 400px;
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    font-family: $primaryFont;
+    font-size: 50px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px $darkColor;
+    text-transform: uppercase;
+    @include media($tablet) {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+}
+
+
+
+
+.header-images-new {
+  margin-top: 80px;
+  height: 120px;
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border-bottom: 5px solid #000;
+
+  .tmpl_type_single &, 
+  .tmpl_type_page & {
+    // display: none;
+    height: 0px;
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    font-family: $primaryFont;
+    font-size: 50px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0px $darkColor;
+    text-transform: uppercase;
+    @include media($tablet) {
+      font-size: 70px;
+      line-height: 70px;
+    }
+  }
+}
+
+
+
+
+
+
+
+.home .header-images,  
+.home .header-images-new 
+ {
+  display: none;
+}
+

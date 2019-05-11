@@ -1,0 +1,227 @@
+.featured-image {
+  display: block;
+  img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    height: auto;
+    border: 1px solid black;
+    @include media($tablet) {
+      width: 400px;
+    }
+  }
+}
+
+.home,
+.blog,
+.tmpl_type_category,
+.tmpl_type_archive {
+  .content {
+    .wp-caption {
+      padding-top: 0px;
+      border-radius: 0px;
+      .wp-caption-text {
+        padding: 10px;
+        font-size: 13px;
+      }
+    }
+    .blog-intro {
+      // margin-bottom: 40px;
+      @include media($tablet) {
+        // margin-bottom: 80px;
+      }
+    }
+  }
+  h2 {
+    // font-weight: 900;
+    // text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    a {
+      text-decoration: none;
+      // color: #37bfe7;
+      &:hover {
+        // color: #37bfe7;
+      }
+    }
+  }
+  .post-snippet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .meta-date {
+      font-weight: 300;
+      position: absolute;
+      font-size: 25px;
+      text-align: center;
+      color: $primaryAlt;
+      text-transform: uppercase;
+    }
+
+    .thumb {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      margin-bottom: 20px;
+      @include media($tablet) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .excerpt {
+      padding-bottom: 30px;
+      border: 1px solid #e9ecef;
+      margin-bottom: 20px;
+      padding: 20px;
+      @include media($tablet) {
+        width: 32%;
+      }
+
+      .para {
+        margin-top: 20px;
+        @include media($tablet) {
+          margin-top: 40px;
+        }
+      }
+      .para a {
+        text-decoration: none !important;
+        color: $tertiaryAlt;
+        font-size: 14px;
+        line-height: 18px;
+
+        span {
+          text-decoration: underline;
+          color: $secondaryColor;
+        }
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .date {
+    color: $primaryColor;
+    text-align: right;
+  }
+  .meta-data {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: $lightGrey;
+    font-size: 11px;
+    line-height: 18px;
+    font-family: $primaryFont;
+    a {
+      color: $lightGrey;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    i {
+      margin-left: 10px;
+      margin-right: 2px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+  .button {
+    text-decoration: none;
+    clear: both;
+  }
+}
+
+.from-blog {
+  .next-prev {
+    margin-top: 50px;
+    display: flex;
+    // display: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    a {
+      // color: $lightColor;
+      transition: all 0.1s ease-in;
+      margin-bottom: 20px;
+      i {
+        transition: all 0.1s ease-in;
+        position: relative;
+        top: 2px;
+        font: normal normal normal 27px/17px "Font Awesome 5 Pro";
+      }
+      &:hover {
+        // color: $lightColor;
+        i {
+          // color: $lightColor;
+        }
+      }
+    }
+  }
+  .prev-blog-button {
+    &:before {
+      transition: all 0.1s ease-in;
+      content: "\f104";
+      display: inline-block;
+      font: normal normal normal 27px/17px "Font Awesome 5 Pro";
+      position: relative;
+      margin-right: 10px;
+      top: 3px;
+      font-weight: 100;
+    }
+    &:hover {
+      // color: $lightColor;
+      &:before {
+        // color: $lightColor;
+      }
+    }
+  }
+
+  .next-blog-button {
+    &:after {
+      transition: all 0.1s ease-in;
+      content: "\f105";
+      display: inline-block;
+      font: normal normal normal 27px/17px "Font Awesome 5 Pro";
+      position: relative;
+      margin-left: 10px;
+      top: 3px;
+      font-weight: 100;
+    }
+    // &:hover {
+    //   color: $lightColor;
+    //   &:after {
+    //     color: $lightColor;
+    //   }
+    // }
+  }
+  .meta-data {
+    margin-bottom: 20px;
+    color: $lightGrey;
+    font-size: 11px;
+    line-height: 18px;
+    font-family: $primaryFont;
+    a {
+      color: $lightGrey;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    i {
+      margin-left: 10px;
+      margin-right: 2px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.tmpl_type_single {
+  .button {
+    text-decoration: none;
+  }
+}
+

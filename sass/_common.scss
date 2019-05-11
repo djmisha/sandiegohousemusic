@@ -1,0 +1,183 @@
+/* ------------------------
+Common/UI elements (images, video, buttons, etc)
+------------------------ */
+video {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.back-to-top {
+  text-align: right;
+  display: block;
+}
+
+img.alignright,
+img.alignleft,
+img.aligncenter,
+img.alignnone,
+.caption {
+  display: block;
+  height: auto;
+  margin: 0 auto 1em;
+  max-width: 100%;
+}
+
+// .content {
+img.alignright,
+img.alignleft {
+  float: none;
+  @include media($tablet) {
+    margin-bottom: 1em;
+    max-width: 50%;
+  }
+}
+img.alignleft {
+  @include media($tablet) {
+    float: left;
+    margin-right: 2.5em;
+  }
+}
+img.alignright {
+  @include media($tablet) {
+    float: right;
+    margin-left: 2.5em;
+  }
+}
+// }
+
+.wp-caption {
+  max-width: 95%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+img.alignleft,
+img.alignright,
+img.aligncenter,
+.yes-frame {
+  @extend %imgdefaults;
+}
+
+.button,
+.buttons a,
+.submit-btn,
+.next-prev a,
+.after-review-sprinkle .button {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none !important;
+  border: none;
+  font-size: 17px;
+  font-weight: 100 !important;
+  color: $secondaryColor;
+  border: 2px solid $secondaryColor;
+  text-transform: uppercase;
+  padding: 8px 25px;
+  transition: all 0.2s ease-in-out;
+  background: transparent;
+    &:hover {
+      text-decoration: none;
+      color: $secondaryAlt;
+      border: 2px solid $secondaryAlt;
+    &:before {
+      color: $darkColor;
+    }
+    &:after {
+      color: $darkColor;
+    }
+  }
+}
+
+
+
+.navigation-links {
+  a.page-numbers {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid $secondaryAlt;
+    display: inline;
+    color: $darkColor;
+    &:hover {
+      color: $darkColor;
+      background: $fourthFont;
+    }
+  }
+  span.page-numbers, 
+  span.dots {
+    padding: 0 5px;
+  } 
+}
+
+
+.after-review-sprinkle .button {
+  &:hover {
+    color: $secondaryColor;
+  }
+}
+
+.submit-btn {
+  // color: $secondaryColor;
+  text-transform: uppercase;
+  &:hover {
+    // back: $secondaryColor !important;
+    // background: darken($primaryColor , 10%) !important;
+  }
+}
+
+.disclaimer {
+  font-size: 11px;
+  font-style: italic;
+}
+
+.two-column {
+  @include media($tablet) {
+    column-count: 2;
+    column-gap: 40px;
+  }
+}
+
+.three-column {
+  @include media($tablet) {
+    column-count: 3;
+    column-gap: 20px;
+  }
+}
+
+::selection {
+  background: $primaryColor;
+}
+
+// For jump links on a site with fixed header
+
+:target:before {
+  @include media($desktop) {
+    content: "";
+    display: block;
+    height: 86px; /* fixed header height*/
+    margin: -86px 0 0; /* negative fixed header height */
+  }
+}
+
+/* Hide Wow before JS Loads */
+
+.wow {
+  // z-index: -1;
+  &.fadeIn,
+  &.fadeInDown,
+  &.fadeInUp,
+  &.fadeInRight,
+  &.slideInDown
+  // &.slideInUp
+  // &.bounceInRight,
+ {
+    // opacity: 0;
+    visibility: hidden;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+}

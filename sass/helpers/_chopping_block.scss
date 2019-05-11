@@ -1,0 +1,23 @@
+// From RM Mixins
+@mixin bold {
+  font-weight: bold;
+}
+
+@mixin thin {
+  font-weight: 100;
+}
+
+@mixin light {
+  font-weight: 300;
+}
+
+@mixin regular {
+  font-weight: 400;
+}
+
+@mixin italic {
+  font-style: italic;
+}
+
+// utils/_wp.scss
+// was empty

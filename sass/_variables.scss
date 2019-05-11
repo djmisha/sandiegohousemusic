@@ -1,0 +1,82 @@
+/* ------------------------
+   Variables
+------------------------ */
+
+
+$veryblue: #38c0e6;
+$hotPink: #eb0077;
+$limeGreen: #07e436;
+$theOrange: #fd9300;
+$moarOrange: #ff6600;
+
+
+$darkblue: #02034a;
+$lightblue: #3271cd;
+
+$grey: #565656;
+$lightGrey: #adb5bd;
+$verylightGrey: #e9ecef;
+
+$primaryColor: $lightblue; // link color, buttons, nav, footer, etc
+$primaryAlt: $theOrange; //link hover
+
+$primaryHighlight: $limeGreen;
+
+$secondaryColor: $veryblue;
+$secondaryAlt: $hotPink;
+
+$tertiaryColor: $grey;
+$tertiaryAlt: $lightGrey;
+
+$fourthFont: $verylightGrey;
+
+$lightColor: #ffffff;
+$darkColor: $darkblue;
+
+// Font Family
+
+$primaryFont: "Oswald", sans-serif;
+
+$secondaryFont: "Roboto Condensed", sans-serif;
+
+$highlightFont: "Open Sans", sans-serif;
+
+// $fourthFont: "Oswald", sans-serif;
+
+$sidebar: 308px;
+
+// Font Weight
+
+$thin: 100;
+$light: 300;
+$normal: 400;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$heavy: 900;
+
+// Media Query break points
+
+$tablet: 768px;
+$desktop: 1080px;
+$full: 1480px;
+
+$ipad-min: 768px;
+$ipad-max: 1024px;
+
+$ipadpro-min: 1024px;
+$ipadpro-max: 1366px;
+
+$ipad: ipads;
+$ipads: ipads;
+
+// Increasing color
+
+$step: 1;
+
+// Defaults
+
+$defaultfont: $primaryFont;
+$defaultcolor: $darkColor;

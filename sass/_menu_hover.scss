@@ -1,0 +1,232 @@
+$menuHeight: 60px;
+
+.hover-menu {
+  display: block;
+  justify-content: space-between;
+  font-family: $primaryFont;
+  font-weight: 100;
+  z-index: 9999;
+  position: absolute;
+  right: 220px;
+  top: 50px;
+
+  .main-menu {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    > li {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      height: 100%;
+
+      &:hover {
+        > a {
+          text-decoration: none !important;
+        }
+
+        > .sub-menu {
+          opacity: 1;
+          visibility: visible;
+          z-index: 1050;
+        }
+      }
+      &.mega-menu {
+        position: static;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 0px 25px;
+        transition: 0.25s ease-in-out;
+        color: $tertiaryAlt;
+        &:hover {
+          color: $secondaryAlt !important;
+          &:before {
+            color: $secondaryAlt !important;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    font-size: 22px; //reset font-size for inline-block hack
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include media($desktop) {
+      font-size: 16px; //reset font-size for inline-block hack
+    }
+  }
+  .sub-menu {
+    background: rgba($secondaryColor, 1);
+    position: absolute;
+    top: 60px;
+    left: 00px;
+    opacity: 0;
+    visibility: hidden;
+    width: 300px;
+    z-index: -5;
+    transition: 0.25s ease-in-out top, 0.25s ease-in-out opacity;
+
+    > li {
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      &.menu-item-has-children {
+        position: relative;
+        .sub-menu {
+          transition: 0.25s ease-in-out top, 0.25s ease-in-out opacity;
+        }
+        &:after {
+          content: "\f105";
+          font-family: "Font Awesome 5 Pro";
+          color: rgba($lightColor, 0.2);
+          font-size: 25px;
+          font-weight: 100;
+          transition: 0.2s all;
+          position: absolute;
+          top: 40%;
+          left: 265px;
+          right: 0;
+          margin: 0 auto;
+        }
+
+        &:hover {
+          //show third level sub-menu
+          &:after {
+            left: 270px;
+            // left: 300px;
+
+            // transform:  rotate(90deg);
+          }
+
+          > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            right: inherit;
+            left: inherit;
+            transform: none;
+            left: 300px;
+            top: 0px;
+            transition: 0.25s ease-in-out top, 0.25s ease-in-out opacity;
+          }
+        }
+      }
+      a {
+        color: $lightColor;
+      }
+      &:hover {
+        > a {
+          color: $lightColor;
+          border-bottom: none;
+        }
+      }
+    }
+    a {
+      text-align: left;
+      padding: 10px 15px !important;
+    }
+  }
+
+
+  .close-menu {
+    display: none !important;
+  }
+}
+
+  header {
+    .menu-item-9284 a,
+    .menu-item-7986 a,
+    .menu-item-7985 a,
+    .menu-item-9153 a,
+    .menu-item-7981 a,
+    .menu-item-7982 a,
+    .menu-item-7978 a,
+    .menu-item-7980 a,
+    .menu-item-9130 a,
+    .menu-item-7264 a,
+    .menu-item-7265 a {
+      position: relative;
+      &:before { 
+      // color: $lightColor !important;
+      font-family: "Font Awesome 5 Pro";
+      color: rgba($lightColor, 0.6);
+
+      font-size: 35px;
+      font-weight: 100;
+      transition: 0.2s all;
+      position: absolute;
+      // right: 10px;
+      left: 180px;
+      transition: all .2s ease-in-out;
+      font-weight: 900;
+      // border: 1px solid white;
+      @include media($desktop) {
+        left: calc( 50% - 15px;);
+        color: $darkColor !important;
+        top: -28px;
+      }
+    }
+    @include media($desktop) {
+      &:hover {
+        &:before { 
+          color: $secondaryColor !important;
+          top: -32px;
+        }
+      }
+    }
+  }
+  .menu-item-7265 a:before, 
+  .menu-item-7986 a:before {
+    content: "\f025";
+    @include media($desktop) {
+      left: calc( 50% - 17px;);
+      
+    }
+  }
+  .menu-item-7264 a:before, 
+  .menu-item-7985 a:before {
+    content: "\f3ff";
+    @include media($desktop) {
+      left: calc( 50% - 19px;);
+      
+    }
+  }
+  .menu-item-7980 a:before, 
+  .menu-item-7982 a:before {
+    content: "\f3c9";
+    @include media($desktop) {
+      left: calc( 50% - 14px;);
+      
+    }
+  }
+  .menu-item-9130 a:before, 
+  .menu-item-9153 a:before {
+    content: "\f51f";
+    @include media($desktop) {
+      left: calc( 50% - 17px;);
+      
+    }
+  }
+  .menu-item-7978 a:before, 
+  .menu-item-7981 a:before {
+    content: "\f0a1";
+    @include media($desktop) {
+      left: calc( 50% - 22px;);
+      
+    }
+  }
+}
+.menu-item-9284 a:before {
+  content: "\f0e0";
+  @include media($desktop) {
+    left: calc( 50% - 22px;);
+    
+  }
+}
