@@ -1,7 +1,7 @@
 
 #overlay-contact-form {
   overflow: scroll;
-  padding: 40px;
+  padding: 20px;
   position: fixed;
   top: -9999px;
   background:#fff;
@@ -29,10 +29,11 @@
   }
   .close-form {
     position: absolute;
-    right: 20px;
-    top:20px;
+    right: 10px;
+    top:10px;
     i {
-      font-size: 30px;
+      font-size: 32px;
+      color:  rgba($darkColor, .3)
     }
   }
   .gform_wrapper .gform_footer {

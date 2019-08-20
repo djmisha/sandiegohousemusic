@@ -6,7 +6,7 @@
 		</div>
 		<strong>Speak with a Dance Music Expert</strong><br><br>
 		<img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-		Give us a few details about your event and receive same day availability and consultation.  Please provide the date, location, occasion about approximate attendace - we look foward to hearing from you!  
+		Give us a few details about your event and receive same day DJ availability and consultation.  Please provide the date, location, occasion and approximate attendace. We look foward to hearing from you!  
 		<?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
 	</div>
 

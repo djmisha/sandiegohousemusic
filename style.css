@@ -2021,7 +2021,7 @@ header .get-social a i {
   font-family: "Oswald", sans-serif;
   font-weight: 100;
   z-index: 9999;
-  position: absolute;
+  position: fixed;
   right: 220px;
   top: 50px;
 }
@@ -2669,7 +2669,7 @@ aside .mobile-add {
 ------------------------ */
 #overlay-contact-form {
   overflow: scroll;
-  padding: 40px;
+  padding: 20px;
   position: fixed;
   top: -9999px;
   background: #fff;
@@ -2705,12 +2705,13 @@ aside .mobile-add {
 
 #overlay-contact-form .close-form {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 10px;
+  top: 10px;
 }
 
 #overlay-contact-form .close-form i {
-  font-size: 30px;
+  font-size: 32px;
+  color: rgba(2, 3, 74, 0.3);
 }
 
 #overlay-contact-form .gform_wrapper .gform_footer {
