@@ -48,7 +48,6 @@
 				<div class="hamburger"></div>
 				<div class="hamburger"></div>
 			</div>
-			<!-- <i class="fal fa-times"></i> -->
 		</div>
  		<div class="get-social">
 			<a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
@@ -68,7 +67,6 @@
 
 </header> 
 
-<!-- <div class="header-images will-parallax parallax-header" <?php get__header__image(); ?>> -->
 <div class="header-images-new">
 	<?php if((is_home() or is_search() or is_category() or is_archive() )): ?>
 		<section class="page-title">
@@ -81,15 +79,7 @@
 		</section>
 	<?php endif; ?>
 </div>
-<!-- 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-6261738507723190",
-          enable_page_level_ads: true
-     });
-</script>
- -->
+
 <section class="site-crumbs">
 	<?php echo __salaciouscrumb(); ?>
 </section>

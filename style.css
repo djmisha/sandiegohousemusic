@@ -899,7 +899,7 @@ img.alignleft {
   color: #38c0e6;
   border: 2px solid #38c0e6;
   text-transform: uppercase;
-  padding: 8px 25px;
+  padding: 8px 20px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   background: transparent;
@@ -911,7 +911,7 @@ img.alignleft {
 .next-prev a:hover,
 .after-review-sprinkle .button:hover {
   text-decoration: none;
-  color: #eb0077;
+  color: #eb0077 !important;
   border: 2px solid #eb0077;
 }
 
@@ -1001,13 +1001,6 @@ img.alignleft {
     margin: -86px 0 0;
     /* negative fixed header height */
   }
-}
-
-/* Hide Wow before JS Loads */
-.wow.fadeIn, .wow.fadeInDown, .wow.fadeInUp, .wow.fadeInRight, .wow.slideInDown {
-  visibility: hidden;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
 }
 
 .smoothie {
@@ -1520,6 +1513,7 @@ main,
 }
 
 header {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -1544,18 +1538,19 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 0;
-  height: 80px;
+  height: 54px;
   padding-top: 0;
   padding-bottom: 0;
-  border-bottom: 5px solid #000;
+  border-bottom: 1px solid #eee;
 }
 
 @media only screen and (min-width: 768px) {
   .nav-bar {
+    height: 80px;
     width: auto;
     left: 0px;
     right: 0px;
@@ -1605,12 +1600,6 @@ header {
   top: 5px;
 }
 
-@media only screen and (min-width: 350px) {
-  .site-logo {
-    top: 8px;
-  }
-}
-
 .site-logo h1 {
   margin: 0 !important;
 }
@@ -1620,13 +1609,7 @@ header {
   height: auto;
 }
 
-@media only screen and (min-width: 350px) {
-  .site-logo img {
-    width: 160px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 768px) {
   .site-logo img {
     width: 200px;
   }
@@ -1826,7 +1809,7 @@ header .get-social a i {
 }
 
 .header-images-new {
-  margin-top: 80px;
+  margin-top: 54px;
   height: 120px;
   background-size: cover;
   background-position: bottom center;
@@ -1841,7 +1824,7 @@ header .get-social a i {
       -ms-flex-pack: center;
           justify-content: center;
   background: #000;
-  border-bottom: 5px solid #000;
+  border-bottom: 1px solid #eee;
 }
 
 .tmpl_type_single .header-images-new,
@@ -2314,12 +2297,12 @@ header .menu-item-7981 a:before {
   }
 }
 
-.menu-item-9284 a:before {
+header .menu-item-9284 a:before {
   content: "\f0e0";
 }
 
 @media only screen and (min-width: 1080px) {
-  .menu-item-9284 a:before {
+  header .menu-item-9284 a:before {
     left: calc( 50% - 22px);
   }
 }
@@ -2333,8 +2316,8 @@ header .menu-item-7981 a:before {
 
 @media only screen and (min-width: 768px) {
   .content {
-    max-width: 1020px;
-    margin-right: 60px;
+    width: 100%;
+    margin-right: 150px;
   }
 }
 
@@ -2355,8 +2338,8 @@ header .menu-item-7981 a:before {
 }
 
 .content h1 {
-  margin-top: 10px !important;
-  margin-bottom: 60px;
+  margin-top: 20px !important;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2407,10 +2390,11 @@ header .menu-item-7981 a:before {
   margin: 0;
   text-align: left;
   font-family: "Oswald", sans-serif;
-  font-size: 30px;
-  line-height: 35px;
-  font-weight: 100;
-  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0px;
   color: #38c0e6;
   display: block;
 }
@@ -2443,7 +2427,7 @@ header .menu-item-7981 a:before {
 
 .site-crumbs .salacious-crumb {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
   text-transform: uppercase;
   color: #bfbfbf;
@@ -2476,12 +2460,11 @@ header .menu-item-7981 a:before {
   margin-top: 0px !important;
 }
 
-.home .interior {
-  padding-top: 40px;
-}
-
 @media only screen and (min-width: 1080px) {
   .interior {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
   }
 }
@@ -2599,30 +2582,6 @@ h2.color-6 a, h1.color-6 {
   color: #ff6600 !important;
 }
 
-.bg-color-1 {
-  background-color: rgba(50, 113, 205, 0.04) !important;
-}
-
-.bg-color-2 {
-  background-color: rgba(253, 147, 0, 0.04) !important;
-}
-
-.bg-color-3 {
-  background-color: rgba(7, 228, 54, 0.04) !important;
-}
-
-.bg-color-4 {
-  background-color: rgba(56, 192, 230, 0.04) !important;
-}
-
-.bg-color-5 {
-  background-color: rgba(235, 0, 119, 0.04) !important;
-}
-
-.bg-color-6 {
-  background-color: rgba(255, 102, 0, 0.04) !important;
-}
-
 /* Landing Page Resets */
 @media only screen and (min-width: 768px) {
   .tmpl_type_page_landing .header-images {
@@ -2656,14 +2615,11 @@ aside {
   width: 300px;
   margin: 0 auto;
   right: 0;
-  background: black !important;
-  border: 1px solid red;
 }
 
 aside > div {
   text-align: center;
   width: 300px;
-  border: 1px solid red;
 }
 
 aside ins {
@@ -2683,7 +2639,9 @@ aside .sidebar-add {
 @media only screen and (min-width: 1080px) {
   aside .sidebar-add {
     display: block;
-    top: 0px;
+    position: fixed;
+    right: 40px;
+    top: 120px;
   }
   aside .sidebar-add.stick-me {
     margin-top: 0px;
@@ -2691,8 +2649,9 @@ aside .sidebar-add {
 }
 
 aside .mobile-add {
+  z-index: 9999px;
   width: 100%;
-  height: 100px;
+  height: 50px;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -2795,7 +2754,7 @@ footer form {
   margin-top: 20px;
 }
 
-form input, form textarea {
+form input, form .textarea {
   width: 100%;
   border: 2px solid #38c0e6;
   background: transparent;
@@ -2816,11 +2775,11 @@ form input {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   position: fixed;
-  bottom: 120px;
+  bottom: 60px;
   right: -80px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .footer-show-form {
     bottom: 20px;
   }
@@ -2845,7 +2804,7 @@ form input {
 
 @media only screen and (min-width: 768px) {
   .footer-show-form img {
-    width: 50px;
+    width: 70px;
   }
 }
 
@@ -2925,9 +2884,6 @@ form input {
 }
 
 @media only screen and (min-width: 768px) and (max-height: 800px) {
-  footer {
-    width: calc(100% - 360px);
-  }
   .home footer {
     width: 100%;
   }
@@ -2944,8 +2900,9 @@ form input {
 @media only screen and (min-width: 768px) {
   .footer-boxes {
     padding: 50px 40px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -2961,8 +2918,8 @@ form input {
 
 @media only screen and (min-width: 768px) {
   .footer-boxes > div {
-    width: 30%;
-    max-width: 300px;
+    width: 40%;
+    max-width: 500px;
   }
 }
 
@@ -3030,28 +2987,12 @@ form input {
 /*====================================
 =            Lower Footer            =
 ====================================*/
-.bg-hire-1 {
-  background: #000 url("images/bg-hire.jpg") center center no-repeat;
-}
-
-.bg-hire-2 {
-  background: #000 url("images/slide-1.jpg") center center no-repeat;
-}
-
-.bg-hire-3 {
-  background: #000 url("images/slide-2.jpg") center center no-repeat;
-}
-
-.bg-hire-4 {
-  background: #000 url("images/slide-3.jpg") center center no-repeat;
-}
-
 .bg-hire {
-  border-top: 10px solid #000;
-  border-bottom: 10px solid #000;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   background-size: cover;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
   margin-top: 40px;
 }
@@ -3064,7 +3005,7 @@ form input {
 
 @media only screen and (min-width: 768px) {
   .bg-hire {
-    height: 600px;
+    padding-top: 150px;
     padding-bottom: 100px;
   }
 }
@@ -3080,21 +3021,14 @@ form input {
   max-width: 600px;
   padding: 20px;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-}
-
-@media only screen and (min-width: 1080px) {
-  .bg-hire div {
-    margin-top: 150px;
-  }
 }
 
 .bg-hire h2 {
   text-shadow: 2px 2px 2px #02034a;
   display: block;
   color: #fff;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 25px;
   margin-bottom: 20px;
   font-weight: 900;
   text-transform: uppercase;
@@ -3113,8 +3047,10 @@ form input {
   max-width: 800px;
   margin: 0 auto;
   text-transform: uppercase;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 10px;
+  line-height: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3126,6 +3062,7 @@ form input {
 
 .bg-hire .button {
   display: block;
+  margin-top: 20px;
 }
 
 .site-logo-footer img {
@@ -3145,7 +3082,19 @@ form input {
 
 .lower-footer {
   padding-top: 60px !important;
-  padding-bottom: 60px !important;
+  padding-bottom: 160px !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .lower-footer {
+    padding-bottom: 180px !important;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .lower-footer {
+    padding-bottom: 60px !important;
+  }
 }
 
 .footer-social {
@@ -3154,7 +3103,7 @@ form input {
 
 .copyright,
 .amg-sig {
-  padding: 0 40px;
+  padding: 0 0px;
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
   font-size: 12px;
@@ -3427,14 +3376,29 @@ span.error {
 /* ------------------------
 	Home Page
 ------------------------ */
-.home h1 {
-  margin-top: 20px;
+.home .content h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 1080px) {
-  .home h1 {
+  .home .content h2 {
     margin-top: 60px;
+    margin-bottom: 40px;
   }
+}
+
+.home .content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.home .content h3 a {
+  color: #000;
+  text-decoration: none;
 }
 
 /*===============================================
@@ -3443,14 +3407,7 @@ span.error {
 .welcome {
   position: relative;
   z-index: 1000;
-  height: 527px;
   border-bottom: 5px solid #000;
-}
-
-@media only screen and (min-width: 768px) {
-  .welcome {
-    height: 680px;
-  }
 }
 
 .flickity-viewport {
@@ -3476,6 +3433,13 @@ span.error {
 .slide-1, .slide-2, .slide-3, .slide-4 {
   width: 100%;
   height: 100%;
+  height: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+  .slide-1, .slide-2, .slide-3, .slide-4 {
+    height: 500px;
+  }
 }
 
 .slide-1 {
@@ -3493,6 +3457,11 @@ span.error {
   background-size: cover;
 }
 
+.slide-4 {
+  background: #000 url("images/slide-4.jpg") center center no-repeat;
+  background-size: cover;
+}
+
 /* flickity-fade */
 .flickity-enabled.is-fade .flickity-slider > * {
   pointer-events: none;
@@ -3505,14 +3474,14 @@ span.error {
 }
 
 .welcome-cta {
-  padding-top: 180px;
+  padding-top: 100px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .welcome-cta {
-    padding-top: 250px;
+    padding-top: 150px;
   }
 }
 
@@ -3522,7 +3491,7 @@ span.error {
   text-transform: uppercase;
   font-weight: 900;
   margin: 0 auto;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 32px;
   color: #ffffff;
   margin-bottom: 20px;
@@ -3538,10 +3507,9 @@ span.error {
     text-shadow: 4px 4px 4px #02034a;
     padding-left: 0px;
     padding-right: 0px;
-    font-size: 75px;
     line-height: 90px;
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 50px;
+    line-height: 60px;
   }
 }
 
@@ -3554,14 +3522,14 @@ span.error {
   color: #ffffff;
   display: inline-block;
   position: relative;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .welcome-cta h3 {
     text-shadow: 4px 4px 4px #02034a;
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -3572,11 +3540,11 @@ span.error {
   background-color: transparent;
   border: 1px solid #ffffff;
   position: relative;
-  margin-top: 30px;
 }
 
 @media only screen and (min-width: 768px) {
   .home-button {
+    margin-top: 30px;
     display: block;
   }
 }
@@ -3594,6 +3562,7 @@ span.error {
 
 .home .content {
   margin: 0 auto;
+  padding: 0 0px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3614,7 +3583,7 @@ span.error {
   max-width: 600px;
   max-height: 600px;
   height: auto;
-  border: 1px solid black;
+  border: 1px solid #eee;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3712,8 +3681,8 @@ span.error {
 .tmpl_type_category .post-snippet .excerpt,
 .tmpl_type_archive .post-snippet .excerpt {
   padding-bottom: 30px;
-  border: 1px solid #e9ecef;
-  margin-bottom: 20px;
+  border: 1px solid #eee;
+  margin-bottom: 80px;
   padding: 20px;
 }
 
@@ -3747,7 +3716,7 @@ span.error {
 .tmpl_type_category .post-snippet .excerpt .para a,
 .tmpl_type_archive .post-snippet .excerpt .para a {
   text-decoration: none !important;
-  color: #adb5bd;
+  color: #000;
   font-size: 14px;
   line-height: 18px;
 }
@@ -3833,14 +3802,14 @@ span.error {
 }
 
 .from-blog .next-prev a {
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin-bottom: 20px;
 }
 
 .from-blog .next-prev a i {
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: relative;
   top: 2px;
   font: normal normal normal 27px/17px "Font Awesome 5 Pro";

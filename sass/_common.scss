@@ -77,12 +77,12 @@ img.aligncenter,
   color: $secondaryColor;
   border: 2px solid $secondaryColor;
   text-transform: uppercase;
-  padding: 8px 25px;
+  padding: 8px 20px;
   transition: all 0.2s ease-in-out;
   background: transparent;
     &:hover {
       text-decoration: none;
-      color: $secondaryAlt;
+      color: $secondaryAlt !important;
       border: 2px solid $secondaryAlt;
     &:before {
       color: $darkColor;
@@ -163,21 +163,3 @@ img.aligncenter,
   }
 }
 
-/* Hide Wow before JS Loads */
-
-.wow {
-  // z-index: -1;
-  &.fadeIn,
-  &.fadeInDown,
-  &.fadeInUp,
-  &.fadeInRight,
-  &.slideInDown
-  // &.slideInUp
-  // &.bounceInRight,
- {
-    // opacity: 0;
-    visibility: hidden;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-}

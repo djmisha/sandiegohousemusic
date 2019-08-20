@@ -71,7 +71,10 @@ function __themejs(){
 	wp_register_script('rm-parallax', TMPL_DIR_URI . '/js/libs/parallax/jquery.parallax.js', array('jquery','modernizr'), '1.0', true );
 	wp_register_script('rm-waypoints', TMPL_DIR_URI . '/js/libs/parallax/jquery.waypoints.min.js', array('jquery','modernizr'), '1.0', true );
 
+	wp_register_script('rm-blazy', TMPL_DIR_URI . '/js/libs/blazy/blazy.js', array('jquery','modernizr'), '1.0', true );
+	wp_register_script('rm-blazy-polyfill', TMPL_DIR_URI . '/js/libs/blazy/polyfills/closest.js', array('jquery','modernizr'), '1.0', true );
 
+	// wp_register_script('rm-restapi', TMPL_DIR_URI . '/js/rest-api.js', array('jquery','modernizr'), '1.0', true );
 
 
 	//RM Scripts
@@ -94,6 +97,9 @@ function __themejs(){
 	wp_enqueue_script( 'rm-infinite');
 	wp_enqueue_script( 'rm-parallax');
 	wp_enqueue_script( 'rm-waypoints');
+	wp_enqueue_script( 'rm-blazy');
+	wp_enqueue_script( 'rm-blazy-polyfill');
+	// wp_enqueue_script( 'rm-restapi');
 	//Enqueue RM Scripts
 	wp_enqueue_script( 'rm-menu');
 	wp_enqueue_script( 'theme-js');
@@ -144,7 +150,13 @@ add_filter('script_loader_tag' , function( $tag , $handle , $src ){
 						/*
 							rm_cookie , rm_scripts
 						*/
-						if(in_array( $handle , array('theme-js', 'rm-menu', 'rm-parallax', 'rm-waypoints', 'rm-flickity', 'rm-flickity-fade', 'rm-infinite'  ))):
+						if(in_array( $handle , array('theme-js', 'rm-menu', 'rm-parallax', 'rm-waypoints', 'rm-flickity', 'rm-flickity-fade', 'rm-infinite',  
+
+							'rm-blazy',
+							'rm-blazy-polyfill',
+
+
+					))):
 							$filecontents = file_get_contents($filepath);
 							$newtag = "<script class=\"inlinejs_{$handle}\">{$filecontents}</script>";
 							return $newtag;
@@ -168,7 +180,7 @@ add_filter('script_loader_tag' , function( $tag , $handle , $src ){
 add_filter('inline/css' , function($tag = null ,$handle = null ,$src = null){
 
 	$newtag = '';
-	if($_SERVER['HTTP_HOST'] != 'staging.rosemontmedia.com'):
+	if($_SERVER['HTTP_HOST'] != 'rosemontdev.com'):
 		/*
 			RUN ONLY ON LIVE (not dev)
 		*/

@@ -222,11 +222,10 @@ $menuHeight: 60px;
       
     }
   }
-}
-.menu-item-9284 a:before {
-  content: "\f0e0";
-  @include media($desktop) {
-    left: calc( 50% - 22px;);
-    
+  .menu-item-9284 a:before {
+    content: "\f0e0";
+    @include media($desktop) {
+      left: calc( 50% - 22px;);
+    }
   }
 }

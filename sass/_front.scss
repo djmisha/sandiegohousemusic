@@ -1,7 +1,22 @@
-.home h1 {
-  margin-top: 20px ;
+.home .content h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
   @include media($desktop) {
-    margin-top: 60px ;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+}
+
+
+.home .content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  a {
+    color: #000;
+    text-decoration: none;
   }
 }
 
@@ -11,11 +26,11 @@
 .welcome {
   position: relative;
   z-index: 1000;
-  height: 527px;
+  // height: 300px;
   border-bottom: 5px solid #000;
 
   @include media($tablet) {
-    height: 680px;
+    // height: 700px;
   }
 
   @include media($desktop) {
@@ -46,6 +61,11 @@
 .slide-1, .slide-2, .slide-3, .slide-4 {
   width: 100%;
   height: 100%;
+  height: 300px;
+    @include media($tablet) {
+  height: 500px;
+    // height: 700px;
+  }
 }
 
 .slide-1 {
@@ -62,6 +82,10 @@
   background-size: cover;
 }
 
+.slide-4 {
+  background: #000 url("images/slide-4.jpg") center center no-repeat;
+  background-size: cover;
+}
 
 /* flickity-fade */
 
@@ -77,11 +101,11 @@
 
 
 .welcome-cta {
-  padding-top: 180px;
+  padding-top: 100px;
   padding-left: 10px;
   padding-right: 10px;
   @include media($tablet) {
-    padding-top: 250px;
+    padding-top: 150px;
   }
   h2 {
     text-shadow: 2px 2px 2px $darkColor;
@@ -89,7 +113,7 @@
     text-transform: uppercase;
     font-weight: 900;
     margin: 0 auto;
-    font-size: 32px;
+    font-size: 26px;
     line-height: 32px;
     color: $lightColor;
     margin-bottom: 20px;
@@ -102,10 +126,9 @@
       text-shadow: 4px 4px 4px $darkColor;
       padding-left: 0px;
       padding-right: 0px;
-      font-size: 75px;
       line-height: 90px;
-      font-size: 80px;
-      line-height: 80px;
+      font-size: 50px;
+      line-height: 60px;
     }
   }
   h3 {
@@ -117,11 +140,11 @@
     color: $lightColor;
     display: inline-block;
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 20px;
     @include media($tablet) {
       text-shadow: 4px 4px 4px $darkColor;
-      font-size: 40px;
+      font-size: 30px;
     }
   }
 }
@@ -132,8 +155,8 @@
   background-color: transparent;
   border: 1px solid $lightColor;
   position: relative;
-  margin-top: 30px;
   @include media($tablet) {
+    margin-top: 30px;
     display: block;
   }
   &:hover {
@@ -150,6 +173,7 @@
 
 .home .content {
   margin: 0 auto;
+  padding: 0 0px;
   .excerpt {
     @include media($tablet) {
       width: 32% !important;

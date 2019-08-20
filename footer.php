@@ -6,15 +6,15 @@
 		</div>
 		<strong>Speak with a Dance Music Expert</strong><br><br>
 		<img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-		Have questions about your party? Inquire now to talk with us, we'll get back right away with usually same day availability and event an consultation. 
+		Give us a few details about your event and receive same day availability and consultation.  Please provide the date, location, occasion about approximate attendace - we look foward to hearing from you!  
 		<?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
 	</div>
 
-	<section class="bg-hire bg-hire-<?php echo rand(1,4) ?> will-parallax parallax-footer">
+	<section class="bg-hire will-parallax parallax-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/slide-<?php echo rand(1,4) ?>.jpg">
 		<div>
-			<h2>Hire our DJs for<br> Events, Party & Weddings</h2>	
+			<h2>Hire our DJs for<br> Events, Party & Wedding</h2>	
 			<p>DJ services in San Diego and beyond. Playing the best club, edm, underground techno, house, top hits and dance music productions.  
-			<a title="San Diego DJ" href="#" rel="nofollow" class="button home-button show-form">Learn More</a></p>
+			<a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a></p>
 		</div>
 	</section>
 
@@ -48,7 +48,7 @@
 	<section class="lower-footer">
 		<div class="site-logo-footer">
 			<a href="<?php bloginfo('url'); ?>">
-				<img src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg?fit=300%2C97&ssl=1" alt="San Diego DJs">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg" class="b-lazy" alt="San Diego DJs">
 			</a>
 		</div>
  		<div class="schema">
@@ -62,7 +62,7 @@
  		
  		<div class="footer-show-form">
 			<a class="show-form">
-				<img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">HIRE DJ<br> 
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ" class="b-lazy">HIRE DJ<br> 
 				Let's Chat
 			</a>
  		</div>
@@ -71,16 +71,23 @@
 		 All rights reserved.  <!-- | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> --> &nbsp; <i class="fas fa-balance-scale"></i> <a href="<?php bloginfo('url'); ?>/terms-of-use/" title="Terms of Use">Terms of Use</a> &nbsp; <i class="fas fa-sitemap"></i> <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a>
 			 </div>
 
-		<div class="amg-sig"><a href="https://www.asburymediagroup.com/" target="_blank" rel="noopener" title="WordPress Website Design, Development, Management, Hosting">WordPress Website Design, Development, Management, Hosting</a> by <i class="fas fa-code"></i> <a href="https://www.asburymediagroup.com/" target="_blank" rel="nofollow noopener" title="Asbury Media Group">Asbury Media Group</a></div>
+		<div class="amg-sig"><a href="https://www.asburymediagroup.com/" target="_blank" rel="noopener" title="WordPress Maintenance">WordPress Maintenance</a> by <i class="fas fa-code"></i> <a href="https://www.asburymediagroup.com/" target="_blank" rel="nofollow noopener" title="Asbury Media Group">Asbury Media Group</a></div>
 	</section>  
 </footer>
 
 <?wp_footer();?>
 
 
-<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:35730/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+<?php
+	$bsPort 				= 35730;
+	$browserSync 			= 'http://rosemontdev.com:'.$bsPort;
+	$browserSyncHdrs 		= @get_headers($browserSync);
+	if($browserSyncHdrs):
+		?>
+		<script async src="http://rosemontdev.com:<?php echo $bsPort?>/browser-sync/browser-sync-client.js?v=2.18.8"></script>
+		<?
+	endif;
+?>
 
 </body>
 </html>

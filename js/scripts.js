@@ -29,6 +29,14 @@
 		});
 
 
+		/*=============================
+		=            Blazy            =
+		=============================*/
+		
+		var bLazy = new Blazy();
+		
+		
+
 		// $('.tmpl_type_single .interior').infiniteScroll({
 		//   path: '.prev-blog-button',
 		//   append: '.content',
@@ -43,7 +51,7 @@
 
 		/* sTick the Add fixed when scrolling down*/
 
-		var stickyAddTop = 225;
+		var stickyAddTop = 0;
 
 		var stickyAdvertisement = function() {
 			var scrollTop = $(window).scrollTop();
@@ -60,8 +68,6 @@
 		$(window).scroll(function() {
 			stickyAdvertisement();
 		});
-
-
 
 
 		var stickyContactTop = 800;
@@ -116,64 +122,14 @@
 					$(".parallax").waypoint(function() {
 						$(".parallax-welcome").parallax("50%", -0.3, true, "is-parallaxing");
 						$(".parallax-header").parallax("50%", -0.3, true, "is-parallaxing");
-						$(".parallax-footer").parallax("50%", 0.3, true, "is-parallaxing");
+						$(".parallax-footer").parallax("50%", -0.1, true, "is-parallaxing");
 						$(".parallax-inside").parallax("50%", -0.3, true, "is-parallaxing");
 					});
 				}
 			}
 		});
-
-
-
-
-		/*===============================================
-		=            Smooth Anchor Scrolling            =
-		===============================================*/
-		// Select all links with hashes
-		$('a[href*="#"]')
-			// Remove links that don't actually link to anything
-			.not('[href="#"]')
-			.not('[href="#0"]')
-			.click(function(event) {
-				// On-page links
-				if (
-					location.pathname.replace(/^\//, "") ==
-						this.pathname.replace(/^\//, "") &&
-					location.hostname == this.hostname
-				) {
-					// Figure out element to scroll to
-					var target = $(this.hash);
-					target = target.length
-						? target
-						: $("[name=" + this.hash.slice(1) + "]");
-					// Does a scroll target exist?
-					if (target.length) {
-						// Only prevent default if animation is actually gonna happen
-						event.preventDefault();
-
-						// if ($("html").hasClass("not--device")) {
-						$("html, body").animate(
-							{
-								scrollTop: target.offset().top
-							},
-							1200,
-							function() {
-								// Callback after animation
-								// Must change focus!
-								var $target = $(target);
-								$target.focus();
-								if ($target.is(":focus")) {
-									// Checking if the target was focused
-									return false;
-								} else {
-									// $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-									// $target.focus(); // Set focus again
-								}
-							}
-						);
-						// }
-					}
-				}
-			});
+		
 	}); // end of doc.ready
 })(jQuery);
+
+

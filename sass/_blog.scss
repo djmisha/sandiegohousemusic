@@ -5,7 +5,7 @@
     max-width: 600px;
     max-height: 600px;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid #eee;
     @include media($tablet) {
       width: 400px;
     }
@@ -75,8 +75,8 @@
 
     .excerpt {
       padding-bottom: 30px;
-      border: 1px solid #e9ecef;
-      margin-bottom: 20px;
+      border: 1px solid #eee;
+      margin-bottom: 80px;
       padding: 20px;
       @include media($tablet) {
         width: 32%;
@@ -90,7 +90,7 @@
       }
       .para a {
         text-decoration: none !important;
-        color: $tertiaryAlt;
+        color: #000;
         font-size: 14px;
         line-height: 18px;
 
@@ -145,10 +145,10 @@
     flex-wrap: wrap;
     a {
       // color: $lightColor;
-      transition: all 0.1s ease-in;
+      transition: all 0.2s ease-in-out;
       margin-bottom: 20px;
       i {
-        transition: all 0.1s ease-in;
+        transition: all 0.2s ease-in-out;
         position: relative;
         top: 2px;
         font: normal normal normal 27px/17px "Font Awesome 5 Pro";
