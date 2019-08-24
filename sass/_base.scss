@@ -11,7 +11,7 @@
 
 body {
   color: $defaultcolor;
-  font: 14px/20px $defaultfont;
+  font: 16px/22px $defaultfont;
   @include media($tablet) {
     font: 18px/25px $defaultfont;
   }
@@ -129,7 +129,7 @@ section {
 section,
 main,
 .contain {
-  padding: 0 20px;
+  padding: 0 10px;
   @include media($tablet) {
     padding: 0 40px;
   }

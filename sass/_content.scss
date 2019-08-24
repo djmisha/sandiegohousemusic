@@ -210,65 +210,59 @@
 
 
 
-// h3.color-1 a,
+h3.color-1 a,
  h2.color-1 a, h1.color-1  {
   color: $primaryColor !important;
 }
 
-// h3.color-2 a,
+h3.color-2 a,
  h2.color-2 a, h1.color-2  {
   color: $primaryAlt !important;
 }
 
-// h3.color-3 a,
+h3.color-3 a,
  h2.color-3 a, h1.color-3  {
   color: $primaryHighlight !important;
 }
 
-// h3.color-4 a,
+h3.color-4 a,
  h2.color-4 a, h1.color-4  {
   color: $secondaryColor !important;
 }
 
-// h3.color-5 a,
+h3.color-5 a,
  h2.color-5 a, h1.color-5  {
   color: $secondaryAlt !important;
 }
 
-// h3.color-6 a,
+h3.color-6 a,
  h2.color-6 a, h1.color-6  {
   color: $moarOrange !important;
 }
 
 
 .bg-color-1  {
-  // background-color: rgba($primaryColor, 1)!important;
-  // border:  4px solid rgba($primaryColor, 1);
+  background-color: rgba($primaryColor, .05)!important;
 }
 
 .bg-color-2  {
-  // background-color: rgba($primaryAlt, 1)!important;
-  // border:  4px solid rgba($primaryAlt, 1);
+  background-color: rgba($primaryAlt, .05)!important;
 }
 
 .bg-color-3  {
-  // background-color: rgba($primaryHighlight, 1)!important;
-  // border:  4px solid rgba($primaryHighlight, 1);
+  background-color: rgba($primaryHighlight, .05)!important;
 }
 
 .bg-color-4  {
-  // background-color: rgba($secondaryColor, 1)!important;
-  // border:  4px solid rgba($secondaryColor, 1);
+  background-color: rgba($secondaryColor, .05)!important;
 }
 
 .bg-color-5  {
-  // background-color: rgba($secondaryAlt, 1)!important;
-  // border:  4px solid rgba($secondaryAlt, 1);
+  background-color: rgba($secondaryAlt, .05)!important;
 }
 
 .bg-color-6  {
-  // background-color: rgba($moarOrange, 1)!important;
-  // border:  4px solid rgba($moarOrange, 1);
+  background-color: rgba($moarOrange, .05)!important;
 }
 
 

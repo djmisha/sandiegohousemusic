@@ -13,12 +13,12 @@
 
 		/* Homepage Slideshow */
 
-		$('.main-carousel').flickity({
-		  cellAlign: 'left',
-		  contain: true,
-		  autoPlay: 4000,
-		  fade: true, 
-		});
+		// $('.main-carousel').flickity({
+		//   cellAlign: 'left',
+		//   contain: true,
+		//   autoPlay: 4000,
+		//   fade: true, 
+		// });
 
 		/* Infinite Scroll */
 
@@ -36,13 +36,6 @@
 		var bLazy = new Blazy();
 		
 		
-
-		// $('.tmpl_type_single .interior').infiniteScroll({
-		//   path: '.prev-blog-button',
-		//   append: '.content',
-		//   history: false,
-		// });
-
 		/* Append Navigation Items */
 		
 		$(".tmpl_type_page_landing .site-crumbs").appendTo("header");
@@ -70,6 +63,7 @@
 		});
 
 
+
 		var stickyContactTop = 800;
 
 		var stickyContact = function(){
@@ -87,8 +81,6 @@
 		$(window).scroll(function() {
 			stickyContact();
 		});
-
-
 
 
 		/*Show hide Contact forms*/

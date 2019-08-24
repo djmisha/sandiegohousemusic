@@ -1,7 +1,7 @@
-<?get_header()?>
+<?php get_header();?>
 
 <section class="interior">
-	<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 		<article class="content">
 			<?php if(!empty(get_the_post_thumbnail())): ?>
 					<div class="featured-image">
@@ -11,11 +11,11 @@
 
 			<h1 class="color-<?php echo rand(1,6) ?>"><?php the_title(); ?></h1>
 			<div class="meta-data">
-				<i class="fas fa-clock"></i>  <?the_time('M');?> <?the_time('j');?>, <? the_time('Y'); ?> 
+				<i class="fas fa-clock"></i>  <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> 
 				<i class="fas fa-headphones"></i>  <?php the_category(', '); ?>
 				<i class="fas fa-home"></i>  <?php the_author(); ?>
 			</div>
-			<?the_content();?>
+			<?php the_content();?>
 			<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>
 			<div class="next-prev">
 				<?php
@@ -32,7 +32,7 @@
 					?>
 			</div>
 		</article>
-		<?endwhile; endif;?>
-		<?php get_sidebar()?>
+		<?php endwhile; endif;?>
+		<?php get_sidebar();?>
 	</section>
-<?get_footer()?>
+<?php get_footer();?>

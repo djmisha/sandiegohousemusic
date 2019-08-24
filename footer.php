@@ -37,13 +37,13 @@
 		</div>
 	</div>
 
-	<div class="footer-signup">
+<!-- 	<div class="footer-signup">
 		<b>Sign Up For VIP Emails</b>
 		<form action="https://sandiegohousemusic.com/cgi-bin/dada/mail.cgi" method="post"><input name="list" type="hidden" value="sdhm" /><input id="email" name="email" type="text" value="Email Address" />
 		<label for="f_s"> </label>
 		<input id="f_s" checked="checked" name="f" type="hidden" value="subscribe" />
 		<input class="processing button" type="submit" value="Sign Up" /></form>
-	</div>
+	</div> -->
 
 	<section class="lower-footer">
 		<div class="site-logo-footer">
@@ -59,15 +59,16 @@
 			<a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
 			<a href="https://twitter.com/sdhousemusic" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
  		</div>
- 		
+ 		<?php if( is_page( array(9228,4027))) { ?>
  		<div class="footer-show-form">
 			<a class="show-form">
 				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ" class="b-lazy">HIRE DJ<br> 
 				Let's Chat
 			</a>
  		</div>
+ 		<?php } ?>
 
-		<div class="copyright">Copyright &copy; <?=date("Y")?> <i class="fas fa-home"></i> <?bloginfo('title');?> California.<br>
+		<div class="copyright">Copyright &copy; <?=date("Y")?> <i class="fas fa-home"></i> <?php bloginfo('title');?> California.<br>
 		 All rights reserved.  <!-- | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> --> &nbsp; <i class="fas fa-balance-scale"></i> <a href="<?php bloginfo('url'); ?>/terms-of-use/" title="Terms of Use">Terms of Use</a> &nbsp; <i class="fas fa-sitemap"></i> <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a>
 			 </div>
 
@@ -75,19 +76,13 @@
 	</section>  
 </footer>
 
-<?wp_footer();?>
+<?php wp_footer();?>
+
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:35732/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script>
 
 
-<?php
-	$bsPort 				= 35730;
-	$browserSync 			= 'http://rosemontdev.com:'.$bsPort;
-	$browserSyncHdrs 		= @get_headers($browserSync);
-	if($browserSyncHdrs):
-		?>
-		<script async src="http://rosemontdev.com:<?php echo $bsPort?>/browser-sync/browser-sync-client.js?v=2.18.8"></script>
-		<?
-	endif;
-?>
 
 </body>
 </html>

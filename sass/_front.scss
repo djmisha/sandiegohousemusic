@@ -15,7 +15,7 @@
   margin-top: 0px;
   margin-bottom: 20px;
   a {
-    color: #000;
+    // color: #000;
     text-decoration: none;
   }
 }
@@ -101,7 +101,7 @@
 
 
 .welcome-cta {
-  padding-top: 100px;
+  padding-top: 90px;
   padding-left: 10px;
   padding-right: 10px;
   @include media($tablet) {
@@ -135,14 +135,16 @@
     text-transform: uppercase;
     font-weight: 900;
     text-shadow: 2px 2px 1px $darkColor;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: $lightColor;
     display: inline-block;
     position: relative;
     font-size: 16px;
     line-height: 20px;
     @include media($tablet) {
+      padding-left: 40px;
+    padding-right: 40px;
       text-shadow: 4px 4px 4px $darkColor;
       font-size: 30px;
     }
@@ -169,6 +171,13 @@
 .home .interior {
   display: block;
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+    @include media($tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+
+  }
 }
 
 .home .content {

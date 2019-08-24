@@ -1,7 +1,7 @@
 <?
 // Template Name: Contact
 ?>
-<?get_header()?>
+<?php get_header();?>
 <main>
 <?php if(have_posts()) : while (have_posts()) : the_post();?>
 	<article class="content">
@@ -50,4 +50,4 @@
 			<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>
 	<?php endwhile; endif;?>
 </main>
-<?get_footer()?>
+<?php get_footer();?>

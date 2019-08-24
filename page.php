@@ -1,4 +1,4 @@
-<?php get_header()?>
+<?php get_header();?>
 
 <section class="interior">
 	<?php if(have_posts()) : while (have_posts()) : the_post();?>
@@ -9,9 +9,9 @@
 		</article>
 	<?php endwhile; endif;?>
 
-	<?php get_sidebar()?>
+	<?php get_sidebar();?>
 </section>
 
-<?php get_footer()?>
+<?php get_footer();?>
 
 

@@ -96,11 +96,6 @@ body {
  * These selection declarations have to be separate
  * Also: hot pink! (or customize the background color to match your design)
  */
-::-moz-selection {
-  background: #4c3f18;
-  color: #fff;
-  text-shadow: none;
-}
 
 ::selection {
   background: #4c3f18;
@@ -965,10 +960,8 @@ img.alignleft {
 @media only screen and (min-width: 768px) {
   .two-column {
     -webkit-column-count: 2;
-       -moz-column-count: 2;
             column-count: 2;
     -webkit-column-gap: 40px;
-       -moz-column-gap: 40px;
             column-gap: 40px;
   }
 }
@@ -976,16 +969,10 @@ img.alignleft {
 @media only screen and (min-width: 768px) {
   .three-column {
     -webkit-column-count: 3;
-       -moz-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
             column-gap: 20px;
   }
-}
-
-::-moz-selection {
-  background: #3271cd;
 }
 
 ::selection {
@@ -1330,7 +1317,7 @@ img.aligncenter,
 ------------------------ */
 body {
   color: #02034a;
-  font: 14px/20px "Oswald", sans-serif;
+  font: 16px/22px "Oswald", sans-serif;
   background-color: #ffffff;
   min-width: 320px;
   text-align: center;
@@ -1455,7 +1442,7 @@ blockquote footer {
 section,
 main,
 .contain {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2558,28 +2545,58 @@ header .menu-item-9284 a:before {
   font-weight: bold;
 }
 
+h3.color-1 a,
 h2.color-1 a, h1.color-1 {
   color: #3271cd !important;
 }
 
+h3.color-2 a,
 h2.color-2 a, h1.color-2 {
   color: #fd9300 !important;
 }
 
+h3.color-3 a,
 h2.color-3 a, h1.color-3 {
   color: #07e436 !important;
 }
 
+h3.color-4 a,
 h2.color-4 a, h1.color-4 {
   color: #38c0e6 !important;
 }
 
+h3.color-5 a,
 h2.color-5 a, h1.color-5 {
   color: #eb0077 !important;
 }
 
+h3.color-6 a,
 h2.color-6 a, h1.color-6 {
   color: #ff6600 !important;
+}
+
+.bg-color-1 {
+  background-color: rgba(50, 113, 205, 0.05) !important;
+}
+
+.bg-color-2 {
+  background-color: rgba(253, 147, 0, 0.05) !important;
+}
+
+.bg-color-3 {
+  background-color: rgba(7, 228, 54, 0.05) !important;
+}
+
+.bg-color-4 {
+  background-color: rgba(56, 192, 230, 0.05) !important;
+}
+
+.bg-color-5 {
+  background-color: rgba(235, 0, 119, 0.05) !important;
+}
+
+.bg-color-6 {
+  background-color: rgba(255, 102, 0, 0.05) !important;
 }
 
 /* Landing Page Resets */
@@ -2705,8 +2722,8 @@ aside .mobile-add {
 
 #overlay-contact-form .close-form {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
 }
 
 #overlay-contact-form .close-form i {
@@ -3088,7 +3105,7 @@ form input {
 
 @media only screen and (min-width: 768px) {
   .lower-footer {
-    padding-bottom: 180px !important;
+    padding-bottom: 100px !important;
   }
 }
 
@@ -3398,7 +3415,6 @@ span.error {
 }
 
 .home .content h3 a {
-  color: #000;
   text-decoration: none;
 }
 
@@ -3475,7 +3491,7 @@ span.error {
 }
 
 .welcome-cta {
-  padding-top: 100px;
+  padding-top: 90px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -3518,8 +3534,8 @@ span.error {
   text-transform: uppercase;
   font-weight: 900;
   text-shadow: 2px 2px 1px #02034a;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: #ffffff;
   display: inline-block;
   position: relative;
@@ -3529,6 +3545,8 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .welcome-cta h3 {
+    padding-left: 40px;
+    padding-right: 40px;
     text-shadow: 4px 4px 4px #02034a;
     font-size: 30px;
   }
@@ -3559,6 +3577,15 @@ span.error {
 .home .interior {
   display: block;
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home .interior {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .home .content {
@@ -3683,8 +3710,8 @@ span.error {
 .tmpl_type_archive .post-snippet .excerpt {
   padding-bottom: 30px;
   border: 1px solid #eee;
-  margin-bottom: 80px;
-  padding: 20px;
+  margin-bottom: 40px;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3692,6 +3719,8 @@ span.error {
   .blog .post-snippet .excerpt,
   .tmpl_type_category .post-snippet .excerpt,
   .tmpl_type_archive .post-snippet .excerpt {
+    margin-bottom: 80px;
+    padding: 20px;
     width: 32%;
   }
 }

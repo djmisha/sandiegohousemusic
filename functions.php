@@ -64,8 +64,8 @@ function __themejs(){
 	// Optional
 
 	// wp_register_script('rm-fancybox', TMPL_DIR_URI . '/js/libs/fancybox3/jquery.fancybox.min.js', array('jquery','modernizr'), '1.0', true );
-	wp_register_script('rm-flickity', TMPL_DIR_URI . '/js/libs/flickity.pkgd.min.js', array('jquery','modernizr'), '1.0', true );
-	wp_register_script('rm-flickity-fade', TMPL_DIR_URI . '/js/libs/flickity-fade.js', array('jquery','modernizr'), '1.0', true );
+	// wp_register_script('rm-flickity', TMPL_DIR_URI . '/js/libs/flickity.pkgd.min.js', array('jquery','modernizr'), '1.0', true );
+	// wp_register_script('rm-flickity-fade', TMPL_DIR_URI . '/js/libs/flickity-fade.js', array('jquery','modernizr'), '1.0', true );
 	wp_register_script('rm-infinite', TMPL_DIR_URI . '/js/libs/infinite-scroll.pkgd.min.js', array('jquery','modernizr'), '1.0', true );
 	wp_register_script('rm-owl', TMPL_DIR_URI . '/js/libs/owl-carousel/owl.carousel.min.js', array('jquery','modernizr'), '1.0', true );
 	wp_register_script('rm-parallax', TMPL_DIR_URI . '/js/libs/parallax/jquery.parallax.js', array('jquery','modernizr'), '1.0', true );
@@ -92,8 +92,8 @@ function __themejs(){
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'rm_modernizr');
 	//Enqueue Optional
-	wp_enqueue_script( 'rm-flickity');
-	wp_enqueue_script( 'rm-flickity-fade');
+	// wp_enqueue_script( 'rm-flickity');
+	// wp_enqueue_script( 'rm-flickity-fade');
 	wp_enqueue_script( 'rm-infinite');
 	wp_enqueue_script( 'rm-parallax');
 	wp_enqueue_script( 'rm-waypoints');
@@ -150,13 +150,15 @@ add_filter('script_loader_tag' , function( $tag , $handle , $src ){
 						/*
 							rm_cookie , rm_scripts
 						*/
-						if(in_array( $handle , array('theme-js', 'rm-menu', 'rm-parallax', 'rm-waypoints', 'rm-flickity', 'rm-flickity-fade', 'rm-infinite',  
-
+						if(in_array( $handle , array(
+							'theme-js', 
+							'rm-menu',
+							'rm-parallax',
+							'rm-waypoints',
+							'rm-infinite',
 							'rm-blazy',
 							'rm-blazy-polyfill',
-
-
-					))):
+						))):
 							$filecontents = file_get_contents($filepath);
 							$newtag = "<script class=\"inlinejs_{$handle}\">{$filecontents}</script>";
 							return $newtag;
@@ -177,26 +179,26 @@ add_filter('script_loader_tag' , function( $tag , $handle , $src ){
 ========================================================================*/
 
 
-add_filter('inline/css' , function($tag = null ,$handle = null ,$src = null){
+// add_filter('inline/css' , function($tag = null ,$handle = null ,$src = null){
 
-	$newtag = '';
-	if($_SERVER['HTTP_HOST'] != 'rosemontdev.com'):
-		/*
-			RUN ONLY ON LIVE (not dev)
-		*/
+// 	$newtag = '';
+// 	if($_SERVER['HTTP_HOST'] != 'dev.rosemontmedia.com'):
+// 		/*
+// 			RUN ONLY ON LIVE (not dev)
+// 		*/
 
-		$templatepath = get_template_directory_uri();
-		if(in_array($handle , array('rm-theme', 'fontawesome')))://list the styles you want to target
-			$templatepath2 = preg_replace('/https?:\/\//i' , '' , $templatepath);
-			$src2 = preg_replace('/https?:\/\/|\?(.*)/i','',$src);
-			$src2 = str_replace("$templatepath2", '' , $src2 );
-			$newtag = miniCSS::file( $src2 , array('echo'=>false));
-		endif;
+// 		$templatepath = get_template_directory_uri();
+// 		if(in_array($handle , array('rm-theme', 'fontawesome')))://list the styles you want to target
+// 			$templatepath2 = preg_replace('/https?:\/\//i' , '' , $templatepath);
+// 			$src2 = preg_replace('/https?:\/\/|\?(.*)/i','',$src);
+// 			$src2 = str_replace("$templatepath2", '' , $src2 );
+// 			$newtag = miniCSS::file( $src2 , array('echo'=>false));
+// 		endif;
 
-	endif;
-	if(!empty($newtag)): return $newtag; endif;
-	return $tag;
-},1,3);
+// 	endif;
+// 	if(!empty($newtag)): return $newtag; endif;
+// 	return $tag;
+// },1,3);
 
 
 /*======================================================================================

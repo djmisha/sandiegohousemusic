@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<title>Page Not Found</title>
-	<?wp_head()?>
+	<?php wp_head()?>
 	
 	
 	<style>
@@ -35,7 +35,7 @@
 		
 		h1 {
 			font-family: 'OpenSans', sans-serif;
-			font-size: 60px;
+			font-size: 40px;
 			font-weight: bold;
 			color: #fff;
 			margin: 0 0 40px 0;
@@ -44,7 +44,7 @@
 
 		h1, h2, h3, h4, h5, p {
 			margin: 0 0 40px 0;
-			line-height:1.3em;
+			line-height:1em;
 			color: #fff;
 		}
 		
@@ -140,7 +140,7 @@
 			<div class="clear"></div>
 		</footer>
 	</div>
-	<p class="copy">Copyright &copy; <?=date("Y")?> <?bloginfo('name');?><br/>
+	<p class="copy">Copyright &copy; <?=date("Y")?> <?php bloginfo('name');?><br/>
 		Website Developed by <a href="https://www.asburymediagroup.com/" target="_blank">Asbury Media Group</a></p>
 </body>
 </html>

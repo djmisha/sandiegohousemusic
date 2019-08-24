@@ -1,16 +1,16 @@
-<?get_header()?>
+<?php get_header();?>
 
 <main class="interior">
 	<article class="content">
 		<div class="blog-intro"><?php the_field('blog_post_paragraph',29); ?></div>
 
 		<article class="post-snippet">
-		<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			<div class="excerpt bg-color-<?php echo rand(1,6) ?>">
-				<h2 class="blog-title color-<?php echo rand(1,6) ?>	"><a href="<?the_permalink();?>"><?the_title();?></a></h2>
+				<h2 class="blog-title color-<?php echo rand(1,6) ?>	"><a href="<?php the_permalink();?>"><?the_title();?></a></h2>
 				<?php if(!empty(get_the_post_thumbnail())): ?>
 				<div class="meta-data">
-					<i class="fas fa-clock"></i>  <?the_time('M');?> <?the_time('j');?>, <? the_time('Y'); ?> 
+					<i class="fas fa-clock"></i>  <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> 
 					<i class="fas fa-headphones"></i>  <?php the_category(', '); ?>
 					<i class="fas fa-home"></i>  <?php the_author(); ?>
 				</div>
@@ -26,7 +26,7 @@
 					</a>
 				</div>
 			</div>
-		<?endwhile; endif;?>
+		<?php endwhile; endif;?>
 		</article>
 
 		<div class="next-prev">
@@ -37,7 +37,7 @@
 		</div>
 
 	</article>
-	<?php get_sidebar()?>
+	<?php get_sidebar();?>
 </main>
 <?wp_reset_postdata(); ?>
-<?get_footer()?>
+<?php get_footer();?>

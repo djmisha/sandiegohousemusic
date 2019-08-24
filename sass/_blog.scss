@@ -76,9 +76,11 @@
     .excerpt {
       padding-bottom: 30px;
       border: 1px solid #eee;
-      margin-bottom: 80px;
-      padding: 20px;
+      margin-bottom: 40px;
+      padding: 10px;
       @include media($tablet) {
+        margin-bottom: 80px;
+        padding: 20px;
         width: 32%;
       }
 
