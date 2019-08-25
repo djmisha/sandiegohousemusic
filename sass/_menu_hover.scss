@@ -154,15 +154,12 @@ $menuHeight: 60px;
     .menu-item-7265 a {
       position: relative;
       &:before { 
-      // color: $lightColor !important;
       font-family: "Font Awesome 5 Pro";
-      color: rgba($lightColor, 0.6);
-
+      color: rgba($lightColor, 1);
       font-size: 35px;
       font-weight: 100;
       transition: 0.2s all;
       position: absolute;
-      // right: 10px;
       left: 180px;
       transition: all .2s ease-in-out;
       font-weight: 900;

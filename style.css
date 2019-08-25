@@ -1317,7 +1317,7 @@ img.aligncenter,
 ------------------------ */
 body {
   color: #02034a;
-  font: 16px/22px "Oswald", sans-serif;
+  font: 14px/20px "Oswald", sans-serif;
   background-color: #ffffff;
   min-width: 320px;
   text-align: center;
@@ -1916,7 +1916,7 @@ header .get-social a i {
   font-family: "Roboto Condensed", sans-serif;
   text-decoration: none;
   display: block;
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
   line-height: 1em;
   font-size: 22px;
   font-weight: 400;
@@ -1982,11 +1982,9 @@ header .get-social a i {
 .touch-menu .close-menu {
   display: block;
   position: fixed;
-  top: 22px;
+  top: 18px;
   right: 22px;
   color: white;
-  color: rgba(255, 255, 255, 0.6);
-  text-align: center;
   font-size: 30px;
   cursor: pointer;
 }
@@ -2177,7 +2175,7 @@ header .menu-item-9130 a:before,
 header .menu-item-7264 a:before,
 header .menu-item-7265 a:before {
   font-family: "Font Awesome 5 Pro";
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
   font-size: 35px;
   font-weight: 100;
   -webkit-transition: 0.2s all;
@@ -2368,7 +2366,7 @@ header .menu-item-9284 a:before {
 
 @media only screen and (min-width: 768px) {
   .page-title {
-    padding-bottom: 0px;
+    padding-bottom: 20px;
   }
 }
 
@@ -2390,17 +2388,18 @@ header .menu-item-9284 a:before {
   .content h1 {
     font-size: 40px;
     line-height: 45px;
+    margin-bottom: 20px;
   }
 }
 
 .site-crumbs {
   text-align: left;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .site-crumbs {
-    padding-top: 20px;
+    margin-top: 40px;
   }
 }
 
@@ -3746,10 +3745,12 @@ span.error {
 .blog .post-snippet .excerpt .para a,
 .tmpl_type_category .post-snippet .excerpt .para a,
 .tmpl_type_archive .post-snippet .excerpt .para a {
+  font-family: "Roboto Condensed", sans-serif;
   text-decoration: none !important;
   color: #000;
   font-size: 14px;
   line-height: 18px;
+  color: #02034a;
 }
 
 .home .post-snippet .excerpt .para a span,

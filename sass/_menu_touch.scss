@@ -80,7 +80,7 @@
 
       text-decoration: none;
       display: block;
-      color: rgba($lightColor, .6); // Set color for menu items
+      color: rgba($lightColor, 1); // Set color for menu items
       line-height: 1em;
       font-size: 22px; // Set font size for menu items
       font-weight: 400;
@@ -170,12 +170,10 @@
   .close-menu {
     display: block;
     position: fixed;
-    top: 22px;
+    top: 18px;
     right: 22px;
-    color: rgba($lightColor, 1);
-      color: rgba($lightColor, .6); // Set color for menu items
-    
-    text-align: center;
+    color: rgba($lightColor, 1); // Set color for menu items
+    // text-align: center;
     font-size: 30px; // match to other font-size
     cursor: pointer;
     i {

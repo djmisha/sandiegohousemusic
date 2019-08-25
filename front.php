@@ -5,12 +5,6 @@
 <?php get_header();?>
 
 <div class="welcome slide-<?php echo rand(1,4) ?> parallax-welcome will-parallax" id="skiptomaincontent">
-	<!-- <div class="main-carousel"> -->
-		<!-- <div class="slide-1"></div> -->
-		<!-- <div class="slide-2"></div> -->
-		<!-- <div class="slide-3"></div> -->
-		<!-- <div class="slide-4"></div> -->
-		<!-- </div>	 -->
 		<div class="welcome-cta">
 			<h2>DJ's EDM House Music &amp; Dance Events</h2> 
 			<h3>in San Diego and Around The World</h3>
@@ -109,10 +103,6 @@
 
 			</div>
 
-
-			
-
 		</main>
-
 
 		<?php get_footer();?>

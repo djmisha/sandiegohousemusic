@@ -91,10 +91,13 @@
         }
       }
       .para a {
+        font-family: $secondaryFont;
         text-decoration: none !important;
         color: #000;
         font-size: 14px;
         line-height: 18px;
+        // font-weight: 600;
+        color: $darkColor;
 
         span {
           text-decoration: underline;
