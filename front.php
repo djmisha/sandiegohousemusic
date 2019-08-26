@@ -4,7 +4,12 @@
 
 <?php get_header();?>
 
-<div class="welcome slide-<?php echo rand(1,4) ?> parallax-welcome will-parallax" id="skiptomaincontent">
+<div class="welcome" id="skiptomaincontent">
+<!-- <div class="welcome slide-<?php echo rand(1,4) ?> parallax-welcome will-parallax" id="skiptomaincontent"> -->
+	<video playsinline autoplay muted loop poster="<?php bloginfo('template_directory'); ?>/images/slide-1.jpg" class="bgvid">
+		<source src="<?php bloginfo('template_directory'); ?>/images/video.mp4" type="video/mp4">
+		<!-- <source src="<?php //bloginfo('template_directory'); ?>/images/video/output.ogg" type="video/ogg"> -->
+	</video>
 		<div class="welcome-cta">
 			<h2>DJ's EDM House Music &amp; Dance Events</h2> 
 			<h3>in San Diego and Around The World</h3>
@@ -28,7 +33,8 @@
 				// wp_query($args);
 
 				// The Query
-				$query1 = new WP_Query( $args );
+					$query1 = new WP_Query( $args );
+
 				?>
 				<?php if ( $query1 -> have_posts() ) : while ( $query1 -> have_posts() ) : $query1 -> the_post();?>
 					<!-- <div class="excerpt"> -->
@@ -49,7 +55,7 @@
 							<?php endif; ?>
 							<div class="para">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
-									<?php my_excerpt(25); ?>
+									<?php my_excerpt(40); ?>
 								</a>
 							</div>
 						</div>
@@ -92,7 +98,7 @@
 							<?php endif; ?>
 							<div class="para">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
-									<?php my_excerpt(25); ?>
+									<?php my_excerpt(40); ?>
 								</a>
 							</div>
 						</div>
