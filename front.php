@@ -5,10 +5,8 @@
 <?php get_header();?>
 
 <div class="welcome" id="skiptomaincontent">
-<!-- <div class="welcome slide-<?php echo rand(1,4) ?> parallax-welcome will-parallax" id="skiptomaincontent"> -->
 	<video playsinline autoplay muted loop poster="<?php bloginfo('template_directory'); ?>/images/slide-1.jpg" class="bgvid">
 		<source src="<?php bloginfo('template_directory'); ?>/images/video.mp4" type="video/mp4">
-		<!-- <source src="<?php //bloginfo('template_directory'); ?>/images/video/output.ogg" type="video/ogg"> -->
 	</video>
 		<div class="welcome-cta">
 			<h2>DJ's EDM House Music &amp; Dance Events</h2> 
@@ -16,7 +14,6 @@
 			<a href="#Listen" class="home-button button" rel="nofollow">Listen Now</a>
 		</div>
 	</div>
-
 
 	<main class="interior" id="#skiptomaincontent">
 		<div class="content" id="Listen">

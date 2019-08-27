@@ -27,9 +27,6 @@
 			</div>
 		<?php endwhile; endif;?>
 		</article>
-		<div class="next-prev">
-			<?php posts_nav_link( ' ', '<i class="fas fa-compact-disc"></i> &nbsp; Prev page', ' Next page &nbsp; <i class="fas fa-compact-disc">' ); ?>
-		</div>
 		<div class="pagi">
 			<?php happenstance_content_nav( '' ); ?>
 		</div>
