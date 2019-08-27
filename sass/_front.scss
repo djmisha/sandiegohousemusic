@@ -43,7 +43,7 @@
       padding: 0;
       object-fit: cover;
       opacity: 1;
-      @include media($desktop) {
+      @include media($tablet) {
         height: 500px;
       }
     }

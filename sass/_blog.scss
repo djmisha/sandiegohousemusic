@@ -175,7 +175,7 @@
   .prev-blog-button {
     &:before {
       transition: all 0.1s ease-in;
-      content: "\f104";
+      content: "\f137";
       display: inline-block;
       font: normal normal normal 27px/17px "Font Awesome 5 Pro";
       position: relative;
@@ -184,9 +184,9 @@
       font-weight: 100;
     }
     &:hover {
-      // color: $lightColor;
+      color: $secondaryAlt;
       &:before {
-        // color: $lightColor;
+        color: $secondaryAlt;
       }
     }
   }
@@ -194,7 +194,7 @@
   .next-blog-button {
     &:after {
       transition: all 0.1s ease-in;
-      content: "\f105";
+      content: "\f138";
       display: inline-block;
       font: normal normal normal 27px/17px "Font Awesome 5 Pro";
       position: relative;
@@ -202,12 +202,12 @@
       top: 3px;
       font-weight: 100;
     }
-    // &:hover {
-    //   color: $lightColor;
-    //   &:after {
-    //     color: $lightColor;
-    //   }
-    // }
+    &:hover {
+      color: $secondaryAlt;
+      &:after {
+        color: $secondaryAlt;
+      }
+    }
   }
   .meta-data {
     margin-bottom: 20px;

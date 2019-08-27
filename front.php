@@ -5,9 +5,10 @@
 <?php get_header();?>
 
 <div class="welcome" id="skiptomaincontent">
-	<video playsinline autoplay muted loop poster="<?php bloginfo('template_directory'); ?>/images/slide-1.jpg" class="bgvid">
+	<div class="home-video"></div>
+<!-- 	<video playsinline autoplay muted loop poster="<?php bloginfo('template_directory'); ?>/images/slide-1.jpg" class="bgvid">
 		<source src="<?php bloginfo('template_directory'); ?>/images/video.mp4" type="video/mp4">
-	</video>
+	</video> -->
 		<div class="welcome-cta">
 			<h2>DJ's EDM House Music &amp; Dance Events</h2> 
 			<h3>in San Diego and Around The World</h3>

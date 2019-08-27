@@ -99,12 +99,12 @@ img.aligncenter,
   a.page-numbers {
     text-decoration: none;
     padding: 5px 10px;
-    border: 2px solid $secondaryAlt;
+    border: 2px solid $secondaryColor;
     display: inline;
     color: $darkColor;
     &:hover {
       color: $darkColor;
-      background: $fourthFont;
+      border: 2px solid $secondaryAlt;
     }
   }
   span.page-numbers, 

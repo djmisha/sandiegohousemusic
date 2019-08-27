@@ -929,14 +929,14 @@ img.alignleft {
 .navigation-links a.page-numbers {
   text-decoration: none;
   padding: 5px 10px;
-  border: 2px solid #eb0077;
+  border: 2px solid #38c0e6;
   display: inline;
   color: #02034a;
 }
 
 .navigation-links a.page-numbers:hover {
   color: #02034a;
-  background: #e9ecef;
+  border: 2px solid #eb0077;
 }
 
 .navigation-links span.page-numbers,
@@ -3456,7 +3456,7 @@ span.error {
   opacity: 1;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 768px) {
   .welcome video {
     height: 500px;
   }
@@ -3852,7 +3852,7 @@ span.error {
 .from-blog .prev-blog-button:before {
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
-  content: "\f104";
+  content: "\f137";
   display: inline-block;
   font: normal normal normal 27px/17px "Font Awesome 5 Pro";
   position: relative;
@@ -3861,16 +3861,32 @@ span.error {
   font-weight: 100;
 }
 
+.from-blog .prev-blog-button:hover {
+  color: #eb0077;
+}
+
+.from-blog .prev-blog-button:hover:before {
+  color: #eb0077;
+}
+
 .from-blog .next-blog-button:after {
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
-  content: "\f105";
+  content: "\f138";
   display: inline-block;
   font: normal normal normal 27px/17px "Font Awesome 5 Pro";
   position: relative;
   margin-left: 10px;
   top: 3px;
   font-weight: 100;
+}
+
+.from-blog .next-blog-button:hover {
+  color: #eb0077;
+}
+
+.from-blog .next-blog-button:hover:after {
+  color: #eb0077;
 }
 
 .from-blog .meta-data {
