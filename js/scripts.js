@@ -126,7 +126,7 @@ function attachVideo() {
   if(myVideoWrap) {
   var theme_path = rm_data.tmplDirUri;
   var mobileVideo ='video-mobile.mp4';
-  var desktopVideo ='video.mp4';
+  var desktopVideo ='video-desktop.mp4';
   let thevid = "";
 
     if(window.innerWidth > 768) {

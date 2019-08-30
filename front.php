@@ -5,6 +5,7 @@
 <?php get_header();?>
 
 <div class="welcome" id="skiptomaincontent">
+	<div class="overlay"></div>
 	<div class="home-video"></div>
 <!-- 	<video playsinline autoplay muted loop poster="<?php bloginfo('template_directory'); ?>/images/slide-1.jpg" class="bgvid">
 		<source src="<?php bloginfo('template_directory'); ?>/images/video.mp4" type="video/mp4">
