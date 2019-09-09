@@ -30,7 +30,7 @@ imagemin      = require('gulp-imagemin'),
 newer         = require('gulp-newer');
 
 /* BrowserSync */
-const myPort  = params.port || 35732; //update this to your port
+const myPort  = params.port || 35730; //update this to your port
 const myHost  = 'http://dev.rosemontmedia.com';
 
 /* src paths*/

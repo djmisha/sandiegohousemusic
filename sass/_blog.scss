@@ -173,16 +173,16 @@
     }
   }
   .prev-blog-button {
-    &:before {
-      transition: all 0.1s ease-in;
-      content: "\f137";
-      display: inline-block;
-      font: normal normal normal 27px/17px "Font Awesome 5 Pro";
-      position: relative;
-      margin-right: 10px;
-      top: 3px;
-      font-weight: 100;
-    }
+    // &:before {
+    //   transition: all 0.1s ease-in;
+    //   content: "\f137";
+    //   display: inline-block;
+    //   font: normal normal normal 27px/17px "Font Awesome 5 Pro";
+    //   position: relative;
+    //   margin-right: 10px;
+    //   top: 3px;
+    //   font-weight: 100;
+    // }
     &:hover {
       color: $secondaryAlt;
       &:before {
@@ -192,16 +192,16 @@
   }
 
   .next-blog-button {
-    &:after {
-      transition: all 0.1s ease-in;
-      content: "\f138";
-      display: inline-block;
-      font: normal normal normal 27px/17px "Font Awesome 5 Pro";
-      position: relative;
-      margin-left: 10px;
-      top: 3px;
-      font-weight: 100;
-    }
+    // &:after {
+    //   transition: all 0.1s ease-in;
+    //   content: "\f138";
+    //   display: inline-block;
+    //   font: normal normal normal 27px/17px "Font Awesome 5 Pro";
+    //   position: relative;
+    //   margin-left: 10px;
+    //   top: 3px;
+    //   font-weight: 100;
+    // }
     &:hover {
       color: $secondaryAlt;
       &:after {

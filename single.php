@@ -19,13 +19,13 @@
 			<?php edit_post_link( $link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id ); ?>
 			<div class="next-prev">
 				<?php
-				prevnext__modify( get_previous_post_link('%link', 'Prev') ,
+				prevnext__modify( get_previous_post_link('%link', '&larr; Prev') ,
 					$attributes = array(
 						'class' => 'button prev-blog-button',
 					));
 					?>
 					<?php
-					prevnext__modify( get_next_post_link('%link', 'Next') ,
+					prevnext__modify( get_next_post_link('%link', 'Next &rarr;') ,
 						$attributes = array(
 							'class' => 'button alignright next-blog-button',
 						));

@@ -191,9 +191,15 @@ a.show-form {
     }
     &.fa-twitter {
       color: #1da1f2;
+      &:hover {
+      color: $secondaryAlt;
+    }
     }
     &.fa-facebook {
       color: #3b5998;
+      &:hover {
+      color: $secondaryAlt;
+    }
     }
   }
   @include media($tablet) {

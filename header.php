@@ -49,12 +49,12 @@
 				<div class="hamburger"></div>
 			</div>
 		</div>
- 		<div class="get-social">
+ 		<!-- <div class="get-social">
 			<a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
 			<a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
 			<a href="https://twitter.com/sdhousemusic" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
 			<a class="show-form"><i class="fal fa-comments"></i></a>
- 		</div>
+ 		</div> -->
 	</div>
 	<nav>
 		<?php wp_nav_menu( array(
