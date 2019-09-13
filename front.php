@@ -28,7 +28,9 @@
 					'cat' => 22,
 					'post_status'=>"publish",
 					'post_type'=>"post",
-					'orderby'=>"post_date"); 
+					'orderby'=>"rand", 
+					'year' => "2019"
+				);
 				// wp_query($args);
 
 				// The Query
