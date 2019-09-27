@@ -2636,6 +2636,27 @@ h2.color-6 a, h1.color-6 {
   margin-right: 0;
 }
 
+/* DJ's Page */
+.page-4027 img, .page-4027 .wp-caption {
+  max-width: 120px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-4027 img, .page-4027 .wp-caption {
+    max-width: none;
+  }
+}
+
+.page-4027 .wp-caption {
+  margin-left: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-4027 .wp-caption {
+    margin-left: 40px;
+  }
+}
+
 /* ------------------------
 	Aside
 ------------------------ */
@@ -2735,7 +2756,14 @@ aside .mobile-add {
 #overlay-contact-form .close-form {
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  #overlay-contact-form .close-form {
+    top: 20px;
+    right: 40px;
+  }
 }
 
 #overlay-contact-form .close-form i {

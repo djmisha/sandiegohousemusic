@@ -294,3 +294,21 @@ h3.color-6 a,
     margin-right: 0;
   }
 }
+
+
+/* DJ's Page */
+
+.page-4027 {
+  img, .wp-caption {
+    max-width: 120px;
+    @include media($tablet) {
+      max-width: none;
+    }
+  }
+  .wp-caption {
+    margin-left: 20px;
+    @include media($tablet) {
+      margin-left: 40px;
+    }
+  }
+}

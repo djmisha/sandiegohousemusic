@@ -31,7 +31,7 @@ newer         = require('gulp-newer');
 
 /* BrowserSync */
 const myPort  = params.port || 35730; //update this to your port
-const myHost  = 'http://dev.rosemontmedia.com';
+const myHost  = 'http://sky.rosemontmedia.com';
 
 /* src paths*/
 const _src_ = {

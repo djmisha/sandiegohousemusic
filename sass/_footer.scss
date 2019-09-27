@@ -30,7 +30,11 @@
   .close-form {
     position: absolute;
     right: 20px;
-    top:20px;
+    top: 10px;
+    @include media($tablet) {
+      top: 20px;
+      right: 40px;
+    }
     i {
       font-size: 32px;
       color:  rgba($darkColor, .3)
