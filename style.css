@@ -2021,7 +2021,7 @@ header .get-social a i {
   font-weight: 100;
   z-index: 9999;
   position: fixed;
-  right: 270px;
+  right: 250px;
   top: 50px;
 }
 
@@ -2172,6 +2172,7 @@ header .menu-item-7978 a,
 header .menu-item-7980 a,
 header .menu-item-9130 a,
 header .menu-item-7264 a,
+header .menu-item-9653 a,
 header .menu-item-7265 a {
   position: relative;
 }
@@ -2186,6 +2187,7 @@ header .menu-item-7978 a:before,
 header .menu-item-7980 a:before,
 header .menu-item-9130 a:before,
 header .menu-item-7264 a:before,
+header .menu-item-9653 a:before,
 header .menu-item-7265 a:before {
   font-family: "Font Awesome 5 Pro";
   color: white;
@@ -2211,8 +2213,9 @@ header .menu-item-7265 a:before {
   header .menu-item-7980 a:before,
   header .menu-item-9130 a:before,
   header .menu-item-7264 a:before,
+  header .menu-item-9653 a:before,
   header .menu-item-7265 a:before {
-    left: calc( 50% - 15px);
+    left: calc( 50% - 17px);
     color: #02034a !important;
     top: -28px;
   }
@@ -2229,9 +2232,10 @@ header .menu-item-7265 a:before {
   header .menu-item-7980 a:hover:before,
   header .menu-item-9130 a:hover:before,
   header .menu-item-7264 a:hover:before,
+  header .menu-item-9653 a:hover:before,
   header .menu-item-7265 a:hover:before {
     color: #38c0e6 !important;
-    top: -32px;
+    font-size: 40px;
   }
 }
 
@@ -2240,23 +2244,9 @@ header .menu-item-7986 a:before {
   content: "\f025";
 }
 
-@media only screen and (min-width: 1080px) {
-  header .menu-item-7265 a:before,
-  header .menu-item-7986 a:before {
-    left: calc( 50% - 17px);
-  }
-}
-
 header .menu-item-7264 a:before,
 header .menu-item-7985 a:before {
   content: "\f3ff";
-}
-
-@media only screen and (min-width: 1080px) {
-  header .menu-item-7264 a:before,
-  header .menu-item-7985 a:before {
-    left: calc( 50% - 19px);
-  }
 }
 
 header .menu-item-7980 a:before,
@@ -2264,23 +2254,9 @@ header .menu-item-7982 a:before {
   content: "\f3c9";
 }
 
-@media only screen and (min-width: 1080px) {
-  header .menu-item-7980 a:before,
-  header .menu-item-7982 a:before {
-    left: calc( 50% - 14px);
-  }
-}
-
 header .menu-item-9130 a:before,
 header .menu-item-9153 a:before {
   content: "\f51f";
-}
-
-@media only screen and (min-width: 1080px) {
-  header .menu-item-9130 a:before,
-  header .menu-item-9153 a:before {
-    left: calc( 50% - 17px);
-  }
 }
 
 header .menu-item-7978 a:before,
@@ -2288,21 +2264,12 @@ header .menu-item-7981 a:before {
   content: "\f0a1";
 }
 
-@media only screen and (min-width: 1080px) {
-  header .menu-item-7978 a:before,
-  header .menu-item-7981 a:before {
-    left: calc( 50% - 22px);
-  }
-}
-
 header .menu-item-9284 a:before {
   content: "\f0e0";
 }
 
-@media only screen and (min-width: 1080px) {
-  header .menu-item-9284 a:before {
-    left: calc( 50% - 22px);
-  }
+header .menu-item-9653 a:before {
+  content: "\f4ad";
 }
 
 /* ------------------------

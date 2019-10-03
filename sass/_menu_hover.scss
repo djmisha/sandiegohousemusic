@@ -7,7 +7,7 @@ $menuHeight: 60px;
   font-weight: 100;
   z-index: 9999;
   position: fixed;
-  right: 270px;
+  right: 250px;
   top: 50px;
 
   .main-menu {
@@ -151,21 +151,22 @@ $menuHeight: 60px;
     .menu-item-7980 a,
     .menu-item-9130 a,
     .menu-item-7264 a,
+    .menu-item-9653 a,
     .menu-item-7265 a {
       position: relative;
       &:before { 
-      font-family: "Font Awesome 5 Pro";
-      color: rgba($lightColor, 1);
-      font-size: 35px;
-      font-weight: 100;
-      transition: 0.2s all;
-      position: absolute;
-      left: 180px;
-      transition: all .2s ease-in-out;
-      font-weight: 900;
-      // border: 1px solid white;
+        font-family: "Font Awesome 5 Pro";
+        color: rgba($lightColor, 1);
+        font-size: 35px;
+        font-weight: 100;
+        transition: 0.2s all;
+        position: absolute;
+        left: 180px;
+        transition: all .2s ease-in-out;
+        font-weight: 900;
+        // border: 1px solid white;
       @include media($desktop) {
-        left: calc( 50% - 15px;);
+        left: calc( 50% - 17px;);
         color: $darkColor !important;
         top: -28px;
       }
@@ -174,7 +175,8 @@ $menuHeight: 60px;
       &:hover {
         &:before { 
           color: $secondaryColor !important;
-          top: -32px;
+          // top: -32px;
+          font-size: 40px;
         }
       }
     }
@@ -183,7 +185,7 @@ $menuHeight: 60px;
   .menu-item-7986 a:before {
     content: "\f025";
     @include media($desktop) {
-      left: calc( 50% - 17px;);
+      // left: calc( 50% - 17px;);
       
     }
   }
@@ -191,7 +193,7 @@ $menuHeight: 60px;
   .menu-item-7985 a:before {
     content: "\f3ff";
     @include media($desktop) {
-      left: calc( 50% - 19px;);
+      // left: calc( 50% - 19px;);
       
     }
   }
@@ -199,7 +201,7 @@ $menuHeight: 60px;
   .menu-item-7982 a:before {
     content: "\f3c9";
     @include media($desktop) {
-      left: calc( 50% - 14px;);
+      // left: calc( 50% - 14px;);
       
     }
   }
@@ -207,7 +209,7 @@ $menuHeight: 60px;
   .menu-item-9153 a:before {
     content: "\f51f";
     @include media($desktop) {
-      left: calc( 50% - 17px;);
+      // left: calc( 50% - 17px;);
       
     }
   }
@@ -215,14 +217,20 @@ $menuHeight: 60px;
   .menu-item-7981 a:before {
     content: "\f0a1";
     @include media($desktop) {
-      left: calc( 50% - 22px;);
+      // left: calc( 50% - 22px;);
       
     }
   }
   .menu-item-9284 a:before {
     content: "\f0e0";
     @include media($desktop) {
-      left: calc( 50% - 22px;);
+      // left: calc( 50% - 22px;);
+    }
+  }
+  .menu-item-9653 a:before {
+    content: "\f4ad";
+    @include media($desktop) {
+      // left: calc( 50% - 22px;);
     }
   }
 }
