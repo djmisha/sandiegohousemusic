@@ -4,6 +4,67 @@
 
 <?php get_header();?>
 
+
+
+	<main class="interior" id="#skiptomaincontent">
+		<div class="content" id="Listen">
+	
+	<br clear="all">
+			<br clear="all">
+			<br clear="all">
+
+
+		<h2 class="color-2"><i class="fas fa-compact-disc"></i> Listen to House Music</h2>
+			<article class="post-snippet">
+				<?php 
+				$args = array(
+					'posts_per_page' => 9,
+					'cat' => 22,
+					'post_status'=>"publish",
+					'post_type'=>"post",
+					// 'orderby'=>"rand", 
+					'year' => "2019"
+				);
+				// wp_query($args);
+
+				// The Query
+				$query1 = new WP_Query( $args );
+
+				?>
+				<?php if ( $query1 -> have_posts() ) : while ( $query1 -> have_posts() ) : $query1 -> the_post();?>
+					<!-- <div class="excerpt"> -->
+						<div class="excerpt bg-color-<?php echo rand(1,6) ?>">
+							
+							<h3 class="blog-title color-<?php echo rand(1,6) ?>"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
+							<?php if(!empty(get_the_post_thumbnail())): ?>
+								<div class="meta-data">
+									<i class="fas fa-clock"></i>  <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> 
+									<i class="fas fa-headphones"></i>  <?php the_category(', '); ?>
+									<i class="fas fa-home"></i>  <?php the_author(); ?>
+								</div>
+								<div class="thumb">
+									<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+										<?php the_post_thumbnail(''); ?>
+									</a>
+								</div>
+							<?php endif; ?>
+							<div class="para">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
+									<?php my_excerpt(40); ?>
+								</a>
+							</div>
+						</div>
+					<?php endwhile; endif;?>
+				</article>
+
+				<a href="<?php bloginfo('url'); ?>/category/music/" rel="nofollow" class="button">More Music</a>
+				<a href="<?php bloginfo('url'); ?>/submit-your-dj-mix/" rel="nofollow" class="button">Submit DJ Mix</a>
+					<br clear="all">
+			<br clear="all">
+			<br clear="all">
+
+</div></main>
+
 <div class="welcome" id="skiptomaincontent">
 	<div class="overlay"></div>
 	<div class="home-video"></div>
@@ -56,16 +117,22 @@
 			<a href="<?php bloginfo('url'); ?>/house-music-events-in-san-diego/" rel="nofollow" class="button">Submit Event</a>
 
 
+		
+
+
+
+
 			<br clear="all">
 			<br clear="all">
 			<br clear="all">
 
 
-			<h2 class="color-2"><i class="fas fa-compact-disc"></i> Listen to House Music</h2>
-			<article class="post-snippet">
+			<h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from the Archives</h2>
+			
+<article class="post-snippet owl-rotator owl-carousel">
 				<?php 
 				$args = array(
-					'posts_per_page' => 9,
+					'posts_per_page' => 6,
 					'cat' => 22,
 					'post_status'=>"publish",
 					'post_type'=>"post",
@@ -80,7 +147,7 @@
 				?>
 				<?php if ( $query1 -> have_posts() ) : while ( $query1 -> have_posts() ) : $query1 -> the_post();?>
 					<!-- <div class="excerpt"> -->
-						<div class="excerpt bg-color-<?php echo rand(1,6) ?>">
+						<div class="excerpt-rotator bg-color-<?php echo rand(1,6) ?>">
 							
 							<h3 class="blog-title color-<?php echo rand(1,6) ?>"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
 							<?php if(!empty(get_the_post_thumbnail())): ?>
@@ -104,10 +171,9 @@
 					<?php endwhile; endif;?>
 				</article>
 
-				<a href="<?php bloginfo('url'); ?>/category/music/" rel="nofollow" class="button">More Music</a>
+ 
+		<a href="<?php bloginfo('url'); ?>/category/music/" rel="nofollow" class="button">More Music</a>
 				<a href="<?php bloginfo('url'); ?>/submit-your-dj-mix/" rel="nofollow" class="button">Submit DJ Mix</a>
-				
-
 
 			</div>
 

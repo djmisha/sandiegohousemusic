@@ -29,7 +29,7 @@
   height: 280px;
   background: $darkColor;
   @include media($tablet) {
-    height: 502px;
+    height: 602px;
   }
   video {
       position: absolute;
@@ -44,7 +44,7 @@
       object-fit: cover;
       opacity: 1;
       @include media($tablet) {
-        height: 500px;
+        height: 600px;
       }
     }
 }
@@ -56,6 +56,7 @@
   background: rgba(#000, .3);
   // z-index: -1;
 }
+
 .slide-1 {
   background: #000 url("images/slide-1.jpg") center center no-repeat;
   background-size: cover;
@@ -81,7 +82,7 @@
   padding-left: 10px;
   padding-right: 10px;
   @include media($tablet) {
-    padding-top: 150px;
+    padding-top: 250px;
   }
   h2 {
     text-shadow: 2px 2px 2px $darkColor;
@@ -166,3 +167,80 @@
   }
 }
 
+
+
+
+
+.home .content 
+.owl-rotator  {
+  .excerpt {
+    widows: auto !important;
+  }
+  margin-bottom: 40px;
+}
+
+.owl-item {
+    max-width: 100%;
+    margin-bottom: 40px;
+    height: 100%;
+    @include media($tablet) {
+      // width: 48%;
+      // min-height: 400px;
+      // max-width: 500px;
+    }
+  }
+  .owl-nav {
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    > div {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+
+
+.excerpt-rotator {
+      padding-bottom: 30px;
+      border: 1px solid #eee;
+      margin-bottom: 40px;
+      padding: 10px;
+      @include media($tablet) {
+        margin-bottom: 0px;
+        padding: 20px;
+        // width: 48%;
+      }
+
+      &:hover {
+        // border: 1px solid $secondaryAlt;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 3px 3px rgba(#000, .3) ;
+      }
+
+      .para {
+        margin-top: 20px;
+        @include media($tablet) {
+          margin-top: 40px;
+        }
+      }
+      .para a {
+        font-family: $secondaryFont;
+        text-decoration: none !important;
+        color: #000;
+        font-size: 14px;
+        line-height: 18px;
+        // font-weight: 600;
+        color: $darkColor;
+
+        span {
+          text-decoration: underline;
+          color: $secondaryColor;
+        }
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }

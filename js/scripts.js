@@ -19,6 +19,40 @@
 		
 
 
+// ADD LIKE FUNCTIONALITY 
+
+
+
+
+		/* --------------------------------------------------
+			Owl Carousel HomePage
+		-------------------------------------------------- */
+
+			$('.owl-rotator').owlCarousel({
+				items:3,
+				margin:20,
+				lazyLoad:true,
+				loop:true,
+				nav:true,
+				dots:false,
+				autoplay: true,
+				autoplayTimeout: 9000,
+				smartSpeed: 1000,
+				navText : ["<span class=\"button\"><i class='fa fa-angle-left'></i></span>"
+							,"<span class=\"button\"><i class='fa fa-angle-right'></i></span>"],
+				responsive:{
+				        0:{
+				            items:1
+				        },
+				        768:{
+				            items:3
+				        }
+				    }
+			});
+
+
+
+
 		/* Infinite Scroll on Category Pages */
 
 		// $('.tmpl_type_category .post-snippet').infiniteScroll({
