@@ -158,10 +158,10 @@ function attachVideo() {
   var myVideoWrap = document.querySelector('.welcome .home-video');
       
   if(myVideoWrap) {
-  var theme_path = rm_data.tmplDirUri;
-  var mobileVideo ='video-mobile.mp4';
-  var desktopVideo ='video-desktop.mp4';
-  let thevid = "";
+	  var theme_path = rm_data.tmplDirUri;
+	  var mobileVideo ='video-mobile.mp4';
+	  var desktopVideo ='video-desktop.mp4';
+	  let thevid = "";
 
     if(window.innerWidth > 768) {
        thevid = desktopVideo;
@@ -180,6 +180,29 @@ function attachVideo() {
 }
 
 attachVideo();
+
+/* Load Social Feeds */
+
+function showSocial() {
+	var twitterScript = 'This is the script';
+	var twitterButton = document.querySelector('.get-social a i.fa-twitter');
+	var twitterFeed = document.querySelector('.social-feed');
+	var twitterClose = document.querySelector('.close-feed');
+
+	twitterButton.addEventListener('mouseenter', function(event) {
+		event.preventDefault;
+		twitterFeed.classList.add('active');
+		twitterButton.classList.add('active');
+	})
+
+	twitterClose.addEventListener('click', function(event) {
+		event.preventDefault;
+		twitterFeed.classList.remove('active');
+		twitterButton.classList.remove('active');
+	})
+};
+
+showSocial();
 
 
 

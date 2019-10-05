@@ -181,24 +181,29 @@ a.show-form {
     margin: 0 5px;
   }
   a i {
+    transition: all .2s ease;
+    &.active {
+      color: $secondaryAlt;
+      font-size: 35px;
+    }
     header & {
       font-size: 25px;
     }
     color: $primaryAlt;
     font-size: 35px;
     &:hover {
-      color: $secondaryAlt;
+      // color: $secondaryAlt;
     }
     &.fa-twitter {
       color: #1da1f2;
       &:hover {
-      color: $secondaryAlt;
+      // color: $secondaryAlt;
     }
     }
     &.fa-facebook {
       color: #3b5998;
       &:hover {
-      color: $secondaryAlt;
+      // color: $secondaryAlt;
     }
     }
   }
@@ -285,3 +290,37 @@ a.show-form {
   display: none;
 }
 
+
+
+.social-feed {
+  // position: absolute;
+    position: fixed;
+  right: 9999px;
+  padding-top: 20px;
+  background: white;
+  z-index: 9999;
+  transition: opacity .2s ease;
+  opacity: 0;
+  &.active {
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: 50px;
+    opacity: 1;
+    @include media($tablet) {
+      top: 80px;
+    }
+    overflow: scroll;
+  }
+  .close-feed {
+    position: fixed;
+    right: 20px;
+    // top: 10px;
+    i {font-size: 30px}
+  }
+  .the-feed {
+    overflow: scroll;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

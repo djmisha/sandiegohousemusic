@@ -15,6 +15,7 @@
   margin-top: 0px;
   margin-bottom: 20px;
   a {
+    color: #000;
     text-decoration: none;
   }
 }
@@ -148,8 +149,8 @@
 .home .interior {
   display: block;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
     @include media($tablet) {
     padding-left: 40px;
     padding-right: 40px;
@@ -170,9 +171,20 @@
 
 
 
-
+.owl-nav {
+  position: absolute;
+  top: -60px;
+  // right: 0;
+  left: 0;
+}
 .home .content 
 .owl-rotator  {
+  // border: 1px solid red;
+  margin-top: 100px;
+  @include media($tablet) {
+  margin-top: 80px;
+    
+  }
   .excerpt {
     widows: auto !important;
   }
@@ -197,6 +209,13 @@
     > div {
       margin-left: 5px;
       margin-right: 5px;
+    }
+    span.button {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 30px;
+      // line-height: 0;
+      i {font-weight: 100;}
     }
   }
 

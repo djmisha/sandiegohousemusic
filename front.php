@@ -35,7 +35,7 @@
 					<!-- <div class="excerpt"> -->
 						<div class="excerpt bg-color-<?php echo rand(1,6) ?>">
 							
-							<h3 class="blog-title color-<?php echo rand(1,6) ?>"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
+							<h3 class="blog-title"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
 							<?php if(!empty(get_the_post_thumbnail())): ?>
 								<div class="meta-data">
 									<i class="fas fa-clock"></i>  <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> 

@@ -1718,7 +1718,14 @@ header .get-social {
 }
 
 .get-social a i {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
   color: #fd9300;
+  font-size: 35px;
+}
+
+.get-social a i.active {
+  color: #eb0077;
   font-size: 35px;
 }
 
@@ -1726,24 +1733,12 @@ header .get-social a i {
   font-size: 25px;
 }
 
-.get-social a i:hover {
-  color: #eb0077;
-}
-
 .get-social a i.fa-twitter {
   color: #1da1f2;
 }
 
-.get-social a i.fa-twitter:hover {
-  color: #eb0077;
-}
-
 .get-social a i.fa-facebook {
   color: #3b5998;
-}
-
-.get-social a i.fa-facebook:hover {
-  color: #eb0077;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1853,6 +1848,47 @@ header .get-social a i {
 .home .header-images,
 .home .header-images-new {
   display: none;
+}
+
+.social-feed {
+  position: fixed;
+  right: 9999px;
+  padding-top: 20px;
+  background: white;
+  z-index: 9999;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  opacity: 0;
+}
+
+.social-feed.active {
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  top: 50px;
+  opacity: 1;
+  overflow: scroll;
+}
+
+@media only screen and (min-width: 768px) {
+  .social-feed.active {
+    top: 80px;
+  }
+}
+
+.social-feed .close-feed {
+  position: fixed;
+  right: 20px;
+}
+
+.social-feed .close-feed i {
+  font-size: 30px;
+}
+
+.social-feed .the-feed {
+  overflow: scroll;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ------------------------
@@ -3424,6 +3460,7 @@ span.error {
 }
 
 .home .content h3 a {
+  color: #000;
   text-decoration: none;
 }
 
@@ -3579,8 +3616,8 @@ span.error {
 .home .interior {
   display: block;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3601,8 +3638,21 @@ span.error {
   }
 }
 
+.owl-nav {
+  position: absolute;
+  top: -60px;
+  left: 0;
+}
+
 .home .content .owl-rotator {
+  margin-top: 100px;
   margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home .content .owl-rotator {
+    margin-top: 80px;
+  }
 }
 
 .home .content .owl-rotator .excerpt {
@@ -3629,6 +3679,16 @@ span.error {
 .owl-nav > div {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.owl-nav span.button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+.owl-nav span.button i {
+  font-weight: 100;
 }
 
 .excerpt-rotator {
@@ -3805,6 +3865,13 @@ span.error {
     padding: 20px;
     width: 48%;
   }
+}
+
+.home .post-snippet .excerpt h3,
+.blog .post-snippet .excerpt h3,
+.tmpl_type_category .post-snippet .excerpt h3,
+.tmpl_type_archive .post-snippet .excerpt h3 {
+  color: #000;
 }
 
 .home .post-snippet .excerpt:hover,

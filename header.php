@@ -52,7 +52,7 @@
  		<div class="get-social">
 			<a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
 			<a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
-			<a href="https://twitter.com/sdhousemusic" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
+			<a href="#"  rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
 			<a class="show-form"><i class="fal fa-comments"></i></a>
  		</div>
 	</div>
@@ -66,6 +66,15 @@
 	</nav> 
 
 </header> 
+
+<div class="social-feed">
+	<div class="close-feed"><i class="fa fa-window-close"></i></div>
+	<div class="the-feed">
+	<a class="twitter-timeline" data-lang="en" href="https://twitter.com/sdhousemusic?ref_src=twsrc%5Etfw"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
+	</div>
+</div>
+
+
 
 <div class="header-images-new">
 	<?php if((is_home() or is_search() or is_category() or is_archive() )): ?>
