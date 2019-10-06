@@ -183,7 +183,7 @@ attachVideo();
 
 /* Load Social Feeds */
 
-function showSocial() {
+function showTwitter() {
 	var twitterScript = 'This is the script';
 	var twitterButton = document.querySelector('.get-social a i.fa-twitter');
 	var twitterFeed = document.querySelector('.social-feed');
@@ -202,7 +202,72 @@ function showSocial() {
 	})
 };
 
-showSocial();
+showTwitter();
+
+
+	function countLikes(button, counter) {
+		var likeButton = document.querySelectorAll('.the-like-button');
+		var allButtons = [];
+		for(let i = 0; likeButton.length > i; i++) {
+			// likeButton[i];
+			likeButton[i].push(allButtons);
+			// console.log(likeButton[i]);
+		}
+
+		likeButton.addEventListener('click', function(event) {
+			console.log('clicked!');
+		});
+
+		// console.log(likeButton)
+	}
+
+	countLikes();
+
+
+
+// (fuction() {
+// 	var loadSocialFeed(type, button, tracker) {
+// 		var theHungryFeed = this.type;
+// 		var theButton = this.button;
+
+// 		function attachFeedToPage() {
+// 			theButton.addEventListener('click', function (event) {
+// 				event.preventDefault;
+// 			});
+// 		}
+// 	}
+// });
+
+
+
+
+
+
+
+
+
+
+// function showfacebook() {
+// 	var facebookScript = 'This is the script';
+// 	var facebookButton = document.querySelector('.get-social a i.fa-facebook');
+// 	var facebookFeed = document.querySelector('.social-feed');
+// 	var facebookClose = document.querySelector('.close-feed');
+
+// 	facebookButton.addEventListener('mouseenter', function(event) {
+// 		event.preventDefault;
+// 		facebookFeed.classList.add('active');
+// 		facebookButton.classList.add('active');
+// 	})
+
+// 	facebookClose.addEventListener('click', function(event) {
+// 		event.preventDefault;
+// 		facebookFeed.classList.remove('active');
+// 		facebookButton.classList.remove('active');
+// 	})
+// };
+
+// showTwitter();
+
 
 
 

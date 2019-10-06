@@ -34,7 +34,7 @@
 				<?php if ( $query1 -> have_posts() ) : while ( $query1 -> have_posts() ) : $query1 -> the_post();?>
 					<!-- <div class="excerpt"> -->
 						<div class="excerpt bg-color-<?php echo rand(1,6) ?>">
-							
+
 							<h3 class="blog-title"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
 							<?php if(!empty(get_the_post_thumbnail())): ?>
 								<div class="meta-data">
@@ -48,6 +48,13 @@
 									</a>
 								</div>
 							<?php endif; ?>
+							<div class="engage-bar">
+							<div class="the-like-button">
+								<div class="love-me-please"><i class="fal fa-heart"></i></div>
+								<div class="the-like-counter"></div>
+								<div class="the-share-button"><i class="fal fa-share-square"></i></div>
+							</div>
+							</div>
 							<div class="para">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
 									<?php my_excerpt(40); ?>
@@ -127,12 +134,12 @@
 			<br clear="all">
 
 
-			<h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from the Archives</h2>
+		<h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from the Archives</h2>
 			
-<article class="post-snippet owl-rotator owl-carousel">
+		<article class="post-snippet owl-rotator owl-carousel">
 				<?php 
 				$args = array(
-					'posts_per_page' => 6,
+					'posts_per_page' => 10,
 					'cat' => 22,
 					'post_status'=>"publish",
 					'post_type'=>"post",

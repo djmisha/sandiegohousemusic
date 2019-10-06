@@ -301,7 +301,9 @@ a.show-form {
   z-index: 9999;
   transition: opacity .2s ease;
   opacity: 0;
+  display: none;
   &.active {
+    display: block;
     right: 0px;
     left: 0px;
     bottom: 0px;
