@@ -48,13 +48,13 @@
 									</a>
 								</div>
 							<?php endif; ?>
-							<div class="engage-bar">
+							<!-- <div class="engage-bar">
 							<div class="the-like-button">
 								<div class="love-me-please"><i class="fal fa-heart"></i></div>
 								<div class="the-like-counter"></div>
 								<div class="the-share-button"><i class="fal fa-share-square"></i></div>
 							</div>
-							</div>
+							</div> -->
 							<div class="para">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
 									<?php my_excerpt(40); ?>
@@ -85,7 +85,57 @@
 	<main class="interior" id="#skiptomaincontent">
 		<div class="content" id="Listen">
 
-			<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Weekly House Music, Techno &amp; EDM Events</h2>
+
+
+<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming Techno &amp; EDM Events</h2>
+			<div class="front-page-events"></div>
+			<article class="post-snippet">
+				<?php 
+				$args = array(
+					'posts_per_page' => 3,
+					'cat' => 3,
+					'post_status'=>"publish",
+					'post_type'=>"post",
+					'orderby'=>"post_date"); 
+
+				$query1 = new WP_Query( $args );
+				?>
+				<?php if ( $query1 -> have_posts() ) : while ( $query1 -> have_posts() ) : $query1 -> the_post();?>
+					<div class="excerpt">
+						<h3 class="blog-title color-<?php echo rand(1,6) ?>"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
+						<?php if(!empty(get_the_post_thumbnail())): ?>
+							<div class="meta-data">
+								<i class="fas fa-headphones"></i>  <?php the_category(', '); ?>
+								<i class="fas fa-home"></i>  <?php the_author(); ?>
+							</div>
+							<div class="thumb">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+									<?php the_post_thumbnail(''); ?>
+								</a>
+							</div>
+						<?php endif; ?>
+						<div class="para">
+							<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
+								<?php my_excerpt(40); ?>
+							</a>
+						</div>
+					</div>
+				<?php endwhile; endif;?>
+			</article>
+		
+
+		
+
+
+
+
+			<br clear="all">
+			<br clear="all">
+			<br clear="all">
+
+
+
+			<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Weekly House Music Events</h2>
 			<div class="front-page-events"></div>
 			<article class="post-snippet">
 				<?php 

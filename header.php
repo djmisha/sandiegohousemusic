@@ -69,8 +69,10 @@
 
 <div class="social-feed">
 	<div class="close-feed"><i class="fa fa-window-close"></i></div>
+
 	<div class="the-feed">
-	<a class="twitter-timeline" data-lang="en" href="https://twitter.com/sdhousemusic?ref_src=twsrc%5Etfw"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
+		<iframe src=""></iframe>
+		<a class="twitter-timeline" data-lang="en" href="https://twitter.com/sdhousemusic?ref_src=twsrc%5Etfw"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
 	</div>
 
 	
