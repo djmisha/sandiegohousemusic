@@ -13,7 +13,6 @@ $menuHeight: 60px;
   .main-menu {
     display: flex;
     justify-content: space-around;
-    // max-width: 1200px;
     margin: 0 auto;
 
     > li {
@@ -44,9 +43,9 @@ $menuHeight: 60px;
         transition: 0.25s ease-in-out;
         color: $tertiaryAlt;
         &:hover {
-          color: $secondaryAlt !important;
+          color: $secondaryColor !important;
           &:before {
-            color: $secondaryAlt !important;
+            color: $secondaryColor !important;
           }
         }
       }
@@ -57,9 +56,9 @@ $menuHeight: 60px;
     font-size: 22px; //reset font-size for inline-block hack
     line-height: 20px;
     text-transform: uppercase;
-    font-weight: 700;
+    // font-weight: 700;
     @include media($desktop) {
-      font-size: 16px; //reset font-size for inline-block hack
+      font-size: 18px; //reset font-size for inline-block hack
     }
   }
   .sub-menu {
@@ -157,26 +156,23 @@ $menuHeight: 60px;
       &:before { 
         font-family: "Font Awesome 5 Pro";
         color: rgba($lightColor, 1);
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 100;
         transition: 0.2s all;
         position: absolute;
         left: 180px;
         transition: all .2s ease-in-out;
         font-weight: 900;
-        // border: 1px solid white;
       @include media($desktop) {
-        left: calc( 50% - 17px;);
-        color: $darkColor !important;
+        left: calc( 50% - 15px;);
+        color: $tertiaryAlt !important;
         top: -28px;
       }
     }
     @include media($desktop) {
       &:hover {
         &:before { 
-          color: $secondaryColor !important;
-          // top: -32px;
-          font-size: 40px;
+          color: $primaryAlt !important;
         }
       }
     }
@@ -184,53 +180,27 @@ $menuHeight: 60px;
   .menu-item-7265 a:before, 
   .menu-item-7986 a:before {
     content: "\f025";
-    @include media($desktop) {
-      // left: calc( 50% - 17px;);
-      
-    }
   }
   .menu-item-7264 a:before, 
   .menu-item-7985 a:before {
     content: "\f3ff";
-    @include media($desktop) {
-      // left: calc( 50% - 19px;);
-      
-    }
   }
   .menu-item-7980 a:before, 
   .menu-item-7982 a:before {
     content: "\f3c9";
-    @include media($desktop) {
-      // left: calc( 50% - 14px;);
-      
-    }
   }
   .menu-item-9130 a:before, 
   .menu-item-9153 a:before {
     content: "\f51f";
-    @include media($desktop) {
-      // left: calc( 50% - 17px;);
-      
-    }
   }
   .menu-item-7978 a:before, 
   .menu-item-7981 a:before {
     content: "\f0a1";
-    @include media($desktop) {
-      // left: calc( 50% - 22px;);
-      
-    }
   }
   .menu-item-9284 a:before {
     content: "\f0e0";
-    @include media($desktop) {
-      // left: calc( 50% - 22px;);
-    }
   }
   .menu-item-9653 a:before {
     content: "\f4ad";
-    @include media($desktop) {
-      // left: calc( 50% - 22px;);
-    }
   }
 }

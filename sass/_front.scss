@@ -9,10 +9,8 @@
 
 
 .home .content h3 {
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0px;
+  font-size: 25px;
+  margin-top: 10px;
   margin-bottom: 20px;
   a {
     color: #000;
@@ -169,17 +167,19 @@
 }
 
 
-
-
 .owl-nav {
   position: absolute;
   top: -60px;
-  // right: 0;
   left: 0;
+  @include media($tablet) {
+    left: auto;
+    right: 20px;
+    top: -100px;
+  }
 }
+
 .home .content 
 .owl-rotator  {
-  // border: 1px solid red;
   margin-top: 100px;
   @include media($tablet) {
   margin-top: 80px;
@@ -195,11 +195,6 @@
     max-width: 100%;
     margin-bottom: 40px;
     height: 100%;
-    @include media($tablet) {
-      // width: 48%;
-      // min-height: 400px;
-      // max-width: 500px;
-    }
   }
   .owl-nav {
     margin: 0 auto;
@@ -214,7 +209,6 @@
       padding-top: 5px;
       padding-bottom: 5px;
       font-size: 30px;
-      // line-height: 0;
       i {font-weight: 100;}
     }
   }
@@ -228,11 +222,9 @@
       @include media($tablet) {
         margin-bottom: 0px;
         padding: 20px;
-        // width: 48%;
       }
 
       &:hover {
-        // border: 1px solid $secondaryAlt;
         transition: all 0.2s ease-in-out;
         box-shadow: 0px 3px 3px rgba(#000, .3) ;
       }
@@ -249,9 +241,7 @@
         color: #000;
         font-size: 14px;
         line-height: 18px;
-        // font-weight: 600;
         color: $darkColor;
-
         span {
           text-decoration: underline;
           color: $secondaryColor;

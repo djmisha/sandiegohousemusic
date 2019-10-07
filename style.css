@@ -2103,23 +2103,22 @@ header .get-social a i {
 }
 
 .hover-menu .main-menu > li a:hover {
-  color: #eb0077 !important;
+  color: #38c0e6 !important;
 }
 
 .hover-menu .main-menu > li a:hover:before {
-  color: #eb0077 !important;
+  color: #38c0e6 !important;
 }
 
 .hover-menu a {
   font-size: 22px;
   line-height: 20px;
   text-transform: uppercase;
-  font-weight: 700;
 }
 
 @media only screen and (min-width: 1080px) {
   .hover-menu a {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -2229,7 +2228,7 @@ header .menu-item-9653 a:before,
 header .menu-item-7265 a:before {
   font-family: "Font Awesome 5 Pro";
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 100;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
@@ -2253,8 +2252,8 @@ header .menu-item-7265 a:before {
   header .menu-item-7264 a:before,
   header .menu-item-9653 a:before,
   header .menu-item-7265 a:before {
-    left: calc( 50% - 17px);
-    color: #02034a !important;
+    left: calc( 50% - 15px);
+    color: #adb5bd !important;
     top: -28px;
   }
 }
@@ -2272,8 +2271,7 @@ header .menu-item-7265 a:before {
   header .menu-item-7264 a:hover:before,
   header .menu-item-9653 a:hover:before,
   header .menu-item-7265 a:hover:before {
-    color: #38c0e6 !important;
-    font-size: 40px;
+    color: #fd9300 !important;
   }
 }
 
@@ -3454,10 +3452,8 @@ span.error {
 }
 
 .home .content h3 {
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0px;
+  font-size: 25px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -3644,6 +3640,14 @@ span.error {
   position: absolute;
   top: -60px;
   left: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .owl-nav {
+    left: auto;
+    right: 20px;
+    top: -100px;
+  }
 }
 
 .home .content .owl-rotator {
