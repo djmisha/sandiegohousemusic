@@ -1898,7 +1898,6 @@ header .get-social a i {
 .social-feed .the-feed iframe {
   width: 100%;
   height: 100% !important;
-  border: 1px solid red;
 }
 
 /* ------------------------

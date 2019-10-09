@@ -184,29 +184,50 @@ attachVideo();
 /* Load Social Feeds */
 
 function showTwitter() {
-	var socialMedia = [
-		{
-			name: 'twitter', 
-			link: 'feed-twitter.html',
-			btnclass: 'fa-twitter'
-		},
-		{
-			name: 'facebook', 
-			link: 'feed-facebook.html',
-			btnclass: 'fa-facebook'
-		},
-		{
-			name: 'instagram', 
-			link: 'feed-instagram.html',
-			btnclass: 'fa-instagram'
-		},
-	];
 
-	var twitterScript = theme_path + '/feed-twitter.html';
+	/* todo
+		- create iframe using JS
+		- select all social icons
+			add data attrbute in the markup 
+			for each social icon add a mouse enter event 
+			on hover get data attr for icon, 
+			set a variable to data attr 
+			the 
+			feedFrame.scr = socialMedia.variable.link
+
+
+	*/
+	// var socialMedia = {
+	// 	twitter: {
+	// 		link:'';
+	// 		btnclass:'';
+	// 	}
+	// };
+	
+	// var socialMedia = [
+	// 	{
+	// 		name: 'twitter', 
+	// 		link: 'feed-twitter.html',
+	// 		btnclass: 'fa-twitter'
+	// 	},
+	// 	{
+	// 		name: 'facebook', 
+	// 		link: 'feed-facebook.html',
+	// 		btnclass: 'fa-facebook'
+	// 	},
+	// 	{
+	// 		name: 'instagram', 
+	// 		link: 'feed-instagram.html',
+	// 		btnclass: 'fa-instagram'
+	// 	},
+	// ];
+
+	var theme_path = rm_data.tmplDirUri;
+
+	var twitterScript = 'https://sandiegohousemusic.com/wordpress/wp-content/themes/sandiegohousemusic/feed-twitter.html';
 	var twitterButton = document.querySelector('.get-social a i.fa-twitter');
 
 
-	var theme_path = rm_data.tmplDirUri;
 	var feedWrapper = document.querySelector('.social-feed');
 	var feedFrame = document.querySelector('.social-feed .the-feed iframe'); 
 	var feedClose = document.querySelector('.close-feed');
