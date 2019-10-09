@@ -181,10 +181,15 @@ a.show-form {
     margin: 0 5px;
   }
   a i {
+    position: relative;
     transition: all .2s ease;
+    bottom: 0;
     &.active {
       color: $secondaryAlt;
-      font-size: 35px;
+      // font-size: 35px;
+      bottom:  7px;
+      // padding-bottom: 5px;
+      // border: 1px solid pink;
     }
     header & {
       font-size: 25px;

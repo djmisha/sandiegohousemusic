@@ -1718,15 +1718,17 @@ header .get-social {
 }
 
 .get-social a i {
+  position: relative;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
+  bottom: 0;
   color: #fd9300;
   font-size: 35px;
 }
 
 .get-social a i.active {
   color: #eb0077;
-  font-size: 35px;
+  bottom: 7px;
 }
 
 header .get-social a i {

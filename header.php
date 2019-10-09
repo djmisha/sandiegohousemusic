@@ -37,9 +37,9 @@
 	<div class="nav-bar">
 		<div class="site-logo">
 				<a href="<?php bloginfo('url'); ?>">
-			<?php echo is_front_page() ? '<h1>' : ''; ?>
-					<img src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg?fit=300%2C97&ssl=1" alt="San Diego DJs">
-			<?php echo is_front_page() ? '</h1>' : ''; ?>
+					<?php echo is_front_page() ? '<h1>' : ''; ?>
+						<img src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg?fit=300%2C97&ssl=1" alt="San Diego DJs">
+					<?php echo is_front_page() ? '</h1>' : ''; ?>
 				</a>
 		</div>
 		<div class="menu-trigger"> 	
@@ -69,22 +69,11 @@
 
 <div class="social-feed">
 	<div class="close-feed"><i class="fa fa-window-close"></i></div>
-
 	<div class="the-feed">
-		<iframe src=""></iframe>
-		<a class="twitter-timeline" data-lang="en" href="https://twitter.com/sdhousemusic?ref_src=twsrc%5Etfw"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> 
+		<iframe src="#" width="100%" height="100%"></iframe>
 	</div>
-
-	
-	<!-- <div class="facebook-timeline">
-		<div id="fb-root"></div>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
-
-	<div class="fb-page" data-href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/San-Diego-House-Music-135772356433768/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/">San Diego House Music</a></blockquote></div>
-	</div> -->
-
-
 </div>
+
 
 
 

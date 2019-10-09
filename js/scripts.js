@@ -184,20 +184,45 @@ attachVideo();
 /* Load Social Feeds */
 
 function showTwitter() {
-	var twitterScript = 'This is the script';
+	var socialMedia = [
+		{
+			name: twitter, 
+			link: 'feed-twitter.html',
+			btnclass: 'fa-twitter'
+		},
+		{
+			name: facebook, 
+			link: 'feed-facebook.html',
+			btnclass: 'fa-facebook'
+		},
+		{
+			name: instagram, 
+			link: 'feed-instagram.html',
+			btnclass: 'fa-instagram'
+		},
+	];
+
+	var twitterScript = theme_path + '/feed-twitter.html';
 	var twitterButton = document.querySelector('.get-social a i.fa-twitter');
-	var twitterFeed = document.querySelector('.social-feed');
-	var twitterClose = document.querySelector('.close-feed');
+
+
+	var theme_path = rm_data.tmplDirUri;
+	var feedWrapper = document.querySelector('.social-feed');
+	var feedFrame = document.querySelector('.social-feed .the-feed iframe'); 
+	var feedClose = document.querySelector('.close-feed');
+
+	// console.log(twitterScript);
 
 	twitterButton.addEventListener('mouseenter', function(event) {
 		event.preventDefault;
-		twitterFeed.classList.add('active');
+		feedFrame.src = twitterScript;
+		feedWrapper.classList.add('active');
 		twitterButton.classList.add('active');
 	})
 
-	twitterClose.addEventListener('click', function(event) {
+	feedClose.addEventListener('click', function(event) {
 		event.preventDefault;
-		twitterFeed.classList.remove('active');
+		feedWrapper.classList.remove('active');
 		twitterButton.classList.remove('active');
 	})
 };
@@ -205,23 +230,30 @@ function showTwitter() {
 showTwitter();
 
 
-	function countLikes(button, counter) {
-		var likeButton = document.querySelectorAll('.the-like-button');
-		var allButtons = [];
-		for(let i = 0; likeButton.length > i; i++) {
-			// likeButton[i];
-			likeButton[i].push(allButtons);
-			// console.log(likeButton[i]);
-		}
 
-		likeButton.addEventListener('click', function(event) {
-			console.log('clicked!');
-		});
 
-		// console.log(likeButton)
+
+
+/**/
+
+
+function countLikes(button, counter) {
+	var likeButton = document.querySelectorAll('.the-like-button');
+	var allButtons = [];
+	for(let i = 0; likeButton.length > i; i++) {
+		// likeButton[i];
+		likeButton[i].push(allButtons);
 	}
+		// console.log(allButtons);
 
-	countLikes();
+	// likeButton.addEventListener('click', function(event) {
+	// 	console.log('clicked!');
+	// });
+
+	// console.log(likeButton)
+}
+
+countLikes();
 
 
 
