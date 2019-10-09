@@ -186,17 +186,17 @@ attachVideo();
 function showTwitter() {
 	var socialMedia = [
 		{
-			name: twitter, 
+			name: 'twitter', 
 			link: 'feed-twitter.html',
 			btnclass: 'fa-twitter'
 		},
 		{
-			name: facebook, 
+			name: 'facebook', 
 			link: 'feed-facebook.html',
 			btnclass: 'fa-facebook'
 		},
 		{
-			name: instagram, 
+			name: 'instagram', 
 			link: 'feed-instagram.html',
 			btnclass: 'fa-instagram'
 		},

@@ -70,17 +70,9 @@
 <div class="social-feed">
 	<div class="close-feed"><i class="fa fa-window-close"></i></div>
 	<div class="the-feed">
-		<iframe src="#" width="100%" height="100%"></iframe>
+		<iframe src="" width="100%" height="100%" frameborder=0></iframe>
 	</div>
 </div>
-
-
-
-
-
-
-
-
 
 
 <div class="header-images-new">
