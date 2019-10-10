@@ -77,117 +77,115 @@ header {
 .site-logo {
   position: relative;
   top: 5px;
-    @include media(350px) {
+  @include media(350px) {
       // top: 8px;
     }
-  h1 {
-    margin: 0 !important;
-  }
-  img {
-    width: 110px;
-    height: auto;
-    @include media($tablet) {
-      width: 200px;
+    h1 {
+      margin: 0 !important;
     }
-    @include media($desktop) {
+    img {
+      width: 110px;
+      height: auto;
+      @include media($tablet) {
+        width: 200px;
+      }
+      @include media($desktop) {
+      }
     }
   }
-}
 
-.menu-trigger {
-  position: absolute;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row-reverse;
-  height: 100%;
-  @include media($desktop) {
-    display: none;
-  }
-  .hamburger {
-    width: 25px;
-    height: 2px;
-    border-radius: 2px;
-    background: $darkColor;
-    display: block;
-    margin-bottom: 4px;
-    &:last-of-type {
-      margin-bottom: 0px;
-    }
-  }
-  i {
-    color: $secondaryAlt;
-    font-size: 27px;
-    display: none;
-  }
-  @include media($desktop) {
-    
-  &.open {
-    .hamburger {
-      z-index: 9999;
+  .menu-trigger {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    height: 100%;
+    @include media($desktop) {
       display: none;
     }
+    .hamburger {
+      width: 25px;
+      height: 2px;
+      border-radius: 2px;
+      background: $darkColor;
+      display: block;
+      margin-bottom: 4px;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
     i {
-      color: #fff;
-      display: block;
-      position: fixed;
-      right: 20px;
-    }
-  }
-  }
-  > div {
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .touch-button-text {
-    margin-right: 15px;
-    display: none;
-    margin-top: 0px;
-    font-size: 20px;
-    font-weight: 100;
-    color: $darkColor;
-    text-transform: uppercase;
-    @include media(370px) {
-      display: block;
-    }
-    @include media($tablet) {
-    }
-  }
-}
-
-a.show-form {
-  i {
-    color: #15cf1e !important;
-    font-weight: 900;
-  }
-}
-
-.get-social {
-  margin-left: 0px;
-  header & {
-    position: absolute;
-    right: 55px;
-    @include media(350px) {
-      right: 60px;
+      color: $secondaryAlt;
+      font-size: 27px;
+      display: none;
     }
     @include media($desktop) {
-      top: auto;
-      right: 40px;
+
+      &.open {
+        .hamburger {
+          z-index: 9999;
+          display: none;
+        }
+        i {
+          color: #fff;
+          display: block;
+          position: fixed;
+          right: 20px;
+        }
+      }
+    }
+    > div {
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .touch-button-text {
+      margin-right: 15px;
+      display: none;
+      margin-top: 0px;
+      font-size: 20px;
+      font-weight: 100;
+      color: $darkColor;
+      text-transform: uppercase;
+      @include media(370px) {
+        display: block;
+      }
+      @include media($tablet) {
+      }
     }
   }
-  a {
-    margin: 0 5px;
+
+  a.show-form {
+    i {
+      color: #15cf1e !important;
+      font-weight: 900;
+    }
   }
-  a i {
-    position: relative;
-    transition: all .2s ease;
-    bottom: 0;
-    &.active {
-      color: $secondaryAlt;
-      // font-size: 35px;
-      bottom:  7px;
+
+  .get-social {
+    margin-left: 0px;
+    header & {
+      position: absolute;
+      right: 55px;
+      @include media(350px) {
+        right: 60px;
+      }
+      @include media($desktop) {
+        top: auto;
+        right: 40px;
+      }
+    }
+    a {
+      margin: 0 5px;
+    }
+    a i {
+      position: relative;
+      transition: all .2s ease;
+      bottom: 0;
+      &.active {
+        bottom:  7px;
       // padding-bottom: 5px;
       // border: 1px solid pink;
     }
@@ -196,27 +194,21 @@ a.show-form {
     }
     color: $primaryAlt;
     font-size: 35px;
-    &:hover {
-      // color: $secondaryAlt;
-    }
+
     &.fa-twitter {
       color: #1da1f2;
-      &:hover {
-      // color: $secondaryAlt;
-    }
-    }
-    &.fa-facebook {
-      color: #3b5998;
-      &:hover {
-      // color: $secondaryAlt;
-    }
-    }
+     
   }
-  @include media($tablet) {
-    display: inline-block;
-    position: relative;
-    display: block;
+  &.fa-facebook {
+    color: #3b5998;
+   
   }
+}
+@include media($tablet) {
+  display: inline-block;
+  position: relative;
+  display: block;
+}
 }
 
 
@@ -231,7 +223,6 @@ a.show-form {
   justify-content: center;
   border-bottom: 5px solid #000;
 
-  // display: none;
   @include media($tablet) {
     border-bottom: none;
     background-size: cover;
@@ -290,8 +281,7 @@ a.show-form {
 
 
 .home .header-images,  
-.home .header-images-new 
- {
+.home .header-images-new {
   display: none;
 }
 
@@ -299,8 +289,8 @@ a.show-form {
 
 .social-feed {
   // position: absolute;
-    position: fixed;
-  right: 9999px;
+  position: fixed;
+  right: 9998px;
   padding-top: 20px;
   background: white;
   z-index: 9999;
@@ -312,7 +302,7 @@ a.show-form {
     right: 0px;
     left: 0px;
     bottom: 0px;
-    top: 50px;
+    top: 40px;
     opacity: 1;
     @include media($tablet) {
       top: 80px;
@@ -320,20 +310,41 @@ a.show-form {
     overflow: scroll;
   }
   .close-feed {
+    z-index: 9999;
     position: fixed;
     right: 20px;
-    // top: 10px;
     i {font-size: 30px}
   }
   .the-feed {
+    position: relative;
+    z-index: 9998;
     overflow: scroll;
-    // max-width: 600px;
+    max-width: 600px;
     margin: 0 auto;
+    margin-top: 60px;
     height: 100%;
     iframe {
       width: 100%;
       height: 100% !important;
-      // border: 1px solid red;
     }
+  }
+}
+
+
+.loadme {
+  position: absolute;
+  top: 100px;
+  left: calc( 50% - 40px;);
+  .loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid $secondaryAlt; /* hot pink */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
 }

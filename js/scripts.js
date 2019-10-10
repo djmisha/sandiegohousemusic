@@ -185,67 +185,57 @@ attachVideo();
 
 function showTwitter() {
 
-	/* todo
-		- create iframe using JS
-		- select all social icons
-			add data attrbute in the markup 
-			for each social icon add a mouse enter event 
-			on hover get data attr for icon, 
-			set a variable to data attr 
-			the 
-			feedFrame.scr = socialMedia.variable.link
+	var socialMedia = {
+		twitter: {
+			link: 'feed-twitter.html',
+			btnclass: 'fa-twitter'
+		},
+		facebook: {
+			link: 'feed-facebook.html',
+			btnclass: 'fa-facebook'
+		},
+		instagram: {
+			link: 'feed-instagram.html',
+			btnclass: 'fa-instagram'
+		},
+	};	
 
-
-	*/
-	// var socialMedia = {
-	// 	twitter: {
-	// 		link:'';
-	// 		btnclass:'';
-	// 	}
-	// };
-	
-	// var socialMedia = [
-	// 	{
-	// 		name: 'twitter', 
-	// 		link: 'feed-twitter.html',
-	// 		btnclass: 'fa-twitter'
-	// 	},
-	// 	{
-	// 		name: 'facebook', 
-	// 		link: 'feed-facebook.html',
-	// 		btnclass: 'fa-facebook'
-	// 	},
-	// 	{
-	// 		name: 'instagram', 
-	// 		link: 'feed-instagram.html',
-	// 		btnclass: 'fa-instagram'
-	// 	},
-	// ];
-
-	var theme_path = rm_data.tmplDirUri;
-
-	var twitterScript = 'https://sandiegohousemusic.com/wordpress/wp-content/themes/sandiegohousemusic/feed-twitter.html';
-	var twitterButton = document.querySelector('.get-social a i.fa-twitter');
-
-
+	var feedURL = 'https://sandiegohousemusic.com/wordpress/wp-content/themes/sandiegohousemusic/';
+	var socialButtons = document.querySelectorAll('.get-social a i');
 	var feedWrapper = document.querySelector('.social-feed');
 	var feedFrame = document.querySelector('.social-feed .the-feed iframe'); 
 	var feedClose = document.querySelector('.close-feed');
 
-	// console.log(twitterScript);
+	for ( let i = 0; socialButtons.length > i ; i++) {
+		socialButtons[i].addEventListener('click', function(event) {
+			showFeed(event.target);
+		})
+	}
 
-	twitterButton.addEventListener('mouseenter', function(event) {
-		event.preventDefault;
-		feedFrame.src = twitterScript;
+	function showFeed(icon){
+		var activeIcon = document.querySelector('i.active');
+		if(activeIcon) {
+			activeIcon.classList.remove('active');
+		}
+		icon.classList.add('active');
+		var iconName = icon.dataset.name;
+		feedFrame.src = feedURL + socialMedia[iconName].link;
 		feedWrapper.classList.add('active');
-		twitterButton.classList.add('active');
-	})
+	}
 
+
+	function closeFeed(icon) {
+		feedWrapper.classList.remove('active');
+		icon.classList.remove('active');
+	}
+	
 	feedClose.addEventListener('click', function(event) {
 		event.preventDefault;
 		feedWrapper.classList.remove('active');
-		twitterButton.classList.remove('active');
+		var activeIcon = document.querySelector('i.active');
+		closeFeed(activeIcon);
 	})
+
 };
 
 showTwitter();
@@ -255,7 +245,7 @@ showTwitter();
 
 
 
-/**/
+/* Make it count likes */
 
 
 function countLikes(button, counter) {
@@ -278,48 +268,8 @@ countLikes();
 
 
 
-// (fuction() {
-// 	var loadSocialFeed(type, button, tracker) {
-// 		var theHungryFeed = this.type;
-// 		var theButton = this.button;
-
-// 		function attachFeedToPage() {
-// 			theButton.addEventListener('click', function (event) {
-// 				event.preventDefault;
-// 			});
-// 		}
-// 	}
-// });
 
 
-
-
-
-
-
-
-
-
-// function showfacebook() {
-// 	var facebookScript = 'This is the script';
-// 	var facebookButton = document.querySelector('.get-social a i.fa-facebook');
-// 	var facebookFeed = document.querySelector('.social-feed');
-// 	var facebookClose = document.querySelector('.close-feed');
-
-// 	facebookButton.addEventListener('mouseenter', function(event) {
-// 		event.preventDefault;
-// 		facebookFeed.classList.add('active');
-// 		facebookButton.classList.add('active');
-// 	})
-
-// 	facebookClose.addEventListener('click', function(event) {
-// 		event.preventDefault;
-// 		facebookFeed.classList.remove('active');
-// 		facebookButton.classList.remove('active');
-// 	})
-// };
-
-// showTwitter();
 
 
 

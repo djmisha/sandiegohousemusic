@@ -1727,7 +1727,6 @@ header .get-social {
 }
 
 .get-social a i.active {
-  color: #eb0077;
   bottom: 7px;
 }
 
@@ -1854,7 +1853,7 @@ header .get-social a i {
 
 .social-feed {
   position: fixed;
-  right: 9999px;
+  right: 9998px;
   padding-top: 20px;
   background: white;
   z-index: 9999;
@@ -1869,7 +1868,7 @@ header .get-social a i {
   right: 0px;
   left: 0px;
   bottom: 0px;
-  top: 50px;
+  top: 40px;
   opacity: 1;
   overflow: scroll;
 }
@@ -1881,6 +1880,7 @@ header .get-social a i {
 }
 
 .social-feed .close-feed {
+  z-index: 9999;
   position: fixed;
   right: 20px;
 }
@@ -1890,14 +1890,58 @@ header .get-social a i {
 }
 
 .social-feed .the-feed {
+  position: relative;
+  z-index: 9998;
   overflow: scroll;
+  max-width: 600px;
   margin: 0 auto;
+  margin-top: 60px;
   height: 100%;
 }
 
 .social-feed .the-feed iframe {
   width: 100%;
   height: 100% !important;
+}
+
+.loadme {
+  position: absolute;
+  top: 100px;
+  left: calc( 50% - 40px);
+}
+
+.loadme .loader {
+  border: 10px solid #f3f3f3;
+  /* Light grey */
+  border-top: 10px solid #eb0077;
+  /* hot pink */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 /* ------------------------
@@ -3006,15 +3050,14 @@ form input {
 @media only screen and (min-width: 768px) {
   .footer-nav {
     padding: 40px 0px;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
 .footer-nav span {
-  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 12px;
-  font-weight: bold;
   text-align: left;
   display: block;
 }
@@ -3022,7 +3065,6 @@ form input {
 @media only screen and (min-width: 768px) {
   .footer-nav span {
     font-size: 16px;
-    font-weight: bold;
   }
 }
 

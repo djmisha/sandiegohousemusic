@@ -50,10 +50,10 @@
 			</div>
 		</div>
  		<div class="get-social">
-			<a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
-			<a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
-			<a href="#"  rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
-			<a class="show-form"><i class="fal fa-comments"></i></a>
+			<a rel="noopener" title="instagram"><i data-name="instagram" class="fab fa-instagram"></i></a>
+			<a rel="noopener" title="facebook"><i data-name="facebook" class="fab fa-facebook"></i></a>
+			<a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a>
+			<!-- <a class="show-form"><i class="fal fa-comments"></i></a> -->
  		</div>
 	</div>
 	<nav>
@@ -64,13 +64,14 @@
 			'menu_class' => 'main-menu',
 			)); ?>
 	</nav> 
-
 </header> 
+
 
 <div class="social-feed">
 	<div class="close-feed"><i class="fa fa-window-close"></i></div>
+	<div class="loadme"><div class="loader"></div> </div>
 	<div class="the-feed">
-		<iframe src="" width="100%" height="100%" frameborder=0></iframe>
+		<iframe src="" width="100%" height="" frameborder=0></iframe>
 	</div>
 </div>
 

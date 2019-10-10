@@ -57,7 +57,7 @@
 							</div> -->
 							<div class="para">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
-									<?php my_excerpt(40); ?>
+									<?php my_excerpt(20); ?>
 								</a>
 							</div>
 						</div>
@@ -116,7 +116,7 @@
 						<?php endif; ?>
 						<div class="para">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
-								<?php my_excerpt(40); ?>
+								<?php my_excerpt(20); ?>
 							</a>
 						</div>
 					</div>
@@ -164,7 +164,7 @@
 						<?php endif; ?>
 						<div class="para">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
-								<?php my_excerpt(40); ?>
+								<?php my_excerpt(20); ?>
 							</a>
 						</div>
 					</div>
@@ -221,7 +221,7 @@
 							<?php endif; ?>
 							<div class="para">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
-									<?php my_excerpt(40); ?>
+									<?php my_excerpt(20); ?>
 								</a>
 							</div>
 						</div>
