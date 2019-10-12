@@ -29,14 +29,14 @@
   }
   .close-form {
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 10px;
     @include media($tablet) {
       top: 20px;
-      right: 40px;
+      right: 20px;
     }
     i {
-      font-size: 32px;
+      font-size: 35px;
       color:  rgba($darkColor, .3)
     }
   }

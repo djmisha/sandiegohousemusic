@@ -18,12 +18,6 @@
 		var bLazy = new Blazy();
 		
 
-
-// ADD LIKE FUNCTIONALITY 
-
-
-
-
 		/* --------------------------------------------------
 			Owl Carousel HomePage
 		-------------------------------------------------- */
@@ -183,7 +177,7 @@ attachVideo();
 
 /* Load Social Feeds */
 
-function showTwitter() {
+function showSocialFeeds() {
 
 	var socialMedia = {
 		twitter: {
@@ -238,7 +232,7 @@ function showTwitter() {
 
 };
 
-showTwitter();
+showSocialFeeds();
 
 
 
