@@ -241,7 +241,7 @@ showSocialFeeds();
 function countLikes() {
 	var engageBar = document.querySelectorAll('.engage-bar');
 	var onPagePosts = [];
-	// console.log(engageBar);
+
 	for(let i = 0; engageBar.length > i; i++) { 
 		var likeID = engageBar[i].dataset.id;
 		var likeCount = engageBar[i].dataset.count;
