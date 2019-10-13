@@ -253,3 +253,58 @@
         margin-bottom: 0;
       }
     }
+
+
+
+/*Like Buttons */
+
+.engage-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  i {
+    font-size: 25px;
+  }
+}
+
+.the-like-button i {
+    color: #000;
+    &.liked {
+      color: red;
+    }
+
+    // animation: spring 1s;
+    // animation-timing-function: ease;
+    // animation-iteration-count: infinite;
+
+  // @keyframes spring { 
+  //   0% {
+  //     transform: scale(1) translateY(0); 
+  //   }
+  //   10% {
+  //     transform: scale(1.0, 0.6); 
+  //   }
+  //   30% { 
+  //     transform: scale(0.8, .8) translateY(-5px); 
+  //   }
+  //   50% { 
+  //     transform: scale(1) translateY(0); 
+  //   }
+  //   100% { 
+  //     transform: translateY(0); 
+  //   }
+  // }
+
+}
+
+.the-like-counter {
+  margin-left: 5px;
+}
+
+.the-share-button {
+  // margin-left: 50px;
+  // align-self: flex-end;
+}
+.the-fire{
+  font-size: 27px;
+}

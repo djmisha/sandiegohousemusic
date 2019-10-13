@@ -43,7 +43,7 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         ui          : false,
         port        : myPort,
-        files       : ['**/*.php'],
+        files       : ['**/*.php', 'js/*.js'],
         host        : myHost,
         open        : false,
         notify      : false,

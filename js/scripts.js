@@ -236,30 +236,55 @@ showSocialFeeds();
 
 
 
-
-
-
 /* Make it count likes */
 
+function countLikes() {
+	var engageBar = document.querySelectorAll('.engage-bar');
+	var onPagePosts = [];
+	// console.log(engageBar);
+	for(let i = 0; engageBar.length > i; i++) { 
+		var likeID = engageBar[i].dataset.id;
+		var likeCount = engageBar[i].dataset.count;
+		var likeURL = engageBar[i].dataset.link;
+		var likeButton = engageBar[i].querySelector('.the-like-button i');
+		var likeVisualCount = engageBar[i].querySelector('.the-like-counter');
 
-function countLikes(button, counter) {
-	var likeButton = document.querySelectorAll('.the-like-button');
-	var allButtons = [];
-	for(let i = 0; likeButton.length > i; i++) {
-		// likeButton[i];
-		likeButton[i].push(allButtons);
+		const thePost = new createPost(likeID, likeCount, likeURL, likeButton, likeVisualCount);
+
+		onPagePosts.push(thePost);
 	}
-		// console.log(allButtons);
 
-	// likeButton.addEventListener('click', function(event) {
-	// 	console.log('clicked!');
-	// });
+	function createPost(id, count, url, button, visualcount) {
+		this.likeID = id;
+		this.likeCount = count;
+		this.shareURL = url; 
+		this.likeButton = button;
+		this.likeVisualCount = visualcount;
 
-	// console.log(likeButton)
+		likeButton.addEventListener('click', function(event) {
+			this.classList.add('liked');
+			countLike(count, visualcount);
+			console.log(finalCount);
+			count = finalCount;
+		});
+
+		visualcount.innerHTML = count;
+	}
+
+	function countLike(item, target) {
+		this.finalCount = item;
+		this.countDiv = target;
+		finalCount ++;
+		countDiv.innerHTML = finalCount;
+		return finalCount;
+	}
 }
 
 countLikes();
 
+
+
+/* Click To Share URL */
 
 
 

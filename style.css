@@ -3800,6 +3800,39 @@ span.error {
   margin-bottom: 0;
 }
 
+/*Like Buttons */
+.engage-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.engage-bar i {
+  font-size: 25px;
+}
+
+.the-like-button i {
+  color: #000;
+}
+
+.the-like-button i.liked {
+  color: red;
+}
+
+.the-like-counter {
+  margin-left: 5px;
+}
+
+.the-fire {
+  font-size: 27px;
+}
+
 /* ------------------------
 	Blog/Category/Archives
 ------------------------ */
