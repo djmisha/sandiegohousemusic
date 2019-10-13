@@ -5,7 +5,10 @@
   "devDependencies": {
     "@bdchauvette/gulp-prettier": "^2.0.0",
     "gulp": "3.9.1",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "lodash": ">=4.17.13",
+    "lodash.template": ">=4.5.0",
+    "minimatch": ">=3.0.2"
   },
   "dependencies": {
     "time-require": "^0.1.2",

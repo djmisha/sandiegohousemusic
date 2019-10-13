@@ -263,15 +263,14 @@ function countLikes() {
 
 		likeButton.addEventListener('click', function(event) {
 			this.classList.add('liked');
-			countLike(count, visualcount);
+			countLikeClick(count, visualcount);
 			console.log(finalCount);
 			count = finalCount;
 		});
 
-		visualcount.innerHTML = count;
 	}
 
-	function countLike(item, target) {
+	function countLikeClick(item, target) {
 		this.finalCount = item;
 		this.countDiv = target;
 		finalCount ++;
