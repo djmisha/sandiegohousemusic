@@ -282,6 +282,28 @@ function countLikes() {
 countLikes();
 
 
+	// const http = new XMLHttpRequest();
+	// const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=music&per_page=1'
+	// http.open('GET', url);
+	// http.send();
+
+	// http.onreadystatechange=(e) => {
+
+	// 	ourData = http.responseText;
+	// 		console.log(ourData.length);
+	// 		// console.log('looping');
+
+
+	// 	function parseData(id, likes) {
+	// 		this.postID = id;
+	// 		this.postLikes = likes;
+
+
+	// 	}
+	// }
+
+
+
 
 /* Click To Share URL */
 
