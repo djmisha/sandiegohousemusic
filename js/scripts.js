@@ -254,20 +254,33 @@ function countLikes() {
 		onPagePosts.push(thePost);
 	}
 
+
+
 	function createPost(id, count, url, button, visualcount) {
-		this.likeID = id;
-		this.likeCount = count;
-		this.shareURL = url; 
-		this.likeButton = button;
-		this.likeVisualCount = visualcount;
+		// this.likeID = id;
+		// this.likeCount = count;
+		// this.shareURL = url; 
+		// this.likeButton = button;
+		// this.likeVisualCount = visualcount;
 
 		likeButton.addEventListener('click', function(event) {
 			this.classList.add('liked');
 			countLikeClick(count, visualcount);
-			console.log(finalCount);
+			// console.log(finalCount);
 			count = finalCount;
-		});
+			console.log(likeID);
 
+			updatePost(likeID, count);
+		});
+	}
+
+	function updatePost(id, count) {
+		for(let i = 0; onPagePosts.length > i; i++) { 
+			if (onPagePosts[i].likeID === id) {
+				onPagePosts[i].likeCount = count;
+				console.log(onPagePosts);
+			}
+		}
 	}
 
 	function countLikeClick(item, target) {
@@ -277,6 +290,9 @@ function countLikes() {
 		countDiv.innerHTML = finalCount;
 		return finalCount;
 	}
+
+	// push like count to the array item
+
 }
 
 countLikes();
