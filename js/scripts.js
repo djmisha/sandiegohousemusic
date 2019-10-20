@@ -242,45 +242,61 @@ function countLikes() {
 	var engageBar = document.querySelectorAll('.engage-bar');
 	var onPagePosts = [];
 
-	for(let i = 0; engageBar.length > i; i++) { 
-		var likeID = engageBar[i].dataset.id;
-		var likeCount = engageBar[i].dataset.count;
-		var likeURL = engageBar[i].dataset.link;
-		var likeButton = engageBar[i].querySelector('.the-like-button i');
-		var likeVisualCount = engageBar[i].querySelector('.the-like-counter');
 
-		const thePost = new createPost(likeID, likeCount, likeURL, likeButton, likeVisualCount);
+	function readPageforLikablePosts() {
+		for(let i = 0; engageBar.length > i; i++) { 
+			var likeID = engageBar[i].dataset.id;
+			var likeCount = engageBar[i].dataset.count;
+			var likeURL = engageBar[i].dataset.link;
+			var likeButton = engageBar[i].querySelector('.the-like-button i');
+			var likeVisualCount = engageBar[i].querySelector('.the-like-counter');
 
-		onPagePosts.push(thePost);
+			const thePost = new createPost(likeID, likeCount, likeURL, likeButton, likeVisualCount);
+
+			onPagePosts.push(thePost);
+		}
 	}
 
+	readPageforLikablePosts();
 
+	
 
 	function createPost(id, count, url, button, visualcount) {
-		// this.likeID = id;
-		// this.likeCount = count;
-		// this.shareURL = url; 
-		// this.likeButton = button;
-		// this.likeVisualCount = visualcount;
+		this.postlikeID = id;
+		this.postlikeCount = count;
+		this.shareURL = url; 
+		this.likeButton = button;
+		this.likeVisualCount = visualcount;
+			// console.log(id);
 
-		likeButton.addEventListener('click', function(event) {
+		button.addEventListener('click', function(event) {
 			this.classList.add('liked');
 			countLikeClick(count, visualcount);
 			// console.log(finalCount);
 			count = finalCount;
-			console.log(likeID);
-
-			updatePost(likeID, count);
+			postlikeCount = finalCount;
+			updatePost(id, count);
+			// postlikeCount = count
+			// onPagePosts.push(postlikeCount);
+			// console.log(postlikeCount, this);
 		});
 	}
 
+
+	// push like count to the array item
 	function updatePost(id, count) {
-		for(let i = 0; onPagePosts.length > i; i++) { 
-			if (onPagePosts[i].likeID === id) {
-				onPagePosts[i].likeCount = count;
-				console.log(onPagePosts);
-			}
-		}
+		console.log(id, count, postlikeCount);
+		onPagePosts.push(postlikeCount);
+		// readPageforLikableThings();
+		console.log(onPagePosts);
+		// for(let i = 0; onPagePosts.length > i; i++) { 
+
+		// 	if ( onPagePosts[i].postlikeID == id  ) {
+
+		// 		console.log['found one'];
+		// 	}
+		// }
+		return postlikeCount;
 	}
 
 	function countLikeClick(item, target) {
@@ -291,7 +307,6 @@ function countLikes() {
 		return finalCount;
 	}
 
-	// push like count to the array item
 
 }
 

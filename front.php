@@ -19,14 +19,10 @@
 				'cat' => 22,
 				'post_status'=>"publish",
 				'post_type'=>"post",
-					// 'orderby'=>"rand", 
+				// 'orderby'=>"rand", 
 				'year' => "2019"
 			);
-				// wp_query($args);
-
-				// The Query
 			$query1 = new WP_Query( $args );
-
 			?>
 			<?php if ( $query1 -> have_posts() ) : while ( $query1 -> have_posts() ) : $query1 -> the_post();?>
 					<div class="excerpt bg-color-<?php echo rand(1,6) ?>">
@@ -181,7 +177,6 @@
 				'orderby'=>"rand", 
 				'year' => "2019"
 			);
-			// The Query
 
 			$query1 = new WP_Query( $args ); ?>
 
