@@ -267,18 +267,13 @@ function countLikes() {
 		this.shareURL = url; 
 		this.likeButton = button;
 		this.likeVisualCount = visualcount;
-			// console.log(id);
 
 		button.addEventListener('click', function(event) {
 			this.classList.add('liked');
 			countLikeClick(count, visualcount);
-			// console.log(finalCount);
 			count = finalCount;
 			postlikeCount = finalCount;
 			updatePost(id, count);
-			// postlikeCount = count
-			// onPagePosts.push(postlikeCount);
-			// console.log(postlikeCount, this);
 		});
 	}
 
@@ -287,12 +282,9 @@ function countLikes() {
 	function updatePost(id, count) {
 		console.log(id, count, postlikeCount);
 		onPagePosts.push(postlikeCount);
-		// readPageforLikableThings();
 		console.log(onPagePosts);
 		// for(let i = 0; onPagePosts.length > i; i++) { 
-
 		// 	if ( onPagePosts[i].postlikeID == id  ) {
-
 		// 		console.log['found one'];
 		// 	}
 		// }

@@ -2659,27 +2659,27 @@ h2.color-6 a, h1.color-6 {
 }
 
 .bg-color-1 {
-  background-color: rgba(50, 113, 205, 0.05) !important;
+  background-color: rgba(50, 113, 205, 0.15) !important;
 }
 
 .bg-color-2 {
-  background-color: rgba(253, 147, 0, 0.05) !important;
+  background-color: rgba(253, 147, 0, 0.15) !important;
 }
 
 .bg-color-3 {
-  background-color: rgba(7, 228, 54, 0.05) !important;
+  background-color: rgba(7, 228, 54, 0.15) !important;
 }
 
 .bg-color-4 {
-  background-color: rgba(56, 192, 230, 0.05) !important;
+  background-color: rgba(56, 192, 230, 0.15) !important;
 }
 
 .bg-color-5 {
-  background-color: rgba(235, 0, 119, 0.05) !important;
+  background-color: rgba(235, 0, 119, 0.15) !important;
 }
 
 .bg-color-6 {
-  background-color: rgba(255, 102, 0, 0.05) !important;
+  background-color: rgba(255, 102, 0, 0.15) !important;
 }
 
 /* Landing Page Resets */
@@ -2772,7 +2772,8 @@ aside .sidebar-add {
 aside .mobile-add {
   z-index: 9999px;
   width: 100%;
-  height: 50px;
+  height: 80px;
+  max-height: 80px;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -2783,6 +2784,10 @@ aside .mobile-add {
   aside .mobile-add {
     display: none;
   }
+}
+
+.adsbygoogle {
+  z-index: 9999;
 }
 
 /* ------------------------
@@ -3962,6 +3967,17 @@ span.error {
   padding: 10px;
 }
 
+.home .post-snippet .excerpt:hover,
+.blog .post-snippet .excerpt:hover,
+.tmpl_type_category .post-snippet .excerpt:hover,
+.tmpl_type_archive .post-snippet .excerpt:hover {
+  top: 2px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
 @media only screen and (min-width: 768px) {
   .home .post-snippet .excerpt,
   .blog .post-snippet .excerpt,
@@ -3978,16 +3994,6 @@ span.error {
 .tmpl_type_category .post-snippet .excerpt h3,
 .tmpl_type_archive .post-snippet .excerpt h3 {
   color: #000;
-}
-
-.home .post-snippet .excerpt:hover,
-.blog .post-snippet .excerpt:hover,
-.tmpl_type_category .post-snippet .excerpt:hover,
-.tmpl_type_archive .post-snippet .excerpt:hover {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .home .post-snippet .excerpt .para,

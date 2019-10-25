@@ -40,14 +40,14 @@
 								</a>
 							</div>
 						<?php endif; ?>
-						<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likeCount'); ?>2">
+						<!-- <div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likeCount'); ?>2">
 							<div class="the-like-button">
 								<i class="fas fa-heart"></i>
 								<span class="the-like-counter"></span>
 							</div>
-							<!-- <div class="the-fire">🔥</div> -->
+							<div class="the-fire">🔥</div>
 							<div class="the-share-button"><i class="fas fa-share-square"></i></div>
-						</div>
+						</div> -->
 
 						<div class="para">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
@@ -116,6 +116,21 @@
 			<?php endwhile; endif;?>
 		</article>
 
+
+
+		<section>
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- SDHM Mobile -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-6261738507723190"
+			     data-ad-slot="2039607348"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</section>
 
 		<br clear="all">
 		<br clear="all">

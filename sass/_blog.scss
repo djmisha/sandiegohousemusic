@@ -74,22 +74,23 @@
     }
 
     .excerpt {
+      // background: #000 !important;
       padding-bottom: 30px;
       border: 1px solid #eee;
       margin-bottom: 40px;
       padding: 10px;
+      &:hover {
+        // border: 1px solid $secondaryAlt;
+        top: 2px;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 3px 3px rgba(#000, .3) ;
+      }
       @include media($tablet) {
         margin-bottom: 80px;
         padding: 20px;
         width: 48%;
       }
-    h3 {color:#000;}
-      &:hover {
-        // border: 1px solid $secondaryAlt;
-        transition: all 0.2s ease-in-out;
-        box-shadow: 0px 3px 3px rgba(#000, .3) ;
-      }
-
+      h3 {color:#000;}
       .para {
         margin-top: 20px;
         @include media($tablet) {

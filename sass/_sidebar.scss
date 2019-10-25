@@ -34,7 +34,8 @@ aside {
     // border: 1px solid red;
     z-index: 9999px;
     width: 100%;
-    height: 50px;
+    height: 80px;
+    max-height: 80px;
     position: fixed;
     bottom:0;
     right: 0;
@@ -43,4 +44,9 @@ aside {
       display: none;
     }
   }
+}
+
+
+.adsbygoogle {
+  z-index: 9999;
 }
