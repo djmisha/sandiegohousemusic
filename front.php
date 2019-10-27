@@ -151,17 +151,17 @@
 			<?php if ( $query1 -> have_posts() ) : while ( $query1 -> have_posts() ) : $query1 -> the_post();?>
 				<div class="excerpt">
 					<div class="thumb">
+						<?php if(!empty(get_the_post_thumbnail())): ?>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
 							<?php the_post_thumbnail(''); ?>
 						</a>
+						<?php endif; ?>
+						</div>
 						<h3 class="blog-title color-<?php echo rand(1,6) ?>"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
 						<div class="meta-data">
 							<i class="fas fa-headphones"></i>  <?php the_category(', '); ?>
 							<!-- <i class="fas fa-home"></i>  <?php the_author(); ?> -->
 						</div>
-						<?php if(!empty(get_the_post_thumbnail())): ?>
-						</div>
-					<?php endif; ?>
 					<div class="para">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
 							<?php my_excerpt(20); ?>

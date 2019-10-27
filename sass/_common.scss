@@ -111,6 +111,12 @@ img.aligncenter,
   span.dots {
     padding: 0 5px;
   } 
+  span.current {
+    color: $lightColor;
+    background: $secondaryColor;
+    padding: 10px 10px 6px 10px;
+    border: 2px solid $secondaryColor;
+  }
 }
 
 

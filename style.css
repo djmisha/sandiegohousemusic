@@ -949,6 +949,13 @@ img.alignleft {
   padding: 0 5px;
 }
 
+.navigation-links span.current {
+  color: #ffffff;
+  background: #38c0e6;
+  padding: 10px 10px 6px 10px;
+  border: 2px solid #38c0e6;
+}
+
 .after-review-sprinkle .button:hover {
   color: #38c0e6;
 }
@@ -3871,6 +3878,7 @@ span.error {
 }
 
 .featured-image img {
+  border-radius: 15px;
   width: 100%;
   max-width: 600px;
   max-height: 600px;
