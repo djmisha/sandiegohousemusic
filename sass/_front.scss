@@ -256,10 +256,19 @@
 
 
 
-/*Like Buttons */
+// Engage Bar 
+// Engage Bar 
+// Engage Bar 
 
+
+.excerpt {position: relative;}
 .engage-bar {
+  position: absolute;
+  bottom: 20px;
+  margin-top: 20px;
+  // ,top: 1;
   display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   i {
@@ -304,6 +313,7 @@
 .the-share-button {
   // margin-left: 50px;
   // align-self: flex-end;
+  margin-left: 40px;
 }
 .the-fire{
   font-size: 27px;

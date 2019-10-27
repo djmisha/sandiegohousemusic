@@ -14,11 +14,8 @@ aside {
   @include media($desktop) {
     width: 300px;
   }
-
   .sidebar-add {
     display: none;
-    // border: 1px solid red;
-  
   @include media($desktop) {
       display: block;
       position: fixed;
@@ -29,9 +26,7 @@ aside {
       }
     }
   }
-
   .mobile-add {
-    // border: 1px solid red;
     z-index: 9999px;
     width: 100%;
     height: 80px;
@@ -45,8 +40,6 @@ aside {
     }
   }
 }
-
-
 .adsbygoogle {
   z-index: 9999;
 }

@@ -2659,27 +2659,27 @@ h2.color-6 a, h1.color-6 {
 }
 
 .bg-color-1 {
-  background-color: rgba(50, 113, 205, 0.15) !important;
+  background-color: rgba(50, 113, 205, 0.05) !important;
 }
 
 .bg-color-2 {
-  background-color: rgba(253, 147, 0, 0.15) !important;
+  background-color: rgba(253, 147, 0, 0.05) !important;
 }
 
 .bg-color-3 {
-  background-color: rgba(7, 228, 54, 0.15) !important;
+  background-color: rgba(7, 228, 54, 0.05) !important;
 }
 
 .bg-color-4 {
-  background-color: rgba(56, 192, 230, 0.15) !important;
+  background-color: rgba(56, 192, 230, 0.05) !important;
 }
 
 .bg-color-5 {
-  background-color: rgba(235, 0, 119, 0.15) !important;
+  background-color: rgba(235, 0, 119, 0.05) !important;
 }
 
 .bg-color-6 {
-  background-color: rgba(255, 102, 0, 0.15) !important;
+  background-color: rgba(255, 102, 0, 0.05) !important;
 }
 
 /* Landing Page Resets */
@@ -3819,11 +3819,18 @@ span.error {
   margin-bottom: 0;
 }
 
-/*Like Buttons */
+.excerpt {
+  position: relative;
+}
+
 .engage-bar {
+  position: absolute;
+  bottom: 20px;
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3846,6 +3853,10 @@ span.error {
 
 .the-like-counter {
   margin-left: 5px;
+}
+
+.the-share-button {
+  margin-left: 40px;
 }
 
 .the-fire {
@@ -3916,6 +3927,9 @@ span.error {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .home .post-snippet .meta-date,
@@ -3935,8 +3949,12 @@ span.error {
 .tmpl_type_category .post-snippet .thumb,
 .tmpl_type_archive .post-snippet .thumb {
   overflow: hidden;
-  width: 100%;
+  width: calc(100% + 40px);
+  left: -20px;
+  top: -20px;
   position: relative;
+  max-height: 20vw;
+  border-radius: 15px;
   margin-bottom: 20px;
 }
 
@@ -3948,34 +3966,27 @@ span.error {
   height: auto;
 }
 
-@media only screen and (min-width: 768px) {
-  .home .post-snippet .thumb,
-  .blog .post-snippet .thumb,
-  .tmpl_type_category .post-snippet .thumb,
-  .tmpl_type_archive .post-snippet .thumb {
-    margin-bottom: 40px;
-  }
-}
-
 .home .post-snippet .excerpt,
 .blog .post-snippet .excerpt,
 .tmpl_type_category .post-snippet .excerpt,
 .tmpl_type_archive .post-snippet .excerpt {
   padding-bottom: 30px;
-  border: 1px solid #eee;
+  background: #eee;
   margin-bottom: 40px;
   padding: 10px;
+  border-radius: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0);
 }
 
 .home .post-snippet .excerpt:hover,
 .blog .post-snippet .excerpt:hover,
 .tmpl_type_category .post-snippet .excerpt:hover,
 .tmpl_type_archive .post-snippet .excerpt:hover {
-  top: 2px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (min-width: 768px) {
@@ -3985,6 +3996,7 @@ span.error {
   .tmpl_type_archive .post-snippet .excerpt {
     margin-bottom: 80px;
     padding: 20px;
+    padding-bottom: 60px;
     width: 48%;
   }
 }
@@ -4001,15 +4013,6 @@ span.error {
 .tmpl_type_category .post-snippet .excerpt .para,
 .tmpl_type_archive .post-snippet .excerpt .para {
   margin-top: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home .post-snippet .excerpt .para,
-  .blog .post-snippet .excerpt .para,
-  .tmpl_type_category .post-snippet .excerpt .para,
-  .tmpl_type_archive .post-snippet .excerpt .para {
-    margin-top: 40px;
-  }
 }
 
 .home .post-snippet .excerpt .para a,
@@ -4052,8 +4055,7 @@ span.error {
 .blog .meta-data,
 .tmpl_type_category .meta-data,
 .tmpl_type_archive .meta-data {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #adb5bd;
   font-size: 11px;
   line-height: 18px;

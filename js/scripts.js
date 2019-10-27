@@ -305,6 +305,45 @@ function countLikes() {
 countLikes();
 
 
+
+function sharePost() {
+	var copyTheseItems = document.querySelectorAll('.the-share-button');
+
+	function copyStringToClipboard (str) {
+	   // Create new element
+	   var el = document.createElement('textarea');
+	   // Set value (string to be copied)
+	   el.value = str;
+	   // Set non-editable to avoid focus and move outside of view
+	   el.setAttribute('readonly', '');
+	   el.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(el);
+	   // Select text inside element
+	   el.select();
+	   // Copy text to clipboard
+	   document.execCommand('copy');
+	   // Remove temporary element
+	   document.body.removeChild(el);
+	}
+
+	if(copyTheseItems.length > 0) {
+		copyTheseItems.forEach(function(itemToCopy) {
+			itemToCopy.addEventListener('click', function(){
+				copyStringToClipboard(itemToCopy.innerText);
+				itemToCopy.style.color = "blue";
+			});
+		});
+	}
+}
+
+sharePost();
+
+
+
+
+
+
+
 	// const http = new XMLHttpRequest();
 	// const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=music&per_page=1'
 	// http.open('GET', url);
