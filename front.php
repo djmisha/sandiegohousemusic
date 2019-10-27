@@ -50,7 +50,7 @@
 							<i class="fas fa-heart"></i>
 							<span class="the-like-counter"></span>
 						</div>
-						<!-- <div class="the-fire">🔥</div> -->
+						<div class="the-fire">🔥</div>
 						<div class="the-share-button"><i class="fas fa-share-square"></i></div>
 					</div>
 				</div>
