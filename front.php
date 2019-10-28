@@ -50,8 +50,8 @@
 							<i class="fas fa-heart"></i>
 							<span class="the-like-counter"></span>
 						</div>
-						<div class="the-fire">🔥</div>
-						<div class="the-share-button"><i class="fas fa-share-square"></i></div>
+						<!-- <div class="the-fire">🔥</div> -->
+						<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>
 					</div>
 				</div>
 			<?php endwhile; endif;?>
@@ -156,7 +156,7 @@
 							<?php the_post_thumbnail(''); ?>
 						</a>
 						<?php endif; ?>
-						</div>
+					</div>
 						<h3 class="blog-title color-<?php echo rand(1,6) ?>"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
 						<div class="meta-data">
 							<i class="fas fa-headphones"></i>  <?php the_category(', '); ?>

@@ -3831,13 +3831,12 @@ span.error {
 }
 
 .engage-bar {
-  position: absolute;
   bottom: 20px;
   margin-top: 20px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3856,14 +3855,6 @@ span.error {
 
 .the-like-button i.liked {
   color: red;
-}
-
-.the-like-counter {
-  margin-left: 5px;
-}
-
-.the-share-button {
-  margin-left: 40px;
 }
 
 .the-fire {
@@ -3961,9 +3952,19 @@ span.error {
   left: -20px;
   top: -20px;
   position: relative;
-  max-height: 20vw;
+  max-height: 50vw;
+  overflow: hidden;
   border-radius: 15px;
   margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home .post-snippet .thumb,
+  .blog .post-snippet .thumb,
+  .tmpl_type_category .post-snippet .thumb,
+  .tmpl_type_archive .post-snippet .thumb {
+    max-height: 20vw;
+  }
 }
 
 .home .post-snippet .thumb img,

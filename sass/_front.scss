@@ -263,12 +263,13 @@
 
 .excerpt {position: relative;}
 .engage-bar {
-  position: absolute;
+  // position: absolute;
   bottom: 20px;
   margin-top: 20px;
-  // ,top: 1;
+  // ,top: 1;w\
+  width: 100%;
   display: flex;
-  display: none;
+  // display: none;
   align-items: center;
   justify-content: space-between;
   i {
@@ -282,9 +283,9 @@
       color: red;
     }
 
-    // animation: spring 1s;
-    // animation-timing-function: ease;
-    // animation-iteration-count: infinite;
+  //   animation: spring 1s;
+  //   animation-timing-function: ease;
+  //   animation-iteration-count: infinite;
 
   // @keyframes spring { 
   //   0% {
@@ -307,13 +308,13 @@
 }
 
 .the-like-counter {
-  margin-left: 5px;
+  // margin-left: 5px;
 }
 
 .the-share-button {
   // margin-left: 50px;
   // align-self: flex-end;
-  margin-left: 40px;
+  // margin-left: 40px;
 }
 .the-fire{
   font-size: 27px;

@@ -307,7 +307,7 @@ countLikes();
 
 
 function sharePost() {
-	var copyTheseItems = document.querySelectorAll('.the-share-button');
+	var shareLinkButtons = document.querySelectorAll('.the-share-button');
 
 	function copyStringToClipboard (str) {
 	   // Create new element
@@ -326,11 +326,11 @@ function sharePost() {
 	   document.body.removeChild(el);
 	}
 
-	if(copyTheseItems.length > 0) {
-		copyTheseItems.forEach(function(itemToCopy) {
+	if(shareLinkButtons.length > 0) {
+		shareLinkButtons.forEach(function(itemToCopy) {
 			itemToCopy.addEventListener('click', function(){
-				copyStringToClipboard(itemToCopy.innerText);
-				itemToCopy.style.color = "blue";
+				copyStringToClipboard(itemToCopy.dataset.link);
+				itemToCopy.style.color = "green";
 			});
 		});
 	}
