@@ -3943,59 +3943,19 @@ span.error {
   text-transform: uppercase;
 }
 
-.home .post-snippet .thumb,
-.blog .post-snippet .thumb,
-.tmpl_type_category .post-snippet .thumb,
-.tmpl_type_archive .post-snippet .thumb {
-  overflow: hidden;
-  width: calc(100% + 40px);
-  left: -20px;
-  top: -20px;
-  position: relative;
-  max-height: 50vw;
-  overflow: hidden;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home .post-snippet .thumb,
-  .blog .post-snippet .thumb,
-  .tmpl_type_category .post-snippet .thumb,
-  .tmpl_type_archive .post-snippet .thumb {
-    max-height: 20vw;
-  }
-}
-
-.home .post-snippet .thumb img,
-.blog .post-snippet .thumb img,
-.tmpl_type_category .post-snippet .thumb img,
-.tmpl_type_archive .post-snippet .thumb img {
-  width: 100%;
-  height: auto;
-}
-
 .home .post-snippet .excerpt,
 .blog .post-snippet .excerpt,
 .tmpl_type_category .post-snippet .excerpt,
 .tmpl_type_archive .post-snippet .excerpt {
   padding-bottom: 30px;
   background: #eee;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   padding: 10px;
   border-radius: 15px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0);
-}
-
-.home .post-snippet .excerpt:hover,
-.blog .post-snippet .excerpt:hover,
-.tmpl_type_category .post-snippet .excerpt:hover,
-.tmpl_type_archive .post-snippet .excerpt:hover {
-  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (min-width: 768px) {
@@ -4008,6 +3968,14 @@ span.error {
     padding-bottom: 60px;
     width: 48%;
   }
+}
+
+.home .post-snippet .excerpt:hover,
+.blog .post-snippet .excerpt:hover,
+.tmpl_type_category .post-snippet .excerpt:hover,
+.tmpl_type_archive .post-snippet .excerpt:hover {
+  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
 }
 
 .home .post-snippet .excerpt h3,
@@ -4050,6 +4018,38 @@ span.error {
 .tmpl_type_archive .post-snippet .excerpt p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.home .post-snippet .thumb,
+.blog .post-snippet .thumb,
+.tmpl_type_category .post-snippet .thumb,
+.tmpl_type_archive .post-snippet .thumb {
+  overflow: hidden;
+  width: calc(100% + 40px);
+  left: -20px;
+  top: -20px;
+  position: relative;
+  max-height: 50vw;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home .post-snippet .thumb,
+  .blog .post-snippet .thumb,
+  .tmpl_type_category .post-snippet .thumb,
+  .tmpl_type_archive .post-snippet .thumb {
+    max-height: 20vw;
+  }
+}
+
+.home .post-snippet .thumb img,
+.blog .post-snippet .thumb img,
+.tmpl_type_category .post-snippet .thumb img,
+.tmpl_type_archive .post-snippet .thumb img {
+  width: 100%;
+  height: auto;
 }
 
 .home .date,
