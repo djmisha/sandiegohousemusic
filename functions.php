@@ -400,10 +400,11 @@ add_action( 'wp_enqueue_scripts', 'add_ajax_scripts' );
 /*Creating the front-end update function*/
 
 
-function custom_update_post() {
+function update_post_like_count() {
     $post_id = $_POST['post_id'];
-    update_post_meta( $post_id, 'your_meta_key', 'Your New Value' );
+    $post_count = $_POST['post_count'];
+    update_post_meta( $post_id, 'likecount', $post_count );
     wp_die();
 }
 
-add_action( 'wp_ajax_custom_update_post', 'custom_update_post' );
+add_action( 'wp_ajax_update_post_like_count', 'update_post_like_count' );

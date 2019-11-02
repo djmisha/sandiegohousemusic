@@ -170,6 +170,122 @@
 		// }, 10000);
 
 
+
+
+
+		/* Make it count likes, suck it Zuck */
+
+		function countLikes() {
+			
+			var engageBar = document.querySelectorAll('.engage-bar');
+			var onPagePosts = [];
+
+
+			function readPageforLikablePosts() {
+				for(let i = 0; engageBar.length > i; i++) { 
+					var likeID = engageBar[i].dataset.id;
+					var likeCount = engageBar[i].dataset.count;
+					var likeURL = engageBar[i].dataset.link;
+					var likeButton = engageBar[i].querySelector('.the-like-button i');
+					var likeVisualCount = engageBar[i].querySelector('.the-like-counter');
+					// var thefire = engageBar[i].querySelector('.the-fire');
+
+					const thePost = new createPost(
+							likeID, 
+							likeCount, 
+							likeURL, 
+							likeButton, 
+							likeVisualCount,
+							// thefire
+							);
+
+					onPagePosts.push(thePost);
+				}
+			}
+
+			readPageforLikablePosts();
+
+			
+
+			function createPost(id, count, url, button, visualcount, thefire) {
+				this.postlikeID = id;
+				this.postlikeCount = count;
+				this.shareURL = url; 
+				this.likeButton = button;
+				this.likeVisualCount = visualcount;
+				// this.ourFire = thefire;
+
+				button.addEventListener('click', function(event) {
+					this.classList.add('liked','bounce');
+					countLikeClick(count, visualcount);
+					count = finalCount;
+					postlikeCount = finalCount;
+					updatePost(id, count);
+
+					// showFire(); 
+					// show the fire 
+
+					setTimeout(function(){
+						removeBounce();
+					}, 1000);
+
+
+
+
+				});
+
+				function removeBounce() {
+					button.classList.remove('bounce');
+					// console.log('removed')
+				}
+
+				// function showFire() {
+				// 	if (count > 100) {
+				// 		thefire.classList.addClass('so-hot')
+				// 	}
+				// }
+			}
+
+
+
+			// push like count to the array item
+			// then update the Database with the new count
+			function updatePost(id, count) {
+				for(let i = 0; onPagePosts.length > i; i++) { 
+					if ( onPagePosts[i].postlikeID == id  ) {
+						onPagePosts[i].postlikeCount = count;
+					}
+				}
+				 $.ajax({
+		            type: 'POST',
+		            url: ajax_object.ajaxurl,
+		            data: {
+		                action: 'update_post_like_count',
+		                post_id: id,
+		                post_count: count,
+		                dataType:'Text',
+						success: function(data) {
+							// console.log(id, count);
+							// console.log('voted');
+						}
+		            }
+		        });
+			}
+
+			// count the click and show it on the Page
+			function countLikeClick(item, target) {
+				this.finalCount = item;
+				this.countDiv = target;
+				finalCount ++;
+				countDiv.innerHTML = finalCount;
+				return finalCount;
+			}
+		}
+
+		countLikes();
+
+
+
 		
 	}); // end of doc.ready
 })(jQuery);
@@ -265,70 +381,6 @@ showSocialFeeds();
 
 
 
-/* Make it count likes */
-
-function countLikes() {
-	
-	var engageBar = document.querySelectorAll('.engage-bar');
-	var onPagePosts = [];
-
-
-	function readPageforLikablePosts() {
-		for(let i = 0; engageBar.length > i; i++) { 
-			var likeID = engageBar[i].dataset.id;
-			var likeCount = engageBar[i].dataset.count;
-			var likeURL = engageBar[i].dataset.link;
-			var likeButton = engageBar[i].querySelector('.the-like-button i');
-			var likeVisualCount = engageBar[i].querySelector('.the-like-counter');
-
-			const thePost = new createPost(likeID, likeCount, likeURL, likeButton, likeVisualCount);
-
-			onPagePosts.push(thePost);
-		}
-	}
-
-	readPageforLikablePosts();
-
-	
-
-	function createPost(id, count, url, button, visualcount) {
-		this.postlikeID = id;
-		this.postlikeCount = count;
-		this.shareURL = url; 
-		this.likeButton = button;
-		this.likeVisualCount = visualcount;
-
-		button.addEventListener('click', function(event) {
-			this.classList.add('liked');
-			countLikeClick(count, visualcount);
-			count = finalCount;
-			postlikeCount = finalCount;
-			updatePost(id, count);
-			// console.log(onPagePosts);
-		});
-	}
-
-
-	// push like count to the array item
-	function updatePost(id, count) {
-		for(let i = 0; onPagePosts.length > i; i++) { 
-			if ( onPagePosts[i].postlikeID == id  ) {
-				onPagePosts[i].postlikeCount = count;
-			}
-		}
-	}
-
-	// count the click and show it
-	function countLikeClick(item, target) {
-		this.finalCount = item;
-		this.countDiv = target;
-		finalCount ++;
-		countDiv.innerHTML = finalCount;
-		return finalCount;
-	}
-}
-
-countLikes();
 
 
 

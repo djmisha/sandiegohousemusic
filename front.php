@@ -12,7 +12,7 @@
 		<br clear="all">
 
 		<h2 class="color-2"><i class="fas fa-compact-disc"></i> Listen to House Music</h2>
-		<article class="post-snippet">
+		<article class="set-of-posts">
 			<?php 
 			$args = array(
 				'posts_per_page' => 9,
@@ -50,7 +50,7 @@
 							<i class="fas fa-heart"></i>
 							<span class="the-like-counter"><?php the_field('likecount'); ?></span>
 						</div>
-						<!-- <div class="the-fire">🔥</div> -->
+						<div class="the-fire">🔥</div>
 						<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 
 		<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming Techno &amp; EDM Events</h2>
 		<div class="front-page-events"></div>
-		<article class="post-snippet">
+		<article class="set-of-posts">
 			<?php 
 			$args = array(
 				'posts_per_page' => 3,
@@ -111,6 +111,14 @@
 							<?php my_excerpt(20); ?>
 						</a>
 					</div>
+					<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
+						<div class="the-like-button">
+							<i class="fas fa-heart"></i>
+							<span class="the-like-counter"><?php the_field('likecount'); ?></span>
+						</div>
+						<div class="the-fire">🔥</div>
+						<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>
+					</div>
 				</div>
 			<?php endwhile; endif;?>
 		</article>
@@ -137,7 +145,7 @@
 
 		<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Weekly House Music Events</h2>
 		<div class="front-page-events"></div>
-		<article class="post-snippet">
+		<article class="set-of-posts">
 			<?php 
 			$args = array(
 				'posts_per_page' => 3,
@@ -167,6 +175,14 @@
 							<?php my_excerpt(20); ?>
 						</a>
 					</div>
+					<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
+						<div class="the-like-button">
+							<i class="fas fa-heart"></i>
+							<span class="the-like-counter"><?php the_field('likecount'); ?></span>
+						</div>
+						<div class="the-fire">🔥</div>
+						<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>
+					</div>
 				</div>
 			<?php endwhile; endif;?>
 		</article>
@@ -180,7 +196,7 @@
 
 		<h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from the Archives</h2>
 		
-		<article class="post-snippet owl-rotator owl-carousel">
+		<article class="set-of-posts owl-rotator owl-carousel">
 			<?php 
 			
 			$args = array(
@@ -214,6 +230,14 @@
 						<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
 							<?php my_excerpt(20); ?>
 						</a>
+					</div>
+					<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
+						<div class="the-like-button">
+							<i class="fas fa-heart"></i>
+							<span class="the-like-counter"><?php the_field('likecount'); ?></span>
+						</div>
+						<div class="	">🔥</div>
+						<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>
 					</div>
 				</div>
 			<?php endwhile; endif;?>

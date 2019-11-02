@@ -31,21 +31,21 @@
     height: 602px;
   }
   video {
-      position: absolute;
-      top: 0px;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 280px;
-      z-index: -1;
-      margin: 0;
-      padding: 0;
-      object-fit: cover;
-      opacity: 1;
-      @include media($tablet) {
-        height: 600px;
-      }
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 280px;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    opacity: 1;
+    @include media($tablet) {
+      height: 600px;
     }
+  }
 }
 
 .overlay {
@@ -120,7 +120,7 @@
     line-height: 20px;
     @include media($tablet) {
       padding-left: 40px;
-    padding-right: 40px;
+      padding-right: 40px;
       text-shadow: 4px 4px 4px $darkColor;
       font-size: 30px;
     }
@@ -149,7 +149,7 @@
   width: 100%;
   padding-left: 4px;
   padding-right: 4px;
-    @include media($tablet) {
+  @include media($tablet) {
     padding-left: 40px;
     padding-right: 40px;
 
@@ -182,7 +182,7 @@
 .owl-rotator  {
   margin-top: 100px;
   @include media($tablet) {
-  margin-top: 80px;
+    margin-top: 80px;
     
   }
   .excerpt {
@@ -192,67 +192,67 @@
 }
 
 .owl-item {
-    max-width: 100%;
-    margin-bottom: 40px;
-    height: 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+  height: 100%;
+}
+.owl-nav {
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  > div {
+    margin-left: 5px;
+    margin-right: 5px;
   }
-  .owl-nav {
-    margin: 0 auto;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    > div {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-    span.button {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      font-size: 30px;
-      i {font-weight: 100;}
-    }
+  span.button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    i {font-weight: 100;}
   }
+}
 
 
 .excerpt-rotator {
-      padding-bottom: 30px;
-      border: 1px solid #eee;
-      margin-bottom: 40px;
-      padding: 10px;
-      @include media($tablet) {
-        margin-bottom: 0px;
-        padding: 20px;
-      }
+  padding-bottom: 30px;
+  border: 1px solid #eee;
+  margin-bottom: 40px;
+  padding: 10px;
+  @include media($tablet) {
+    margin-bottom: 0px;
+    padding: 20px;
+  }
 
-      &:hover {
-        transition: all 0.2s ease-in-out;
-        box-shadow: 0px 3px 3px rgba(#000, .3) ;
-      }
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0px 3px 3px rgba(#000, .3) ;
+  }
 
-      .para {
-        margin-top: 20px;
-        @include media($tablet) {
-          margin-top: 40px;
-        }
-      }
-      .para a {
-        font-family: $secondaryFont;
-        text-decoration: none !important;
-        color: #000;
-        font-size: 14px;
-        line-height: 18px;
-        color: $darkColor;
-        span {
-          text-decoration: underline;
-          color: $secondaryColor;
-        }
-      }
-
-      p {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
+  .para {
+    margin-top: 20px;
+    @include media($tablet) {
+      margin-top: 40px;
     }
+  }
+  .para a {
+    font-family: $secondaryFont;
+    text-decoration: none !important;
+    color: #000;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkColor;
+    span {
+      text-decoration: underline;
+      color: $secondaryColor;
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 
 
 
@@ -273,59 +273,32 @@
   align-items: center;
   justify-content: space-between;
   i {
-    font-size: 25px;
+    font-size: 30px;
   }
 }
 
 .the-like-button {
-    color: #ccc;
-    i {
+  color: #ccc;
+  i {
+      // border: 1px solid pink;
       &.liked {
         color: red;
-      }
-    } 
-// }
+      } 
+    }
+  }
 
-  //   animation: spring 1s;
-  //   animation-timing-function: ease;
-  //   animation-iteration-count: infinite;
-
-  // @keyframes spring { 
-  //   0% {
-  //     transform: scale(1) translateY(0); 
-  //   }
-  //   10% {
-  //     transform: scale(1.0, 0.6); 
-  //   }
-  //   30% { 
-  //     transform: scale(0.8, .8) translateY(-5px); 
-  //   }
-  //   50% { 
-  //     transform: scale(1) translateY(0); 
-  //   }
-  //   100% { 
-  //     transform: translateY(0); 
-  //   }
-  // }
-
-}
-
-.the-like-counter {
-  // margin-left: 5px;
-}
-
-.the-share-button {
-  position: relative;
-  color: #ccc;
-  &:before {
-    content: "link copied";
-    position: absolute;
-    font-size: 10px;
-    line-height:  10px;
-    bottom: -15px;
-    left: -10px;
-    width: 45px;
-    opacity: 0;
+  .the-share-button {
+    position: relative;
+    color: #ccc;
+    &:before {
+      content: "link copied";
+      position: absolute;
+      font-size: 10px;
+      line-height:  10px;
+      bottom: -15px;
+      left: -10px;
+      width: 45px;
+      opacity: 0;
     // border: 1px solid pink; 
   }
   &.copied {
@@ -336,6 +309,27 @@
     }
   }
 }
-.the-fire{
+
+
+.the-fire{ 
   font-size: 27px;
+  opacity: 0;
+  // display: none  !important;
+  &.so-hot {
+    opacity: 1;
+  }
+}
+
+
+.bounce {
+   animation: spring .75s;
+   animation-timing-function: ease-in;
+   animation-iteration-count: 1;
+   @keyframes spring { 
+    0% {transform: scale(1) translateY(0); }
+    10% {transform: scale(1.0, 0.6); }
+    30% {transform: scale(0.8, .8) translateY(-5px); }
+    50% {transform: scale(1) translateY(0); }
+    100% {transform: translateY(0); }
+  }
 }

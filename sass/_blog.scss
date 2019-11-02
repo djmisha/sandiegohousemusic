@@ -1,14 +1,16 @@
 .featured-image {
   display: block;
   img {
-    border-radius: 15px;
+    border-radius: 10px;
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     max-height: 600px;
     height: auto;
     border: 1px solid #eee;
     @include media($tablet) {
-      width: 400px;
+      // width: 400px;
+      width: auto;
+      height: 100%;
     }
   }
 }
@@ -17,62 +19,28 @@
 .blog,
 .tmpl_type_category,
 .tmpl_type_archive {
-  .content {
-    .wp-caption {
-      padding-top: 0px;
-      border-radius: 0px;
-      .wp-caption-text {
-        padding: 10px;
-        font-size: 13px;
-      }
-    }
-    .blog-intro {
-      @include media($tablet) {
-      }
-    }
-  }
-  h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-    a {
-      text-decoration: none;
-      &:hover {
-        // color: #37bfe7;
-      }
-    }
-  }
-  .post-snippet {
+  .set-of-posts {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    .meta-date {
-      font-weight: 300;
-      position: absolute;
-      font-size: 25px;
-      text-align: center;
-      color: $primaryAlt;
-      text-transform: uppercase;
-    }
-   
     .excerpt {
       background: #eee;
       margin-bottom: 100px;
-      padding: 10px;
-      border-radius: 15px;
+      padding: 0px;
       transition: all 0.2s ease-in-out;
-      box-shadow: 0px 3px 3px rgba(#000, .0) ;
+      box-shadow: 0px 3px 3px rgba(#000, .1) ;
       padding-bottom: 40px;
       @include media($tablet) {
+        border-radius: 10px;
         margin-bottom: 80px;
         padding: 20px;
-        // padding-bottom: 30px;
         width: 48%;
+        &:hover {
+          box-shadow: 0px 3px 7px rgba(#000, .3) ;
+        }
+        h3 {color:#000;}
       }
-      &:hover {
-        box-shadow: 0px 3px 7px rgba(#000, .3) ;
-      }
-      h3 {color:#000;}
       .para {
         margin-top: 20px;
         @include media($tablet) {
@@ -103,11 +71,12 @@
       left: -20px;
       top: -20px; 
       position: relative;
-      max-height: 50vw;
+      max-height: 90vw;
       overflow: hidden;
-      border-radius: 15px;
       @include media($tablet) {
+        // border-radius: 15px;
         max-height: 20vw;
+        min-height: 200px;
       }
       img {
         width: 100%;
@@ -118,11 +87,21 @@
       @include media($tablet) {
       }
     }
+    .meta-date {
+      font-weight: 300;
+      position: absolute;
+      font-size: 25px;
+      text-align: center;
+      color: $primaryAlt;
+      text-transform: uppercase;
+    }
   }
+
   .date {
     color: $primaryColor;
     text-align: right;
   }
+
   .meta-data {
     margin-bottom: 10px;
     color: $lightGrey;
@@ -142,6 +121,7 @@
       }
     }
   }
+
   .button {
     text-decoration: none;
     clear: both;
@@ -208,8 +188,7 @@
 }
 
 .tmpl_type_single {
-  .button {
-    text-decoration: none;
+  h1 {
+    margin-bottom: 10px;
   }
 }
-
