@@ -381,29 +381,3 @@ if ( ! function_exists( 'happenstance_content_nav' ) ) {
 
 
 
-// https://wpza.net/how-to-update-wordpress-posts-with-ajax-on-the-front-end/
-
-/*Using admin-ajax.php and loading scripts*/
-
-function add_ajax_scripts() {
-    wp_enqueue_script( 'ajaxcalls', get_template_directory_uri() . '/js/ajax-calls.js', array(), '1.0.0', true );
-
-    wp_localize_script( 'ajaxcalls', 'ajax_object', array(
-        'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'ajaxnonce' => wp_create_nonce( 'ajax_post_validation' )
-    ) );
-}
-
-add_action( 'wp_enqueue_scripts', 'add_ajax_scripts' );
-
-
-/*Creating the front-end update function*/
-
-
-function custom_update_post() {
-    $post_id = $_POST['post_id'];
-    update_post_meta( $post_id, 'your_meta_key', 'Your New Value' );
-    wp_die();
-}
-
-add_action( 'wp_ajax_custom_update_post', 'custom_update_post' );

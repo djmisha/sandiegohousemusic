@@ -45,10 +45,10 @@
 							<?php my_excerpt(20); ?>
 						</a>
 					</div>
-					<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likeCount'); ?>2">
+					<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
 						<div class="the-like-button">
 							<i class="fas fa-heart"></i>
-							<span class="the-like-counter"></span>
+							<span class="the-like-counter"><?php the_field('likecount'); ?></span>
 						</div>
 						<!-- <div class="the-fire">🔥</div> -->
 						<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>

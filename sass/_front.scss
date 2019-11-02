@@ -277,11 +277,14 @@
   }
 }
 
-.the-like-button i {
-    color: #000;
-    &.liked {
-      color: red;
-    }
+.the-like-button {
+    color: #ccc;
+    i {
+      &.liked {
+        color: red;
+      }
+    } 
+// }
 
   //   animation: spring 1s;
   //   animation-timing-function: ease;
@@ -312,9 +315,26 @@
 }
 
 .the-share-button {
-  // margin-left: 50px;
-  // align-self: flex-end;
-  // margin-left: 40px;
+  position: relative;
+  color: #ccc;
+  &:before {
+    content: "link copied";
+    position: absolute;
+    font-size: 10px;
+    line-height:  10px;
+    bottom: -15px;
+    left: -10px;
+    width: 45px;
+    opacity: 0;
+    // border: 1px solid pink; 
+  }
+  &.copied {
+    color: pink;
+    color: #000;
+    &:before {
+      opacity: 1;
+    }
+  }
 }
 .the-fire{
   font-size: 27px;

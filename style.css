@@ -3849,12 +3849,37 @@ span.error {
   font-size: 25px;
 }
 
-.the-like-button i {
-  color: #000;
+.the-like-button {
+  color: #ccc;
 }
 
 .the-like-button i.liked {
   color: red;
+}
+
+.the-share-button {
+  position: relative;
+  color: #ccc;
+}
+
+.the-share-button:before {
+  content: "link copied";
+  position: absolute;
+  font-size: 10px;
+  line-height: 10px;
+  bottom: -15px;
+  left: -10px;
+  width: 45px;
+  opacity: 0;
+}
+
+.the-share-button.copied {
+  color: pink;
+  color: #000;
+}
+
+.the-share-button.copied:before {
+  opacity: 1;
 }
 
 .the-fire {
@@ -3947,7 +3972,6 @@ span.error {
 .blog .post-snippet .excerpt,
 .tmpl_type_category .post-snippet .excerpt,
 .tmpl_type_archive .post-snippet .excerpt {
-  padding-bottom: 30px;
   background: #eee;
   margin-bottom: 100px;
   padding: 10px;
@@ -3956,6 +3980,7 @@ span.error {
   transition: all 0.2s ease-in-out;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0);
+  padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3965,7 +3990,6 @@ span.error {
   .tmpl_type_archive .post-snippet .excerpt {
     margin-bottom: 80px;
     padding: 20px;
-    padding-bottom: 60px;
     width: 48%;
   }
 }

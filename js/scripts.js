@@ -47,6 +47,7 @@
 
 
 
+
 		/* Infinite Scroll on Category Pages */
 
 		// $('.tmpl_type_category .post-snippet').infiniteScroll({
@@ -104,6 +105,7 @@
 		});
 
 
+
 		/*Show hide Contact forms*/
 		$('.show-form').click(function(event) {
 			/* Act on the event */
@@ -141,6 +143,33 @@
 				}
 			}
 		});
+
+
+
+
+		/* Update The DataBase with my Likes*/
+		// function autoSaveLikes () {
+
+		// 	$.ajax ({
+		// 		url: 'save_post.php',
+		// 		method: 'POST',
+		// 		data: {
+		// 			postID: post_id, 
+		// 			postlikeCount: count
+		// 		}
+		// 		dataType:'Text',
+		// 		success: function(data) {
+		// 			console.log('postsaved');
+		// 		}
+		// 	});
+		// };
+
+
+		// setInterval(function)({
+		// 	autoSaveLikes();
+		// }, 10000);
+
+
 		
 	}); // end of doc.ready
 })(jQuery);
@@ -239,6 +268,7 @@ showSocialFeeds();
 /* Make it count likes */
 
 function countLikes() {
+	
 	var engageBar = document.querySelectorAll('.engage-bar');
 	var onPagePosts = [];
 
@@ -274,23 +304,21 @@ function countLikes() {
 			count = finalCount;
 			postlikeCount = finalCount;
 			updatePost(id, count);
+			// console.log(onPagePosts);
 		});
 	}
 
 
 	// push like count to the array item
 	function updatePost(id, count) {
-		console.log(id, count, postlikeCount);
-		onPagePosts.push(postlikeCount);
-		console.log(onPagePosts);
-		// for(let i = 0; onPagePosts.length > i; i++) { 
-		// 	if ( onPagePosts[i].postlikeID == id  ) {
-		// 		console.log['found one'];
-		// 	}
-		// }
-		return postlikeCount;
+		for(let i = 0; onPagePosts.length > i; i++) { 
+			if ( onPagePosts[i].postlikeID == id  ) {
+				onPagePosts[i].postlikeCount = count;
+			}
+		}
 	}
 
+	// count the click and show it
 	function countLikeClick(item, target) {
 		this.finalCount = item;
 		this.countDiv = target;
@@ -298,8 +326,6 @@ function countLikes() {
 		countDiv.innerHTML = finalCount;
 		return finalCount;
 	}
-
-
 }
 
 countLikes();
@@ -311,26 +337,23 @@ function sharePost() {
 
 	function copyStringToClipboard (str) {
 	   // Create new element
-	   var el = document.createElement('textarea');
+	   var temporaryElement = document.createElement('textarea');
 	   // Set value (string to be copied)
-	   el.value = str;
+	   temporaryElement.value = str;
 	   // Set non-editable to avoid focus and move outside of view
-	   el.setAttribute('readonly', '');
-	   el.style = {position: 'absolute', left: '-9999px'};
-	   document.body.appendChild(el);
-	   // Select text inside element
-	   el.select();
-	   // Copy text to clipboard
-	   document.execCommand('copy');
-	   // Remove temporary element
-	   document.body.removeChild(el);
+	   temporaryElement.setAttribute('readonly', '');
+	   temporaryElement.style = {position: 'absolute', left: '-9999px'};
+	   document.body.appendChild(temporaryElement);
+	   temporaryElement.select(); // Select text inside element
+	   document.execCommand('copy'); // Copy text to clipboard
+	   document.body.removeChild(temporaryElement); // Remove temporary element
 	}
 
 	if(shareLinkButtons.length > 0) {
 		shareLinkButtons.forEach(function(itemToCopy) {
 			itemToCopy.addEventListener('click', function(){
 				copyStringToClipboard(itemToCopy.dataset.link);
-				itemToCopy.style.color = "green";
+				itemToCopy.classList.add('copied');
 			});
 		});
 	}
