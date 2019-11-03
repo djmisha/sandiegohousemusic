@@ -147,33 +147,8 @@
 
 
 
-		/* Update The DataBase with my Likes*/
-		// function autoSaveLikes () {
 
-		// 	$.ajax ({
-		// 		url: 'save_post.php',
-		// 		method: 'POST',
-		// 		data: {
-		// 			postID: post_id, 
-		// 			postlikeCount: count
-		// 		}
-		// 		dataType:'Text',
-		// 		success: function(data) {
-		// 			console.log('postsaved');
-		// 		}
-		// 	});
-		// };
-
-
-		// setInterval(function)({
-		// 	autoSaveLikes();
-		// }, 10000);
-
-
-
-
-
-		/* Make it count likes, suck it Zuck */
+		/* Make it count likes */
 
 		function countLikes() {
 			
@@ -188,7 +163,7 @@
 					var likeURL = engageBar[i].dataset.link;
 					var likeButton = engageBar[i].querySelector('.the-like-button i');
 					var likeVisualCount = engageBar[i].querySelector('.the-like-counter');
-					// var thefire = engageBar[i].querySelector('.the-fire');
+					var theFire = engageBar[i].querySelector('.the-fire');
 
 					const thePost = new createPost(
 							likeID, 
@@ -196,7 +171,7 @@
 							likeURL, 
 							likeButton, 
 							likeVisualCount,
-							// thefire
+							theFire
 							);
 
 					onPagePosts.push(thePost);
@@ -213,8 +188,9 @@
 				this.shareURL = url; 
 				this.likeButton = button;
 				this.likeVisualCount = visualcount;
-				// this.ourFire = thefire;
+				this.ourFire = thefire;
 
+				/*Heart Click*/
 				button.addEventListener('click', function(event) {
 					this.classList.add('liked','bounce');
 					countLikeClick(count, visualcount);
@@ -222,16 +198,13 @@
 					postlikeCount = finalCount;
 					updatePost(id, count);
 
-					// showFire(); 
 					// show the fire 
+					showFire(count); 
 
+					/* Remove Bouce Effect */
 					setTimeout(function(){
 						removeBounce();
 					}, 1000);
-
-
-
-
 				});
 
 				function removeBounce() {
@@ -239,14 +212,13 @@
 					// console.log('removed')
 				}
 
-				// function showFire() {
-				// 	if (count > 100) {
-				// 		thefire.classList.addClass('so-hot')
-				// 	}
-				// }
+				function showFire(item) {
+					if (item > 100) {
+						thefire.classList.add('so-hot')
+					}
+				}
+
 			}
-
-
 
 			// push like count to the array item
 			// then update the Database with the new count
@@ -445,6 +417,57 @@ sharePost();
 /* Click To Share URL */
 
 
+
+
+
+
+// Gallery Popup
+const isGallery = document.querySelector('body');
+if (isGallery) {
+  (function(){
+		const get = function(selector) {
+			return document.querySelector(selector);
+		}
+
+		const createMarkUp = function(elementType, classList, content) {
+			const element = document.createElement(elementType);
+			if(classList.length > 0) {
+				element.classList = classList.join(' ');
+			}
+			if(content) {
+				element.innerHTML = content;
+			}
+			return element;
+		}
+
+		const onCloseAddCookie = function() {
+			const d = new Date();
+	  	d.setTime(d.getTime() + (1*24*60*60*1000));
+	  	const expires = "expires="+ d.toUTCString();
+	  	const cookieName = 'rmg';
+	  	const cookieValue = 'gallerypop';
+	  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+			const activePopUp = get('.gallery-popup');
+			activePopUp.classList.add('hidden');
+		}
+
+		const createAndShowGalleryPopup = function() {
+			const innerContent = '<div class="popup-content"><h2>Notice</h2><p>Images are Graphic</p><button class="gallery-ok button" class="popupbtn button">OK</button></div>';
+			const popup = createMarkUp('div', ['gallery-popup'], innerContent);
+			const okBtn = popup.querySelector('.gallery-ok');
+			okBtn.addEventListener('click', onCloseAddCookie);
+			isGallery.appendChild(popup);
+		}
+
+		const cookiesAsAString = document.cookie;
+		if(!cookiesAsAString.includes('gallerypop')) {
+			createAndShowGalleryPopup();
+			const galleryPopUp = get('.gallery-popup');
+			galleryPopUp.classList.remove('hidden');
+		}
+	})();
+}
+// End Gallery Popup
 
 
 

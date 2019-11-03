@@ -381,6 +381,11 @@ if ( ! function_exists( 'happenstance_content_nav' ) ) {
 
 
 
+
+
+
+
+
 // https://wpza.net/how-to-update-wordpress-posts-with-ajax-on-the-front-end/
 
 /*Using admin-ajax.php and loading scripts*/

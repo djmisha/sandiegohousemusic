@@ -2795,6 +2795,7 @@ aside .mobile-add {
 
 .adsbygoogle {
   z-index: 9999;
+  background-color: transparent;
 }
 
 /* ------------------------
@@ -3992,7 +3993,7 @@ span.error {
 .tmpl_type_archive .set-of-posts .excerpt {
   background: #eee;
   margin-bottom: 100px;
-  padding: 0px;
+  padding: 20px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
