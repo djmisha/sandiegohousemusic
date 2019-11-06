@@ -2435,15 +2435,14 @@ header .menu-item-9653 a:before {
 .content h6 {
   color: #38c0e6;
   font-weight: 100;
-  margin-top: 50px;
 }
 
-.content h2 b,
-.content h3 b,
-.content h4 b,
-.content h5 b,
-.content h6 b {
-  font-weight: 100;
+.content h2 a,
+.content h3 a,
+.content h4 a,
+.content h5 a,
+.content h6 a {
+  text-decoration: none;
 }
 
 .content iframe {
@@ -3522,6 +3521,7 @@ span.error {
 .home .content h2 {
   margin-top: 0px;
   margin-bottom: 20px;
+  padding-left: 10px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -3694,8 +3694,8 @@ span.error {
 .home .interior {
   display: block;
   width: 100%;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3788,6 +3788,7 @@ span.error {
   .excerpt-rotator {
     margin-bottom: 0px;
     padding: 20px;
+    width: 100% !important;
   }
 }
 
@@ -3861,6 +3862,8 @@ span.error {
 .the-share-button {
   position: relative;
   color: #ccc;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .the-share-button:before {
@@ -3872,6 +3875,8 @@ span.error {
   left: -10px;
   width: 45px;
   opacity: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .the-share-button.copied {
@@ -3970,10 +3975,13 @@ span.error {
   }
 }
 
-.home .set-of-posts,
+.home .set-of-posts, .home .post-snippet,
 .blog .set-of-posts,
+.blog .post-snippet,
 .tmpl_type_category .set-of-posts,
-.tmpl_type_archive .set-of-posts {
+.tmpl_type_category .post-snippet,
+.tmpl_type_archive .set-of-posts,
+.tmpl_type_archive .post-snippet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3987,12 +3995,21 @@ span.error {
           align-items: flex-start;
 }
 
-.home .set-of-posts .excerpt,
+.home .set-of-posts .excerpt, .home .set-of-posts .excerpt-rotator, .home .post-snippet .excerpt, .home .post-snippet .excerpt-rotator,
 .blog .set-of-posts .excerpt,
+.blog .set-of-posts .excerpt-rotator,
+.blog .post-snippet .excerpt,
+.blog .post-snippet .excerpt-rotator,
 .tmpl_type_category .set-of-posts .excerpt,
-.tmpl_type_archive .set-of-posts .excerpt {
+.tmpl_type_category .set-of-posts .excerpt-rotator,
+.tmpl_type_category .post-snippet .excerpt,
+.tmpl_type_category .post-snippet .excerpt-rotator,
+.tmpl_type_archive .set-of-posts .excerpt,
+.tmpl_type_archive .set-of-posts .excerpt-rotator,
+.tmpl_type_archive .post-snippet .excerpt,
+.tmpl_type_archive .post-snippet .excerpt-rotator {
   background: #eee;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   padding: 20px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -4002,41 +4019,86 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .home .set-of-posts .excerpt,
+  .home .set-of-posts .excerpt, .home .set-of-posts .excerpt-rotator, .home .post-snippet .excerpt, .home .post-snippet .excerpt-rotator,
   .blog .set-of-posts .excerpt,
+  .blog .set-of-posts .excerpt-rotator,
+  .blog .post-snippet .excerpt,
+  .blog .post-snippet .excerpt-rotator,
   .tmpl_type_category .set-of-posts .excerpt,
-  .tmpl_type_archive .set-of-posts .excerpt {
-    border-radius: 10px;
+  .tmpl_type_category .set-of-posts .excerpt-rotator,
+  .tmpl_type_category .post-snippet .excerpt,
+  .tmpl_type_category .post-snippet .excerpt-rotator,
+  .tmpl_type_archive .set-of-posts .excerpt,
+  .tmpl_type_archive .set-of-posts .excerpt-rotator,
+  .tmpl_type_archive .post-snippet .excerpt,
+  .tmpl_type_archive .post-snippet .excerpt-rotator {
     margin-bottom: 80px;
     padding: 20px;
     width: 48%;
   }
-  .home .set-of-posts .excerpt:hover,
+  .home .set-of-posts .excerpt:hover, .home .set-of-posts .excerpt-rotator:hover, .home .post-snippet .excerpt:hover, .home .post-snippet .excerpt-rotator:hover,
   .blog .set-of-posts .excerpt:hover,
+  .blog .set-of-posts .excerpt-rotator:hover,
+  .blog .post-snippet .excerpt:hover,
+  .blog .post-snippet .excerpt-rotator:hover,
   .tmpl_type_category .set-of-posts .excerpt:hover,
-  .tmpl_type_archive .set-of-posts .excerpt:hover {
+  .tmpl_type_category .set-of-posts .excerpt-rotator:hover,
+  .tmpl_type_category .post-snippet .excerpt:hover,
+  .tmpl_type_category .post-snippet .excerpt-rotator:hover,
+  .tmpl_type_archive .set-of-posts .excerpt:hover,
+  .tmpl_type_archive .set-of-posts .excerpt-rotator:hover,
+  .tmpl_type_archive .post-snippet .excerpt:hover,
+  .tmpl_type_archive .post-snippet .excerpt-rotator:hover {
     -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
             box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
   }
-  .home .set-of-posts .excerpt h3,
+  .home .set-of-posts .excerpt h3, .home .set-of-posts .excerpt-rotator h3, .home .post-snippet .excerpt h3, .home .post-snippet .excerpt-rotator h3,
   .blog .set-of-posts .excerpt h3,
+  .blog .set-of-posts .excerpt-rotator h3,
+  .blog .post-snippet .excerpt h3,
+  .blog .post-snippet .excerpt-rotator h3,
   .tmpl_type_category .set-of-posts .excerpt h3,
-  .tmpl_type_archive .set-of-posts .excerpt h3 {
+  .tmpl_type_category .set-of-posts .excerpt-rotator h3,
+  .tmpl_type_category .post-snippet .excerpt h3,
+  .tmpl_type_category .post-snippet .excerpt-rotator h3,
+  .tmpl_type_archive .set-of-posts .excerpt h3,
+  .tmpl_type_archive .set-of-posts .excerpt-rotator h3,
+  .tmpl_type_archive .post-snippet .excerpt h3,
+  .tmpl_type_archive .post-snippet .excerpt-rotator h3 {
     color: #000;
   }
 }
 
-.home .set-of-posts .excerpt .para,
+.home .set-of-posts .excerpt .para, .home .set-of-posts .excerpt-rotator .para, .home .post-snippet .excerpt .para, .home .post-snippet .excerpt-rotator .para,
 .blog .set-of-posts .excerpt .para,
+.blog .set-of-posts .excerpt-rotator .para,
+.blog .post-snippet .excerpt .para,
+.blog .post-snippet .excerpt-rotator .para,
 .tmpl_type_category .set-of-posts .excerpt .para,
-.tmpl_type_archive .set-of-posts .excerpt .para {
-  margin-top: 20px;
+.tmpl_type_category .set-of-posts .excerpt-rotator .para,
+.tmpl_type_category .post-snippet .excerpt .para,
+.tmpl_type_category .post-snippet .excerpt-rotator .para,
+.tmpl_type_archive .set-of-posts .excerpt .para,
+.tmpl_type_archive .set-of-posts .excerpt-rotator .para,
+.tmpl_type_archive .post-snippet .excerpt .para,
+.tmpl_type_archive .post-snippet .excerpt-rotator .para {
+  margin-top: 0px;
+  padding-bottom: 20px;
 }
 
-.home .set-of-posts .excerpt .para a,
+.home .set-of-posts .excerpt .para a, .home .set-of-posts .excerpt-rotator .para a, .home .post-snippet .excerpt .para a, .home .post-snippet .excerpt-rotator .para a,
 .blog .set-of-posts .excerpt .para a,
+.blog .set-of-posts .excerpt-rotator .para a,
+.blog .post-snippet .excerpt .para a,
+.blog .post-snippet .excerpt-rotator .para a,
 .tmpl_type_category .set-of-posts .excerpt .para a,
-.tmpl_type_archive .set-of-posts .excerpt .para a {
+.tmpl_type_category .set-of-posts .excerpt-rotator .para a,
+.tmpl_type_category .post-snippet .excerpt .para a,
+.tmpl_type_category .post-snippet .excerpt-rotator .para a,
+.tmpl_type_archive .set-of-posts .excerpt .para a,
+.tmpl_type_archive .set-of-posts .excerpt-rotator .para a,
+.tmpl_type_archive .post-snippet .excerpt .para a,
+.tmpl_type_archive .post-snippet .excerpt-rotator .para a {
   font-family: "Roboto Condensed", sans-serif;
   text-decoration: none !important;
   color: #000;
@@ -4045,26 +4107,47 @@ span.error {
   color: #02034a;
 }
 
-.home .set-of-posts .excerpt .para a span,
+.home .set-of-posts .excerpt .para a span, .home .set-of-posts .excerpt-rotator .para a span, .home .post-snippet .excerpt .para a span, .home .post-snippet .excerpt-rotator .para a span,
 .blog .set-of-posts .excerpt .para a span,
+.blog .set-of-posts .excerpt-rotator .para a span,
+.blog .post-snippet .excerpt .para a span,
+.blog .post-snippet .excerpt-rotator .para a span,
 .tmpl_type_category .set-of-posts .excerpt .para a span,
-.tmpl_type_archive .set-of-posts .excerpt .para a span {
+.tmpl_type_category .set-of-posts .excerpt-rotator .para a span,
+.tmpl_type_category .post-snippet .excerpt .para a span,
+.tmpl_type_category .post-snippet .excerpt-rotator .para a span,
+.tmpl_type_archive .set-of-posts .excerpt .para a span,
+.tmpl_type_archive .set-of-posts .excerpt-rotator .para a span,
+.tmpl_type_archive .post-snippet .excerpt .para a span,
+.tmpl_type_archive .post-snippet .excerpt-rotator .para a span {
   text-decoration: underline;
   color: #38c0e6;
 }
 
-.home .set-of-posts .excerpt p,
+.home .set-of-posts .excerpt p, .home .set-of-posts .excerpt-rotator p, .home .post-snippet .excerpt p, .home .post-snippet .excerpt-rotator p,
 .blog .set-of-posts .excerpt p,
+.blog .set-of-posts .excerpt-rotator p,
+.blog .post-snippet .excerpt p,
+.blog .post-snippet .excerpt-rotator p,
 .tmpl_type_category .set-of-posts .excerpt p,
-.tmpl_type_archive .set-of-posts .excerpt p {
+.tmpl_type_category .set-of-posts .excerpt-rotator p,
+.tmpl_type_category .post-snippet .excerpt p,
+.tmpl_type_category .post-snippet .excerpt-rotator p,
+.tmpl_type_archive .set-of-posts .excerpt p,
+.tmpl_type_archive .set-of-posts .excerpt-rotator p,
+.tmpl_type_archive .post-snippet .excerpt p,
+.tmpl_type_archive .post-snippet .excerpt-rotator p {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.home .set-of-posts .thumb,
+.home .set-of-posts .thumb, .home .post-snippet .thumb,
 .blog .set-of-posts .thumb,
+.blog .post-snippet .thumb,
 .tmpl_type_category .set-of-posts .thumb,
-.tmpl_type_archive .set-of-posts .thumb {
+.tmpl_type_category .post-snippet .thumb,
+.tmpl_type_archive .set-of-posts .thumb,
+.tmpl_type_archive .post-snippet .thumb {
   overflow: hidden;
   width: calc(100% + 40px);
   left: -20px;
@@ -4076,27 +4159,36 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .home .set-of-posts .thumb,
+  .home .set-of-posts .thumb, .home .post-snippet .thumb,
   .blog .set-of-posts .thumb,
+  .blog .post-snippet .thumb,
   .tmpl_type_category .set-of-posts .thumb,
-  .tmpl_type_archive .set-of-posts .thumb {
+  .tmpl_type_category .post-snippet .thumb,
+  .tmpl_type_archive .set-of-posts .thumb,
+  .tmpl_type_archive .post-snippet .thumb {
     max-height: 20vw;
     min-height: 200px;
   }
 }
 
-.home .set-of-posts .thumb img,
+.home .set-of-posts .thumb img, .home .post-snippet .thumb img,
 .blog .set-of-posts .thumb img,
+.blog .post-snippet .thumb img,
 .tmpl_type_category .set-of-posts .thumb img,
-.tmpl_type_archive .set-of-posts .thumb img {
+.tmpl_type_category .post-snippet .thumb img,
+.tmpl_type_archive .set-of-posts .thumb img,
+.tmpl_type_archive .post-snippet .thumb img {
   width: 100%;
   height: auto;
 }
 
-.home .set-of-posts .meta-date,
+.home .set-of-posts .meta-date, .home .post-snippet .meta-date,
 .blog .set-of-posts .meta-date,
+.blog .post-snippet .meta-date,
 .tmpl_type_category .set-of-posts .meta-date,
-.tmpl_type_archive .set-of-posts .meta-date {
+.tmpl_type_category .post-snippet .meta-date,
+.tmpl_type_archive .set-of-posts .meta-date,
+.tmpl_type_archive .post-snippet .meta-date {
   font-weight: 300;
   position: absolute;
   font-size: 25px;

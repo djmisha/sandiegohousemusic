@@ -19,20 +19,20 @@
 .blog,
 .tmpl_type_category,
 .tmpl_type_archive {
-  .set-of-posts {
+  .set-of-posts, .post-snippet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    .excerpt {
+    .excerpt, .excerpt-rotator {
       background: #eee;
-      margin-bottom: 100px;
+      margin-bottom: 20px;
       padding: 20px;
       transition: all 0.2s ease-in-out;
       box-shadow: 0px 3px 3px rgba(#000, .1) ;
       padding-bottom: 40px;
       @include media($tablet) {
-        border-radius: 10px;
+        // border-radius: 10px;
         margin-bottom: 80px;
         padding: 20px;
         width: 48%;
@@ -42,7 +42,8 @@
         h3 {color:#000;}
       }
       .para {
-        margin-top: 20px;
+        margin-top: 0px;
+        padding-bottom: 20px;
         @include media($tablet) {
         }
       }
@@ -53,7 +54,6 @@
         font-size: 14px;
         line-height: 18px;
         color: $darkColor;
-
         span {
           text-decoration: underline;
           color: $secondaryColor;

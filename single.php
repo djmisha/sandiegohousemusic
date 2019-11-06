@@ -8,7 +8,14 @@
 						<?php the_post_thumbnail(''); ?>
 					</div>
 				<?php endif; ?>
-
+			<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
+					<div class="the-like-button">
+						<i class="fas fa-heart"></i>
+						<span class="the-like-counter"><?php the_field('likecount'); ?></span>
+					</div>
+					<div class="the-fire">🔥</div>
+					<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>
+				</div>
 			<h1 class="color-<?php echo rand(1,6) ?>"><?php the_title(); ?></h1>
 			<div class="meta-data">
 				<i class="fas fa-clock"></i>  <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> 

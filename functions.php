@@ -412,4 +412,4 @@ function update_post_like_count() {
     wp_die();
 }
 
-add_action( 'wp_ajax_update_post_like_count', 'update_post_like_count' );
+add_action( 'wp_ajax_nopriv_update_post_like_count', 'update_post_like_count' );

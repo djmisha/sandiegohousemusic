@@ -1,6 +1,7 @@
 .home .content h2 {
   margin-top: 0px;
   margin-bottom: 20px;
+  padding-left: 10px;
   @include media($desktop) {
     margin-top: 60px;
     margin-bottom: 40px;
@@ -147,8 +148,8 @@
 .home .interior {
   display: block;
   width: 100%;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
   @include media($tablet) {
     padding-left: 40px;
     padding-right: 40px;
@@ -222,6 +223,7 @@
   @include media($tablet) {
     margin-bottom: 0px;
     padding: 20px;
+    width: 100% !important;
   }
 
   &:hover {
@@ -290,6 +292,7 @@
   .the-share-button {
     position: relative;
     color: #ccc;
+    transition: all .5s ease;
     &:before {
       content: "link copied";
       position: absolute;
@@ -300,6 +303,7 @@
       width: 45px;
       opacity: 0;
     // border: 1px solid pink; 
+    transition: all .5s ease;
   }
   &.copied {
     color: pink;

@@ -196,12 +196,14 @@
 					countLikeClick(count, visualcount);
 					count = finalCount;
 					postlikeCount = finalCount;
+
+					/*Update the Page and DB wit new count*/
 					updatePost(id, count);
 
-					// show the fire 
-					showFire(count); 
+					// check the count and show fire
+					checkLikeCount(count); 
 
-					/* Remove Bouce Effect */
+					/* Remove Bouce Effect class from heart */
 					setTimeout(function(){
 						removeBounce();
 					}, 1000);
@@ -212,12 +214,16 @@
 					// console.log('removed')
 				}
 
-				function showFire(item) {
+				function checkLikeCount(item) {
+					if (item > 1) {
+						button.classList.add('liked');
+					}
 					if (item > 100) {
-						thefire.classList.add('so-hot')
+						thefire.classList.add('so-hot');
 					}
 				}
 
+				checkLikeCount(count);
 			}
 
 			// push like count to the array item
@@ -290,7 +296,14 @@ function attachVideo() {
   }
 }
 
-attachVideo();
+
+/* Delay Loading of Video */
+
+setTimeout(function() {
+	attachVideo();
+}, 3000);
+
+
 
 /* Load Social Feeds */
 
@@ -378,6 +391,9 @@ function sharePost() {
 			itemToCopy.addEventListener('click', function(){
 				copyStringToClipboard(itemToCopy.dataset.link);
 				itemToCopy.classList.add('copied');
+				setTimeout(function() {
+					itemToCopy.classList.remove('copied');
+				}, 2000);
 			});
 		});
 	}
@@ -422,51 +438,51 @@ sharePost();
 
 
 // Gallery Popup
-const isGallery = document.querySelector('body');
-if (isGallery) {
-  (function(){
-		const get = function(selector) {
-			return document.querySelector(selector);
-		}
+// const isGallery = document.querySelector('body');
+// if (isGallery) {
+//   (function(){
+// 		const get = function(selector) {
+// 			return document.querySelector(selector);
+// 		}
 
-		const createMarkUp = function(elementType, classList, content) {
-			const element = document.createElement(elementType);
-			if(classList.length > 0) {
-				element.classList = classList.join(' ');
-			}
-			if(content) {
-				element.innerHTML = content;
-			}
-			return element;
-		}
+// 		const createMarkUp = function(elementType, classList, content) {
+// 			const element = document.createElement(elementType);
+// 			if(classList.length > 0) {
+// 				element.classList = classList.join(' ');
+// 			}
+// 			if(content) {
+// 				element.innerHTML = content;
+// 			}
+// 			return element;
+// 		}
 
-		const onCloseAddCookie = function() {
-			const d = new Date();
-	  	d.setTime(d.getTime() + (1*24*60*60*1000));
-	  	const expires = "expires="+ d.toUTCString();
-	  	const cookieName = 'rmg';
-	  	const cookieValue = 'gallerypop';
-	  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-			const activePopUp = get('.gallery-popup');
-			activePopUp.classList.add('hidden');
-		}
+// 		const onCloseAddCookie = function() {
+// 			const d = new Date();
+// 	  	d.setTime(d.getTime() + (1*24*60*60*1000));
+// 	  	const expires = "expires="+ d.toUTCString();
+// 	  	const cookieName = 'rmg';
+// 	  	const cookieValue = 'gallerypop';
+// 	  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+// 			const activePopUp = get('.gallery-popup');
+// 			activePopUp.classList.add('hidden');
+// 		}
 
-		const createAndShowGalleryPopup = function() {
-			const innerContent = '<div class="popup-content"><h2>Notice</h2><p>Images are Graphic</p><button class="gallery-ok button" class="popupbtn button">OK</button></div>';
-			const popup = createMarkUp('div', ['gallery-popup'], innerContent);
-			const okBtn = popup.querySelector('.gallery-ok');
-			okBtn.addEventListener('click', onCloseAddCookie);
-			isGallery.appendChild(popup);
-		}
+// 		const createAndShowGalleryPopup = function() {
+// 			const innerContent = '<div class="popup-content"><h2>Notice</h2><p>Images are Graphic</p><button class="gallery-ok button" class="popupbtn button">OK</button></div>';
+// 			const popup = createMarkUp('div', ['gallery-popup'], innerContent);
+// 			const okBtn = popup.querySelector('.gallery-ok');
+// 			okBtn.addEventListener('click', onCloseAddCookie);
+// 			isGallery.appendChild(popup);
+// 		}
 
-		const cookiesAsAString = document.cookie;
-		if(!cookiesAsAString.includes('gallerypop')) {
-			createAndShowGalleryPopup();
-			const galleryPopUp = get('.gallery-popup');
-			galleryPopUp.classList.remove('hidden');
-		}
-	})();
-}
+// 		const cookiesAsAString = document.cookie;
+// 		if(!cookiesAsAString.includes('gallerypop')) {
+// 			createAndShowGalleryPopup();
+// 			const galleryPopUp = get('.gallery-popup');
+// 			galleryPopUp.classList.remove('hidden');
+// 		}
+// 	})();
+// }
 // End Gallery Popup
 
 
