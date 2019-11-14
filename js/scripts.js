@@ -22,30 +22,27 @@
 			Owl Carousel HomePage
 		-------------------------------------------------- */
 
-			$('.owl-rotator').owlCarousel({
-				items:3,
-				margin:20,
-				lazyLoad:true,
-				loop:true,
-				nav:true,
-				dots:false,
-				autoplay: true,
-				autoplayTimeout: 9000,
-				smartSpeed: 1000,
-				navText : ["<span class=\"button\"><i class='fa fa-angle-left'></i></span>"
-							,"<span class=\"button\"><i class='fa fa-angle-right'></i></span>"],
-				responsive:{
-				        0:{
-				            items:1
-				        },
-				        768:{
-				            items:3
-				        }
-				    }
-			});
-
-
-
+		$('.owl-rotator').owlCarousel({
+			items:3,
+			margin:20,
+			lazyLoad:true,
+			loop:true,
+			nav:true,
+			dots:false,
+			autoplay: true,
+			autoplayTimeout: 9000,
+			smartSpeed: 1000,
+			navText : ["<span class=\"button\"><i class='fa fa-angle-left'></i></span>"
+						,"<span class=\"button\"><i class='fa fa-angle-right'></i></span>"],
+			responsive:{
+			        0:{
+			            items:1
+			        },
+			        768:{
+			            items:3
+			        }
+			    }
+		});
 
 
 		/* Infinite Scroll on Category Pages */
@@ -207,6 +204,14 @@
 					setTimeout(function(){
 						removeBounce();
 					}, 1000);
+					
+
+					/*Add lots of fire*/
+					if(count > 1 ) {
+						let moreFire = thefire.innerHTML;
+						// this.innerHTML.moreFire;
+						// console.log(this);
+					}
 				});
 
 				function removeBounce() {
@@ -215,10 +220,10 @@
 				}
 
 				function checkLikeCount(item) {
-					if (item > 1) {
+					if (item > 0) {
 						button.classList.add('liked');
-					}
-					if (item > 100) {
+					} 
+					if (item > 2) {
 						thefire.classList.add('so-hot');
 					}
 				}
@@ -288,7 +293,7 @@ function attachVideo() {
     }
 
 	myVideoWrap.innerHTML = createVideoMarkup(thevid);
-
+	console.log('video attached');
   	function createVideoMarkup(item) {
   		let videoMarkup = '<video playsinline autoplay muted loop poster=\"' + theme_path + '/images/slide-1.jpg\" class=\"bgvid\"><source src=\"' + theme_path + '/images/' + item +'\" type=\"video/mp4\"></video>';
   		return videoMarkup;
@@ -370,24 +375,22 @@ showSocialFeeds();
 
 
 function sharePost() {
-	var shareLinkButtons = document.querySelectorAll('.the-share-button');
-
-	function copyStringToClipboard (str) {
-	   // Create new element
-	   var temporaryElement = document.createElement('textarea');
-	   // Set value (string to be copied)
-	   temporaryElement.value = str;
-	   // Set non-editable to avoid focus and move outside of view
-	   temporaryElement.setAttribute('readonly', '');
-	   temporaryElement.style = {position: 'absolute', left: '-9999px'};
-	   document.body.appendChild(temporaryElement);
-	   temporaryElement.select(); // Select text inside element
-	   document.execCommand('copy'); // Copy text to clipboard
-	   document.body.removeChild(temporaryElement); // Remove temporary element
-	}
-
-	if(shareLinkButtons.length > 0) {
-		shareLinkButtons.forEach(function(itemToCopy) {
+	var shareUrlButtons = document.querySelectorAll('.the-share-button');
+	if(shareUrlButtons.length > 0) {
+		function copyStringToClipboard (str) {
+		   // Create new element
+		   var temporaryElement = document.createElement('textarea');
+		   // Set value (string to be copied)
+		   temporaryElement.value = str;
+		   // Set non-editable to avoid focus and move outside of view
+		   temporaryElement.setAttribute('readonly', '');
+		   temporaryElement.style = {position: 'absolute', left: '-9999px'};
+		   document.body.appendChild(temporaryElement);
+		   temporaryElement.select(); // Select text inside element
+		   document.execCommand('copy'); // Copy text to clipboard
+		   document.body.removeChild(temporaryElement); // Remove temporary element
+		}
+		shareUrlButtons.forEach(function(itemToCopy) {
 			itemToCopy.addEventListener('click', function(){
 				copyStringToClipboard(itemToCopy.dataset.link);
 				itemToCopy.classList.add('copied');
@@ -407,31 +410,39 @@ sharePost();
 
 
 
-	// const http = new XMLHttpRequest();
-	// const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=music&per_page=1'
-	// http.open('GET', url);
-	// http.send();
-
-	// http.onreadystatechange=(e) => {
-
-	// 	ourData = http.responseText;
-	// 		console.log(ourData.length);
-	// 		// console.log('looping');
+function requestPosts(category, numberofposts) {
 
 
-	// 	function parseData(id, likes) {
-	// 		this.postID = id;
-	// 		this.postLikes = likes;
+	const http = new XMLHttpRequest();
+	const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=music&per_page=2'
+	http.open('GET', url);
+	http.send();
 
+	http.onreadystatechange= function() {
 
-	// 	}
-	// }
+		if(http.readyState === XMLHttpRequest.DONE && http.status === 200) {
+			var PostResponce = JSON.parse(http.responseText);
+			parseData(PostResponce);
+		}
 
+		function parseData(data) {
+			for ( let i = 0; i < data.length; i++) {
+				let postID = data[i].id;
+				let postTitle = data[i].title;
+				let postURL = data[i].link;
 
+				var pageElement = document.createElement('div');
+				pageElement.classList.add('parsed__post');
+				pageElement.innerHTML = postID + ' This is a Post';
+				document.body.appendChild(pageElement);
+				console.log(pageElement);
+			}
+		}
+	}
 
+}
 
-/* Click To Share URL */
-
+requestPosts();
 
 
 

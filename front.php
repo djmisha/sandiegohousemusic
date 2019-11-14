@@ -29,9 +29,6 @@
 					<div class="thumb">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
 							<?php the_post_thumbnail('', array('class' => 'b-lazy')); ?>
-
-
-							
 						</a>
 					</div>
 					<h3 class="blog-title color-<?php echo rand(1,6) ?>"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
