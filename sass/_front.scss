@@ -303,7 +303,7 @@
       width: 45px;
       opacity: 0;
     // border: 1px solid pink; 
-    transition: all .5s ease;
+      transition: all .5s ease;
   }
   &.copied {
     color: pink;
@@ -336,4 +336,38 @@
     50% {transform: scale(1) translateY(0); }
     100% {transform: translateY(0); }
   }
+}
+
+
+.parsed__post {
+  position: fixed;
+  left: 0px;
+  // left: auto;
+  bottom: 60px;
+  width: 200px;
+  // height: 140px;
+  border: 2px solid black;
+  background: black;
+}
+
+.parsed__post a {
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  // height: 140px;
+  text-decoration: none;
+}
+
+.parsed__post span {
+  font-size: 14px;
+  font-family: $primaryFont;
+  color: #fff;
+}
+
+
+.parsed__post img {
+  // position: absolute;
+  width: 100%;
+  height: auto;
+  // z-index: 1;
 }

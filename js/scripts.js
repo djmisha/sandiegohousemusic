@@ -410,8 +410,7 @@ sharePost();
 
 
 
-function requestPosts(category, numberofposts) {
-
+function requestPostsAndAttachtoPage(category, numberofposts) {
 
 	const http = new XMLHttpRequest();
 	const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=' + category + '&per_page=' + numberofposts;
@@ -419,30 +418,34 @@ function requestPosts(category, numberofposts) {
 	http.send();
 
 	http.onreadystatechange= function() {
-
 		if(http.readyState === XMLHttpRequest.DONE && http.status === 200) {
 			var PostResponce = JSON.parse(http.responseText);
 			parseData(PostResponce);
 		}
+	}
+	
+	function parseData(data) {
+		for ( let i = 0; i < data.length; i++) {
+			let postID = data[i].id;
+			let postTitle = data[i].title.rendered;
+			let postURL = data[i].link;
+			let postIMG = data[i].jetpack_featured_media_url;
 
-		function parseData(data) {
-			for ( let i = 0; i < data.length; i++) {
-				let postID = data[i].id;
-				let postTitle = data[i].title;
-				let postURL = data[i].link;
+			var pageElement = document.createElement('div');
+			pageElement.classList.add('parsed__post');
 
-				var pageElement = document.createElement('div');
-				pageElement.classList.add('parsed__post');
-				pageElement.innerHTML = postID + ' This is a Post';
-				document.body.appendChild(pageElement);
-				console.log(pageElement);
-			}
+			pageElement.innerHTML = '<a class=\"\" href=\"' + postURL + '\"><img src=\"' + postIMG + '\"><span>' + postTitle + '</span></a>';
+			
+			document.body.appendChild(pageElement);
 		}
 	}
-
 }
 
-requestPosts('music', 2);
+// Only on inside pages
+// if( document.body.classList.hasClass('inside')} {
+	requestPostsAndAttachtoPage('music', 1);
+// })
+
 
 
 
