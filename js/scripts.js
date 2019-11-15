@@ -414,7 +414,7 @@ function requestPosts(category, numberofposts) {
 
 
 	const http = new XMLHttpRequest();
-	const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=music&per_page=2'
+	const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=' + category + '&per_page=' + numberofposts;
 	http.open('GET', url);
 	http.send();
 
@@ -442,7 +442,7 @@ function requestPosts(category, numberofposts) {
 
 }
 
-requestPosts();
+requestPosts('music', 2);
 
 
 
