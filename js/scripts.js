@@ -187,48 +187,67 @@
 				this.likeVisualCount = visualcount;
 				this.ourFire = thefire;
 
-				/*Heart Click*/
-				button.addEventListener('click', function(event) {
+
+				/* Actions done once heart is clicked on a post */
+				const postLikedActions = function (event) {
 					this.classList.add('liked','bounce');
+					
+					// NEED TO ADD CHECK FOR COOOKIE BEFORE ALLOWING CLICK
+
 					countLikeClick(count, visualcount);
 					count = finalCount;
 					postlikeCount = finalCount;
 
-					/*Update the Page and DB wit new count*/
+					/* Update the Page and DB wit new likes count*/
 					updatePost(id, count);
 
-					// check the count and show fire
-					checkLikeCount(count); 
+					/* check the count and show fire */
+					checkLikeCountandShowFire(count); 
 
 					/* Remove Bouce Effect class from heart */
-					setTimeout(function(){
-						removeBounce();
-					}, 1000);
+					removeBounce();
 					
+					addCookie(id);
 
-					/*Add lots of fire*/
-					if(count > 1 ) {
-						let moreFire = thefire.innerHTML;
-						// this.innerHTML.moreFire;
-						// console.log(this);
-					}
-				});
-
-				function removeBounce() {
-					button.classList.remove('bounce');
-					// console.log('removed')
 				}
 
-				function checkLikeCount(item) {
+				/* Listen For Hart Clicks */
+				button.addEventListener('click', postLikedActions);
+
+
+				const addCookie = function(id) {
+					const d = new Date();
+				  	d.setTime(d.getTime() + (1*24*60*60*1000));
+				  	console.log(d.toUTCString());
+				  	const expires = "expires="+ d.toUTCString();
+				  	const cookieName = 'sdhm ' + id;
+				  	const cookieValue = 'Voted for post ' + id ;
+				  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+				}
+
+				function removeBounce() {
+					setTimeout(function(){
+						button.classList.remove('bounce');
+					}, 1000);
+				}
+
+				function checkLikeCountandShowFire(item) {
 					if (item > 0) {
 						button.classList.add('liked');
 					} 
-					if (item > 2) {
+					if (item > 1) {
 						thefire.classList.add('so-hot');
+					}
+					/*Add lots of fire*/
+					if(count > 20 ) {
+						let moreFire = '🔥';
+						// this.innerHTML.moreFire;
+						// thefire.append(moreFire);
+						console.log(thefire);
 					}
 				}
 
-				checkLikeCount(count);
+				checkLikeCountandShowFire(count);
 			}
 
 			// push like count to the array item
@@ -441,11 +460,11 @@ function requestPostsAndAttachtoPage(category, numberofposts) {
 	}
 }
 
-// Only on inside pages
-// if( document.body.classList.hasClass('inside')} {
-	requestPostsAndAttachtoPage('music', 1);
-// })
 
+//delay for 30 seconds 
+setTimeout(function() {
+	requestPostsAndAttachtoPage('music', 1);
+}, 20000);
 
 
 

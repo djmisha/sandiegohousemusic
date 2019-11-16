@@ -344,10 +344,11 @@
   left: 0px;
   // left: auto;
   bottom: 60px;
-  width: 200px;
+  width: 150px;
   // height: 140px;
   border: 2px solid black;
   background: black;
+  transition: all .2s ease-in;
 }
 
 .parsed__post a {
@@ -359,7 +360,8 @@
 }
 
 .parsed__post span {
-  font-size: 14px;
+  font-size: 10px;
+  font-weight: 100;
   font-family: $primaryFont;
   color: #fff;
 }

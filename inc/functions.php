@@ -243,8 +243,10 @@ function bodyClass( $active_home_id = '' , $home_name = '' , $new_classes = '' ,
 	if($parent_page): $classes[] = 'parent-'.$parent_page; endif;
 	if( is_404() ): $classes[] = 'page-404'; endif;
 	if( get_post_type() == 'post'): $classes[] = 'post from-blog'; else: /*to style everything else but the blog*/ $classes[] = 'not-blog'; endif;
-	if( this_is('gallery')): $classes[] = 'rmgallery'; else: /* to style everything else but the rmgallery */ $classes[] = 'not-rmgallery'; endif;
-	if( this_is('gallery-child')): $classes[] = 'rmgallery-child'; endif;
+		/* to style everything else but the rmgallery */ 
+	// if( this_is('gallery')): $classes[] = 'rmgallery'; else: 
+		// $classes[] = 'not-rmgallery'; endif;
+	// if( this_is('gallery-child')): $classes[] = 'rmgallery-child'; endif;
 	if( is_page() ): $classes[] = 'is-page'; endif;
 	global $template,$post; 
 	$templateType = basename($template , ".php");

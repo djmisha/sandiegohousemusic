@@ -3956,9 +3956,11 @@ span.error {
   position: fixed;
   left: 0px;
   bottom: 60px;
-  width: 200px;
+  width: 150px;
   border: 2px solid black;
   background: black;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 .parsed__post a {
@@ -3969,7 +3971,8 @@ span.error {
 }
 
 .parsed__post span {
-  font-size: 14px;
+  font-size: 10px;
+  font-weight: 100;
   font-family: "Oswald", sans-serif;
   color: #fff;
 }
