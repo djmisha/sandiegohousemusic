@@ -281,6 +281,34 @@
 
 .the-like-button {
   color: #ccc;
+  position: relative;
+  &:before {
+  // &:before {
+   // &:hover {
+    // opacity: 1;
+   // }
+   // opacity: 0;
+   content: "Like This";
+   position: absolute;
+   font-size: 10px;
+   line-height:  10px;
+   bottom: -15px;
+   left: -5px;
+   width: 50px;
+      // opacity: 0;
+      transition: all .5s ease;
+    }
+    &.liked {&:before {
+    // border: 1px solid pink; 
+    content: "Liked!" !important;
+    color: #000;
+    left: 3px;
+    opacity: 1;
+    
+  }
+}
+
+
   i {
       // border: 1px solid pink;
       &.liked {
@@ -302,7 +330,6 @@
       left: -10px;
       width: 45px;
       opacity: 0;
-    // border: 1px solid pink; 
       transition: all .5s ease;
   }
   &.copied {
@@ -316,9 +343,10 @@
 
 
 .the-fire{ 
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 27px;
   opacity: 0;
-  // display: none  !important;
   &.so-hot {
     opacity: 1;
   }
@@ -341,14 +369,17 @@
 
 .parsed__post {
   position: fixed;
-  left: 0px;
-  // left: auto;
+  left: -150px;
   bottom: 60px;
   width: 150px;
-  // height: 140px;
   border: 2px solid black;
   background: black;
-  transition: all .2s ease-in;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  &.active {
+    opacity: 1;
+    left: 0px;
+  }
 }
 
 .parsed__post a {

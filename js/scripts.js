@@ -161,6 +161,7 @@
 					var likeButton = engageBar[i].querySelector('.the-like-button i');
 					var likeVisualCount = engageBar[i].querySelector('.the-like-counter');
 					var theFire = engageBar[i].querySelector('.the-fire');
+					var hasVoted = false;
 
 					const thePost = new createPost(
 							likeID, 
@@ -168,7 +169,8 @@
 							likeURL, 
 							likeButton, 
 							likeVisualCount,
-							theFire
+							theFire,
+							hasVoted,
 							);
 
 					onPagePosts.push(thePost);
@@ -191,24 +193,26 @@
 				/* Actions done once heart is clicked on a post */
 				const postLikedActions = function (event) {
 					this.classList.add('liked','bounce');
+					this.parentElement.classList.add('liked')
 					
-					// NEED TO ADD CHECK FOR COOOKIE BEFORE ALLOWING CLICK
+					// CHECK FOR COOOKIE BEFORE ALLOWING click to count
+					if (!document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
+						countLikeClick(count, visualcount);
+						count = finalCount;
+						postlikeCount = finalCount;
 
-					countLikeClick(count, visualcount);
-					count = finalCount;
-					postlikeCount = finalCount;
+						/* Update the Page and DB wit new likes count*/
+						updatePost(id, count);
 
-					/* Update the Page and DB wit new likes count*/
-					updatePost(id, count);
-
-					/* check the count and show fire */
-					checkLikeCountandShowFire(count); 
-
+						/* check the count and show fire */
+						checkLikeCountandShowFire(count); 
+						addCookie(id);
+					}
+					
 					/* Remove Bouce Effect class from heart */
 					removeBounce();
-					
-					addCookie(id);
-
+						// checkForCookie();
+						// console.log(document.cookie);
 				}
 
 				/* Listen For Hart Clicks */
@@ -216,14 +220,24 @@
 
 
 				const addCookie = function(id) {
-					const d = new Date();
-				  	d.setTime(d.getTime() + (1*24*60*60*1000));
-				  	console.log(d.toUTCString());
-				  	const expires = "expires="+ d.toUTCString();
-				  	const cookieName = 'sdhm ' + id;
-				  	const cookieValue = 'Voted for post ' + id ;
-				  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+					if (!document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
+					    console.log( id + 'no cookie set,  creating cookie')
+						const d = new Date();
+					  	d.setTime(d.getTime() + (1*24*60*60*1000)); // 1 day 
+					  	// console.log(d.toUTCString());
+					  	const expires = "expires="+ d.toUTCString();
+					  	const cookieName = id; //name the cookie the id of the post
+					  	const cookieValue = 'Voted for post ' + id ;
+					  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+					}
 				}
+
+				// const checkForCookie = function() {
+				// 	if (document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
+				// 	    console.log('For post ' + id + ' you have already voted');
+				// 	    return true;
+				// 	}
+				// }
 
 				function removeBounce() {
 					setTimeout(function(){
@@ -234,17 +248,23 @@
 				function checkLikeCountandShowFire(item) {
 					if (item > 0) {
 						button.classList.add('liked');
+						button.parentElement.classList.add('liked')
 					} 
-					if (item > 1) {
+					if (item >= 1) {
 						thefire.classList.add('so-hot');
 					}
 					/*Add lots of fire*/
-					if(count > 20 ) {
-						let moreFire = '🔥';
-						// this.innerHTML.moreFire;
-						// thefire.append(moreFire);
-						console.log(thefire);
-					}
+					// if(count > 20 ) {
+					// 	let moreFire = '🔥';
+					// 	// this.innerHTML.moreFire;
+					// 	thefire.append(moreFire);
+					// 	console.log(thefire);
+					// }
+					thefire.addEventListener('click', function() {
+						let moreFire = thefire.innerHTML;
+						thefire.append(moreFire);
+
+					})
 				}
 
 				checkLikeCountandShowFire(count);
@@ -312,7 +332,7 @@ function attachVideo() {
     }
 
 	myVideoWrap.innerHTML = createVideoMarkup(thevid);
-	console.log('video attached');
+	console.log('video attached after 3 seconds');
   	function createVideoMarkup(item) {
   		let videoMarkup = '<video playsinline autoplay muted loop poster=\"' + theme_path + '/images/slide-1.jpg\" class=\"bgvid\"><source src=\"' + theme_path + '/images/' + item +'\" type=\"video/mp4\"></video>';
   		return videoMarkup;
@@ -456,6 +476,9 @@ function requestPostsAndAttachtoPage(category, numberofposts) {
 			pageElement.innerHTML = '<a class=\"\" href=\"' + postURL + '\"><img src=\"' + postIMG + '\"><span>' + postTitle + '</span></a>';
 			
 			document.body.appendChild(pageElement);
+			setTimeout(function(){
+				pageElement.classList.add('active');
+			},2000);
 		}
 	}
 }
@@ -463,8 +486,8 @@ function requestPostsAndAttachtoPage(category, numberofposts) {
 
 //delay for 30 seconds 
 setTimeout(function() {
-	requestPostsAndAttachtoPage('music', 1);
-}, 20000);
+	requestPostsAndAttachtoPage('music', 1); // post requested after 30 seconds 
+}, 30000);
 
 
 

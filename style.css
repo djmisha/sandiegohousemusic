@@ -2040,17 +2040,18 @@ header .get-social a i {
 
 .touch-menu .main-menu a {
   text-transform: uppercase;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Oswald", sans-serif;
   text-decoration: none;
   display: block;
-  color: white;
+  color: #eb0077;
   line-height: 1em;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 .touch-menu .main-menu .menu-item > a {
-  padding: 16px 20px;
+  padding: 16px 20px 16px 80px;
 }
 
 .touch-menu .main-menu .sub-menu {
@@ -2302,16 +2303,16 @@ header .menu-item-7264 a:before,
 header .menu-item-9653 a:before,
 header .menu-item-7265 a:before {
   font-family: "Font Awesome 5 Pro";
-  color: white;
+  color: #eb0077;
   font-size: 30px;
   font-weight: 100;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
   position: absolute;
-  left: 180px;
+  left: 30px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  font-weight: 900;
+  font-weight: 100;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -3853,6 +3854,26 @@ span.error {
 
 .the-like-button {
   color: #ccc;
+  position: relative;
+}
+
+.the-like-button:before {
+  content: "Like This";
+  position: absolute;
+  font-size: 10px;
+  line-height: 10px;
+  bottom: -15px;
+  left: -5px;
+  width: 50px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.the-like-button.liked:before {
+  content: "Liked!" !important;
+  color: #000;
+  left: 3px;
+  opacity: 1;
 }
 
 .the-like-button i.liked {
@@ -3889,6 +3910,8 @@ span.error {
 }
 
 .the-fire {
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 27px;
   opacity: 0;
 }
@@ -3954,13 +3977,19 @@ span.error {
 
 .parsed__post {
   position: fixed;
-  left: 0px;
+  left: -150px;
   bottom: 60px;
   width: 150px;
   border: 2px solid black;
   background: black;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.parsed__post.active {
+  opacity: 1;
+  left: 0px;
 }
 
 .parsed__post a {
