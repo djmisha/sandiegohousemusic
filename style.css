@@ -3978,7 +3978,7 @@ span.error {
 .parsed__post {
   position: fixed;
   left: -150px;
-  bottom: 60px;
+  bottom: 80px;
   width: 150px;
   border: 2px solid black;
   background: black;

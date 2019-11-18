@@ -194,7 +194,7 @@
 				const postLikedActions = function (event) {
 					this.classList.add('liked','bounce');
 					this.parentElement.classList.add('liked')
-					
+
 					// CHECK FOR COOOKIE BEFORE ALLOWING click to count
 					if (!document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
 						countLikeClick(count, visualcount);
@@ -211,32 +211,35 @@
 					
 					/* Remove Bouce Effect class from heart */
 					removeBounce();
-						// checkForCookie();
+						checkForCookie(id);
 						// console.log(document.cookie);
 				}
 
 				/* Listen For Hart Clicks */
 				button.addEventListener('click', postLikedActions);
-
+				// console.log(cookieIsSet);
 
 				const addCookie = function(id) {
 					if (!document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
 					    console.log( id + 'no cookie set,  creating cookie')
 						const d = new Date();
-					  	d.setTime(d.getTime() + (1*24*60*60*1000)); // 1 day 
-					  	// console.log(d.toUTCString());
+					  	d.setTime(d.getTime() + (365*24*60*60*1000)); 
 					  	const expires = "expires="+ d.toUTCString();
-					  	const cookieName = id; //name the cookie the id of the post
+					  	const cookieName = id; // name the cookie the id of the post
 					  	const cookieValue = 'Voted for post ' + id ;
 					  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 					}
 				}
 
-				// const checkForCookie = function() {
+				// const checkForCookie = function(id) {
+				// 	let cookieIsSet = false;
+				// 	console.log(cookieIsSet);
 				// 	if (document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
 				// 	    console.log('For post ' + id + ' you have already voted');
-				// 	    return true;
+				// 	    let cookieIsSet = true;
 				// 	}
+				// 	console.log(cookieIsSet);
+				//     return cookieIsSet;
 				// }
 
 				function removeBounce() {
@@ -244,6 +247,8 @@
 						button.classList.remove('bounce');
 					}, 1000);
 				}
+
+
 
 				function checkLikeCountandShowFire(item) {
 					if (item > 0) {
@@ -267,7 +272,11 @@
 					})
 				}
 
-				checkLikeCountandShowFire(count);
+				if (document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
+					
+					checkLikeCountandShowFire(count);
+
+				}
 			}
 
 			// push like count to the array item
@@ -485,9 +494,12 @@ function requestPostsAndAttachtoPage(category, numberofposts) {
 
 
 //delay for 30 seconds 
-setTimeout(function() {
-	requestPostsAndAttachtoPage('music', 1); // post requested after 30 seconds 
-}, 30000);
+// if (document.body.classList.hasClass('djs')) {
+	setTimeout(function() {
+		requestPostsAndAttachtoPage('music', 1); // post requested after 30 seconds 
+	// }, 3000);
+	}, 30000);
+// }
 
 
 
@@ -540,12 +552,3 @@ setTimeout(function() {
 // 	})();
 // }
 // End Gallery Popup
-
-
-
-
-
-
-
-
-
