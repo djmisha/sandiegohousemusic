@@ -155,23 +155,15 @@
 
 			function readPageforLikablePosts() {
 				for(let i = 0; engageBar.length > i; i++) { 
-					var likeID = engageBar[i].dataset.id;
-					var likeCount = engageBar[i].dataset.count;
-					var likeURL = engageBar[i].dataset.link;
-					var likeButton = engageBar[i].querySelector('.the-like-button i');
-					var likeVisualCount = engageBar[i].querySelector('.the-like-counter');
-					var theFire = engageBar[i].querySelector('.the-fire');
-					var hasVoted = false;
+					var likeID = engageBar[i].dataset.id,
+					 	likeCount = engageBar[i].dataset.count,
+					 	likeURL = engageBar[i].dataset.link,
+					 	likeButton = engageBar[i].querySelector('.the-like-button i'),
+					 	likeVisualCount = engageBar[i].querySelector('.the-like-counter'),
+					 	theFire = engageBar[i].querySelector('.the-fire'),
+					 	hasVoted = false;
 
-					const thePost = new createPost(
-							likeID, 
-							likeCount, 
-							likeURL, 
-							likeButton, 
-							likeVisualCount,
-							theFire,
-							hasVoted,
-							);
+					const thePost = new createPost(likeID, likeCount, likeURL, likeButton, likeVisualCount, theFire, hasVoted, );
 
 					onPagePosts.push(thePost);
 				}
@@ -200,47 +192,45 @@
 						countLikeClick(count, visualcount);
 						count = finalCount;
 						postlikeCount = finalCount;
-
 						/* Update the Page and DB wit new likes count*/
 						updatePost(id, count);
-
 						/* check the count and show fire */
 						checkLikeCountandShowFire(count); 
-						addCookie(id);
+						toggleCookie(id);
 					}
-					
+					else {
+						this.classList.remove('liked','bounce');
+						this.parentElement.classList.remove('liked')
+						toggleCookie(id);
+						uncountLikeClick(count, visualcount);
+						count = finalCount;
+						updatePost(id, count);
+					}
 					/* Remove Bouce Effect class from heart */
 					removeBounce();
-						checkForCookie(id);
-						// console.log(document.cookie);
 				}
 
 				/* Listen For Hart Clicks */
 				button.addEventListener('click', postLikedActions);
-				// console.log(cookieIsSet);
 
-				const addCookie = function(id) {
+
+				const toggleCookie = function(id) {
+
+					const d = new Date();
+				  	d.setTime(d.getTime() + (365*24*60*60*1000)); 
+				  	const expires = "expires="+ d.toUTCString();
+				  	const cookieName = id; // name the cookie the id of the post
+				  	const cookieValue = 'Voted for ' + id ;
+					
 					if (!document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
-					    console.log( id + 'no cookie set,  creating cookie')
-						const d = new Date();
-					  	d.setTime(d.getTime() + (365*24*60*60*1000)); 
-					  	const expires = "expires="+ d.toUTCString();
-					  	const cookieName = id; // name the cookie the id of the post
-					  	const cookieValue = 'Voted for post ' + id ;
+					    // console.log( id + ' no cookie set,  creating cookie')
 					  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
 					}
+					else {
+					    // console.log( id + ' cookie already set, expiring cookie')
+						document.cookie = cookieName + "=" + cookieValue + ";" + "expires=Thu, 01 Jan 1970 00:00:00 GMT" + ";path=/";
+					}
 				}
-
-				// const checkForCookie = function(id) {
-				// 	let cookieIsSet = false;
-				// 	console.log(cookieIsSet);
-				// 	if (document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
-				// 	    console.log('For post ' + id + ' you have already voted');
-				// 	    let cookieIsSet = true;
-				// 	}
-				// 	console.log(cookieIsSet);
-				//     return cookieIsSet;
-				// }
 
 				function removeBounce() {
 					setTimeout(function(){
@@ -248,23 +238,14 @@
 					}, 1000);
 				}
 
-
-
 				function checkLikeCountandShowFire(item) {
 					if (item > 0) {
 						button.classList.add('liked');
 						button.parentElement.classList.add('liked')
 					} 
-					if (item >= 1) {
+					if (item >= 5) {
 						thefire.classList.add('so-hot');
 					}
-					/*Add lots of fire*/
-					// if(count > 20 ) {
-					// 	let moreFire = '🔥';
-					// 	// this.innerHTML.moreFire;
-					// 	thefire.append(moreFire);
-					// 	console.log(thefire);
-					// }
 					thefire.addEventListener('click', function() {
 						let moreFire = thefire.innerHTML;
 						thefire.append(moreFire);
@@ -273,9 +254,7 @@
 				}
 
 				if (document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
-					
 					checkLikeCountandShowFire(count);
-
 				}
 			}
 
@@ -311,6 +290,15 @@
 				countDiv.innerHTML = finalCount;
 				return finalCount;
 			}
+
+			function uncountLikeClick(item, target) {
+				this.finalCount = item;
+				this.countDiv = target;
+				finalCount = finalCount - 1;
+				countDiv.innerHTML = finalCount;
+				return finalCount;
+			}
+
 		}
 
 		countLikes();
