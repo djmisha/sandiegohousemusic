@@ -152,6 +152,9 @@
 			var engageBar = document.querySelectorAll('.engage-bar');
 			var onPagePosts = [];
 
+			/*===============================================================================
+			=            Read the page for Likelable Content and push into array            =
+			===============================================================================*/
 
 			function readPageforLikablePosts() {
 				for(let i = 0; engageBar.length > i; i++) { 
@@ -163,7 +166,7 @@
 					 	theFire = engageBar[i].querySelector('.the-fire'),
 					 	hasVoted = false;
 
-					const thePost = new createPost(likeID, likeCount, likeURL, likeButton, likeVisualCount, theFire, hasVoted, );
+					const thePost = new createPost(likeID, likeCount, likeURL, likeButton, likeVisualCount, theFire, hasVoted,);
 
 					onPagePosts.push(thePost);
 				}
@@ -171,8 +174,42 @@
 
 			readPageforLikablePosts();
 
+			/*=====  End of Read the page for Likelable Content and push into array  ======*/
+
+			/*===============================================
+			=            Cookie check and Toggle            =
+			===============================================*/
+			
+			const toggleCookie = function(likeID) {
+
+					const d = new Date();
+				  	d.setTime(d.getTime() + (365*24*60*60*1000)); 
+				  	const expires = "expires="+ d.toUTCString();
+				  	const cookieName = likeID; // name the cookie the id of the post
+				  	const cookieValue = 'Voted for ' + likeID ;
+				  	let thereIsCookie = false;
+
+					if (!document.cookie.split(';').filter((item) => item.trim().startsWith(likeID)).length) {
+					    // console.log( id + ' no cookie set,  creating cookie')
+					  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+					  	thereIsCookie = true;
+					}
+					else {
+					    // console.log( id + ' cookie already set, expiring cookie')
+						document.cookie = cookieName + "=" + cookieValue + ";" + "expires=Thu, 01 Jan 1970 00:00:00 GMT" + ";path=/";
+				  		thereIsCookie = false;
+					}
+			  		console.log(thereIsCookie);
+					return thereIsCookie;
+				}
+			
+			/*=====  End of Cookie check and Toggle  ======*/
 			
 
+			/*============================================================
+			=            Create a Post for each Likeable Item            =
+			============================================================*/
+			
 			function createPost(id, count, url, button, visualcount, thefire) {
 				this.postlikeID = id;
 				this.postlikeCount = count;
@@ -188,12 +225,13 @@
 					this.parentElement.classList.add('liked')
 
 					// CHECK FOR COOOKIE BEFORE ALLOWING click to count
+					// if (thereIsCookie === true) {
 					if (!document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
 						countLikeClick(count, visualcount);
 						count = finalCount;
 						postlikeCount = finalCount;
 						/* Update the Page and DB wit new likes count*/
-						updatePost(id, count);
+						updatePostInWordPress(id, count);
 						/* check the count and show fire */
 						checkLikeCountandShowFire(count); 
 						toggleCookie(id);
@@ -204,34 +242,16 @@
 						toggleCookie(id);
 						uncountLikeClick(count, visualcount);
 						count = finalCount;
-						updatePost(id, count);
+						updatePostInWordPress(id, count);
 					}
 					/* Remove Bouce Effect class from heart */
 					removeBounce();
 				}
 
-				/* Listen For Hart Clicks */
+				/* Listen For Heart Clicks */
 				button.addEventListener('click', postLikedActions);
 
-
-				const toggleCookie = function(id) {
-
-					const d = new Date();
-				  	d.setTime(d.getTime() + (365*24*60*60*1000)); 
-				  	const expires = "expires="+ d.toUTCString();
-				  	const cookieName = id; // name the cookie the id of the post
-				  	const cookieValue = 'Voted for ' + id ;
-					
-					if (!document.cookie.split(';').filter((item) => item.trim().startsWith(id)).length) {
-					    // console.log( id + ' no cookie set,  creating cookie')
-					  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-					}
-					else {
-					    // console.log( id + ' cookie already set, expiring cookie')
-						document.cookie = cookieName + "=" + cookieValue + ";" + "expires=Thu, 01 Jan 1970 00:00:00 GMT" + ";path=/";
-					}
-				}
-
+				
 				function removeBounce() {
 					setTimeout(function(){
 						button.classList.remove('bounce');
@@ -257,10 +277,14 @@
 					checkLikeCountandShowFire(count);
 				}
 			}
+			
+			/*=====  End of Create a Post for each Likeable Item  ======*/
+			
+
 
 			// push like count to the array item
 			// then update the Database with the new count
-			function updatePost(id, count) {
+			function updatePostInWordPress(id, count) {
 				for(let i = 0; onPagePosts.length > i; i++) { 
 					if ( onPagePosts[i].postlikeID == id  ) {
 						onPagePosts[i].postlikeCount = count;
@@ -299,6 +323,24 @@
 				return finalCount;
 			}
 
+			// refactor
+
+			function addOneLike(item) {
+				item = item + 1;
+				return item; 
+			}
+
+			function removeOneLike(item) {
+				item = item + 1;
+				return item; 
+			}
+
+			function updateLikeCountOnPage(item, target) {
+				this.countContainer = target;
+				this.finalCount = item; 
+				countContainer.innerHTML = finalCount;
+			}
+
 		}
 
 		countLikes();
@@ -329,7 +371,7 @@ function attachVideo() {
     }
 
 	myVideoWrap.innerHTML = createVideoMarkup(thevid);
-	console.log('video attached after 3 seconds');
+	console.log('video attached to document after 3 seconds');
   	function createVideoMarkup(item) {
   		let videoMarkup = '<video playsinline autoplay muted loop poster=\"' + theme_path + '/images/slide-1.jpg\" class=\"bgvid\"><source src=\"' + theme_path + '/images/' + item +'\" type=\"video/mp4\"></video>';
   		return videoMarkup;

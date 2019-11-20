@@ -2046,7 +2046,7 @@ header .get-social a i {
   color: #eb0077;
   line-height: 1em;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 1px;
 }
 
@@ -2435,7 +2435,7 @@ header .menu-item-9653 a:before {
 .content h5,
 .content h6 {
   color: #38c0e6;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .content h2 a,

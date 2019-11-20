@@ -83,7 +83,7 @@
       color: rgba($secondaryAlt, 1); // Set color for menu items
       line-height: 1em;
       font-size: 22px; // Set font size for menu items
-      font-weight: 300;
+      font-weight: 200;
       letter-spacing: 1px;
       // border: 1px solid pink;
       // padding-left: 40px;
@@ -94,7 +94,7 @@
 
     .menu-item {
       > a {
-        padding: 16px 20px 16px 80px;
+          padding: 16px 20px 16px 80px;
         // border-bottom: 1px solid rgba($lightColor, .15);
       }
     }
