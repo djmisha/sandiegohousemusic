@@ -145,9 +145,11 @@
 
 
 
-		/* Make it count likes */
-
-		function countLikes() {
+		/*================================================
+		=            Engabe Bar - Count Likes            =
+		================================================*/
+		
+		const countLikes() => {
 			
 			var engageBar = document.querySelectorAll('.engage-bar');
 			var onPagePosts = [];
@@ -156,7 +158,7 @@
 			=            Read the page for Likelable Content and push into array            =
 			===============================================================================*/
 
-			function readPageforLikablePosts() {
+			const readPageforLikablePosts = () => {
 				for(let i = 0; engageBar.length > i; i++) { 
 					var likeID = engageBar[i].dataset.id,
 					 	likeCount = engageBar[i].dataset.count,
@@ -166,7 +168,7 @@
 					 	theFire = engageBar[i].querySelector('.the-fire'),
 					 	hasVoted = false;
 
-					const thePost = new createPost(likeID, likeCount, likeURL, likeButton, likeVisualCount, theFire, hasVoted,);
+					const thePost = new mapPostData(likeID, likeCount, likeURL, likeButton, likeVisualCount, theFire, hasVoted,);
 
 					onPagePosts.push(thePost);
 				}
@@ -180,7 +182,7 @@
 			=            Cookie check and Toggle            =
 			===============================================*/
 			
-			const toggleCookie = function(likeID) {
+			const toggleCookie = (likeID) => {
 
 					const d = new Date();
 				  	d.setTime(d.getTime() + (365*24*60*60*1000)); 
@@ -210,7 +212,7 @@
 			=            Create a Post for each Likeable Item            =
 			============================================================*/
 			
-			function createPost(id, count, url, button, visualcount, thefire) {
+			const mapPostData = (id, count, url, button, visualcount, thefire) => {
 				this.postlikeID = id;
 				this.postlikeCount = count;
 				this.shareURL = url; 
@@ -219,8 +221,13 @@
 				this.ourFire = thefire;
 
 
-				/* Actions done once heart is clicked on a post */
-				const postLikedActions = function (event) {
+				/*=============================================
+				=            Section comment block            =
+				=============================================*/
+				
+				
+				
+				const postLikedActions = (event) => {
 					this.classList.add('liked','bounce');
 					this.parentElement.classList.add('liked')
 
@@ -251,7 +258,7 @@
 				/* Listen For Heart Clicks */
 				button.addEventListener('click', postLikedActions);
 
-				
+
 				function removeBounce() {
 					setTimeout(function(){
 						button.classList.remove('bounce');
@@ -325,15 +332,20 @@
 
 			// refactor
 
-			function addOneLike(item) {
-				item = item + 1;
-				return item; 
-			}
 
-			function removeOneLike(item) {
-				item = item + 1;
-				return item; 
-			}
+			const addOneLike = item => item + 1
+			const removeOneLike = item => item - 1 
+
+
+			// function addOneLike(item) {
+			// 	item = item + 1;
+			// 	return item; 
+			// }
+
+			// function removeOneLike(item) {
+			// 	item = item + 1;
+			// 	return item; 
+			// }
 
 			function updateLikeCountOnPage(item, target) {
 				this.countContainer = target;
