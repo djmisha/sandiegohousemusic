@@ -159,7 +159,7 @@
 			===============================================================================*/
 
 			const readPageforLikablePosts = () => {
-				for(let i = 0; engageBar.length > i; i++) { 
+				for(let i = 0; i < engageBar.length; i++) { 
 					var likeID = engageBar[i].dataset.id,
 					 	likeCount = engageBar[i].dataset.count,
 					 	likeURL = engageBar[i].dataset.link,
@@ -179,7 +179,7 @@
 			/*=====  End of Read the page for Likelable Content and push into array  ======*/
 
 			/*===============================================
-			=            Cookie check and Toggle            =
+			=            Cookie chec k and Toggle            =
 			===============================================*/
 			
 			const toggleCookie = (likeID) => {
