@@ -179,7 +179,7 @@
 			/*=====  End of Read the page for Likelable Content and push into array  ======*/
 
 			/*===============================================
-			=            Cookie chec k and Toggle            =
+			=            Cookie check and Toggle            =
 			===============================================*/
 			
 			const toggleCookie = (likeID) => {
@@ -330,7 +330,7 @@
 				return finalCount;
 			}
 
-			// refactor
+			// start to refactor
 
 
 			const addOneLike = item => item + 1
