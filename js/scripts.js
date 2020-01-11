@@ -149,7 +149,7 @@
 		=            Engabe Bar - Count Likes            =
 		================================================*/
 		
-		const countLikes() => {
+		function countLikes() {
 			
 			var engageBar = document.querySelectorAll('.engage-bar');
 			var onPagePosts = [];
@@ -158,7 +158,7 @@
 			=            Read the page for Likelable Content and push into array            =
 			===============================================================================*/
 
-			const readPageforLikablePosts = () => {
+			function readPageforLikablePosts() {
 				for(let i = 0; i < engageBar.length; i++) { 
 					var likeID = engageBar[i].dataset.id,
 					 	likeCount = engageBar[i].dataset.count,
@@ -182,7 +182,7 @@
 			=            Cookie check and Toggle            =
 			===============================================*/
 			
-			const toggleCookie = (likeID) => {
+			function toggleCookie(likeID) {
 
 					const d = new Date();
 				  	d.setTime(d.getTime() + (365*24*60*60*1000)); 
@@ -212,7 +212,7 @@
 			=            Create a Post for each Likeable Item            =
 			============================================================*/
 			
-			const mapPostData = (id, count, url, button, visualcount, thefire) => {
+			function mapPostData(id, count, url, button, visualcount, thefire) {
 				this.postlikeID = id;
 				this.postlikeCount = count;
 				this.shareURL = url; 
@@ -227,7 +227,7 @@
 				
 				
 				
-				const postLikedActions = (event) => {
+				function postLikedActions(event) {
 					this.classList.add('liked','bounce');
 					this.parentElement.classList.add('liked')
 
