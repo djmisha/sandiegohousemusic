@@ -20,7 +20,7 @@
 				'post_status'=>"publish",
 				'post_type'=>"post",
 				// 'orderby'=>"rand", 
-				'year' => "2019"
+				'year' => "2020"
 			);
 			$query1 = new WP_Query( $args );
 			?>
