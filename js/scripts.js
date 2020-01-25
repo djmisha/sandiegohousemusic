@@ -222,7 +222,7 @@
 
 
 				/*=============================================
-				=            Section comment block            =
+				=            Actions that Each Post will have =
 				=============================================*/
 				
 				
@@ -333,19 +333,19 @@
 			// start to refactor
 
 
-			const addOneLike = item => item + 1
-			const removeOneLike = item => item - 1 
+			// const addOneLike = item => item + 1
+			// const removeOneLike = item => item - 1 
 
 
-			// function addOneLike(item) {
-			// 	item = item + 1;
-			// 	return item; 
-			// }
+			function addOneLike(item) {
+				item = item + 1;
+				return item; 
+			}
 
-			// function removeOneLike(item) {
-			// 	item = item + 1;
-			// 	return item; 
-			// }
+			function removeOneLike(item) {
+				item = item + 1;
+				return item; 
+			}
 
 			function updateLikeCountOnPage(item, target) {
 				this.countContainer = target;
@@ -535,13 +535,12 @@ function requestPostsAndAttachtoPage(category, numberofposts) {
 }
 
 
-//delay for 30 seconds 
-// if (document.body.classList.hasClass('djs')) {
+/*Fire Off Featured Post slide in */
+if (document.body.classList.contains('home')) { // only do on homepage
 	setTimeout(function() {
 		requestPostsAndAttachtoPage('music', 1); // post requested after 30 seconds 
-	// }, 3000);
 	}, 30000);
-// }
+}
 
 
 

@@ -30,8 +30,8 @@ imagemin      = require('gulp-imagemin'),
 newer         = require('gulp-newer');
 
 /* BrowserSync */
-const myPort  = params.port || 35730; //update this to your port
-const myHost  = 'http://sky.rosemontmedia.com';
+// const myPort  = params.port || 35730; //update this to your port
+// const myHost  = 'http://sandiegohousemusic.local';
 
 /* src paths*/
 const _src_ = {
@@ -42,15 +42,15 @@ const _src_ = {
 gulp.task('browser-sync', function() {
     browserSync.init({
         ui          : false,
-        port        : myPort,
+        // port        : myPort,
         files       : ['**/*.php', 'js/*.js'],
-        host        : myHost,
+        // host        : myHost,
         open        : false,
         notify      : false,
         ghostMode   : false,
-        socket: {
-            domain: myHost +":"+ myPort
-        }
+        // socket: {
+            // domain: myHost +":"+ myPort
+        // }
     });
 });
 
