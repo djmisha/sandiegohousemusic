@@ -26,19 +26,19 @@ aside {
       }
     }
   }
-  .mobile-add {
-    z-index: 9999px;
-    width: 100%;
-    height: 80px;
-    max-height: 80px;
-    position: fixed;
-    bottom:0;
-    right: 0;
-    left: 0;
-    @include media($desktop) {
-      display: none;
-    }
-  }
+  // .mobile-add {
+  //   z-index: 9999px;
+  //   width: 100%;
+  //   height: 80px;
+  //   max-height: 80px;
+  //   position: fixed;
+  //   bottom:0;
+  //   right: 0;
+  //   left: 0;
+  //   @include media($desktop) {
+  //     display: none;
+  //   }
+  // }
 }
 .adsbygoogle {
   z-index: 9999;

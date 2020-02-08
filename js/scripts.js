@@ -461,9 +461,6 @@ showSocialFeeds();
 
 
 
-
-
-
 function sharePost() {
 	var shareUrlButtons = document.querySelectorAll('.the-share-button');
 	if(shareUrlButtons.length > 0) {
@@ -498,98 +495,3 @@ sharePost();
 
 
 
-
-
-function requestPostsAndAttachtoPage(category, numberofposts) {
-
-	const http = new XMLHttpRequest();
-	const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=' + category + '&per_page=' + numberofposts;
-	http.open('GET', url);
-	http.send();
-
-	http.onreadystatechange= function() {
-		if(http.readyState === XMLHttpRequest.DONE && http.status === 200) {
-			var PostResponce = JSON.parse(http.responseText);
-			parseData(PostResponce);
-		}
-	}
-	
-	function parseData(data) {
-		for ( let i = 0; i < data.length; i++) {
-			let postID = data[i].id;
-			let postTitle = data[i].title.rendered;
-			let postURL = data[i].link;
-			let postIMG = data[i].jetpack_featured_media_url;
-
-			var pageElement = document.createElement('div');
-			pageElement.classList.add('parsed__post');
-
-			pageElement.innerHTML = '<a class=\"\" href=\"' + postURL + '\"><img src=\"' + postIMG + '\"><span>' + postTitle + '</span></a>';
-			
-			document.body.appendChild(pageElement);
-			setTimeout(function(){
-				pageElement.classList.add('active');
-			},2000);
-		}
-	}
-}
-
-
-/*Fire Off Featured Post slide in */
-if (document.body.classList.contains('home')) { // only do on homepage
-	setTimeout(function() {
-		requestPostsAndAttachtoPage('music', 1); // post requested after 30 seconds 
-	}, 30000);
-}
-
-
-
-
-
-// Gallery Popup
-// const isGallery = document.querySelector('body');
-// if (isGallery) {
-//   (function(){
-// 		const get = function(selector) {
-// 			return document.querySelector(selector);
-// 		}
-
-// 		const createMarkUp = function(elementType, classList, content) {
-// 			const element = document.createElement(elementType);
-// 			if(classList.length > 0) {
-// 				element.classList = classList.join(' ');
-// 			}
-// 			if(content) {
-// 				element.innerHTML = content;
-// 			}
-// 			return element;
-// 		}
-
-// 		const onCloseAddCookie = function() {
-// 			const d = new Date();
-// 	  	d.setTime(d.getTime() + (1*24*60*60*1000));
-// 	  	const expires = "expires="+ d.toUTCString();
-// 	  	const cookieName = 'rmg';
-// 	  	const cookieValue = 'gallerypop';
-// 	  	document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
-// 			const activePopUp = get('.gallery-popup');
-// 			activePopUp.classList.add('hidden');
-// 		}
-
-// 		const createAndShowGalleryPopup = function() {
-// 			const innerContent = '<div class="popup-content"><h2>Notice</h2><p>Images are Graphic</p><button class="gallery-ok button" class="popupbtn button">OK</button></div>';
-// 			const popup = createMarkUp('div', ['gallery-popup'], innerContent);
-// 			const okBtn = popup.querySelector('.gallery-ok');
-// 			okBtn.addEventListener('click', onCloseAddCookie);
-// 			isGallery.appendChild(popup);
-// 		}
-
-// 		const cookiesAsAString = document.cookie;
-// 		if(!cookiesAsAString.includes('gallerypop')) {
-// 			createAndShowGalleryPopup();
-// 			const galleryPopUp = get('.gallery-popup');
-// 			galleryPopUp.classList.remove('hidden');
-// 		}
-// 	})();
-// }
-// End Gallery Popup
