@@ -2135,8 +2135,14 @@ header .get-social a i {
   font-weight: 100;
   z-index: 9999;
   position: fixed;
-  right: 250px;
+  right: 150px;
   top: 50px;
+}
+
+@media only screen and (min-width: 1480px) {
+  .hover-menu {
+    right: 20vw;
+  }
 }
 
 .hover-menu .main-menu {
@@ -2286,6 +2292,7 @@ header .menu-item-7980 a,
 header .menu-item-9130 a,
 header .menu-item-7264 a,
 header .menu-item-9653 a,
+header .menu-item-9756 a,
 header .menu-item-7265 a {
   position: relative;
 }
@@ -2301,6 +2308,7 @@ header .menu-item-7980 a:before,
 header .menu-item-9130 a:before,
 header .menu-item-7264 a:before,
 header .menu-item-9653 a:before,
+header .menu-item-9756 a:before,
 header .menu-item-7265 a:before {
   font-family: "Font Awesome 5 Pro";
   color: #eb0077;
@@ -2327,6 +2335,7 @@ header .menu-item-7265 a:before {
   header .menu-item-9130 a:before,
   header .menu-item-7264 a:before,
   header .menu-item-9653 a:before,
+  header .menu-item-9756 a:before,
   header .menu-item-7265 a:before {
     left: calc( 50% - 15px);
     color: #adb5bd !important;
@@ -2346,6 +2355,7 @@ header .menu-item-7265 a:before {
   header .menu-item-9130 a:hover:before,
   header .menu-item-7264 a:hover:before,
   header .menu-item-9653 a:hover:before,
+  header .menu-item-9756 a:hover:before,
   header .menu-item-7265 a:hover:before {
     color: #fd9300 !important;
   }
@@ -2382,6 +2392,10 @@ header .menu-item-9284 a:before {
 
 header .menu-item-9653 a:before {
   content: "\f4ad";
+}
+
+header .menu-item-9756 a:before {
+  content: "\f0d1";
 }
 
 /* ------------------------

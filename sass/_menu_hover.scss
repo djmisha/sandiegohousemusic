@@ -7,8 +7,11 @@ $menuHeight: 60px;
   font-weight: 100;
   z-index: 9999;
   position: fixed;
-  right: 250px;
+  right: 150px;
   top: 50px;
+  @include media($full) {
+    right: 20vw;
+  }
 
   .main-menu {
     display: flex;
@@ -151,6 +154,7 @@ $menuHeight: 60px;
     .menu-item-9130 a,
     .menu-item-7264 a,
     .menu-item-9653 a,
+    .menu-item-9756 a,
     .menu-item-7265 a {
       position: relative;
       &:before { 
@@ -202,5 +206,8 @@ $menuHeight: 60px;
   }
   .menu-item-9653 a:before {
     content: "\f4ad";
+  }
+  .menu-item-9756 a:before {
+    content: "\f0d1";
   }
 }
