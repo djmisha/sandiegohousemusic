@@ -39,7 +39,7 @@
 			<?php happenstance_content_nav( '' ); ?>
 		</div>
 	</article>
-	<?php get_sidebar();?>
+	<?php //get_sidebar();?>
 </main>
 <?php wp_reset_postdata(); ?>
 <?php get_footer();?>

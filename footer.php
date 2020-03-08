@@ -4,16 +4,16 @@
 		<div class="close-form">
 			<i class="fal fa-times"></i>
 		</div>
-		<strong>Contact Us to Speak with a Dance Music DJ</strong><br><br>
+		<strong>Speak with a Dance Music Expert</strong><br><br>
 		<img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-		Give us a few details about your event and receive same day DJ availability and consultation.  Please provide the date, location, occasion and approximate attendace. We look foward to hearing from you!  
+		Contact us here, just give us a few details about your event need and receive same day DJ availability and consultation.  Please provide the date, location, occasion and approximate attendace. We look foward to hearing from you!  
 		<?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
 	</div>
 
 	<section class="bg-hire will-parallax parallax-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/slide-<?php echo rand(1,4) ?>.jpg">
 		<div>
 			<h2>Hire our DJs for<br> Events, Party & Wedding</h2>	
-			<p>DJ services in San Diego and beyond. Playing the best club, edm, underground techno, house, top hits and dance music productions.  
+			<p>DJ services in San Diego and beyond. Playing the best club, edm, underground techno, house, top hits and music for dancing DJ productions.  
 			<a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a></p>
 		</div>
 	</section>
@@ -37,13 +37,13 @@
 		</div>
 	</div>
 
-<!-- 	<div class="footer-signup">
-		<b>Sign Up For VIP Emails</b>
-		<form action="https://sandiegohousemusic.com/cgi-bin/dada/mail.cgi" method="post"><input name="list" type="hidden" value="sdhm" /><input id="email" name="email" type="text" value="Email Address" />
+	<div class="footer-signup">
+		<b>Sign Up For Our Newsletter</b>
+		<form action="https://sandiegohousemusic.com/cgi-bin/dada/mail.cgi" method="post"><input name="list" type="hidden" value="sdhm" /><input id="email" name="email" type="text" value="email@address.com" />
 		<label for="f_s"> </label>
 		<input id="f_s" checked="checked" name="f" type="hidden" value="subscribe" />
 		<input class="processing button" type="submit" value="Sign Up" /></form>
-	</div> -->
+	</div>
 
 	<section class="lower-footer">
 		<div class="site-logo-footer">
@@ -79,7 +79,7 @@
 <?php wp_footer();?>
 
 <script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+    document.write("<script async src='http://HOST:3002/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
 //]]></script>
 </body>
 </html>

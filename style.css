@@ -1906,7 +1906,8 @@ header .get-social a i {
 .social-feed .close-feed {
   z-index: 9999;
   position: fixed;
-  right: 20px;
+  right: 3px;
+  top: 0px;
 }
 
 .social-feed .close-feed i {
@@ -2283,7 +2284,7 @@ header .get-social a i {
 
 header .menu-item-9284 a,
 header .menu-item-7986 a,
-header .menu-item-7985 a,
+header .menu-item-9759 a,
 header .menu-item-9153 a,
 header .menu-item-7981 a,
 header .menu-item-7982 a,
@@ -2299,7 +2300,7 @@ header .menu-item-7265 a {
 
 header .menu-item-9284 a:before,
 header .menu-item-7986 a:before,
-header .menu-item-7985 a:before,
+header .menu-item-9759 a:before,
 header .menu-item-9153 a:before,
 header .menu-item-7981 a:before,
 header .menu-item-7982 a:before,
@@ -2326,7 +2327,7 @@ header .menu-item-7265 a:before {
 @media only screen and (min-width: 1080px) {
   header .menu-item-9284 a:before,
   header .menu-item-7986 a:before,
-  header .menu-item-7985 a:before,
+  header .menu-item-9759 a:before,
   header .menu-item-9153 a:before,
   header .menu-item-7981 a:before,
   header .menu-item-7982 a:before,
@@ -2346,7 +2347,7 @@ header .menu-item-7265 a:before {
 @media only screen and (min-width: 1080px) {
   header .menu-item-9284 a:hover:before,
   header .menu-item-7986 a:hover:before,
-  header .menu-item-7985 a:hover:before,
+  header .menu-item-9759 a:hover:before,
   header .menu-item-9153 a:hover:before,
   header .menu-item-7981 a:hover:before,
   header .menu-item-7982 a:hover:before,
@@ -2367,7 +2368,7 @@ header .menu-item-7986 a:before {
 }
 
 header .menu-item-7264 a:before,
-header .menu-item-7985 a:before {
+header .menu-item-9759 a:before {
   content: "\f3ff";
 }
 
@@ -2401,6 +2402,12 @@ header .menu-item-9756 a:before {
 /* ------------------------
 	Content
 ------------------------ */
+/* Guttenberg Styles */
+.wp-block-cover {
+  max-height: 500px;
+  margin: 80px 0;
+}
+
 .content {
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -2408,7 +2415,6 @@ header .menu-item-9756 a:before {
 @media only screen and (min-width: 768px) {
   .content {
     width: 100%;
-    margin-right: 150px;
   }
 }
 
@@ -2428,7 +2434,14 @@ header .menu-item-9756 a:before {
   color: #3271cd;
 }
 
+.content p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .content h1 {
+  padding-left: 20px;
+  padding-right: 20px;
   margin-top: 20px !important;
   margin-bottom: 40px;
 }
@@ -2448,6 +2461,8 @@ header .menu-item-9756 a:before {
 .content h4,
 .content h5,
 .content h6 {
+  padding-left: 20px;
+  padding-right: 20px;
   color: #38c0e6;
   font-weight: 200;
 }
@@ -3130,8 +3145,6 @@ form input {
   border-bottom: 1px solid #eee;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 30px;
-  padding-bottom: 30px;
   text-align: center;
   margin-top: 40px;
 }
@@ -3140,6 +3153,35 @@ form input {
 .page-4027 .bg-hire,
 .page-441 .bg-hire {
   display: none;
+}
+
+.bg-hire .foot-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.bg-hire .foot-video video {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 280px;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-hire .foot-video video {
+    height: 600px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -3158,7 +3200,6 @@ form input {
 .bg-hire div {
   margin: 0 auto;
   max-width: 600px;
-  padding: 20px;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -3221,13 +3262,13 @@ form input {
 
 .lower-footer {
   padding-top: 40px !important;
-  padding-bottom: 100px !important;
+  padding-bottom: 40px !important;
 }
 
 @media only screen and (min-width: 768px) {
   .lower-footer {
     padding-top: 60px !important;
-    padding-bottom: 100px !important;
+    padding-bottom: 40px !important;
   }
 }
 
@@ -3617,7 +3658,7 @@ span.error {
   }
 }
 
-.welcome-cta h2 {
+.welcome-cta h1 {
   text-shadow: 2px 2px 2px #02034a;
   max-width: 1040px;
   text-transform: uppercase;
@@ -3635,7 +3676,7 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .welcome-cta h2 {
+  .welcome-cta h1 {
     text-shadow: 4px 4px 4px #02034a;
     padding-left: 0px;
     padding-right: 0px;
@@ -3645,7 +3686,8 @@ span.error {
   }
 }
 
-.welcome-cta h3 {
+.welcome-cta h2 {
+  display: block;
   text-transform: uppercase;
   font-weight: 900;
   text-shadow: 2px 2px 1px #02034a;
@@ -3659,12 +3701,16 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .welcome-cta h3 {
+  .welcome-cta h2 {
     padding-left: 40px;
     padding-right: 40px;
     text-shadow: 4px 4px 4px #02034a;
     font-size: 30px;
   }
+}
+
+.welcome-cta ul {
+  margin-top: 0 !important;
 }
 
 .home-button {
@@ -3674,6 +3720,11 @@ span.error {
   background-color: transparent;
   border: 1px solid #ffffff;
   position: relative;
+}
+
+.home-button a {
+  color: #fff;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {

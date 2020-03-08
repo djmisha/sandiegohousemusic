@@ -45,7 +45,7 @@
 
 	// Make the mobile menu work when switching between sizes
 
-	$(window).on("load resize",function(e){
+	function switchNavBetweenMobileDesktop() {
 		if ($("html").hasClass("is--device") || $(window).width() < $desktop) {
 			$(".menu-wrap").removeClass("hover-menu");
 			$(".menu-wrap").addClass("touch-menu");
@@ -80,4 +80,10 @@
 			$('.menu > li.menu-item-has-children > a, .menu .sub-menu > li.menu-item-has-children > a').unbind('click');
 			$('ul.sub-menu, .menu').removeAttr('style');
 		}
+	}
+
+	switchNavBetweenMobileDesktop();
+
+	$(window).on("resize",function(e){
+		switchNavBetweenMobileDesktop();
 	});

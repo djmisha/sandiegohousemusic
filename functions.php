@@ -413,3 +413,17 @@ function update_post_like_count() {
 }
 
 add_action( 'wp_ajax_nopriv_update_post_like_count', 'update_post_like_count' );
+
+
+
+
+/* Lazy Load Thumbnails */
+
+
+function lazyload_image( $html ) {
+    $html = str_replace( 'src=', 'data-src=', $html ) ;
+    return $html;
+}
+
+
+add_filter( 'post_thumbnail_html', 'lazyload_image');

@@ -396,7 +396,7 @@ function attachVideo() {
 
 setTimeout(function() {
 	attachVideo();
-}, 3000);
+}, 5000);
 
 
 
@@ -459,6 +459,45 @@ function showSocialFeeds() {
 
 showSocialFeeds();
 
+/* Show Event Page */
+
+function showEventFeed() {
+
+	var eventsLink =  'https://events.sandiegohousemusic.com'; 
+	var eventButtons = document.querySelectorAll('.get-events a');
+	var feedWrapper = document.querySelector('.social-feed');
+	var feedFrame = document.querySelector('.social-feed .the-feed iframe'); 
+	var feedClose = document.querySelector('.close-feed');
+
+	for ( let i = 0; eventButtons.length > i ; i++) {
+		eventButtons[i].addEventListener('click', function(event) {
+			event.preventDefault();
+			showFeed();
+		})
+	}
+
+	function showFeed(icon){
+		feedFrame.src = eventsLink;
+		feedWrapper.classList.add('active');
+	}
+
+
+	function closeFeed(icon) {
+		feedWrapper.classList.remove('active');
+	}
+	
+	feedClose.addEventListener('click', function(event) {
+		event.preventDefault;
+		feedWrapper.classList.remove('active');
+		var activeIcon = document.querySelector('i.active');
+		closeFeed(activeIcon);
+	})
+
+};
+
+showEventFeed();
+
+
 
 
 function sharePost() {
@@ -493,5 +532,58 @@ sharePost();
 
 
 
+
+
+function requestPostsAndAttachtoPage(category, numberofposts) {
+
+	const http = new XMLHttpRequest();
+	const url = 'https://sandiegohousemusic.com/wp-json/wp/v2/posts?category=' + category + '&per_page=' + numberofposts;
+	http.open('GET', url);
+	http.send();
+
+	http.onreadystatechange= function() {
+		if(http.readyState === XMLHttpRequest.DONE && http.status === 200) {
+			var PostResponce = JSON.parse(http.responseText);
+			parseData(PostResponce);
+		}
+	}
+	
+	function parseData(data) {
+		for ( let i = 0; i < data.length; i++) {
+			let postID = data[i].id;
+			let postTitle = data[i].title.rendered;
+			let postURL = data[i].link;
+			let postIMG = data[i].jetpack_featured_media_url;
+
+			var pageElement = document.createElement('div');
+			pageElement.classList.add('parsed__post');
+
+			pageElement.innerHTML = '<a class=\"\" href=\"' + postURL + '\"><img src=\"' + postIMG + '\"><span>' + postTitle + '</span></a>';
+			
+			document.body.appendChild(pageElement);
+			setTimeout(function(){
+				pageElement.classList.add('active');
+			},2000);
+		}
+	}
+}
+
+
+
+
+
+var inputSearch = document.getElementById('email');
+console.log(inputSearch);
+
+inputSearch.addEventListener('focusin', function (event) {
+	inputSearch.value = '';
+});
+
+/*Fire Off Featured Post slide in */
+// if (document.body.classList.contains('home')) { // only do on homepage
+// 	setTimeout(function() {
+// 		requestPostsAndAttachtoPage('music', 1); // post requested after 30 seconds 
+// 	}, 30000);
+// }
 
 
