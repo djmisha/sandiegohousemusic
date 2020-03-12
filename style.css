@@ -2439,11 +2439,25 @@ header .menu-item-9756 a:before {
   padding-right: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+  .content p {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
 .content h1 {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 20px !important;
   margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .content h1 {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -2465,6 +2479,17 @@ header .menu-item-9756 a:before {
   padding-right: 20px;
   color: #38c0e6;
   font-weight: 200;
+}
+
+@media only screen and (min-width: 768px) {
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .content h2 a,
@@ -2568,9 +2593,6 @@ header .menu-item-9756 a:before {
 
 @media only screen and (min-width: 1080px) {
   .interior {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     width: 100%;
   }
 }
