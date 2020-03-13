@@ -479,11 +479,12 @@ function showEventFeed() {
 	function showFeed(icon){
 		feedFrame.src = eventsLink;
 		feedWrapper.classList.add('active');
+		feedWrapper.classList.add('events');
 	}
-
 
 	function closeFeed(icon) {
 		feedWrapper.classList.remove('active');
+		feedWrapper.classList.remove('events');
 	}
 	
 	feedClose.addEventListener('click', function(event) {

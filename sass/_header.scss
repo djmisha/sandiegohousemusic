@@ -332,6 +332,9 @@ header {
     margin: 0 auto;
     margin-top: 0px;
     height: 100%;
+    .events & {
+      background: red;
+    }
     // border: 1px solid red;
     iframe {
       width: 100%;
