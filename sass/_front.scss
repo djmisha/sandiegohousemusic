@@ -89,8 +89,8 @@
   h1 {
     text-shadow: 2px 2px 2px $darkColor;
     max-width: 1040px;
-    text-transform: uppercase;
-    font-weight: 900;
+    // text-transform: uppercase;
+    font-weight: 100;
     margin: 0 auto;
     font-size: 26px;
     line-height: 32px;
@@ -110,10 +110,10 @@
       line-height: 60px;
     }
   }
-  h2 {
-    display: block;
-    text-transform: uppercase;
-    font-weight: 900;
+  span {
+    display: block !important;
+    // text-transform: uppercase;
+    font-weight: 100;
     text-shadow: 2px 2px 1px $darkColor;
     padding-left: 10px;
     padding-right: 10px;
@@ -122,6 +122,7 @@
     position: relative;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 30px;
     @include media($tablet) {
       padding-left: 40px;
       padding-right: 40px;
@@ -177,6 +178,13 @@
     }
   }
 }
+
+
+
+.front-page-events {
+  margin-bottom: 20px;
+}
+
 
 
 .owl-nav {

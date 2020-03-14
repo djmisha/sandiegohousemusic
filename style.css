@@ -1858,10 +1858,9 @@ header .get-social a i {
   position: relative;
   text-align: center;
   font-family: "Oswald", sans-serif;
-  font-size: 50px;
-  font-weight: 900;
+  font-size: 40px;
+  font-weight: 200;
   text-shadow: 2px 2px 0px #02034a;
-  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2498,10 +2497,11 @@ header .menu-item-9756 a:before {
   font-size: 20px;
   line-height: 25px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 200;
   margin-bottom: 0px;
   color: #38c0e6;
   display: block;
+  padding-top: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3046,6 +3046,8 @@ form input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3054,6 +3056,8 @@ form input {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -3126,9 +3130,28 @@ form input {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+.footer-nav:nth-of-type(3) {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-nav:nth-of-type(3) {
+    margin-top: 0;
+    max-width: 500px;
+    width: auto;
+  }
+}
+
 .footer-signup {
   margin: 0 auto;
+  margin-top: 20px;
   max-width: 500px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-signup {
+    margin-top: 0;
+  }
 }
 
 /*====================================
@@ -3243,16 +3266,17 @@ form input {
 .site-logo-footer img {
   max-width: 200px;
   margin-left: -20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .schema {
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 13px;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .schema a {
-  color: #000;
+  color: #adb5bd;
 }
 
 .lower-footer {
@@ -3282,7 +3306,7 @@ form input {
   padding: 0 0px;
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 16px;
   color: #adb5bd;
 }
@@ -3657,8 +3681,7 @@ span.error {
 .welcome-cta h1 {
   text-shadow: 2px 2px 2px #02034a;
   max-width: 1040px;
-  text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 100;
   margin: 0 auto;
   font-size: 26px;
   line-height: 32px;
@@ -3682,10 +3705,9 @@ span.error {
   }
 }
 
-.welcome-cta h2 {
-  display: block;
-  text-transform: uppercase;
-  font-weight: 900;
+.welcome-cta span {
+  display: block !important;
+  font-weight: 100;
   text-shadow: 2px 2px 1px #02034a;
   padding-left: 10px;
   padding-right: 10px;
@@ -3694,10 +3716,11 @@ span.error {
   position: relative;
   font-size: 16px;
   line-height: 20px;
+  margin-bottom: 30px;
 }
 
 @media only screen and (min-width: 768px) {
-  .welcome-cta h2 {
+  .welcome-cta span {
     padding-left: 40px;
     padding-right: 40px;
     text-shadow: 4px 4px 4px #02034a;
@@ -3759,6 +3782,10 @@ span.error {
   .home .content .excerpt {
     width: 32% !important;
   }
+}
+
+.front-page-events {
+  margin-bottom: 20px;
 }
 
 .owl-nav {
@@ -4127,7 +4154,6 @@ span.error {
   transition: all 0.2s ease-in-out;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 17px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4144,6 +4170,7 @@ span.error {
   .tmpl_type_archive .set-of-posts .excerpt-rotator,
   .tmpl_type_archive .post-snippet .excerpt,
   .tmpl_type_archive .post-snippet .excerpt-rotator {
+    border-radius: 17px;
     margin-bottom: 80px;
     padding: 20px;
     padding-bottom: 30px;
@@ -4212,11 +4239,11 @@ span.error {
 .tmpl_type_archive .set-of-posts .excerpt-rotator .para a,
 .tmpl_type_archive .post-snippet .excerpt .para a,
 .tmpl_type_archive .post-snippet .excerpt-rotator .para a {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-decoration: none !important;
   color: #000;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 18px;
   color: #02034a;
 }
 

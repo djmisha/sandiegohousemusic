@@ -9,9 +9,8 @@
 	<div class="overlay"></div>
 	<div class="home-video"></div>
 	<div class="welcome-cta">
-		<h1>DJ's EDM House Music &amp; Dance Events</h1> 
-		<h2>in San Diego and Around The World</h2>
-		<br clear="all">
+		<h1>DJ's EDM House Music &amp; Dance Events</h1>
+		<span>in San Diego and Around The World</span>
 		<ul>
 			<li class="home-button button get-events">
 				<a href="events.sandiegohousemusic.com">Explore Events</a>
@@ -27,19 +26,6 @@
 	<div class="content" >
 
 
-		<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events: House Music Techno Dance</h2>
-
-		<div class="front-page-events">
-			<iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%" height="1320" style="overflow: hidden;" scrolling="no"></iframe>
-		</div>
-		
-		<div class="get-events">
-			<a href="events.sandiegohousemusic.com" rel="nofollow" class="home-button button">More Events</a>
-		</div>
-
-		<br clear="all">
-		<br clear="all">
-		<br clear="all">
 
 		<h2 class="color-2"><i class="fas fa-compact-disc"></i> Listen to House Music</h2>
 		<article class="set-of-posts">
@@ -94,6 +80,20 @@
 		<br clear="all">
 		<br clear="all">
 
+
+		<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events: House Music Techno Dance</h2>
+
+		<div class="front-page-events">
+			<iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%" height="1320" style="overflow: hidden;" scrolling="no"></iframe>
+		</div>
+		
+		<div class="get-events">
+			<a href="events.sandiegohousemusic.com" rel="nofollow" class=" button">More Events</a>
+		</div>
+
+		<br clear="all">
+		<br clear="all">
+		<br clear="all">
 
 		<!-- <article class="set-of-posts">
 			<?php 

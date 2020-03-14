@@ -273,10 +273,10 @@ header {
     position: relative;
     text-align: center;
     font-family: $primaryFont;
-    font-size: 50px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 200;
     text-shadow: 2px 2px 0px $darkColor;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     @include media($tablet) {
       font-size: 70px;
       line-height: 70px;

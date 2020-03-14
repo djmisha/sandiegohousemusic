@@ -88,10 +88,11 @@
   font-size: 20px;
   line-height: 25px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 200;
   margin-bottom: 0px;
   color: $secondaryColor;
   display: block;
+  padding-top: 20px;
   @include media($tablet) {
     font-size: 40px;
     line-height: 45px;
