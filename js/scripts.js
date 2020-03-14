@@ -134,7 +134,7 @@
 					$(".parallax").waypoint(function() {
 						// $(".parallax-welcome").parallax("50%", -0.3, true, "is-parallaxing");
 						// $(".parallax-header").parallax("50%", -0.3, true, "is-parallaxing");
-						$(".parallax-footer").parallax("50%", -0.1, true, "is-parallaxing");
+						$(".parallax-footer").parallax("50%", -0.2, true, "is-parallaxing");
 						// $(".parallax-inside").parallax("50%", -0.3, true, "is-parallaxing");
 					});
 				}
@@ -572,13 +572,16 @@ function requestPostsAndAttachtoPage(category, numberofposts) {
 
 
 
+/* Susbribe Input Clear */
 
 var inputSearch = document.getElementById('email');
-console.log(inputSearch);
 
 inputSearch.addEventListener('focusin', function (event) {
 	inputSearch.value = '';
 });
+
+
+
 
 /*Fire Off Featured Post slide in */
 // if (document.body.classList.contains('home')) { // only do on homepage

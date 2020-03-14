@@ -1345,7 +1345,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   body {
-    font: 22px/25px "Oswald", sans-serif;
+    font: 18px/22px "Oswald", sans-serif;
   }
 }
 
@@ -3127,10 +3127,7 @@ form input {
 }
 
 .footer-signup {
-  padding-left: 40px;
-  padding-right: 40px;
   margin: 0 auto;
-  margin-top: 40px;
   max-width: 500px;
 }
 
@@ -3197,6 +3194,7 @@ form input {
 .bg-hire div {
   margin: 0 auto;
   max-width: 600px;
+  padding: 20px;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -3586,7 +3584,8 @@ span.error {
   z-index: 1000;
   border-bottom: 5px solid #000;
   height: 280px;
-  background: #02034a;
+  background: #090979;
+  background: linear-gradient(135deg, #090979 0%, #090979 45%, #020024 99%);
 }
 
 @media only screen and (min-width: 768px) {
@@ -4126,9 +4125,9 @@ span.error {
   padding: 20px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-  padding-bottom: 40px;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 17px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4147,6 +4146,7 @@ span.error {
   .tmpl_type_archive .post-snippet .excerpt-rotator {
     margin-bottom: 80px;
     padding: 20px;
+    padding-bottom: 30px;
     width: 30%;
   }
   .home .set-of-posts .excerpt:hover, .home .set-of-posts .excerpt-rotator:hover, .home .post-snippet .excerpt:hover, .home .post-snippet .excerpt-rotator:hover,

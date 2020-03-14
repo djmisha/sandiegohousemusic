@@ -20,7 +20,7 @@
 
 	<div class="footer-boxes">
 		<div class="footer-nav">
-			<span>House Music, DJs, Clubs </span>
+			<span>House Music, DJs, Events </span>
 			<?php wp_nav_menu( array(
 				'menu' 		=> 'Footer Navigation',
 				'menu_id'	=> 'footer-main-1',
@@ -35,14 +35,15 @@
 				'footer_class' => 'main-menu',
 				)); ?>
 		</div>
-	</div>
-
-	<div class="footer-signup">
-		<b>Sign Up For Our Newsletter</b>
-		<form action="https://sandiegohousemusic.com/cgi-bin/dada/mail.cgi" method="post"><input name="list" type="hidden" value="sdhm" /><input id="email" name="email" type="text" value="email@address.com" />
-		<label for="f_s"> </label>
-		<input id="f_s" checked="checked" name="f" type="hidden" value="subscribe" />
-		<input class="processing button" type="submit" value="Sign Up" /></form>
+		<div class="footer-nav">
+			<div class="footer-signup">
+				<span>Sign Up For Our Newsletter</span>
+				<form action="https://sandiegohousemusic.com/cgi-bin/dada/mail.cgi" method="post"><input name="list" type="hidden" value="sdhm" /><input id="email" name="email" type="text" value="email@address.com" />
+				<label for="f_s"> </label>
+				<input id="f_s" checked="checked" name="f" type="hidden" value="subscribe" />
+				<input class="processing button" type="submit" value="Sign Up" /></form>
+			</div>
+		</div>
 	</div>
 
 	<section class="lower-footer">

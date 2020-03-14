@@ -27,7 +27,9 @@
   z-index: 1000;
   border-bottom: 5px solid #000;
   height: 280px;
-  background: $darkColor;
+  // background: $darkColor;
+   background: rgb(9,9,121);
+  background: linear-gradient(135deg, rgba(9,9,121,1) 0%, rgba(9,9,121,1) 45%, rgba(2,0,36,1) 99%); 
   @include media($tablet) {
     height: 602px;
   }
@@ -318,7 +320,7 @@
 }
 
 
-  i {
+i {
       // border: 1px solid pink;
       &.liked {
         color: red;
@@ -340,29 +342,29 @@
       width: 45px;
       opacity: 0;
       transition: all .5s ease;
+    }
+    &.copied {
+      color: pink;
+      color: #000;
+      &:before {
+        opacity: 1;
+      }
+    }
   }
-  &.copied {
-    color: pink;
-    color: #000;
-    &:before {
+
+
+  .the-fire{ 
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 27px;
+    opacity: 0;
+    &.so-hot {
       opacity: 1;
     }
   }
-}
 
 
-.the-fire{ 
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 27px;
-  opacity: 0;
-  &.so-hot {
-    opacity: 1;
-  }
-}
-
-
-.bounce {
+  .bounce {
    animation: spring .75s;
    animation-timing-function: ease-in;
    animation-iteration-count: 1;

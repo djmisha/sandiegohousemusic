@@ -13,7 +13,7 @@ body {
   color: $defaultcolor;
   font: 14px/20px $defaultfont;
   @include media($tablet) {
-    font: 22px/25px $defaultfont;
+    font: 18px/22px $defaultfont;
   }
   background-color: $lightColor;
   min-width: 320px;
