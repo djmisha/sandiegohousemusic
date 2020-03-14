@@ -1345,7 +1345,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   body {
-    font: 18px/25px "Oswald", sans-serif;
+    font: 22px/25px "Oswald", sans-serif;
   }
 }
 
@@ -2412,6 +2412,11 @@ header .menu-item-9756 a:before {
   margin: 80px 0;
 }
 
+.tmpl_type_page .content h1, .tmpl_type_page .content h2, .tmpl_type_page .content h3, .tmpl_type_page .content h4, .tmpl_type_page .content h5, .tmpl_type_page .content h6, .tmpl_type_page .content p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .content {
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -2438,30 +2443,9 @@ header .menu-item-9756 a:before {
   color: #3271cd;
 }
 
-.content p {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .content p {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-}
-
 .content h1 {
-  padding-left: 20px;
-  padding-right: 20px;
   margin-top: 20px !important;
   margin-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .content h1 {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -2478,32 +2462,16 @@ header .menu-item-9756 a:before {
 .content h3,
 .content h4,
 .content h5,
-.content h6,
-.content .gform_wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
+.content h6 {
   color: #38c0e6;
   font-weight: 200;
-}
-
-@media only screen and (min-width: 768px) {
-  .content h2,
-  .content h3,
-  .content h4,
-  .content h5,
-  .content h6,
-  .content .gform_wrapper {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
 }
 
 .content h2 a,
 .content h3 a,
 .content h4 a,
 .content h5 a,
-.content h6 a,
-.content .gform_wrapper a {
+.content h6 a {
   text-decoration: none;
 }
 
@@ -4109,7 +4077,8 @@ span.error {
   max-width: 100%;
   max-height: 600px;
   height: auto;
-  border: 1px solid #eee;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (min-width: 768px) {
@@ -4178,7 +4147,7 @@ span.error {
   .tmpl_type_archive .post-snippet .excerpt-rotator {
     margin-bottom: 80px;
     padding: 20px;
-    width: 48%;
+    width: 30%;
   }
   .home .set-of-posts .excerpt:hover, .home .set-of-posts .excerpt-rotator:hover, .home .post-snippet .excerpt:hover, .home .post-snippet .excerpt-rotator:hover,
   .blog .set-of-posts .excerpt:hover,
@@ -4246,8 +4215,8 @@ span.error {
   font-family: "Roboto Condensed", sans-serif;
   text-decoration: none !important;
   color: #000;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   color: #02034a;
 }
 

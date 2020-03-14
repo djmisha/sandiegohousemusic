@@ -6,7 +6,8 @@
     max-width: 100%;
     max-height: 600px;
     height: auto;
-    border: 1px solid #eee;
+    // border: 1px solid #eee;
+     box-shadow: 0px 3px 3px rgba(#000, .1) ;
     @include media($tablet) {
       // width: 400px;
       width: auto;
@@ -35,7 +36,7 @@
         // border-radius: 10px;
         margin-bottom: 80px;
         padding: 20px;
-        width: 48%;
+        width: 30%;
         &:hover {
           box-shadow: 0px 3px 7px rgba(#000, .3) ;
         }
@@ -51,8 +52,8 @@
         font-family: $secondaryFont;
         text-decoration: none !important;
         color: #000;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 20px;
         color: $darkColor;
         span {
           text-decoration: underline;
