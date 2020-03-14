@@ -2478,7 +2478,8 @@ header .menu-item-9756 a:before {
 .content h3,
 .content h4,
 .content h5,
-.content h6 {
+.content h6,
+.content .gform_wrapper {
   padding-left: 20px;
   padding-right: 20px;
   color: #38c0e6;
@@ -2490,7 +2491,8 @@ header .menu-item-9756 a:before {
   .content h3,
   .content h4,
   .content h5,
-  .content h6 {
+  .content h6,
+  .content .gform_wrapper {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -2500,7 +2502,8 @@ header .menu-item-9756 a:before {
 .content h3 a,
 .content h4 a,
 .content h5 a,
-.content h6 a {
+.content h6 a,
+.content .gform_wrapper a {
   text-decoration: none;
 }
 
