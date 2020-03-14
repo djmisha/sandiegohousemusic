@@ -1903,6 +1903,10 @@ header .get-social a i {
   }
 }
 
+.social-feed.active.events .the-feed {
+  max-width: none;
+}
+
 .social-feed .close-feed {
   z-index: 9999;
   position: fixed;
@@ -1922,10 +1926,6 @@ header .get-social a i {
   margin: 0 auto;
   margin-top: 0px;
   height: 100%;
-}
-
-.events .social-feed .the-feed {
-  background: red;
 }
 
 .social-feed .the-feed iframe {

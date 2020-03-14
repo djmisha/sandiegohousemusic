@@ -88,11 +88,13 @@
 		<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events: House Music Techno Dance</h2>
 
 		<div class="front-page-events">
-			<iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%" height="1400" style="overflow: hidden;" scrolling="no"></iframe>
+			<iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%" height="1320" style="overflow: hidden;" scrolling="no"></iframe>
 		</div>
 
-		<a href="https://events.sandiegohousemusic.com" rel="nofollow" class="button">More Events</a>
 
+		<li class="home-button button get-events">
+			<a href="events.sandiegohousemusic.com" rel="nofollow">More Events</a>
+		</li>
 
 		<!-- <article class="set-of-posts">
 			<?php 
