@@ -180,6 +180,7 @@ header {
       @include media($desktop) {
         top: auto;
         right: 40px;
+        display: none;
       }
     }
     a {

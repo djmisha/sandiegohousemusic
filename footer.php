@@ -52,11 +52,18 @@
 				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg" class="b-lazy" alt="San Diego DJs">
 			</a>
 		</div>
-		<div class="get-social footer-social">
+
+ 		<div class="get-social footer-social">
+			<a rel="noopener" title="instagram"><i data-name="instagram" class="fab fa-instagram"></i></a>
+			<a rel="noopener" title="facebook"><i data-name="facebook" class="fab fa-facebook"></i></a>
+			<a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a>
+			<!-- <a class="show-form"><i class="fal fa-comments"></i></a> -->
+ 		</div>
+<!-- 		<div class="get-social footer-social">
 			<a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
 			<a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
 			<a href="https://twitter.com/sdhousemusic" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
- 		</div>
+ 		</div> -->
  		<div class="schema">
  			<?php do_action('reviews_markup'); ?>
  		</div>

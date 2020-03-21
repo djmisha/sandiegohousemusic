@@ -7,7 +7,7 @@ $menuHeight: 60px;
   font-weight: 100;
   z-index: 9999;
   position: fixed;
-  right: 150px;
+  right: 0px;
   top: 50px;
   @include media($full) {
     right: 20vw;

@@ -1735,6 +1735,7 @@ header .get-social {
   header .get-social {
     top: auto;
     right: 40px;
+    display: none;
   }
 }
 
@@ -2139,7 +2140,7 @@ header .get-social a i {
   font-weight: 100;
   z-index: 9999;
   position: fixed;
-  right: 150px;
+  right: 0px;
   top: 50px;
 }
 
@@ -3608,8 +3609,7 @@ span.error {
   z-index: 1000;
   border-bottom: 5px solid #000;
   height: 280px;
-  background: #090979;
-  background: linear-gradient(135deg, #090979 0%, #090979 45%, #020024 99%);
+  background: #000;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3742,7 +3742,6 @@ span.error {
 }
 
 .home-button a {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -3755,7 +3754,8 @@ span.error {
 
 .home-button:hover {
   color: #eb0077;
-  border: 1px solid #eb0077;
+  color: #000 !important;
+  border: 1px solid #fff;
   background: transparent;
 }
 
