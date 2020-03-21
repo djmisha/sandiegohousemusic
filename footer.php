@@ -63,7 +63,8 @@
 			<a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
 			<a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
 			<a href="https://twitter.com/sdhousemusic" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
- 		</div> -->
+ 		</div> 
+ 	-->
  		<div class="schema">
  			<?php do_action('reviews_markup'); ?>
  		</div>
@@ -84,10 +85,25 @@
 	</section>  
 </footer>
 
+<section class="auto-google-ads">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- SDHM Mobile -->
+	<ins class="adsbygoogle"
+	style="display:block"
+	data-ad-client="ca-pub-6261738507723190"
+	data-ad-slot="2039607348"
+	data-ad-format="auto"
+	data-full-width-responsive="true"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</section>
+
 <?php wp_footer();?>
 
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
 //]]></script>
+
 </body>
 </html>

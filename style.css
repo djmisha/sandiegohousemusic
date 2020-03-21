@@ -2412,7 +2412,7 @@ header .menu-item-9756 a:before {
   margin: 80px 0;
 }
 
-.tmpl_type_page .content h1, .tmpl_type_page .content h2, .tmpl_type_page .content h3, .tmpl_type_page .content h4, .tmpl_type_page .content h5, .tmpl_type_page .content h6, .tmpl_type_page .content p {
+.tmpl_type_page .content h1, .tmpl_type_page .content h2, .tmpl_type_page .content h3, .tmpl_type_page .content h4, .tmpl_type_page .content h5, .tmpl_type_page .content h6, .tmpl_type_page .content p, .tmpl_type_page .content form {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -2927,7 +2927,7 @@ form input {
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   position: fixed;
-  bottom: 60px;
+  bottom: 20px;
   right: -80px;
 }
 
@@ -4046,50 +4046,7 @@ span.error {
   }
 }
 
-.parsed__post {
-  position: fixed;
-  left: -150px;
-  bottom: 80px;
-  width: 150px;
-  border: 2px solid black;
-  background: black;
-  opacity: 0;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  font-size: 10px;
-  line-height: 12px;
-  text-align: left;
-  padding-bottom: 10px;
-  font-weight: 100;
-  z-index: 9999;
-}
-
-.parsed__post.active {
-  opacity: 1;
-  left: 0px;
-}
-
-.parsed__post a {
-  overflow: hidden;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-}
-
-.parsed__post span {
-  font-family: "Oswald", sans-serif;
-  color: #fff;
-  display: block;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.parsed__post img {
-  width: 100%;
-  height: auto;
-  padding-bottom: 10px;
-}
-
+/*NOT USED RIGHT NOW*/
 /* ------------------------
 	Blog/Category/Archives
 ------------------------ */
