@@ -1548,9 +1548,9 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1567,6 +1567,10 @@ header {
 
 @media only screen and (min-width: 768px) {
   .nav-bar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: 80px;
     width: auto;
     left: 0px;
@@ -1584,37 +1588,10 @@ header {
   }
 }
 
-.nav-down {
-  position: fixed;
-  top: 0px;
-  left: 0;
-  right: 0;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  -webkit-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-          transform: translateY(0px);
-}
-
-.nav-up {
-  position: fixed;
-  top: 0px;
-  left: 0;
-  right: 0;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  -webkit-transform: translateY(-100px);
-      -ms-transform: translateY(-100px);
-          transform: translateY(-100px);
-}
-
 .site-logo {
   position: relative;
-  top: 5px;
+  top: 1px;
+  right: 10px;
 }
 
 .site-logo h1 {
@@ -1639,7 +1616,7 @@ header {
 
 .menu-trigger {
   position: absolute;
-  right: 20px;
+  left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1665,8 +1642,8 @@ header {
 .menu-trigger .hamburger {
   width: 25px;
   height: 2px;
-  border-radius: 2px;
-  background: #02034a;
+  border-radius: 20px;
+  background: #eb0077;
   display: block;
   margin-bottom: 4px;
 }
@@ -1732,19 +1709,11 @@ a.show-form i {
 
 header .get-social {
   position: absolute;
-  right: 55px;
-}
-
-@media only screen and (min-width: 350px) {
-  header .get-social {
-    right: 60px;
-  }
+  right: 125px;
 }
 
 @media only screen and (min-width: 1080px) {
   header .get-social {
-    top: auto;
-    right: 40px;
     display: none;
   }
 }
@@ -2120,10 +2089,10 @@ header .get-social a i {
 .touch-menu .close-menu {
   display: block;
   position: fixed;
-  top: 18px;
-  right: 22px;
-  color: white;
-  font-size: 30px;
+  top: 8px;
+  left: 22px;
+  color: #eb0077;
+  font-size: 33px;
   cursor: pointer;
 }
 
@@ -3651,22 +3620,22 @@ span.error {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.slide-1 {
+.header-1 {
   background: #000 url("images/slide-1.jpg") center center no-repeat;
   background-size: cover;
 }
 
-.slide-2 {
+.header-2 {
   background: #000 url("images/slide-2.jpg") center center no-repeat;
   background-size: cover;
 }
 
-.slide-3 {
+.header-3 {
   background: #000 url("images/slide-3.jpg") center center no-repeat;
   background-size: cover;
 }
 
-.slide-4 {
+.header-4 {
   background: #000 url("images/slide-4.jpg") center center no-repeat;
   background-size: cover;
 }

@@ -173,11 +173,11 @@
   .close-menu {
     display: block;
     position: fixed;
-    top: 18px;
-    right: 22px;
-    color: rgba($lightColor, 1); // Set color for menu items
+    top: 8px;
+    left: 22px;
+    color: rgba($secondaryAlt, 1); // Set color for menu items
     // text-align: center;
-    font-size: 30px; // match to other font-size
+    font-size: 33px; // match to other font-size
     cursor: pointer;
     i {
       font-weight: 100;

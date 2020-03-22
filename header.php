@@ -29,7 +29,6 @@
 
 <?php bodyClass(); ?>
 
-
 <a href="#skiptomaincontent" style="display:none;">Skip to main content</a>
 
 <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>" >
@@ -76,9 +75,7 @@
 	</div>
 </div>
 
-
-
-<div class="header-images-new">
+<div class="header-images-new header-<?php echo rand(1,4); ?>">
 	<?php if((is_home() or is_search() or is_category() or is_archive() )): ?>
 		<section class="page-title">
 			<h1 class="color-<?php echo rand(1,6); ?>"><?php single_cat_title();?></h1>

@@ -22,7 +22,7 @@ header {
   background: rgba($lightColor, 1);
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   padding: 0 20px;
   position: fixed;
@@ -35,6 +35,8 @@ header {
   border-bottom: 1px solid #eee;
 
   @include media($tablet) {
+  flex-direction: row;
+
     height: 80px;
     width: auto;
     left: 0px;
@@ -53,27 +55,10 @@ header {
   }
 }
 
-.nav-down {
-  position: fixed;
-  top: 0px;
-  left: 0;
-  right: 0;
-  transition: transform 0.5s ease-in-out;
-  transform: translateY(0px);
-}
-
-.nav-up {
-  position: fixed;
-  top: 0px;
-  left: 0;
-  right: 0;
-  transition: transform 0.5s ease-in-out;
-  transform: translateY(-100px);
-}
-
 .site-logo {
   position: relative;
-  top: 5px;
+  top: 1px;
+  right: 10px;
 
   @include media(350px) {
       // top: 8px;
@@ -98,7 +83,7 @@ header {
 
   .menu-trigger {
     position: absolute;
-    right: 20px;
+    left: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,8 +95,8 @@ header {
     .hamburger {
       width: 25px;
       height: 2px;
-      border-radius: 2px;
-      background: $darkColor;
+      border-radius: 20px;
+      background: $secondaryAlt;
       display: block;
       margin-bottom: 4px;
       &:last-of-type {
@@ -170,13 +155,8 @@ header {
     margin-left: 0px;
     header & {
       position: absolute;
-      right: 55px;
-      @include media(350px) {
-        right: 60px;
-      }
+      right: 125px;
       @include media($desktop) {
-        top: auto;
-        right: 40px;
         display: none;
       }
     }
@@ -189,8 +169,6 @@ header {
       bottom: 0;
       &.active {
         bottom:  7px;
-      // padding-bottom: 5px;
-      // border: 1px solid pink;
     }
     header & {
       font-size: 25px;
