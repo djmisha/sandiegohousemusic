@@ -129,6 +129,7 @@ section {
   }
 }
 
+header,
 section,
 main,
 .contain {
@@ -140,7 +141,7 @@ main,
     padding: 0  calc(40px + (50% - (#{$desktop} / 2)));
   }
   @include media($full) {
-    padding: 0 calc(40px + (50% - (#{$full} / 2)));
+    // padding: 0 calc(40px + (50% - (#{$full} / 2)));
   }
 }
 

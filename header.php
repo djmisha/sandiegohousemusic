@@ -56,15 +56,15 @@
 			<a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a>
 			<!-- <a class="show-form"><i class="fal fa-comments"></i></a> -->
  		</div>
+		<nav>
+			<?php wp_nav_menu( array(
+				'menu' 		=> 'Main',
+				'container_class' => 'menu-wrap menu-is-closed',
+				'menu_id'	=> 'menu-main',
+				'menu_class' => 'main-menu',
+				)); ?>
+		</nav> 
 	</div>
-	<nav>
-		<?php wp_nav_menu( array(
-			'menu' 		=> 'Main',
-			'container_class' => 'menu-wrap menu-is-closed',
-			'menu_id'	=> 'menu-main',
-			'menu_class' => 'main-menu',
-			)); ?>
-	</nav> 
 </header> 
 
 
@@ -90,9 +90,8 @@
 		</section>
 	<?php endif; ?>
 
-	<?php if((is_page(''))): // Single Page Title ?>
+	<?php if((is_page() || is_single() )): // Single Page Title ?>
 		<section class="page-title">
-			single page title
 			<h1 class="color-<?php echo rand(1,6); ?>"><?php the_title();?></h1>
 		</section>
 	<?php endif; ?>

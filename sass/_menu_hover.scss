@@ -2,13 +2,13 @@ $menuHeight: 60px;
 
 .hover-menu {
   display: block;
-  justify-content: space-between;
+  // justify-content: space-between;
   font-family: $primaryFont;
   font-weight: 100;
-  z-index: 9999;
-  position: fixed;
-  right: 0px;
-  top: 50px;
+  // z-index: 9999;
+  // position: relative;
+  // border: 1px solid pink;
+  padding-top: 30px;
 
   .main-menu {
     display: flex;

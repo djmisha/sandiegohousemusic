@@ -428,3 +428,9 @@ form {
     text-decoration: underline;
   }
 }
+
+/* Hide WP stats smiley face */
+
+#wpstats {
+  display: none;
+}

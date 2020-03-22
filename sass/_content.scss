@@ -11,6 +11,15 @@
     h1, h2, h3, h4 ,h5, h6, p, ul, ol, form {
       padding-left: 20px;
       padding-right: 20px;
+      @include media($tablet) {
+        padding: 0 40px;
+      }
+      @include media($desktop) {
+        padding: 0  calc(40px + (50% - (#{$desktop} / 2)));
+      }
+      @include media($full) {
+        // padding: 0 calc(40px + (50% - (#{$full} / 2)));
+      }
     }
   }
 }
@@ -79,6 +88,7 @@
     padding-bottom: 20px;
   }
 }
+
 .content h1 {
   position: relative;
   margin: 0;
@@ -109,7 +119,7 @@
     display: none;
   }
   .crumb-go-home {
-    padding-left: 0 !important;
+    // padding-left: 0 !important;
   }
   .salacious-crumb {
     font-family: $secondaryFont;
@@ -117,7 +127,7 @@
     line-height: 10px;
     text-transform: uppercase;
     color: #bfbfbf;
-    padding: 0;
+    // padding: 0;
     position: relative;
     @include media($tablet) {
       font-size: 12px;

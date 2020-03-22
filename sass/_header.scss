@@ -1,7 +1,4 @@
 
-#wpstats {
-  display: none;
-}
 
 /* Naviagation bar */
 
@@ -203,18 +200,18 @@ header {
 
     &.fa-twitter {
       color: #1da1f2;
-     
+
+    }
+    &.fa-facebook {
+      color: #3b5998;
+
+    }
   }
-  &.fa-facebook {
-    color: #3b5998;
-   
+  @include media($tablet) {
+    display: inline-block;
+    position: relative;
+    display: block;
   }
-}
-@include media($tablet) {
-  display: inline-block;
-  position: relative;
-  display: block;
-}
 }
 
 
@@ -242,7 +239,7 @@ header {
     text-align: center;
     font-family: $primaryFont;
     font-size: 50px;
-    font-weight: 900;
+    // font-weight: 900;
     text-shadow: 2px 2px 0px $darkColor;
     text-transform: uppercase;
     @include media($tablet) {
@@ -253,8 +250,9 @@ header {
 }
 
 .header-images-new {
+  // border: 1px solid pink;
   margin-top: 54px;
-  height: 120px;
+  // height: 80px;
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -264,23 +262,22 @@ header {
   background: #000;
   border-bottom: 1px solid #eee;
   @include media($tablet) {
+    // height: 120px;
     margin-top: 80px;
   }
   .tmpl_type_single &, 
   .tmpl_type_page & {
-    height: 0px;
+    // height: 0px;
   }
   h1 {
     position: relative;
     text-align: center;
     font-family: $primaryFont;
-    font-size: 40px;
-    font-weight: 200;
-    text-shadow: 2px 2px 0px $darkColor;
-    // text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 100;
     @include media($tablet) {
-      font-size: 70px;
-      line-height: 70px;
+      font-size: 50px;
+      line-height: 65px;
     }
   }
 }

@@ -1473,6 +1473,7 @@ blockquote footer {
   font-style: normal;
 }
 
+header,
 section,
 main,
 .contain {
@@ -1480,6 +1481,7 @@ main,
 }
 
 @media only screen and (min-width: 768px) {
+  header,
   section,
   main,
   .contain {
@@ -1488,18 +1490,11 @@ main,
 }
 
 @media only screen and (min-width: 1080px) {
+  header,
   section,
   main,
   .contain {
     padding: 0 calc(40px + (50% - (1080px / 2)));
-  }
-}
-
-@media only screen and (min-width: 1480px) {
-  section,
-  main,
-  .contain {
-    padding: 0 calc(40px + (50% - (1480px / 2)));
   }
 }
 
@@ -1531,10 +1526,6 @@ main,
 /* ------------------------
 	Header
 ------------------------ */
-#wpstats {
-  display: none;
-}
-
 /* Naviagation bar */
 .home header {
   position: relative;
@@ -1835,7 +1826,6 @@ header .get-social a i {
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 50px;
-  font-weight: 900;
   text-shadow: 2px 2px 0px #02034a;
   text-transform: uppercase;
 }
@@ -1849,7 +1839,6 @@ header .get-social a i {
 
 .header-images-new {
   margin-top: 54px;
-  height: 120px;
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -1872,24 +1861,18 @@ header .get-social a i {
   }
 }
 
-.tmpl_type_single .header-images-new,
-.tmpl_type_page .header-images-new {
-  height: 0px;
-}
-
 .header-images-new h1 {
   position: relative;
   text-align: center;
   font-family: "Oswald", sans-serif;
-  font-size: 40px;
-  font-weight: 200;
-  text-shadow: 2px 2px 0px #02034a;
+  font-size: 30px;
+  font-weight: 100;
 }
 
 @media only screen and (min-width: 768px) {
   .header-images-new h1 {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 50px;
+    line-height: 65px;
   }
 }
 
@@ -2155,15 +2138,9 @@ header .get-social a i {
 
 .hover-menu {
   display: block;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-family: "Oswald", sans-serif;
   font-weight: 100;
-  z-index: 9999;
-  position: fixed;
-  right: 0px;
-  top: 50px;
+  padding-top: 30px;
 }
 
 .hover-menu .main-menu {
@@ -2433,6 +2410,18 @@ header .menu-item-9756 a:before {
   padding-right: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+  .tmpl_type_page .content h1, .tmpl_type_page .content h2, .tmpl_type_page .content h3, .tmpl_type_page .content h4, .tmpl_type_page .content h5, .tmpl_type_page .content h6, .tmpl_type_page .content p, .tmpl_type_page .content ul, .tmpl_type_page .content ol, .tmpl_type_page .content form {
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .tmpl_type_page .content h1, .tmpl_type_page .content h2, .tmpl_type_page .content h3, .tmpl_type_page .content h4, .tmpl_type_page .content h5, .tmpl_type_page .content h6, .tmpl_type_page .content p, .tmpl_type_page .content ul, .tmpl_type_page .content ol, .tmpl_type_page .content form {
+    padding: 0 calc(40px + (50% - (1080px / 2)));
+  }
+}
+
 /* Content Styles */
 .content {
   font-family: "Roboto Condensed", sans-serif;
@@ -2545,17 +2534,12 @@ header .menu-item-9756 a:before {
   display: none;
 }
 
-.site-crumbs .crumb-go-home {
-  padding-left: 0 !important;
-}
-
 .site-crumbs .salacious-crumb {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 8px;
   line-height: 10px;
   text-transform: uppercase;
   color: #bfbfbf;
-  padding: 0;
   position: relative;
 }
 
@@ -3348,6 +3332,11 @@ form input {
   text-decoration: underline;
 }
 
+/* Hide WP stats smiley face */
+#wpstats {
+  display: none;
+}
+
 /* ------------------------
 	Forms & Form Elements
 ------------------------ */
@@ -4071,13 +4060,10 @@ span.error {
 }
 
 .featured-image img {
-  border-radius: 10px;
   width: 100%;
   max-width: 100%;
   max-height: 600px;
   height: auto;
-  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (min-width: 768px) {
