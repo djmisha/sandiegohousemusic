@@ -1473,7 +1473,6 @@ blockquote footer {
   font-style: normal;
 }
 
-header,
 section,
 main,
 .contain {
@@ -1481,7 +1480,6 @@ main,
 }
 
 @media only screen and (min-width: 768px) {
-  header,
   section,
   main,
   .contain {
@@ -1490,7 +1488,6 @@ main,
 }
 
 @media only screen and (min-width: 1080px) {
-  header,
   section,
   main,
   .contain {
@@ -1876,11 +1873,13 @@ header .get-social a i {
   }
 }
 
+/* Hide Heades on Homepage*/
 .home .header-images,
 .home .header-images-new {
   display: none;
 }
 
+/* Social Media Overlay Feeds*/
 .social-feed {
   position: fixed;
   right: 9998px;
@@ -1938,6 +1937,7 @@ header .get-social a i {
   height: 100% !important;
 }
 
+/* Laoding Icon for Iframes */
 .loadme {
   position: absolute;
   top: 100px;

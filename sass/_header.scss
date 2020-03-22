@@ -17,6 +17,7 @@ header {
 
 .nav-bar {
   width: 100%;
+  // max-width: $desktop;
   position: relative;
   background: rgba($lightColor, 1);
   display: flex;
@@ -38,7 +39,6 @@ header {
     width: auto;
     left: 0px;
     right: 0px;
-    // border-bottom: 5px solid #000;
   }
 
   @include media($desktop) {
@@ -283,6 +283,8 @@ header {
 }
 
 
+/* Hide Heades on Homepage*/
+
 .home .header-images,  
 .home .header-images-new {
   display: none;
@@ -290,6 +292,8 @@ header {
 
 
 
+
+/* Social Media Overlay Feeds*/
 
 .social-feed {
   // position: absolute;
@@ -344,6 +348,8 @@ header {
   }
 }
 
+
+/* Laoding Icon for Iframes */
 
 .loadme {
   position: absolute;
