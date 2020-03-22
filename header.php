@@ -77,6 +77,7 @@
 </div>
 
 
+
 <div class="header-images-new">
 	<?php if((is_home() or is_search() or is_category() or is_archive() )): ?>
 		<section class="page-title">
@@ -88,7 +89,16 @@
 			<h1 class="color-<?php echo rand(1,6); ?>"><?php the_title();?></h1>
 		</section>
 	<?php endif; ?>
+
+	<?php if((is_page(''))): // Single Page Title ?>
+		<section class="page-title">
+			single page title
+			<h1 class="color-<?php echo rand(1,6); ?>"><?php the_title();?></h1>
+		</section>
+	<?php endif; ?>
+
 </div>
+
 
 <section class="site-crumbs">
 	<?php echo __salaciouscrumb(); ?>

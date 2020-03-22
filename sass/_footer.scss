@@ -194,7 +194,7 @@ form {
     width: 50%;
     @include media($tablet) {
       width: 40%;
-      max-width: 500px;
+      // max-width: 500px;
     }
   }
   p {

@@ -9,9 +9,6 @@ $menuHeight: 60px;
   position: fixed;
   right: 0px;
   top: 50px;
-  @include media($full) {
-    right: 20vw;
-  }
 
   .main-menu {
     display: flex;

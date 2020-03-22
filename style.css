@@ -1371,6 +1371,20 @@ h6,
   font-family: "Oswald", sans-serif;
 }
 
+h2 b, h2 strong,
+h3 b,
+h3 strong,
+h4 b,
+h4 strong,
+h5 b,
+h5 strong,
+h6 b,
+h6 strong,
+.the-headline b,
+.the-headline strong {
+  font-weight: 100 !important;
+}
+
 h2,
 h3,
 h4,
@@ -1473,6 +1487,14 @@ main,
   }
 }
 
+@media only screen and (min-width: 1080px) {
+  section,
+  main,
+  .contain {
+    padding: 0 calc(40px + (50% - (1080px / 2)));
+  }
+}
+
 @media only screen and (min-width: 1480px) {
   section,
   main,
@@ -1549,7 +1571,7 @@ header {
   top: 0;
   width: 100%;
   padding: 0;
-  height: 54px;
+  height: 50px;
   padding-top: 0;
   padding-bottom: 0;
   border-bottom: 1px solid #eee;
@@ -2144,12 +2166,6 @@ header .get-social a i {
   top: 50px;
 }
 
-@media only screen and (min-width: 1480px) {
-  .hover-menu {
-    right: 20vw;
-  }
-}
-
 .hover-menu .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2412,11 +2428,12 @@ header .menu-item-9756 a:before {
   margin: 80px 0;
 }
 
-.tmpl_type_page .content h1, .tmpl_type_page .content h2, .tmpl_type_page .content h3, .tmpl_type_page .content h4, .tmpl_type_page .content h5, .tmpl_type_page .content h6, .tmpl_type_page .content p, .tmpl_type_page .content form {
+.tmpl_type_page .content h1, .tmpl_type_page .content h2, .tmpl_type_page .content h3, .tmpl_type_page .content h4, .tmpl_type_page .content h5, .tmpl_type_page .content h6, .tmpl_type_page .content p, .tmpl_type_page .content ul, .tmpl_type_page .content ol, .tmpl_type_page .content form {
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/* Content Styles */
 .content {
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -3075,7 +3092,6 @@ form input {
 @media only screen and (min-width: 768px) {
   .footer-boxes > div {
     width: 40%;
-    max-width: 500px;
   }
 }
 
@@ -4127,7 +4143,6 @@ span.error {
   .tmpl_type_archive .set-of-posts .excerpt-rotator,
   .tmpl_type_archive .post-snippet .excerpt,
   .tmpl_type_archive .post-snippet .excerpt-rotator {
-    border-radius: 17px;
     margin-bottom: 80px;
     padding: 20px;
     padding-bottom: 30px;

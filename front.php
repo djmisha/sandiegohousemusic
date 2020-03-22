@@ -216,10 +216,6 @@
 
 	<div class="content" id="Listen">
 
-		
-
-
-
 		<h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from the Archives</h2>
 		
 		<article class="set-of-posts owl-rotator owl-carousel">

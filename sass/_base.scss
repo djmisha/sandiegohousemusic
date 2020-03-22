@@ -51,6 +51,9 @@ h5,
 h6,
 .the-headline {
   font-family: $primaryFont;
+  b, strong {
+    font-weight: 100 !important;
+  }
 }
 
 h2,
@@ -134,7 +137,7 @@ main,
     padding: 0 40px;
   }
   @include media($desktop) {
-    // padding: 0  calc(40px + (50% - (#{$desktop} / 2)));
+    padding: 0  calc(40px + (50% - (#{$desktop} / 2)));
   }
   @include media($full) {
     padding: 0 calc(40px + (50% - (#{$full} / 2)));
