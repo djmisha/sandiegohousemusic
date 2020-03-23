@@ -13,7 +13,7 @@
 		<span>in San Diego and Around The World</span>
 		<ul>
 			<li class="get-events">
-				<a href="events.sandiegohousemusic.com" class="home-button button ">Explore Events</a>
+				<a href="events.sandiegohousemusic.com" class="home-button button">Explore Events</a>
 			</li>
 		</ul>
 	</div>
