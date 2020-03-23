@@ -1,5 +1,4 @@
 
-
 /* Naviagation bar */
 
 .home header {
@@ -35,7 +34,7 @@ header {
   border-bottom: 1px solid #eee;
 
   @include media($tablet) {
-  flex-direction: row;
+    flex-direction: row;
 
     height: 80px;
     width: auto;
@@ -56,106 +55,115 @@ header {
 }
 
 .site-logo {
-  position: relative;
-  top: 1px;
+  position: absolute;
+  top: 6px;
   right: 10px;
 
-  @include media(350px) {
-      // top: 8px;
-    }
-    h1 {
-      margin: 0 !important;
-    }
-    img {
-      width: 110px;
-      height: auto;
-      transition: all .15s ease-in;
-      @include media($tablet) {
-        width: 200px;
-        &:hover {
-          width: 210px; 
-        }
-      }
-      @include media($desktop) {
-      }
-    }
+  @include media($desktop) {
+    top: 10px;
+    right: 20px;
+  }
+  .is--ipad & {
+    // border: 1px solid pink;
   }
 
-  .menu-trigger {
-    position: absolute;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-    height: 100%;
-    @include media($desktop) {
-      display: none;
-    }
-    .hamburger {
-      width: 25px;
-      height: 2px;
-      border-radius: 20px;
-      background: $secondaryAlt;
-      display: block;
-      margin-bottom: 4px;
-      &:last-of-type {
-        margin-bottom: 0px;
+  h1 {
+    margin: 0 !important;
+  }
+  img {
+    width: 110px;
+    height: auto;
+    transition: all .15s ease-in;
+    @include media($tablet) {
+      width: 200px;
+      &:hover {
+        width: 210px; 
       }
     }
-    i {
-      color: $secondaryAlt;
-      font-size: 27px;
-      display: none;
-    }
     @include media($desktop) {
+    }
+  }
+}
 
-      &.open {
-        .hamburger {
-          z-index: 9999;
-          display: none;
-        }
-        i {
-          color: #fff;
-          display: block;
-          position: fixed;
-          right: 20px;
-        }
+.menu-trigger {
+  position: absolute;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  height: 100%;
+  @include media($desktop) {
+    display: none;
+  }
+  .hamburger {
+    width: 25px;
+    height: 2px;
+    border-radius: 20px;
+    background: $secondaryAlt;
+    display: block;
+    margin-bottom: 4px;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+  i {
+    color: $secondaryAlt;
+    font-size: 27px;
+    display: none;
+  }
+  @include media($desktop) {
+
+    &.open {
+      .hamburger {
+        z-index: 9999;
+        display: none;
       }
-    }
-    > div {
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .touch-button-text {
-      margin-right: 15px;
-      display: none;
-      margin-top: 0px;
-      font-size: 20px;
-      font-weight: 100;
-      color: $darkColor;
-      text-transform: uppercase;
-      @include media(370px) {
+      i {
+        color: #fff;
         display: block;
-      }
-      @include media($tablet) {
+        position: fixed;
+        right: 20px;
       }
     }
   }
-
-  a.show-form {
-    i {
-      color: #15cf1e !important;
-      font-weight: 900;
+  > div {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .touch-button-text {
+    margin-right: 15px;
+    display: none;
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 100;
+    color: $darkColor;
+    text-transform: uppercase;
+    @include media(370px) {
+      display: block;
+    }
+    @include media($tablet) {
     }
   }
+}
 
-  .get-social {
-    margin-left: 0px;
-    header & {
-      position: absolute;
-      right: 125px;
+a.show-form {
+  i {
+    color: #15cf1e !important;
+    font-weight: 900;
+  }
+}
+
+.get-social {
+  margin-left: 0px;
+  header & {
+    position: absolute;
+    right: 125px;
+    .is--ipad & {
+      right: 225px;
+        // border: 1px solid pink;
+      }
       @include media($desktop) {
         display: none;
       }
@@ -169,54 +177,54 @@ header {
       bottom: 0;
       &.active {
         bottom:  7px;
-    }
-    header & {
-      font-size: 25px;
-    }
-    color: $primaryAlt;
-    font-size: 35px;
+      }
+      header & {
+        font-size: 25px;
+      }
+      color: $primaryAlt;
+      font-size: 35px;
 
-    &.fa-twitter {
-      color: #1da1f2;
+      &.fa-twitter {
+        color: #1da1f2;
 
+      }
+      &.fa-facebook {
+        color: #3b5998;
+
+      }
     }
-    &.fa-facebook {
-      color: #3b5998;
-
+    @include media($tablet) {
+      display: inline-block;
+      position: relative;
+      display: block;
     }
   }
-  @include media($tablet) {
-    display: inline-block;
-    position: relative;
-    display: block;
-  }
-}
 
 
-.header-images {
-  margin-top: 80px;
-  height: 120px;
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 5px solid #000;
-
-  @include media($tablet) {
-    border-bottom: none;
+  .header-images {
+    margin-top: 80px;
+    height: 120px;
     background-size: cover;
-    height: 300px;
-  }
-  @include media(2000px) {
-    height: 400px;
-  }
-  h1 {
-    position: relative;
-    text-align: center;
-    font-family: $primaryFont;
-    font-size: 50px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #000;
+
+    @include media($tablet) {
+      border-bottom: none;
+      background-size: cover;
+      height: 300px;
+    }
+    @include media(2000px) {
+      height: 400px;
+    }
+    h1 {
+      position: relative;
+      text-align: center;
+      font-family: $primaryFont;
+      font-size: 50px;
     // font-weight: 900;
     text-shadow: 2px 2px 0px $darkColor;
     text-transform: uppercase;

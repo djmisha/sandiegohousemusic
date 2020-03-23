@@ -1589,9 +1589,16 @@ header {
 }
 
 .site-logo {
-  position: relative;
-  top: 1px;
+  position: absolute;
+  top: 6px;
   right: 10px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .site-logo {
+    top: 10px;
+    right: 20px;
+  }
 }
 
 .site-logo h1 {
@@ -1710,6 +1717,10 @@ a.show-form i {
 header .get-social {
   position: absolute;
   right: 125px;
+}
+
+.is--ipad header .get-social {
+  right: 225px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -3716,7 +3727,9 @@ span.error {
 }
 
 .home-button a {
+  display: block;
   text-decoration: none;
+  background-color: red;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3727,9 +3740,7 @@ span.error {
 }
 
 .home-button:hover {
-  color: #eb0077;
   color: #000 !important;
-  border: 1px solid #fff;
   background: transparent;
 }
 

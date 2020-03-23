@@ -12,8 +12,8 @@
 		<h1>DJ's EDM House Music &amp; Dance Events</h1>
 		<span>in San Diego and Around The World</span>
 		<ul>
-			<li class="home-button button get-events">
-				<a href="events.sandiegohousemusic.com">Explore Events</a>
+			<li class="get-events">
+				<a href="events.sandiegohousemusic.com" class="home-button button ">Explore Events</a>
 			</li>
 		</ul>
 	</div>

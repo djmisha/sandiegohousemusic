@@ -142,7 +142,10 @@
   border: 1px solid $lightColor;
   position: relative;
   a {
+    // width: 100%;
+    display: block;
     text-decoration: none;
+    background-color: red;
     // background-color: #fff;
   }
   @include media($tablet) {
@@ -150,9 +153,9 @@
     display: block;
   }
   &:hover {
-    color: $secondaryAlt;
+    // color: $secondaryAlt;
     color: #000 !important;
-    border: 1px solid #fff;
+    // border: 1px solid #fff;
     // border: 1px solid $secondaryAlt;
     background: transparent;
   }
