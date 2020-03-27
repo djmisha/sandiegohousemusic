@@ -1598,6 +1598,14 @@ header {
   right: 10px;
 }
 
+@media only screen and (min-width: 768px) {
+  .site-logo {
+    top: 12px;
+    left: auto;
+    right: 20px;
+  }
+}
+
 @media only screen and (min-width: 1080px) {
   .site-logo {
     top: 17px;
@@ -1617,7 +1625,7 @@ header {
   transition: all .15s ease-in;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 768px) {
   .site-logo img {
     width: 200px;
   }
@@ -1724,14 +1732,20 @@ header .get-social {
   right: 125px;
 }
 
-.is--ipad header .get-social {
-  right: 225px;
+@media only screen and (min-width: 768px) {
+  header .get-social {
+    right: 230px;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
   header .get-social {
     display: none;
   }
+}
+
+.is--ipad header .get-social {
+  right: 225px;
 }
 
 .get-social a {

@@ -9,11 +9,11 @@
 	<div class="overlay"></div>
 	<div class="home-video"></div>
 	<div class="welcome-cta">
-		<h1>DJ's EDM House Music &amp; Dance Events</h1>
-		<span>in San Diego and Around The World</span>
+		<h1>DJ's EDM Dance Events &amp; House Music </h1>
+		<span>in San Diego and around the world</span>
 		<ul>
 			<li class="get-events">
-				<a href="events.sandiegohousemusic.com" class="home-button button">Explore Events</a>
+				<a href="events.sandiegohousemusic.com" class="home-button button">View Events</a>
 			</li>
 		</ul>
 	</div>
@@ -21,11 +21,7 @@
 
 <main class="interior" id="#skiptomaincontent">
 
-
-
 	<div class="content" >
-
-
 
 		<h2 class="color-2"><i class="fas fa-compact-disc"></i> Listen to House Music</h2>
 		<article class="set-of-posts">
@@ -270,7 +266,5 @@
 		<a href="<?php bloginfo('url'); ?>/submit-your-dj-mix/" rel="nofollow" class="button">Submit DJ Mix</a>
 	</div>
 </main>
-
-
 
 <?php get_footer();?>

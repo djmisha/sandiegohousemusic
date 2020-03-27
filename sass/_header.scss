@@ -60,13 +60,19 @@ header {
   top: 6px;
   right: 10px;
 
+  @include media($tablet) {
+    top: 12px;
+    left: auto;
+    right: 20px;
+  }
+
+
   @include media($desktop) {
     top: 17px;
     right: auto;
     left: 20px;
   }
   .is--ipad & {
-    // border: 1px solid pink;
   }
 
   h1 {
@@ -76,7 +82,7 @@ header {
     width: 110px;
     height: auto;
     transition: all .15s ease-in;
-    @include media($desktop) {
+    @include media($tablet) {
       width: 200px;
       &:hover {
         width: 210px; 
@@ -162,71 +168,73 @@ a.show-form {
   header & {
     position: absolute;
     right: 125px;
+    @include media($tablet) {
+      right: 230px;
+    }
+    @include media($desktop) {
+      display: none;
+    }
     .is--ipad & {
       right: 225px;
-        // border: 1px solid pink;
-      }
-      @include media($desktop) {
-        display: none;
-      }
-    }
-    a {
-      margin: 0 5px;
-    }
-    a i {
-      position: relative;
-      transition: all .2s ease;
-      bottom: 0;
-      &.active {
-        bottom:  7px;
-      }
-      header & {
-        font-size: 25px;
-      }
-      color: $primaryAlt;
-      font-size: 35px;
-
-      &.fa-twitter {
-        color: #1da1f2;
-
-      }
-      &.fa-facebook {
-        color: #3b5998;
-
-      }
-    }
-    @include media($tablet) {
-      display: inline-block;
-      position: relative;
-      display: block;
     }
   }
+  a {
+    margin: 0 5px;
+  }
+  a i {
+    position: relative;
+    transition: all .2s ease;
+    bottom: 0;
+    &.active {
+      bottom:  7px;
+    }
+    header & {
+      font-size: 25px;
+    }
+    color: $primaryAlt;
+    font-size: 35px;
+
+    &.fa-twitter {
+      color: #1da1f2;
+
+    }
+    &.fa-facebook {
+      color: #3b5998;
+
+    }
+  }
+  @include media($tablet) {
+    display: inline-block;
+    position: relative;
+    display: block;
+  }
+}
 
 
-  .header-images {
-    margin-top: 80px;
-    height: 120px;
+.header-images {
+  margin-top: 80px;
+  height: 120px;
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid #000;
+
+  @include media($tablet) {
+    border-bottom: none;
     background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 5px solid #000;
-
-    @include media($tablet) {
-      border-bottom: none;
-      background-size: cover;
-      height: 300px;
-    }
-    @include media(2000px) {
-      height: 400px;
-    }
-    h1 {
-      position: relative;
-      text-align: center;
-      font-family: $primaryFont;
-      font-size: 50px;
+    height: 300px;
+  }
+  @include media(2000px) {
+    height: 400px;
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    font-family: $primaryFont;
+    font-size: 50px;
     // font-weight: 900;
     text-shadow: 2px 2px 0px $darkColor;
     text-transform: uppercase;
