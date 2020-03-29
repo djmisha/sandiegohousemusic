@@ -6,7 +6,7 @@
 		</div>
 		<strong>Speak with a Dance Music Expert</strong><br><br>
 		<img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-		Contact us here, just give us a few details about your event need and receive same day DJ availability and consultation.  Please provide the date, location, occasion and approximate attendace. We look foward to hearing from you!  
+		Contact us here, just give us a few details about your event need and receive same day DJ availability and a complimentary consultation.  Please provide the date, location, occasion and approximate attendace. We look foward to hearing from you!  
 		<?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
 	</div>
 
@@ -85,6 +85,8 @@
 	</section>  
 </footer>
 
+<?php // Only Show Ads on Homepage and Single Posts ?>
+<?php if (is_single() || is_front_page())  { ?>
 <section class="auto-google-ads">
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- SDHM Mobile -->
@@ -98,6 +100,7 @@
 		(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
 </section>
+<?php } ?>
 
 <?php wp_footer();?>
 

@@ -119,7 +119,9 @@
     display: none;
   }
   .crumb-go-home {
-    // padding-left: 0 !important;
+    a {
+      padding-left: 0 !important;
+    }
   }
   .salacious-crumb {
     font-family: $secondaryFont;
