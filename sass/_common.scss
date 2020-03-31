@@ -82,7 +82,8 @@ img.aligncenter,
   background: transparent;
     &:hover {
       text-decoration: none;
-      color: $secondaryAlt !important;
+      background-color: $secondaryAlt; 
+      color: #fff !important;
       border: 2px solid $secondaryAlt;
     &:before {
       color: $darkColor;

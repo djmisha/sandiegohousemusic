@@ -911,7 +911,8 @@ img.alignleft {
 .next-prev a:hover,
 .after-review-sprinkle .button:hover {
   text-decoration: none;
-  color: #eb0077 !important;
+  background-color: #eb0077;
+  color: #fff !important;
   border: 2px solid #eb0077;
 }
 
@@ -3745,6 +3746,7 @@ span.error {
 
 .welcome-cta ul {
   margin-top: 0 !important;
+  list-style: none;
 }
 
 .home-button {

@@ -107,6 +107,7 @@
 
 
 <?php
+	// Load Browser Sync only on Local
 	$browserSync 			= 'http://sdhm.local';
 	$browserSyncHdrs 		= @get_headers($browserSync);
 	if($browserSyncHdrs):
