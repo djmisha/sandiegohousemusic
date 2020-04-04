@@ -108,7 +108,7 @@
 
 <?php
 	// Load Browser Sync only on Local
-	$browserSync 			= 'http://sdhm.local';
+	$browserSync 			= 'http://sandiegohousemusic.local';
 	$browserSyncHdrs 		= @get_headers($browserSync);
 	if($browserSyncHdrs):
 ?>

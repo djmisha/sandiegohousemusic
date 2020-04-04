@@ -1560,7 +1560,7 @@ header {
   top: 0;
   width: 100%;
   padding: 0;
-  height: 50px;
+  height: 60px;
   padding-top: 0;
   padding-bottom: 0;
   border-bottom: 1px solid #eee;
@@ -1595,7 +1595,7 @@ header {
 
 .site-logo {
   position: absolute;
-  top: 6px;
+  top: 10px;
   right: 10px;
 }
 
@@ -1661,7 +1661,7 @@ header {
 }
 
 .menu-trigger .hamburger {
-  width: 25px;
+  width: 30px;
   height: 2px;
   border-radius: 20px;
   background: #eb0077;
@@ -2127,10 +2127,10 @@ header .get-social a i {
 .touch-menu .close-menu {
   display: block;
   position: fixed;
-  top: 8px;
-  left: 22px;
+  top: 10px;
+  left: 23px;
   color: #eb0077;
-  font-size: 33px;
+  font-size: 35px;
   cursor: pointer;
 }
 

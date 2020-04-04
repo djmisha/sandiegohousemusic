@@ -44,7 +44,7 @@ gulp.task('browser-sync', function() {
         ui          : false,
         // port        : myPort,
         files       : ['**/*.php', 'js/*.js'],
-        host        : 'http://sdhm.local/',
+        host        : 'http://sandiegohousemusic.local/',
         open        : false,
         notify      : false,
         ghostMode   : false,
