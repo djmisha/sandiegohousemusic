@@ -396,7 +396,7 @@ function attachVideo() {
 
 setTimeout(function() {
 	attachVideo();
-}, 5000);
+}, 0);
 
 
 
