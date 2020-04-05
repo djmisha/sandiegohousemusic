@@ -85,7 +85,7 @@
   position: relative;
   text-align: left;
   background: rgba(#000, .4);
-  padding: 15px 8px;
+  padding: 5px 8px !important;
   transform: rotate(3deg);
   @include media($tablet) {
     padding-bottom: 20px;
