@@ -87,9 +87,8 @@
 
 <?php // Only Show Ads on Homepage and Single Posts ?>
 <?php if (is_single() || is_front_page())  { ?>
-<section class="auto-google-ads">
+<!-- <section class="auto-google-ads">
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- SDHM Mobile -->
 	<ins class="adsbygoogle"
 	style="display:block"
 	data-ad-client="ca-pub-6261738507723190"
@@ -99,7 +98,7 @@
 	<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-</section>
+</section> -->
 <?php } ?>
 
 <?php wp_footer();?>
