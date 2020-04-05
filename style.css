@@ -1595,7 +1595,7 @@ header {
 
 .site-logo {
   position: absolute;
-  top: 17px;
+  top: 15px;
   right: 10px;
 }
 
@@ -2495,16 +2495,20 @@ header .menu-item-9756 a:before {
   position: relative;
   text-align: left;
   background: rgba(0, 0, 0, 0.4);
-  padding: 5px 8px !important;
   -webkit-transform: rotate(3deg);
       -ms-transform: rotate(3deg);
           transform: rotate(3deg);
+  border-radius: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .page-title {
     padding-bottom: 20px;
   }
+}
+
+.page-title h1 {
+  padding: 5px 18px !important;
 }
 
 .content h1 {
