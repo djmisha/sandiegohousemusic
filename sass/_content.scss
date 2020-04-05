@@ -86,12 +86,12 @@
   text-align: left;
   background: rgba(#000, .4);
   transform: rotate(3deg);
-  border-radius: 10px;
+  // border-radius: 10px;
   @include media($tablet) {
     padding-bottom: 20px;
   }
   h1 {
-    margin: 5px 18px !important;
+    margin: 5px 8px !important;
   }
 }
 
