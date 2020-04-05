@@ -2495,6 +2495,11 @@ header .menu-item-9756 a:before {
 .page-title {
   position: relative;
   text-align: left;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 8px;
+  -webkit-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
 }
 
 @media only screen and (min-width: 768px) {

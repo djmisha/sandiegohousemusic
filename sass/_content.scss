@@ -84,6 +84,9 @@
 .page-title {
   position: relative;
   text-align: left;
+  background: rgba(#000, .4);
+  padding: 15px 8px;
+  transform: rotate(3deg);
   @include media($tablet) {
     padding-bottom: 20px;
   }
