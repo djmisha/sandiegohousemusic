@@ -1595,13 +1595,12 @@ header {
 
 .site-logo {
   position: absolute;
-  top: 10px;
+  top: 17px;
   right: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .site-logo {
-    top: 12px;
     left: auto;
     right: 20px;
   }

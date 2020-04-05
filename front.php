@@ -138,9 +138,8 @@
 		<br clear="all">
 		<br clear="all">
 
-		<section>
+<!-- 		<section>
 			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- SDHM Mobile -->
 			<ins class="adsbygoogle"
 			style="display:block"
 			data-ad-client="ca-pub-6261738507723190"
@@ -150,7 +149,7 @@
 			<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
-		</section>
+		</section> -->
 
 	<!-- 	<br clear="all">
 		<br clear="all">

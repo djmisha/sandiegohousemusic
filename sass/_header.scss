@@ -61,7 +61,7 @@ header {
   right: 10px;
 
   @include media($tablet) {
-    top: 12px;
+    // top: 12px;
     left: auto;
     right: 20px;
   }
