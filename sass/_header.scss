@@ -248,7 +248,7 @@ a.show-form {
 
 .header-images-new {
   // border: 1px solid pink;
-  margin-top: 54px;
+  margin-top: 60px;
   // height: 80px;
   background-size: cover;
   background-position: bottom center;
@@ -258,6 +258,7 @@ a.show-form {
   justify-content: center;
   background: #000;
   border-bottom: 1px solid #eee;
+  min-height: 200px;
   @include media($tablet) {
     // height: 120px;
     margin-top: 80px;

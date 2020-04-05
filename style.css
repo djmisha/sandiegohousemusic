@@ -1840,7 +1840,7 @@ header .get-social a i {
 }
 
 .header-images-new {
-  margin-top: 54px;
+  margin-top: 60px;
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -1855,6 +1855,7 @@ header .get-social a i {
           justify-content: center;
   background: #000;
   border-bottom: 1px solid #eee;
+  min-height: 200px;
 }
 
 @media only screen and (min-width: 768px) {
