@@ -1422,12 +1422,13 @@ h2,
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 768px) {
   h3 {
-    font-size: 35px;
+    font-size: 22px;
+    line-height: 25px;
   }
 }
 
@@ -1472,6 +1473,11 @@ blockquote {
 
 blockquote footer {
   font-style: normal;
+}
+
+hr {
+  border-top: 1px solid #ccc !important;
+  margin: 2em !important;
 }
 
 section,
@@ -2508,7 +2514,7 @@ header .menu-item-9756 a:before {
 }
 
 .page-title h1 {
-  padding: 5px 18px !important;
+  margin: 5px 18px !important;
 }
 
 .content h1 {

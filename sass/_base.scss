@@ -86,9 +86,11 @@ h2,
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 18px;
   @include media($tablet) {
-    font-size: 35px;
+    // font-size: 35px;
+    font-size: 22px;
+    line-height: 25px;
   }
 }
 
@@ -120,6 +122,11 @@ blockquote {
   footer {
     font-style: normal;
   }
+}
+
+hr {
+  border-top: 1px solid #ccc !important;
+  margin: 2em !important;
 }
 
 section {
