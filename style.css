@@ -1860,12 +1860,12 @@ header .get-social a i {
 @media only screen and (min-width: 768px) {
   .header-images-new {
     margin-top: 80px;
+    min-height: 400px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .header-images-new {
-    min-height: 400px;
     border: 1px solid pink;
   }
 }

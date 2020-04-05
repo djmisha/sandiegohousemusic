@@ -261,9 +261,9 @@ a.show-form {
   @include media($tablet) {
     // height: 120px;
     margin-top: 80px;
+    min-height: 400px;
   }
   @include media($desktop) {
-    min-height: 400px;
     border: 1px solid pink;
   }
   .tmpl_type_single &, 
