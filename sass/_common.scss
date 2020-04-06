@@ -1,6 +1,9 @@
 /* ------------------------
 Common/UI elements (images, video, buttons, etc)
 ------------------------ */
+html {
+  scroll-behavior: smooth;
+}
 video {
   max-width: 100%;
   height: auto;

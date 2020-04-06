@@ -437,3 +437,22 @@ form {
 #wpstats {
   display: none;
 }
+
+.back-to-top{
+  // border: 1px solid pink;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba($secondaryAlt, .3);
+  padding: .2em .6em;
+  z-index: 9999;
+  a {
+    display: block;
+    // width:  20px;
+    // height: 20px;
+  }
+  i {
+    color: #fff !important;
+    font-size: 30px;
+  }
+}

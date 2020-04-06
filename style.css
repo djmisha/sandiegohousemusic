@@ -825,6 +825,10 @@ li.model_ast:before {
 /* ------------------------
 Common/UI elements (images, video, buttons, etc)
 ------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
 video {
   max-width: 100%;
   height: auto;
@@ -3356,6 +3360,24 @@ form input {
 /* Hide WP stats smiley face */
 #wpstats {
   display: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(235, 0, 119, 0.3);
+  padding: .2em .6em;
+  z-index: 9999;
+}
+
+.back-to-top a {
+  display: block;
+}
+
+.back-to-top i {
+  color: #fff !important;
+  font-size: 30px;
 }
 
 /* ------------------------

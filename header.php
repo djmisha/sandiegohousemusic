@@ -29,9 +29,9 @@
 
 <?php bodyClass(); ?>
 
+<div id="the-top"></div>
 <a href="#skiptomaincontent" style="display:none;">Skip to main content</a>
-
-<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>" >
+<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>">
 
 	<div class="nav-bar">
 		<div class="site-logo">

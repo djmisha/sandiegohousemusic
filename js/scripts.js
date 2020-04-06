@@ -97,8 +97,22 @@
 
 		stickyContact();
 
+
+		var backToTop = 200;
+
+		var backTo = function(){
+			var scrollTop = $(window).scrollTop();
+
+			if (scrollTop > backToTop) {
+				$('.back-to-top').fadeIn();
+			} else {
+				$('.back-to-top').fadeOut();
+			}
+		};	
+
 		$(window).scroll(function() {
 			stickyContact();
+			backTo();
 		});
 
 

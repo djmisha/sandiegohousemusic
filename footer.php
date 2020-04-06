@@ -83,6 +83,7 @@
 
 		<div class="amg-sig"><a href="https://www.asburymediagroup.com/" target="_blank" rel="noopener" title="WordPress Maintenance">WordPress Maintenance</a> by <i class="fas fa-code"></i> <a href="https://www.asburymediagroup.com/" target="_blank" rel="nofollow noopener" title="Asbury Media Group">Asbury Media Group</a></div>
 	</section>  
+	<div class="back-to-top"><a href="#the-top"><i class="far fa-angle-up"></i></a></div>
 </footer>
 
 <?php // Only Show Ads on Homepage and Single Posts ?>
