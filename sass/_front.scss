@@ -140,7 +140,7 @@
   max-width: 180px;
   margin: 0 auto;
   background-color: transparent;
-  border: 1px solid $lightColor;
+  border: 2px solid $lightColor;
   position: relative;
   a {
     // width: 100%;
@@ -150,15 +150,16 @@
     // background-color: #fff;
   }
   @include media($tablet) {
-    margin-top: 30px;
+    // margin-top: 30px;
+    margin-top: 60px;
     display: block;
   }
   &:hover {
     // color: $secondaryAlt;
-    color: #000 !important;
+    // color: #000 !important;
     // border: 1px solid #fff;
     // border: 1px solid $secondaryAlt;
-    background: transparent;
+    // background: transparent;
   }
 }
 

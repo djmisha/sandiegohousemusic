@@ -1601,12 +1601,13 @@ header {
 
 .site-logo {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .site-logo {
+    top: 14px;
     left: auto;
     right: 20px;
   }
@@ -1625,7 +1626,7 @@ header {
 }
 
 .site-logo img {
-  width: 110px;
+  width: 120px;
   height: auto;
   -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
@@ -1634,9 +1635,6 @@ header {
 @media only screen and (min-width: 768px) {
   .site-logo img {
     width: 200px;
-  }
-  .site-logo img:hover {
-    width: 210px;
   }
 }
 
@@ -1735,13 +1733,7 @@ a.show-form i {
 
 header .get-social {
   position: absolute;
-  right: 125px;
-}
-
-@media only screen and (min-width: 768px) {
-  header .get-social {
-    right: 230px;
-  }
+  left: 80px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -1751,7 +1743,7 @@ header .get-social {
 }
 
 .is--ipad header .get-social {
-  right: 225px;
+  left: 225px;
 }
 
 .get-social a {
@@ -2074,7 +2066,7 @@ header .get-social a i {
 }
 
 .touch-menu .main-menu .menu-item > a {
-  padding: 16px 20px 16px 80px;
+  padding: 16px 20px 16px 100px;
 }
 
 .touch-menu .main-menu .sub-menu {
@@ -2328,7 +2320,7 @@ header .menu-item-7265 a:before {
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
   position: absolute;
-  left: 30px;
+  left: 45px;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   font-weight: 100;
@@ -3174,6 +3166,10 @@ form input {
   max-width: 500px;
 }
 
+.footer-signup input {
+  padding: 10px 10px;
+}
+
 @media only screen and (min-width: 768px) {
   .footer-signup {
     margin-top: 0;
@@ -3768,7 +3764,7 @@ span.error {
   max-width: 180px;
   margin: 0 auto;
   background-color: transparent;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   position: relative;
 }
 
@@ -3780,14 +3776,9 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-button {
-    margin-top: 30px;
+    margin-top: 60px;
     display: block;
   }
-}
-
-.home-button:hover {
-  color: #000 !important;
-  background: transparent;
 }
 
 .home .interior {

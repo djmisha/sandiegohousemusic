@@ -57,11 +57,12 @@ header {
 
 .site-logo {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 10px;
+  // border: 1px solid pink;
 
   @include media($tablet) {
-    // top: 12px;
+    top: 14px;
     left: auto;
     right: 20px;
   }
@@ -80,13 +81,13 @@ header {
     margin: 0 !important;
   }
   img {
-    width: 110px;
+    width: 120px;
     height: auto;
     transition: all .15s ease-in;
     @include media($tablet) {
       width: 200px;
       &:hover {
-        width: 210px; 
+        // width: 210px; 
       }
     }
     @include media($desktop) {
@@ -168,15 +169,15 @@ a.show-form {
   margin-left: 0px;
   header & {
     position: absolute;
-    right: 125px;
+    left: 80px;
     @include media($tablet) {
-      right: 230px;
+      // left: 230px;
     }
     @include media($desktop) {
       display: none;
     }
     .is--ipad & {
-      right: 225px;
+      left: 225px;
     }
   }
   a {
