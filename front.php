@@ -4,7 +4,19 @@
 
 <?php get_header();?>
 
+<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events: House Music Techno Dance</h2>
 
+<div class="front-page-events">
+	<iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%" height="1320" style="overflow: hidden;" scrolling="no"></iframe>
+</div>
+
+<div class="get-events">
+	<a href="events.sandiegohousemusic.com" rel="nofollow" class=" button">More Events</a>
+</div>
+
+<br clear="all">
+<br clear="all">
+<br clear="all">
 <div class="welcome">
 	<div class="overlay"></div>
 	<div class="home-video"></div>
@@ -77,19 +89,7 @@
 		<br clear="all">
 
 
-		<h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events: House Music Techno Dance</h2>
-
-		<div class="front-page-events">
-			<iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%" height="1320" style="overflow: hidden;" scrolling="no"></iframe>
-		</div>
-		
-		<div class="get-events">
-			<a href="events.sandiegohousemusic.com" rel="nofollow" class=" button">More Events</a>
-		</div>
-
-		<br clear="all">
-		<br clear="all">
-		<br clear="all">
+	
 
 		<!-- <article class="set-of-posts">
 			<?php 
