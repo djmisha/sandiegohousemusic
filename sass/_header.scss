@@ -57,7 +57,7 @@ header {
 
 .site-logo {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 10px;
   // border: 1px solid pink;
 
@@ -332,7 +332,11 @@ a.show-form {
     position: fixed;
     right: 3px;
     top: 0px;
-    i {font-size: 30px}
+    i {
+      font-weight: 100;
+      font-size: 30px;
+      color: rgba($darkColor, .3);
+    }
   }
   .the-feed {
     position: relative;

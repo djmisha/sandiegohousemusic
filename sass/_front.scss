@@ -80,7 +80,7 @@
 
 .welcome-cta {
   // z-index: 9999;
-  padding-top: 80px;
+  padding-top: 100px;
   padding-left: 10px;
   padding-right: 10px;
   @include media($tablet) {
@@ -177,7 +177,7 @@
 
 .home .content {
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 0 10px;
   .excerpt {
     @include media($tablet) {
       width: 32% !important;

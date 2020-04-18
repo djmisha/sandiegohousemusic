@@ -68,7 +68,7 @@
 
 
 <div class="social-feed">
-	<div class="close-feed"><i class="fa fa-window-close"></i></div>
+	<div class="close-feed"><i class="fa fa-times"></i></div>
 	<div class="loadme"><div class="loader"></div> </div>
 	<div class="the-feed">
 		<iframe src="" width="100%" height="" frameborder=0></iframe>

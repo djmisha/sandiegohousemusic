@@ -99,6 +99,7 @@
 
 
 		var backToTop = 200;
+		$('.back-to-top').hide();
 
 		var backTo = function(){
 			var scrollTop = $(window).scrollTop();

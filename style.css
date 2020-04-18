@@ -1605,7 +1605,7 @@ header {
 
 .site-logo {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 10px;
 }
 
@@ -1928,7 +1928,9 @@ header .get-social a i {
 }
 
 .social-feed .close-feed i {
+  font-weight: 100;
   font-size: 30px;
+  color: rgba(2, 3, 74, 0.3);
 }
 
 .social-feed .the-feed {
@@ -2763,6 +2765,16 @@ h2.color-6 a, h1.color-6 {
   margin-right: 0;
 }
 
+p.wp-caption-text {
+  line-height: 14px !important;
+}
+
+.wp-caption {
+  background: none;
+  border-bottom: 2px solid #eee;
+  border-radius: 0;
+}
+
 /* DJ's Page */
 .page-4027 img, .page-4027 .wp-caption {
   max-width: 140px;
@@ -2884,13 +2896,6 @@ aside .sidebar-add {
   top: 10px;
 }
 
-@media only screen and (min-width: 768px) {
-  #overlay-contact-form .close-form {
-    top: 20px;
-    right: 20px;
-  }
-}
-
 #overlay-contact-form .close-form i {
   font-size: 35px;
   color: rgba(2, 3, 74, 0.3);
@@ -2952,6 +2957,7 @@ form input {
 }
 
 .footer-show-form {
+  cursor: pointer;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
@@ -2960,12 +2966,7 @@ form input {
   position: fixed;
   bottom: 20px;
   right: -80px;
-}
-
-@media only screen and (min-width: 1080px) {
-  .footer-show-form {
-    bottom: 20px;
-  }
+  border: 1px solid pink;
 }
 
 .footer-show-form.hithere {
@@ -3316,13 +3317,13 @@ form input {
 
 .lower-footer {
   padding-top: 40px !important;
-  padding-bottom: 40px !important;
+  padding-bottom: 60px !important;
 }
 
 @media only screen and (min-width: 768px) {
   .lower-footer {
     padding-top: 60px !important;
-    padding-bottom: 40px !important;
+    padding-bottom: 60px !important;
   }
 }
 
@@ -3374,9 +3375,9 @@ form input {
 .back-to-top {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: calc(50% - 20px);
   border-radius: 4px;
-  background-color: rgba(235, 0, 119, 0.3);
+  background-color: rgba(235, 0, 119, 0.2);
   padding: .2em .6em;
 }
 
@@ -3724,7 +3725,7 @@ span.error {
 }
 
 .welcome-cta {
-  padding-top: 80px;
+  padding-top: 100px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -3828,7 +3829,7 @@ span.error {
 
 .home .content {
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 0 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4159,8 +4160,8 @@ span.error {
   padding: 20px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media only screen and (min-width: 768px) {
@@ -4177,26 +4178,12 @@ span.error {
   .tmpl_type_archive .set-of-posts .excerpt-rotator,
   .tmpl_type_archive .post-snippet .excerpt,
   .tmpl_type_archive .post-snippet .excerpt-rotator {
+    -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
     margin-bottom: 80px;
     padding: 20px;
     padding-bottom: 30px;
     width: 30%;
-  }
-  .home .set-of-posts .excerpt:hover, .home .set-of-posts .excerpt-rotator:hover, .home .post-snippet .excerpt:hover, .home .post-snippet .excerpt-rotator:hover,
-  .blog .set-of-posts .excerpt:hover,
-  .blog .set-of-posts .excerpt-rotator:hover,
-  .blog .post-snippet .excerpt:hover,
-  .blog .post-snippet .excerpt-rotator:hover,
-  .tmpl_type_category .set-of-posts .excerpt:hover,
-  .tmpl_type_category .set-of-posts .excerpt-rotator:hover,
-  .tmpl_type_category .post-snippet .excerpt:hover,
-  .tmpl_type_category .post-snippet .excerpt-rotator:hover,
-  .tmpl_type_archive .set-of-posts .excerpt:hover,
-  .tmpl_type_archive .set-of-posts .excerpt-rotator:hover,
-  .tmpl_type_archive .post-snippet .excerpt:hover,
-  .tmpl_type_archive .post-snippet .excerpt-rotator:hover {
-    -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
   }
   .home .set-of-posts .excerpt h3, .home .set-of-posts .excerpt-rotator h3, .home .post-snippet .excerpt h3, .home .post-snippet .excerpt-rotator h3,
   .blog .set-of-posts .excerpt h3,
