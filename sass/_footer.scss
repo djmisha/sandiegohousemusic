@@ -95,15 +95,6 @@ form {
   position: fixed;
   bottom: 20px;
   right: -80px;
-  border: 1px solid pink;
-  // height: 100px;
-  @include media($tablet) {
-    // bottom: 90px;
-    
-  }
-  @include media($desktop) {
-    // bottom: 20px;
-  }
   &.hithere {
     right: 10px;
     @include media($tablet) {
@@ -123,7 +114,6 @@ form {
   }
 
   &:hover {
-    // padding: 30px;
     img {
       width: 100px;
     }
