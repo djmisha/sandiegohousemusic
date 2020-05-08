@@ -2942,7 +2942,8 @@ footer form {
   margin-top: 20px;
 }
 
-form input, form .textarea {
+form input,
+form .textarea {
   width: 100%;
   border: 2px solid #38c0e6;
   background: transparent;
@@ -2961,10 +2962,10 @@ form input {
   font-size: 12px;
   line-height: 12px;
   text-align: center;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: -80px;
 }
 
@@ -2979,8 +2980,8 @@ form input {
 }
 
 .footer-show-form img {
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   width: 50px;
   display: block;
 }
@@ -3374,10 +3375,10 @@ form input {
 .back-to-top {
   position: fixed;
   bottom: 10px;
-  right: calc(50% - 20px);
+  right: calc(20px);
   border-radius: 4px;
   background-color: rgba(235, 0, 119, 0.2);
-  padding: .2em .6em;
+  padding: 0.2em 0.6em;
 }
 
 .back-to-top a {

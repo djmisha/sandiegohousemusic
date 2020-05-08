@@ -18,9 +18,9 @@ endif;
 include TMPL_DIR . '/inc/functions.php';  //Inclide RM Functions in inc/functions.php (must be included before anything else)
 
 // Nav Walker 
-if(file_exists(TMPL_DIR . '/inc/walkers/walkerpagecustom.php')):
-	include TMPL_DIR . '/inc/walkers/walkerpagecustom.php';
-endif;
+// if(file_exists(TMPL_DIR . '/inc/walkers/walkerpagecustom.php')):
+// 	include TMPL_DIR . '/inc/walkers/walkerpagecustom.php';
+// endif;
 
 
 function __themesetup(){

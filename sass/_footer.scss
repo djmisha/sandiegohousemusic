@@ -1,269 +1,265 @@
-
 #overlay-contact-form {
-  overflow: scroll;
-  padding: 20px;
-  position: fixed;
-  top: -9999px;
-  background:#fff;
-  z-index: 9999;
-  text-align: left;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 300ms, opacity 400ms;
-
-  @include media($desktop) {
-    padding: 40px calc(180px + (50% - (#{$desktop} / 2)));
-  }
-  &.show-form {
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
-    top: 0;
+    overflow: scroll;
+    padding: 20px;
     position: fixed;
-    opacity: 1;
-    visibility: visible;
-    transition: visibility 0s linear 0s, opacity 400ms;
-  }
-  #input_3_1_3_container label {
-    display: none !important;
-  }
-  .close-form {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    @include media($tablet) {
-      // top: 20px;
-      // right: 20px;
+    top: -9999px;
+    background: #fff;
+    z-index: 9999;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 400ms;
+
+    @include media($desktop) {
+        padding: 40px calc(180px + (50% - (#{$desktop} / 2)));
     }
-    i {
-      font-size: 35px;
-      color:  rgba($darkColor, .3)
+    &.show-form {
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        top: 0;
+        position: fixed;
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0s linear 0s, opacity 400ms;
     }
-  }
-  .gform_wrapper .gform_footer {
-    margin-top: -10px;
-  }
-  form {
-    margin-top: 20px !important;
-    @include media($tablet) {
-      margin-top: 40px !important;
+    #input_3_1_3_container label {
+        display: none !important;
     }
-  }
-  strong {
-    font-size: 18px;
-    text-transform: uppercase;
-  }
-  img {
-    float: right;
-    width: 100px;
-    margin-left: 20px;
-    @include media($tablet) {
-      width: auto;
-      width: 150px;
-      margin-top: -40px;
+    .close-form {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        @include media($tablet) {
+            // top: 20px;
+            // right: 20px;
+        }
+        i {
+            font-size: 35px;
+            color: rgba($darkColor, 0.3);
+        }
     }
-  }
+    .gform_wrapper .gform_footer {
+        margin-top: -10px;
+    }
+    form {
+        margin-top: 20px !important;
+        @include media($tablet) {
+            margin-top: 40px !important;
+        }
+    }
+    strong {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    img {
+        float: right;
+        width: 100px;
+        margin-left: 20px;
+        @include media($tablet) {
+            width: auto;
+            width: 150px;
+            margin-top: -40px;
+        }
+    }
 }
 
 form {
-  clear: both;
-  footer & {
-    margin-top: 20px;
-  }
-  input, .textarea {
-    width: 100%;
-    border: 2px solid $secondaryColor;
-    background: transparent;
-  }
-  input {
-    font-size: inherit;
-    font-family: inherit;
-    padding: 5px 4px;
-    letter-spacing: normal;
-    margin-bottom: 10px;
-  }
-}
-
-
-
-.footer-show-form {
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 12px;
-  text-align: center;
-  transition: all .2s ease-in-out;
-  position: fixed;
-  bottom: 20px;
-  right: -80px;
-  &.hithere {
-    right: 10px;
-    @include media($tablet) {
-      right: 20px;
+    clear: both;
+    footer & {
+        margin-top: 20px;
     }
-  }
-  img {
-    transition: all .2s ease-in-out;
-    width: 50px;
-    display: block;
-    @include media($tablet) {
-      width: 70px;
-    }
-  }
-  a {
-    color: #000 !important;
-  }
-
-  &:hover {
-    img {
-      width: 100px;
-    }
-  }
-}
-
-
-.ginput_complex.ginput_container.no_prefix.has_first_name.no_middle_name.no_last_name.no_suffix.gf_name_has_1.ginput_container_name,
-.gform_wrapper li.field_sublabel_below .ginput_complex{
-  margin-top: 8px !important;
-}
-#gform_fields_3 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  #field_3_1,
-  #field_3_2,
-  #field_3_3 {
-    margin-top: 0 !important;
-    width: 48%;
-    @include media($tablet) {
-      width: 32%;
+    input,
+    .textarea {
+        width: 100%;
+        border: 2px solid $secondaryColor;
+        background: transparent;
     }
     input {
-      width: 100%;
+        font-size: inherit;
+        font-family: inherit;
+        padding: 5px 4px;
+        letter-spacing: normal;
+        margin-bottom: 10px;
     }
-    span {
-      padding-top: 0;
-    }
-  }
-  #field_3_3 {
-    width: 100%;
-    @include media($tablet) {
-      width: 32%; 
-    }
-  }
-
-  #field_3_4 {
-    width: 100%;
-  }
-  textarea {
-    height: 100px;
-    @include media($tablet) {
-      height: 120px;
-    }
-  }
 }
 
+.footer-show-form {
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    bottom: 60px;
+    right: -80px;
+    &.hithere {
+        right: 10px;
+        @include media($tablet) {
+            right: 20px;
+        }
+    }
+    img {
+        transition: all 0.2s ease-in-out;
+        width: 50px;
+        display: block;
+        @include media($tablet) {
+            width: 70px;
+        }
+    }
+    a {
+        color: #000 !important;
+    }
+
+    &:hover {
+        img {
+            width: 100px;
+        }
+    }
+}
+
+.ginput_complex.ginput_container.no_prefix.has_first_name.no_middle_name.no_last_name.no_suffix.gf_name_has_1.ginput_container_name,
+.gform_wrapper li.field_sublabel_below .ginput_complex {
+    margin-top: 8px !important;
+}
+#gform_fields_3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    #field_3_1,
+    #field_3_2,
+    #field_3_3 {
+        margin-top: 0 !important;
+        width: 48%;
+        @include media($tablet) {
+            width: 32%;
+        }
+        input {
+            width: 100%;
+        }
+        span {
+            padding-top: 0;
+        }
+    }
+    #field_3_3 {
+        width: 100%;
+        @include media($tablet) {
+            width: 32%;
+        }
+    }
+
+    #field_3_4 {
+        width: 100%;
+    }
+    textarea {
+        height: 100px;
+        @include media($tablet) {
+            height: 120px;
+        }
+    }
+}
 
 @include media($tablet) {
-  @media screen and (max-height: 800px) {
-    footer {
-      // width: calc(100% - 360px);
+    @media screen and (max-height: 800px) {
+        footer {
+            // width: calc(100% - 360px);
+        }
+        .home footer {
+            width: 100%;
+        }
     }
-    .home footer {
-      width: 100%
-    }
-  }
 }
 
 .footer-boxes {
-  background: #f5f5f5;
-  padding: 20px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  @include media($tablet) {
-    padding: 50px 40px;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-  }
-  @include media($desktop) {
-    padding: 50px 100px;
-  }
-  > div {
-    width: 50%;
+    background: #f5f5f5;
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
     @include media($tablet) {
-      width: 40%;
-      // max-width: 500px;
+        padding: 50px 40px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
     }
-  }
-  p {
-    font-family: $secondaryFont;
-  }
+    @include media($desktop) {
+        padding: 50px 100px;
+    }
+    > div {
+        width: 50%;
+        @include media($tablet) {
+            width: 40%;
+            // max-width: 500px;
+        }
+    }
+    p {
+        font-family: $secondaryFont;
+    }
 }
 
 .footer-nav {
-  background: #f5f5f5;
-  padding: 20px 0px 0px 0px;
-  text-align: left;
-  font-size: 12px;
-  line-height: 18px;
-  // text-transform: uppercase;
-  @include media($tablet) {
-    padding: 40px 0px;
-    font-size: 14px;
-    line-height: 18px;
-  }
-  span {
-    font-family: $secondaryFont;
-    // text-transform: uppercase;
-    font-size: 12px;
-    // font-weight: bold;
+    background: #f5f5f5;
+    padding: 20px 0px 0px 0px;
     text-align: left;
-    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    // text-transform: uppercase;
     @include media($tablet) {
-      font-size: 16px;
-      // font-weight: bold;
+        padding: 40px 0px;
+        font-size: 14px;
+        line-height: 18px;
     }
-  }
-  a {
-    // font-family: $secondaryFont;
-    
-    color: $secondaryColor;
-    text-decoration: none;
+    span {
+        font-family: $secondaryFont;
+        // text-transform: uppercase;
+        font-size: 12px;
+        // font-weight: bold;
+        text-align: left;
+        display: block;
+        @include media($tablet) {
+            font-size: 16px;
+            // font-weight: bold;
+        }
+    }
+    a {
+        // font-family: $secondaryFont;
 
-    &:hover {
-      color: $secondaryAlt;
+        color: $secondaryColor;
+        text-decoration: none;
+
+        &:hover {
+            color: $secondaryAlt;
+        }
     }
-  }
-  ul {
-    list-style: none;
-    text-align-last: left;
-    li {
-      font-family: $secondaryFont;
+    ul {
+        list-style: none;
+        text-align-last: left;
+        li {
+            font-family: $secondaryFont;
+        }
     }
-  }
 }
 
 .footer-nav:nth-of-type(3) {
-  width: 100%;
-  @include media($tablet) {
-    margin-top: 0;
-    max-width: 500px;
-    width: auto;
-  }
+    width: 100%;
+    @include media($tablet) {
+        margin-top: 0;
+        max-width: 500px;
+        width: auto;
+    }
 }
 
 .footer-signup {
-  // padding-left: 40px;
-  // padding-right: 40px;
-  margin: 0 auto;
-  margin-top: 20px;
-  max-width: 500px;
-  input {
-    padding: 10px 10px;
-  }
+    // padding-left: 40px;
+    // padding-right: 40px;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 500px;
+    input {
+        padding: 10px 10px;
+    }
 
-  @include media($tablet) {
-    margin-top: 0;
-  }
+    @include media($tablet) {
+        margin-top: 0;
+    }
 }
 
 /*====================================
@@ -286,172 +282,170 @@ form {
 //   background: #000 url("images/slide-4.jpg") center center no-repeat;
 // }
 
-
 .bg-hire {
-  .page-27 &,
-  .page-4027 &,
-  .page-441 & {
-    display: none;
-  }
-  .foot-video {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-  video {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 280px;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    object-fit: cover;
-    opacity: 1;
-    @include media($tablet) {
-      height: 600px;
+    .page-27 &,
+    .page-4027 &,
+    .page-441 & {
+        display: none;
     }
-  }
-  }
-  
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  margin-top: 40px;
-  @include media($tablet) {
-    padding-top: 150px;
-    padding-bottom: 100px;
-  }
-  @include media($desktop) {
-    // background-attachment: scroll;
+    .foot-video {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        video {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 280px;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+            object-fit: cover;
+            opacity: 1;
+            @include media($tablet) {
+                height: 600px;
+            }
+        }
+    }
+
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     background-size: cover;
-  }
-   div {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 20px;
-    background: rgba(#000, 0.5);
-  }
-  h2 {
-    text-shadow: 2px 2px 2px $darkColor;
-    display: block;
-    color: #fff;
-    font-size: 20px;
-    line-height: 25px;
-    margin-bottom: 20px;
-    font-weight: 900;
-    text-transform: uppercase;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 40px;
     @include media($tablet) {
-      font-size: 50px;
-      line-height: 50px;
+        padding-top: 150px;
+        padding-bottom: 100px;
     }
-  }
-  p {
-    text-shadow: 2px 2px 2px $darkColor;
-    color: #fff;
-    max-width: 800px;
-    margin: 0 auto;
-    text-transform: uppercase;
-    font-size: 10px;
-    line-height: 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    @include media($tablet) {
-      font-size: 18px;
-      line-height: 28px;
+    @include media($desktop) {
+        // background-attachment: scroll;
+        background-size: cover;
     }
-  }
-  .button {
-    display: block;
-    margin-top: 20px;
-
-  }
+    div {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px;
+        background: rgba(#000, 0.5);
+    }
+    h2 {
+        text-shadow: 2px 2px 2px $darkColor;
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        @include media($tablet) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+    p {
+        text-shadow: 2px 2px 2px $darkColor;
+        color: #fff;
+        max-width: 800px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        @include media($tablet) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    .button {
+        display: block;
+        margin-top: 20px;
+    }
 }
 
 .site-logo-footer {
-  img {
-    max-width: 200px;
-    margin-left: -20px;
-    margin-bottom: 40px;
-  }
+    img {
+        max-width: 200px;
+        margin-left: -20px;
+        margin-bottom: 40px;
+    }
 }
 
 .schema {
-  margin-bottom: 20px;
-  font-size: 13px;
-  font-family: $secondaryFont;
-  a {
-    color: #adb5bd;
-  }
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-family: $secondaryFont;
+    a {
+        color: #adb5bd;
+    }
 }
 
 .lower-footer {
-  padding-top: 40px !important;
-  padding-bottom: 60px !important;
-  @include media($tablet) {
-    padding-top: 60px !important;
+    padding-top: 40px !important;
     padding-bottom: 60px !important;
-  }
-  @include media($desktop) {
-    padding-bottom: 60px !important;
-  }
+    @include media($tablet) {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+    @include media($desktop) {
+        padding-bottom: 60px !important;
+    }
 }
 
 .footer-social {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .copyright,
 .amg-sig {
-  padding: 0 0px;
-  font-family: $secondaryFont;
-  text-align: center;
-  font-size: 11px;
-  line-height: 16px;
-  color: $tertiaryAlt;
-  @include media($tablet) {
-    font-size: 13px;
-    line-height: 17px;
+    padding: 0 0px;
+    font-family: $secondaryFont;
     text-align: center;
-  }
-  a {
+    font-size: 11px;
+    line-height: 16px;
     color: $tertiaryAlt;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+    @include media($tablet) {
+        font-size: 13px;
+        line-height: 17px;
+        text-align: center;
+    }
+    a {
+        color: $tertiaryAlt;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 /* Hide WP stats smiley face */
 
 #wpstats {
-  display: none;
+    display: none;
 }
 
-.back-to-top{
-  // border: 1px solid pink;
-  position: fixed;
-  bottom: 10px;
-  // left: 0px;
-  right: calc(50% - 20px);
-  border-radius: 4px;
-  background-color: rgba($secondaryAlt, .2);
-  padding: .2em .6em;
-  // z-index: 9999;
-  a {
-    display: block;
-    // width:  20px;
-    // height: 20px;
-  }
-  i {
-    color: #fff !important;
-    font-size: 30px;
-  }
+.back-to-top {
+    // border: 1px solid pink;
+    position: fixed;
+    bottom: 10px;
+    // left: 0px;
+    right: calc(20px);
+    border-radius: 4px;
+    background-color: rgba($secondaryAlt, 0.2);
+    padding: 0.2em 0.6em;
+    // z-index: 9999;
+    a {
+        display: block;
+        // width:  20px;
+        // height: 20px;
+    }
+    i {
+        color: #fff !important;
+        font-size: 30px;
+    }
 }
