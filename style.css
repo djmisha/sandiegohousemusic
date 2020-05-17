@@ -2849,6 +2849,7 @@ p.wp-caption-text {
 /* Fix images  */
 .gallery-icon img {
   width: 100%;
+  height: auto;
 }
 
 /* ------------------------
