@@ -433,7 +433,7 @@ function attachVideo() {
 
 setTimeout(function() {
     attachVideo();
-}, 0);
+}, 5000);
 
 /* Load Social Feeds */
 
