@@ -4,16 +4,16 @@
 		<div class="close-form">
 			<i class="fal fa-times"></i>
 		</div>
-		<strong>Speak with a Dance Music Expert</strong><br><br>
+		<strong>Specilizing in electronic-dance and house music</strong><br><br>
 		<img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-		Contact us here, just give us a few details about your event need and receive same day DJ availability and a complimentary consultation.  Please provide the date, location, occasion and approximate attendace. We look foward to hearing from you!  
+		Speak with a dance music expert about your event need and receive same day DJ availability and complimentary consultation.  Please provide the date, location, occasion and approximate attendace. We look foward to hearing from you!  
 		<?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
 	</div>
 
 	<section class="bg-hire will-parallax parallax-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/slide-<?php echo rand(1,4) ?>.jpg">
 		<div>
 			<h2>Hire our DJs for<br> Events, Party & Wedding</h2>	
-			<p>DJ services in San Diego and beyond. Playing the best club, edm, underground techno, house, top hits and music for dancing DJ productions.  
+			<p>Specilizing in electronic-dance and house music, club, edm, underground techno, top hits and best music for dancing DJ productions.  DJ services in San Diego and beyond. 
 			<a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a></p>
 		</div>
 	</section>
@@ -57,17 +57,13 @@
 			<a rel="noopener" title="instagram"><i data-name="instagram" class="fab fa-instagram"></i></a>
 			<a rel="noopener" title="facebook"><i data-name="facebook" class="fab fa-facebook"></i></a>
 			<a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a>
-			<!-- <a class="show-form"><i class="fal fa-comments"></i></a> -->
+			<a class="show-form"><i class="fal fa-comments"></i></a>
  		</div>
-<!-- 		<div class="get-social footer-social">
-			<a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
-			<a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
-			<a href="https://twitter.com/sdhousemusic" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
- 		</div> 
- 	-->
+
  		<div class="schema">
  			<?php do_action('reviews_markup'); ?>
  		</div>
+
  		<?php if( is_page( array(9228,4027))) { ?>
  		<div class="footer-show-form">
 			<a class="show-form">
@@ -88,7 +84,7 @@
 
 <?php // Only Show Ads on Homepage and Single Posts ?>
 <?php if (is_single() || is_front_page())  { ?>
-<!-- <section class="auto-google-ads">
+<section class="auto-google-ads">
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<ins class="adsbygoogle"
 	style="display:block"
@@ -99,7 +95,7 @@
 	<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
-</section> -->
+</section>
 <?php } ?>
 
 <?php wp_footer();?>
