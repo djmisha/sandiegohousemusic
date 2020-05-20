@@ -1,396 +1,375 @@
 .home .content h2 {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  @include media($desktop) {
-    margin-top: 60px;
-    margin-bottom: 40px;
-  }
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    @include media($desktop) {
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
 }
 
-
 .home .content h3 {
-  font-size: 25px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  a {
-    color: #000;
-    text-decoration: none;
-  }
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    a {
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 /*===============================================
 =            Welcome to my Website!             =
 ===============================================*/
 .welcome {
-  position: relative;
-  z-index: 1000;
-  border-bottom: 5px solid #000;
-  height: 280px;
-  background: #000;
-   // background: rgb(9,9,121);
-  // background: linear-gradient(135deg, rgba(9,9,121,1) 0%, rgba(9,9,121,1) 45%, rgba(2,0,36,1) 99%); 
-  @include media($tablet) {
-    height: 602px;
-  }
-  video {
-    position: absolute;
-    top: 0px;
-    left: 0;
-    right: 0;
-    width: 100%;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 5px solid #000;
     height: 280px;
-    z-index: -1;
-    margin: 0;
-    padding: 0;
-    object-fit: cover;
-    opacity: 1;
+    background: #000;
+    // background: rgb(9,9,121);
+    // background: linear-gradient(135deg, rgba(9,9,121,1) 0%, rgba(9,9,121,1) 45%, rgba(2,0,36,1) 99%);
     @include media($tablet) {
-      height: 600px;
+        height: 602px;
     }
-  }
+    video {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 280px;
+        z-index: -1;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
+        opacity: 1;
+        @include media($tablet) {
+            height: 600px;
+        }
+    }
 }
 
 .overlay {
-  width: 100%;
-  height: calc(100% + 5px);
-  position: absolute;
-  background: rgba(#000, .3);
-  // z-index: -1;
-}
-
-.header-1 {
-  background: #000 url("images/slide-1.jpg") center center no-repeat;
-  background-size: cover;
-}
-
-.header-2 {
-  background: #000 url("images/slide-2.jpg") center center no-repeat;
-  background-size: cover;
-}
-.header-3 {
-  background: #000 url("images/slide-3.jpg") center center no-repeat;
-  background-size: cover;
-}
-
-.header-4 {
-  background: #000 url("images/slide-4.jpg") center center no-repeat;
-  background-size: cover;
+    width: 100%;
+    height: calc(100% + 5px);
+    position: absolute;
+    background: rgba(#000, 0.3);
+    // z-index: -1;
 }
 
 .welcome-cta {
-  // z-index: 9999;
-  padding-top: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  @include media($tablet) {
-    padding-top: 250px;
-  }
-  h1 {
-    text-shadow: 2px 2px 2px $darkColor;
-    max-width: 1040px;
-    // text-transform: uppercase;
-    font-weight: 100;
-    margin: 0 auto;
-    font-size: 26px;
-    line-height: 32px;
-    color: $lightColor;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 10px;
-    z-index: 1001;
-    position: relative;;
-    @include media($tablet) {
-      text-shadow: 4px 4px 4px $darkColor;
-      padding-left: 0px;
-      padding-right: 0px;
-      line-height: 90px;
-      font-size: 50px;
-      line-height: 60px;
-    }
-  }
-  span {
-    display: block !important;
-    // text-transform: uppercase;
-    font-weight: 100;
-    text-shadow: 2px 2px 1px $darkColor;
+    // z-index: 9999;
+    padding-top: 100px;
     padding-left: 10px;
     padding-right: 10px;
-    color: $lightColor;
-    display: inline-block;
-    position: relative;
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 30px;
     @include media($tablet) {
-      padding-left: 40px;
-      padding-right: 40px;
-      text-shadow: 4px 4px 4px $darkColor;
-      font-size: 30px;
+        padding-top: 250px;
     }
-  }
-  ul {
-    margin-top: 0 !important;
-    list-style: none;
-  }
+    h1 {
+        text-shadow: 2px 2px 2px $darkColor;
+        max-width: 1040px;
+        // text-transform: uppercase;
+        font-weight: 100;
+        margin: 0 auto;
+        font-size: 26px;
+        line-height: 32px;
+        color: $lightColor;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 10px;
+        z-index: 1001;
+        position: relative;
+        @include media($tablet) {
+            text-shadow: 4px 4px 4px $darkColor;
+            padding-left: 0px;
+            padding-right: 0px;
+            line-height: 90px;
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+    span {
+        display: block !important;
+        // text-transform: uppercase;
+        font-weight: 100;
+        text-shadow: 2px 2px 1px $darkColor;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: $lightColor;
+        display: inline-block;
+        position: relative;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 30px;
+        @include media($tablet) {
+            padding-left: 40px;
+            padding-right: 40px;
+            text-shadow: 4px 4px 4px $darkColor;
+            font-size: 30px;
+        }
+    }
+    ul {
+        margin-top: 0 !important;
+        list-style: none;
+    }
 }
 .home-button {
-  color: $lightColor;
-  max-width: 180px;
-  margin: 0 auto;
-  background-color: transparent;
-  border: 2px solid $lightColor;
-  position: relative;
-  a {
-    // width: 100%;
-    display: block;
-    text-decoration: none;
-    background-color: red;
-    // background-color: #fff;
-  }
-  @include media($tablet) {
-    // margin-top: 30px;
-    margin-top: 60px;
-    display: block;
-  }
-  &:hover {
-    // color: $secondaryAlt;
-    // color: #000 !important;
-    // border: 1px solid #fff;
-    // border: 1px solid $secondaryAlt;
-    // background: transparent;
-  }
+    color: $lightColor;
+    max-width: 180px;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid $lightColor;
+    position: relative;
+    a {
+        // width: 100%;
+        display: block;
+        text-decoration: none;
+        background-color: red;
+        // background-color: #fff;
+    }
+    @include media($tablet) {
+        // margin-top: 30px;
+        margin-top: 60px;
+        display: block;
+    }
+    &:hover {
+        // color: $secondaryAlt;
+        // color: #000 !important;
+        // border: 1px solid #fff;
+        // border: 1px solid $secondaryAlt;
+        // background: transparent;
+    }
 }
 
 .home .interior {
-  display: block;
-  width: 100%;
-  padding-left: 0px;
-  padding-right: 0px;
-  @include media($tablet) {
-    padding-left: 40px;
-    padding-right: 40px;
-
-  }
+    display: block;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    @include media($tablet) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }
 
 .home .content {
-  margin: 0 auto;
-  padding: 0 10px;
-  .excerpt {
-    @include media($tablet) {
-      width: 32% !important;
+    margin: 0 auto;
+    padding: 0 10px;
+    .excerpt {
+        @include media($tablet) {
+            width: 32% !important;
+        }
     }
-  }
 }
-
-
 
 .front-page-events {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-
-
 
 .owl-nav {
-  position: absolute;
-  top: -60px;
-  left: 0;
-  @include media($tablet) {
-    left: auto;
-    right: 20px;
-    top: -100px;
-  }
+    position: absolute;
+    top: -60px;
+    left: 0;
+    @include media($tablet) {
+        left: auto;
+        right: 20px;
+        top: -100px;
+    }
 }
 
-.home .content 
-.owl-rotator  {
-  margin-top: 100px;
-  @include media($tablet) {
-    margin-top: 80px;
-    
-  }
-  .excerpt {
-    widows: auto !important;
-  }
-  margin-bottom: 40px;
+.home .content .owl-rotator {
+    margin-top: 100px;
+    @include media($tablet) {
+        margin-top: 80px;
+    }
+    .excerpt {
+        widows: auto !important;
+    }
+    margin-bottom: 40px;
 }
 
 .owl-item {
-  max-width: 100%;
-  margin-bottom: 40px;
-  height: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    height: 100%;
 }
 .owl-nav {
-  margin: 0 auto;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  > div {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  span.button {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 30px;
-    i {font-weight: 100;}
-  }
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    > div {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    span.button {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 30px;
+        i {
+            font-weight: 100;
+        }
+    }
 }
-
 
 .excerpt-rotator {
-  padding-bottom: 30px;
-  border: 1px solid #eee;
-  margin-bottom: 40px;
-  padding: 10px;
-  @include media($tablet) {
-    margin-bottom: 0px;
-    padding: 20px;
-    width: 100% !important;
-  }
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0px 3px 3px rgba(#000, .3) ;
-  }
-
-  .para {
-    margin-top: 20px;
+    padding-bottom: 30px;
+    border: 1px solid #eee;
+    margin-bottom: 40px;
+    padding: 10px;
     @include media($tablet) {
-      margin-top: 40px;
+        margin-bottom: 0px;
+        padding: 20px;
+        width: 100% !important;
     }
-  }
-  .para a {
-    font-family: $secondaryFont;
-    text-decoration: none !important;
-    color: #000;
-    font-size: 14px;
-    line-height: 18px;
-    color: $darkColor;
-    span {
-      text-decoration: underline;
-      color: $secondaryColor;
-    }
-  }
 
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 3px 3px rgba(#000, 0.3);
+    }
+
+    .para {
+        margin-top: 20px;
+        @include media($tablet) {
+            margin-top: 40px;
+        }
+    }
+    .para a {
+        font-family: $secondaryFont;
+        text-decoration: none !important;
+        color: #000;
+        font-size: 14px;
+        line-height: 18px;
+        color: $darkColor;
+        span {
+            text-decoration: underline;
+            color: $secondaryColor;
+        }
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
+// Engage Bar
+// Engage Bar
+// Engage Bar
 
-
-// Engage Bar 
-// Engage Bar 
-// Engage Bar 
-
-
-.excerpt {position: relative;}
+.excerpt {
+    position: relative;
+}
 .engage-bar {
-  // position: absolute;
-  bottom: 20px;
-  margin-top: 20px;
-  // ,top: 1;w\
-  width: 100%;
-  display: flex;
-  // display: none;
-  align-items: center;
-  justify-content: space-between;
-  i {
-    font-size: 30px;
-  }
+    // position: absolute;
+    bottom: 20px;
+    margin-top: 20px;
+    // ,top: 1;w\
+    width: 100%;
+    display: flex;
+    // display: none;
+    align-items: center;
+    justify-content: space-between;
+    i {
+        font-size: 30px;
+    }
 }
 
 .the-like-button {
-  color: #ccc;
-  position: relative;
-  &:before {
-  // &:before {
-   // &:hover {
-    // opacity: 1;
-   // }
-   // opacity: 0;
-   content: "Like This";
-   position: absolute;
-   font-size: 10px;
-   line-height:  10px;
-   bottom: -15px;
-   left: -2px;
-   width: 50px;
-      // opacity: 0;
-      transition: all .5s ease;
+    color: #ccc;
+    position: relative;
+    &:before {
+        // &:before {
+        // &:hover {
+        // opacity: 1;
+        // }
+        // opacity: 0;
+        content: "Like This";
+        position: absolute;
+        font-size: 10px;
+        line-height: 10px;
+        bottom: -15px;
+        left: -2px;
+        width: 50px;
+        // opacity: 0;
+        transition: all 0.5s ease;
     }
-    &.liked {&:before {
-    // border: 1px solid pink; 
-    content: "Liked!" !important;
-    color: #000;
-    left: 3px;
-    opacity: 1;
-    
-  }
+    &.liked {
+        &:before {
+            // border: 1px solid pink;
+            content: "Liked!" !important;
+            color: #000;
+            left: 3px;
+            opacity: 1;
+        }
+    }
+
+    i {
+        // border: 1px solid pink;
+        &.liked {
+            color: red;
+        }
+    }
 }
 
-
-i {
-      // border: 1px solid pink;
-      &.liked {
-        color: red;
-      } 
-    }
-  }
-
-  .the-share-button {
+.the-share-button {
     position: relative;
     color: #ccc;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &:before {
-      content: "link copied";
-      position: absolute;
-      font-size: 10px;
-      line-height:  10px;
-      bottom: -15px;
-      left: -10px;
-      width: 45px;
-      opacity: 0;
-      transition: all .5s ease;
+        content: "link copied";
+        position: absolute;
+        font-size: 10px;
+        line-height: 10px;
+        bottom: -15px;
+        left: -10px;
+        width: 45px;
+        opacity: 0;
+        transition: all 0.5s ease;
     }
     &.copied {
-      color: pink;
-      color: #000;
-      &:before {
-        opacity: 1;
-      }
+        color: pink;
+        color: #000;
+        &:before {
+            opacity: 1;
+        }
     }
-  }
+}
 
-
-  .the-fire{ 
+.the-fire {
     padding-left: 20px;
     padding-right: 20px;
     font-size: 27px;
     opacity: 0;
     &.so-hot {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-
-
-  .bounce {
-   animation: spring .75s;
-   animation-timing-function: ease-in;
-   animation-iteration-count: 1;
-   @keyframes spring { 
-    0% {transform: scale(1) translateY(0); }
-    10% {transform: scale(1.0, 0.6); }
-    30% {transform: scale(0.8, .8) translateY(-5px); }
-    50% {transform: scale(1) translateY(0); }
-    100% {transform: translateY(0); }
-  }
 }
 
+.bounce {
+    animation: spring 0.75s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    @keyframes spring {
+        0% {
+            transform: scale(1) translateY(0);
+        }
+        10% {
+            transform: scale(1, 0.6);
+        }
+        30% {
+            transform: scale(0.8, 0.8) translateY(-5px);
+        }
+        50% {
+            transform: scale(1) translateY(0);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+}
 
 /*NOT USED RIGHT NOW*/
 
@@ -429,7 +408,6 @@ i {
 //   padding-left: 5px;
 //   padding-right: 5px;
 // }
-
 
 // .parsed__post img {
 //   width: 100%;

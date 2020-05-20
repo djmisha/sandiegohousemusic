@@ -3796,26 +3796,6 @@ span.error {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.header-1 {
-  background: #000 url("images/slide-1.jpg") center center no-repeat;
-  background-size: cover;
-}
-
-.header-2 {
-  background: #000 url("images/slide-2.jpg") center center no-repeat;
-  background-size: cover;
-}
-
-.header-3 {
-  background: #000 url("images/slide-3.jpg") center center no-repeat;
-  background-size: cover;
-}
-
-.header-4 {
-  background: #000 url("images/slide-4.jpg") center center no-repeat;
-  background-size: cover;
-}
-
 .welcome-cta {
   padding-top: 100px;
   padding-left: 10px;
@@ -4082,8 +4062,8 @@ span.error {
   bottom: -15px;
   left: -2px;
   width: 50px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .the-like-button.liked:before {
@@ -4100,8 +4080,8 @@ span.error {
 .the-share-button {
   position: relative;
   color: #ccc;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .the-share-button:before {
@@ -4113,8 +4093,8 @@ span.error {
   left: -10px;
   width: 45px;
   opacity: 0;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .the-share-button.copied {
@@ -4138,8 +4118,8 @@ span.error {
 }
 
 .bounce {
-  -webkit-animation: spring .75s;
-          animation: spring .75s;
+  -webkit-animation: spring 0.75s;
+          animation: spring 0.75s;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
   -webkit-animation-iteration-count: 1;
