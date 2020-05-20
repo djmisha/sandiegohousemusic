@@ -55,10 +55,10 @@
             </div>
         </div>
         <div class="get-social">
-            <a rel="noopener" title="instagram"><i data-name="instagram" class="fab fa-instagram"></i></a>
-            <a rel="noopener" title="facebook"><i data-name="facebook" class="fab fa-facebook"></i></a>
-            <a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a>
-            <!-- <a class="show-form"><i class="fal fa-comments"></i></a> -->
+            <!-- <a rel="noopener" title="instagram"><i data-name="instagram" class="fab fa-instagram"></i></a> -->
+            <!-- <a rel="noopener" title="facebook"><i data-name="facebook" class="fab fa-facebook"></i></a> -->
+            <!-- <a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a> -->
+            <a class="show-form"><i class="fal fa-comments"></i></a>
         </div>
         <nav>
             <?php wp_nav_menu( array(
@@ -82,7 +82,7 @@
     </div>
 </div>
 
-<div class="header-images-new header-<?php echo rand(1,4); ?>">
+<div class="header-images-new header-<?php echo rand(1,9); ?>">
     <?php if((is_home() or is_search() or is_category() or is_archive() )): ?>
     <section class="page-title">
         <h1 class="color-<?php echo rand(1,6); ?>"><?php single_cat_title();?></h1>
