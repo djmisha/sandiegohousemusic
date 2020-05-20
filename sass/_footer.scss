@@ -91,7 +91,7 @@ form {
     text-align: center;
     transition: all 0.2s ease-in-out;
     position: fixed;
-    bottom: 60px;
+    bottom: 20px;
     right: -80px;
     &.hithere {
         right: 10px;
@@ -447,5 +447,9 @@ form {
     i {
         color: #fff !important;
         font-size: 30px;
+    }
+    /* Not on DJ page */
+    .page-4027 & {
+        display: none;
     }
 }

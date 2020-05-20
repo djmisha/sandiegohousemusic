@@ -3057,7 +3057,7 @@ form input {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   position: fixed;
-  bottom: 60px;
+  bottom: 20px;
   right: -80px;
 }
 
@@ -3471,6 +3471,7 @@ form input {
   border-radius: 4px;
   background-color: rgba(235, 0, 119, 0.2);
   padding: 0.2em 0.6em;
+  /* Not on DJ page */
 }
 
 .back-to-top a {
@@ -3480,6 +3481,10 @@ form input {
 .back-to-top i {
   color: #fff !important;
   font-size: 30px;
+}
+
+.page-4027 .back-to-top {
+  display: none;
 }
 
 /* ------------------------
