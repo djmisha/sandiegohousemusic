@@ -2671,7 +2671,12 @@ header .menu-item-9756 a:before {
 
 @media only screen and (min-width: 1080px) {
   .interior {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
+    width: calc(100%-300px);
+    border: 1px solid pink;
   }
 }
 
