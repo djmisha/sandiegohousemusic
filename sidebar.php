@@ -1,6 +1,6 @@
 <aside>
 		<!-- SDHM sidebar -->
-<!-- 	<div class="sidebar-add">
+	<div class="sidebar-add">
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<ins class="adsbygoogle"
 		     style="display:inline-block;width:300px;height:600px"
@@ -9,17 +9,17 @@
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
-	</div> -->
-	<!-- <div class="mobile-add"> -->
-		<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+	</div>
+	<div class="mobile-add">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- SDHM Mobile -->
-		<!-- <ins class="adsbygoogle"
+		<ins class="adsbygoogle"
 		     style="display:inline-block;width:440px;height:80px"
 		     data-ad-client="ca-pub-6261738507723190"
-		     data-ad-slot="2039607348"></ins> -->
-		<!-- <script>
+		     data-ad-slot="2039607348"></ins>
+		<script>
 		     (adsbygoogle = window.adsbygoogle || []).push({});
-		</script> -->
-	<!-- </div> -->
+		</script>
+	</div>
 
 </aside>
