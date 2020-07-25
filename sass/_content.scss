@@ -172,8 +172,8 @@
     @include media($desktop) {
         display: flex;
         width: 100%;
-        width: calc(100%-300px);
-        border: 1px solid pink;
+        // width: calc(100% - 300px);
+        // border: 1px solid pink;
     }
 
     .content {
