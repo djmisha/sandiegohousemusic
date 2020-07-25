@@ -4,24 +4,6 @@
 
 <?php get_header();?>
 
-
-<div class="welcome">
-    <div class="overlay"></div>
-    <div class="home-video"></div>
-    <div class="welcome-cta">
-        <h1>DJ's EDM Dance Events &amp; House Music </h1>
-        <span>in San Diego and around the world</span>
-        <ul>
-            <li class="get-events">
-                <a href="events.sandiegohousemusic.com" class="home-button button">View Events</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-
-
-
 <main class="interior" id="#skiptomaincontent">
     <div class="content">
        
@@ -119,6 +101,20 @@
 
     </div>
 </main>
+
+<div class="welcome">
+    <div class="overlay"></div>
+    <div class="home-video"></div>
+    <div class="welcome-cta">
+        <h1>DJ's EDM Dance Events &amp; House Music </h1>
+        <span>in San Diego and around the world</span>
+        <ul>
+            <li class="get-events">
+                <a href="events.sandiegohousemusic.com" class="home-button button">View Events</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
 
 <div class="interior" style="padding: 0 !important">
