@@ -6,8 +6,7 @@
         </div>
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-        Speak with a dance music expert about your event need and receive same day DJ availability and complimentary
-        consultation. Please provide the date, location, occasion and approximate attendace. We look foward to hearing
+        Contact us about proffesional dance music DJ services for your event. Please provide the date, location, occasion and approximate attendace. We look foward to hearing
         from you!
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
     </div>
@@ -17,7 +16,7 @@
         <div>
             <h2>Hire our DJs for<br> Events, Party & Wedding</h2>
             <p>Specilizing in electronic-dance and house music, club, edm, underground techno, top hits and best music
-                for dancing DJ productions. DJ services in San Diego and beyond.
+                for dancing DJ and event productions. Proffesional DJ services in San Diego and beyond.
                 <a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a>
             </p>
         </div>
