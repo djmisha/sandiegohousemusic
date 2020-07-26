@@ -102,7 +102,7 @@
 </footer>
 
 <?php // Only Show Ads on Homepage and Single Posts ?>
-<?php if (is_single() || is_front_page())  { ?>
+<?php //if (is_single() || is_front_page())  { ?>
 <section class="auto-google-ads">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6261738507723190" data-ad-slot="2039607348"
@@ -111,7 +111,7 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </section>
-<?php } ?>
+<?php //} ?>
 
 <?php wp_footer();?>
 
