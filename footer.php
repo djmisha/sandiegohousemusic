@@ -40,7 +40,7 @@
                 'footer_class' => 'main-menu',
                 )); ?>
         </div>
-        <div class="footer-nav">
+        <!-- <div class="footer-nav">
             <div class="footer-signup">
                 <span>Sign Up For Our Newsletter</span>
                 <form action="https://sandiegohousemusic.com/cgi-bin/dada/mail.cgi" method="post"><input name="list"
@@ -50,7 +50,7 @@
                     <input id="f_s" checked="checked" name="f" type="hidden" value="subscribe" />
                     <input class="processing button" type="submit" value="Sign Up" /></form>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <section class="lower-footer">
