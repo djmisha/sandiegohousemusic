@@ -3,11 +3,13 @@
 <section class="interior">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 		<article class="content">
+			
 			<?php if(!empty(get_the_post_thumbnail())): ?>
-					<div class="featured-image">
-						<?php the_post_thumbnail(''); ?>
-					</div>
-				<?php endif; ?>
+					<!-- <div class="featured-image"> -->
+						<?php //the_post_thumbnail(''); ?>
+					<!-- </div> -->
+			<?php endif; ?>
+
 			<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
 					<div class="the-like-button">
 						<i class="fas fa-heart"></i>

@@ -6,8 +6,7 @@
         </div>
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-        Speak with a dance music expert about your event need and receive same day DJ availability and complimentary
-        consultation. Please provide the date, location, occasion and approximate attendace. We look foward to hearing
+        Contact us about proffesional dance music DJ services for your event. Please provide the date, location, occasion and approximate attendace. We look foward to hearing
         from you!
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
     </div>
@@ -17,7 +16,7 @@
         <div>
             <h2>Hire our DJs for<br> Events, Party & Wedding</h2>
             <p>Specilizing in electronic-dance and house music, club, edm, underground techno, top hits and best music
-                for dancing DJ productions. DJ services in San Diego and beyond.
+                for dancing DJ and event productions. Proffesional DJ services in San Diego and beyond.
                 <a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a>
             </p>
         </div>
@@ -101,8 +100,13 @@
     <div class="back-to-top"><a href="#the-top"><i class="far fa-angle-up"></i></a></div>
 </footer>
 
+<<<<<<< HEAD
 <?php // Only Show Ads on Homepage and Single Posts?>
 <?php if (is_single() || is_front_page()) { ?>
+=======
+<?php // Only Show Ads on Homepage and Single Posts ?>
+<?php //if (is_single() || is_front_page())  { ?>
+>>>>>>> cbe50f9e119773e74234442f4686ca6017962c71
 <section class="auto-google-ads">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6261738507723190" data-ad-slot="2039607348"
@@ -111,7 +115,7 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </section>
-<?php } ?>
+<?php //} ?>
 
 <?php wp_footer();?>
 

@@ -6,17 +6,7 @@
 
 <main class="interior" id="#skiptomaincontent">
     <div class="content">
-        <br clear="all">
-        <br clear="all">
-        <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events</h2>
-        <div class="front-page-events">
-            <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%"
-                height="1320" style="overflow: hidden;" scrolling="no"></iframe>
-        </div>
-
-        <div class="get-events">
-            <a href="events.sandiegohousemusic.com" rel="nofollow" class=" button">More Events</a>
-        </div>
+       
 
         <br clear="all">
         <br clear="all">
@@ -92,7 +82,17 @@
             </script>
         </section>
 
-      
+        <br clear="all">
+        <br clear="all">
+        <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events</h2>
+        <div class="front-page-events">
+            <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%"
+                height="1320" style="overflow: hidden;" scrolling="no"></iframe>
+        </div>
+
+        <div class="get-events">
+            <a href="events.sandiegohousemusic.com" rel="nofollow" class=" button">More Events</a>
+        </div>
 
         <br clear="all">
         <br clear="all">
@@ -115,6 +115,7 @@
         </ul>
     </div>
 </div>
+
 
 <div class="interior" style="padding: 0 !important">
 
