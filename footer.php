@@ -13,7 +13,7 @@
     </div>
 
     <section class="bg-hire will-parallax parallax-footer b-lazy"
-        data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1,9) ?>.jpg">
+        data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg">
         <div>
             <h2>Hire our DJs for<br> Events, Party & Wedding</h2>
             <p>Specilizing in electronic-dance and house music, club, edm, underground techno, top hits and best music
@@ -26,21 +26,21 @@
     <div class="footer-boxes">
         <div class="footer-nav">
             <span>House Music, DJs, Events </span>
-            <?php wp_nav_menu( array(
-				'menu' 		=> 'Footer Navigation',
-				'menu_id'	=> 'footer-main-1',
-				'footer_class' => 'main-menu',
-				)); ?>
+            <?php wp_nav_menu(array(
+                'menu' 		=> 'Footer Navigation',
+                'menu_id'	=> 'footer-main-1',
+                'footer_class' => 'main-menu',
+                )); ?>
         </div>
         <div class="footer-nav">
             <span>Our Network</span>
-            <?php wp_nav_menu( array(
-				'menu' 		=> 'Network Websites',
-				'menu_id'	=> 'footer-main-2',
-				'footer_class' => 'main-menu',
-				)); ?>
+            <?php wp_nav_menu(array(
+                'menu' 		=> 'Network Websites',
+                'menu_id'	=> 'footer-main-2',
+                'footer_class' => 'main-menu',
+                )); ?>
         </div>
-        <div class="footer-nav">
+        <!-- <div class="footer-nav">
             <div class="footer-signup">
                 <span>Sign Up For Our Newsletter</span>
                 <form action="https://sandiegohousemusic.com/cgi-bin/dada/mail.cgi" method="post"><input name="list"
@@ -50,7 +50,7 @@
                     <input id="f_s" checked="checked" name="f" type="hidden" value="subscribe" />
                     <input class="processing button" type="submit" value="Sign Up" /></form>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <section class="lower-footer">
@@ -73,7 +73,7 @@
             <?php do_action('reviews_markup'); ?>
         </div>
 
-        <?php if( is_page( array(9228,4027))) { ?>
+        <?php if (is_page(array(9228,4027))) { ?>
         <div class="footer-show-form">
             <a class="show-form">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -101,8 +101,8 @@
     <div class="back-to-top"><a href="#the-top"><i class="far fa-angle-up"></i></a></div>
 </footer>
 
-<?php // Only Show Ads on Homepage and Single Posts ?>
-<?php if (is_single() || is_front_page())  { ?>
+<?php // Only Show Ads on Homepage and Single Posts?>
+<?php if (is_single() || is_front_page()) { ?>
 <section class="auto-google-ads">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6261738507723190" data-ad-slot="2039607348"
@@ -118,10 +118,10 @@
 
 
 <?php
-	// Load Browser Sync only on Local
-	$browserSync 			= 'http://sandiegohousemusic.local';
-	$browserSyncHdrs 		= @get_headers($browserSync);
-	if($browserSyncHdrs):
+    // Load Browser Sync only on Local
+    $browserSync 			= 'http://sandiegohousemusic.local';
+    $browserSyncHdrs 		= @get_headers($browserSync);
+    if ($browserSyncHdrs):
 ?>
 
 <script id="__bs_script__">
@@ -131,7 +131,7 @@ document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-cl
 //]]>
 </script>
 
-<? endif; ?>
+<?php endif; ?>
 
 
 
