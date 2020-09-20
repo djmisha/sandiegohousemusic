@@ -1867,12 +1867,6 @@ header .get-social a i {
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .header-images-new {
-    border: 1px solid pink;
-  }
-}
-
 .header-images-new h1 {
   position: relative;
   text-align: center;

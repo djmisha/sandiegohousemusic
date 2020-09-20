@@ -4,6 +4,24 @@
 
 <?php get_header();?>
 
+
+<?php # Welcome Scheme ?>
+<div class="welcome">
+    <div class="overlay"></div>
+    <div class="home-video"></div>
+    <div class="welcome-cta">
+        <h1>DJ's EDM Dance Events &amp; House Music </h1>
+        <span>in San Diego and around the world</span>
+        <ul>
+            <li class="">
+                <a href="#listen" class="home-button button">Listen Now</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<?php # Homepage  Music, Events ?>
 <main class="interior" id="#skiptomaincontent">
     <div class="content">
        
@@ -12,11 +30,11 @@
         <br clear="all">
         <br clear="all">
 
-        <h2 class="color-2"><i class="fas fa-compact-disc"></i> Listen to House Music</h2>
+        <h2 class="color-2" id="listen"><i class="fas fa-compact-disc"></i> Listen to House Music</h2>
         <article class="set-of-posts">
             <?php 
 			$args = array(
-				'posts_per_page' => 9,
+				'posts_per_page' => 12,
 				'cat' => 22,
 				'post_status'=>"publish",
 				'post_type'=>"post",
@@ -69,9 +87,6 @@
 
 
 
-        <br clear="all">
-        <br clear="all">
-        <br clear="all">
 
         <section>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -100,26 +115,11 @@
 
 
     </div>
-</main>
-
-<div class="welcome">
-    <div class="overlay"></div>
-    <div class="home-video"></div>
-    <div class="welcome-cta">
-        <h1>DJ's EDM Dance Events &amp; House Music </h1>
-        <span>in San Diego and around the world</span>
-        <ul>
-            <li class="get-events">
-                <a href="events.sandiegohousemusic.com" class="home-button button">View Events</a>
-            </li>
-        </ul>
-    </div>
-</div>
 
 
-<div class="interior" style="padding: 0 !important">
 
-    <div class="content" style="padding: 0 !important">
+
+
 
         <h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from the Archives</h2>
 
@@ -177,7 +177,6 @@
         <a href="<?php bloginfo('url'); ?>/category/music/" rel="nofollow" class="button">More Music</a>
         <a href="<?php bloginfo('url'); ?>/submit-your-dj-mix/" rel="nofollow" class="button">Submit DJ Mix</a>
         </div>
-    </div>
-</div>
+</main>
 
 <?php get_footer();?>

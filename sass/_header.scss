@@ -260,7 +260,7 @@ a.show-form {
         min-height: 400px;
     }
     @include media($desktop) {
-        border: 1px solid pink;
+        // border: 1px solid pink;
     }
     .tmpl_type_single &,
     .tmpl_type_page & {

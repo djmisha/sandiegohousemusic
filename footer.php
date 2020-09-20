@@ -6,8 +6,7 @@
         </div>
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-        Speak with a dance music expert about your event need and receive same day DJ availability and complimentary
-        consultation. Please provide the date, location, occasion and approximate attendace. We look foward to hearing
+        Speak with a dance music DJ expert about your event or party. Please provide the date, location, occasion and approximate attendace for the event.  We'll get back with same day DJ availability and a complimentary consultation. We look foward to hearing
         from you!
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
     </div>
@@ -16,7 +15,7 @@
         data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg">
         <div>
             <h2>Hire our DJs for<br> Events, Party & Wedding</h2>
-            <p>Specilizing in electronic-dance and house music, club, edm, underground techno, top hits and best music
+            <p>Artists specilizing in electronic-dance and house music, club, edm, underground techno, top hits and best music
                 for dancing DJ productions. DJ services in San Diego and beyond.
                 <a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a>
             </p>
@@ -119,7 +118,7 @@
 
 <?php
     // Load Browser Sync only on Local
-    $browserSync 			= 'http://sandiegohousemusic.local';
+    $browserSync 			= 'http://sdhmdev.local';
     $browserSyncHdrs 		= @get_headers($browserSync);
     if ($browserSyncHdrs):
 ?>
