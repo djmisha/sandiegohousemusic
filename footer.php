@@ -6,8 +6,9 @@
         </div>
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-        Speak with a dance music DJ expert about your event or party. Please provide the date, location, occasion and approximate attendace for the event.  We'll get back with same day DJ availability and a complimentary consultation. We look foward to hearing
-        from you!
+        Hi!  I'm DJ Misha -  If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party!  Please just let me know the date, location, occasion and approximate attendace for the event. 
+         I'll get back with you quickly with availability, estimate and complimentary consultation. <br />
+         I look foward to hearing from you!
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
     </div>
 
