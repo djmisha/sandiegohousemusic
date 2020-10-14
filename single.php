@@ -5,9 +5,9 @@
 		<article class="content">
 			
 			<?php if(!empty(get_the_post_thumbnail())): ?>
-					<!-- <div class="featured-image"> -->
+					<div class="featured-image">
 						<?php //the_post_thumbnail(''); ?>
-					<!-- </div> -->
+					</div>
 			<?php endif; ?>
 
 			<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
