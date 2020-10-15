@@ -5,13 +5,13 @@
 <?php get_header();?>
 
 
-<?php # Welcome Schene?>
+<?php # Welcome Hero?>
 <div class="welcome">
     <div class="overlay"></div>
     <div class="home-video"></div>
     <div class="welcome-cta">
-        <h1>DJ's EDM Dance Events &amp; House Music </h1>
-        <span>in San Diego and around the world</span>
+        <h1>Listen to DJ's House Music Mixes & Live Event Streams  &amp; </h1>
+        <span>&amp;dance music in San Diego and around the world</span>
         <ul>
             <li class="">
                 <a href="#listen" class="home-button button">Listen Now</a>
@@ -30,7 +30,7 @@
         <br clear="all">
         <br clear="all">
 
-        <h2 class="color-2" id="listen"><i class="fas fa-compact-disc"></i> Listen to House Music</h2>
+        <h2 class="color-2" id="listen"><i class="fas fa-compact-disc"></i> Listen to House Music Mixes</h2>
         <article class="set-of-posts">
             <?php
             $args = array(
@@ -113,13 +113,6 @@
         <br clear="all">
         <br clear="all">
 
-
-
-
-
-
-
-
         <h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from the Archives</h2>
 
         <article class="set-of-posts owl-rotator owl-carousel">
@@ -131,7 +124,7 @@
                 'post_status'=>"publish",
                 'post_type'=>"post",
                 'orderby'=>"rand",
-                'year' => "2019"
+                'year' => "2019, 2018"
             );
 
             $query1 = new WP_Query($args); ?>
