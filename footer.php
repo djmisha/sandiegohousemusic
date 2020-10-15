@@ -6,18 +6,18 @@
         </div>
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-        Hi!  I'm DJ Misha -  If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party!  Please just let me know the date, location, occasion and approximate attendace for the event. 
-         I'll get back with you quickly with availability, estimate and complimentary consultation. <br />
-         Tank you and I look foward to hearing from you!
+        Hi!  I'm DJ Misha -  If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br>  Please just let me know the date, location, occasion and approximate attendace for the event. 
+         I'll get back with you quickly with availability, cost estimate and complimentary event music consultation. <br />
+         Thank you - I look foward to hearing from you!
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
     </div>
 
     <section class="bg-hire will-parallax parallax-footer b-lazy"
         data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg">
         <div>
-            <h2>Hire DJs for<br> Events, Party & Wedding</h2>
-            <p>Artists specilizing in electronic-dance and house music, club, edm, underground, techno, top hits and best music
-                for dancing DJ productions. Inquire about DJ services in San Diego and beyond.
+            <h2>Hire DJs for<br> Events, Party & Weddings</h2>
+            <p>Artists specilizing in electronic-dance and house music, underground, techno and DJ music
+                for party and dancing. Inquire about DJ services in San Diego and beyond.
                 <a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a>
             </p>
         </div>
@@ -94,14 +94,14 @@
         </div>
 
         <div class="amg-sig"><a href="https://www.asburymediagroup.com/" target="_blank" rel="noopener"
-                title="WordPress Maintenance">WordPress Maintenance</a> by <i class="fas fa-code"></i> <a
+                title="Web Design">Web Design</a> by <i class="fas fa-code"></i> <a
                 href="https://www.asburymediagroup.com/" target="_blank" rel="nofollow noopener"
                 title="Asbury Media Group">Asbury Media Group</a></div>
     </section>
     <div class="back-to-top"><a href="#the-top"><i class="far fa-angle-up"></i></a></div>
 </footer>
 
-<?php // Only Show Ads on Homepage and Single Posts ?>
+<?php // Only Show Ads on Homepage and Single Posts?>
 <?php if (is_single() || is_front_page()) { ?>
 <section class="auto-google-ads">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -99,7 +99,7 @@
 
         <br clear="all">
         <br clear="all">
-        <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events</h2>
+        <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events and Live Streams</h2>
         <div class="front-page-events">
             <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%"
                 height="1320" style="overflow: hidden;" scrolling="no"></iframe>
