@@ -10,7 +10,7 @@
     <div class="overlay"></div>
     <div class="home-video"></div>
     <div class="welcome-cta">
-        <h1>Listen to DJ's House Music Mixes &amp; Live Event Streams   </h1>
+        <h1>Listen to DJ's House Music Mixes</h1>
         <span>dance music in San Diego and around the world</span>
         <ul>
             <li class="">
