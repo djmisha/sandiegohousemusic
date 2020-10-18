@@ -6,10 +6,11 @@
         </div>
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-        Hello!   If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br>  Please just let me know the date, location, occasion and approximate attendace for the event. 
-         I'll get back with you quickly with availability and an event music consultation. <br /><br />
+        Hello!   If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br> 
+         Please just let me know the date, location, occasion and approximate attendace for the event and I'll get back to you quickly. 
+        
          Thanks for getting in touch - I look foward to hearing from you!<br /><br />
-         - DJ Misha, Creator of SanDiegoHouseMusic.com 
+         - DJ Misha, Creator of sandiegohousemusic.com 
 
          
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
