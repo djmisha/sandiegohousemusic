@@ -61,7 +61,7 @@
 
                 <div class="para">
                     <a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
-                        <?php my_excerpt(20); ?>
+                        <?php my_excerpt(30); ?>
                     </a>
                 </div>
                 <div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>"

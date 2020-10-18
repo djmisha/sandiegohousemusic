@@ -3775,7 +3775,7 @@ span.error {
 ===============================================*/
 .welcome {
   position: relative;
-  z-index: 1000;
+  z-index: 1;
   border-bottom: 5px solid #000;
   height: 280px;
   background: #000;
@@ -4213,7 +4213,8 @@ span.error {
   }
 }
 
-.home .set-of-posts, .home .post-snippet,
+.home .set-of-posts,
+.home .post-snippet,
 .blog .set-of-posts,
 .blog .post-snippet,
 .tmpl_type_category .set-of-posts,
@@ -4233,7 +4234,10 @@ span.error {
           align-items: flex-start;
 }
 
-.home .set-of-posts .excerpt, .home .set-of-posts .excerpt-rotator, .home .post-snippet .excerpt, .home .post-snippet .excerpt-rotator,
+.home .set-of-posts .excerpt,
+.home .set-of-posts .excerpt-rotator,
+.home .post-snippet .excerpt,
+.home .post-snippet .excerpt-rotator,
 .blog .set-of-posts .excerpt,
 .blog .set-of-posts .excerpt-rotator,
 .blog .post-snippet .excerpt,
@@ -4256,7 +4260,10 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .home .set-of-posts .excerpt, .home .set-of-posts .excerpt-rotator, .home .post-snippet .excerpt, .home .post-snippet .excerpt-rotator,
+  .home .set-of-posts .excerpt,
+  .home .set-of-posts .excerpt-rotator,
+  .home .post-snippet .excerpt,
+  .home .post-snippet .excerpt-rotator,
   .blog .set-of-posts .excerpt,
   .blog .set-of-posts .excerpt-rotator,
   .blog .post-snippet .excerpt,
@@ -4276,7 +4283,10 @@ span.error {
     padding-bottom: 30px;
     width: 30%;
   }
-  .home .set-of-posts .excerpt h3, .home .set-of-posts .excerpt-rotator h3, .home .post-snippet .excerpt h3, .home .post-snippet .excerpt-rotator h3,
+  .home .set-of-posts .excerpt h3,
+  .home .set-of-posts .excerpt-rotator h3,
+  .home .post-snippet .excerpt h3,
+  .home .post-snippet .excerpt-rotator h3,
   .blog .set-of-posts .excerpt h3,
   .blog .set-of-posts .excerpt-rotator h3,
   .blog .post-snippet .excerpt h3,
@@ -4293,7 +4303,10 @@ span.error {
   }
 }
 
-.home .set-of-posts .excerpt .para, .home .set-of-posts .excerpt-rotator .para, .home .post-snippet .excerpt .para, .home .post-snippet .excerpt-rotator .para,
+.home .set-of-posts .excerpt .para,
+.home .set-of-posts .excerpt-rotator .para,
+.home .post-snippet .excerpt .para,
+.home .post-snippet .excerpt-rotator .para,
 .blog .set-of-posts .excerpt .para,
 .blog .set-of-posts .excerpt-rotator .para,
 .blog .post-snippet .excerpt .para,
@@ -4310,7 +4323,10 @@ span.error {
   padding-bottom: 20px;
 }
 
-.home .set-of-posts .excerpt .para a, .home .set-of-posts .excerpt-rotator .para a, .home .post-snippet .excerpt .para a, .home .post-snippet .excerpt-rotator .para a,
+.home .set-of-posts .excerpt .para a,
+.home .set-of-posts .excerpt-rotator .para a,
+.home .post-snippet .excerpt .para a,
+.home .post-snippet .excerpt-rotator .para a,
 .blog .set-of-posts .excerpt .para a,
 .blog .set-of-posts .excerpt-rotator .para a,
 .blog .post-snippet .excerpt .para a,
@@ -4331,7 +4347,10 @@ span.error {
   color: #02034a;
 }
 
-.home .set-of-posts .excerpt .para a span, .home .set-of-posts .excerpt-rotator .para a span, .home .post-snippet .excerpt .para a span, .home .post-snippet .excerpt-rotator .para a span,
+.home .set-of-posts .excerpt .para a span,
+.home .set-of-posts .excerpt-rotator .para a span,
+.home .post-snippet .excerpt .para a span,
+.home .post-snippet .excerpt-rotator .para a span,
 .blog .set-of-posts .excerpt .para a span,
 .blog .set-of-posts .excerpt-rotator .para a span,
 .blog .post-snippet .excerpt .para a span,
@@ -4348,7 +4367,10 @@ span.error {
   color: #38c0e6;
 }
 
-.home .set-of-posts .excerpt p, .home .set-of-posts .excerpt-rotator p, .home .post-snippet .excerpt p, .home .post-snippet .excerpt-rotator p,
+.home .set-of-posts .excerpt p,
+.home .set-of-posts .excerpt-rotator p,
+.home .post-snippet .excerpt p,
+.home .post-snippet .excerpt-rotator p,
 .blog .set-of-posts .excerpt p,
 .blog .set-of-posts .excerpt-rotator p,
 .blog .post-snippet .excerpt p,
@@ -4365,7 +4387,8 @@ span.error {
   margin-bottom: 0;
 }
 
-.home .set-of-posts .thumb, .home .post-snippet .thumb,
+.home .set-of-posts .thumb,
+.home .post-snippet .thumb,
 .blog .set-of-posts .thumb,
 .blog .post-snippet .thumb,
 .tmpl_type_category .set-of-posts .thumb,
@@ -4383,7 +4406,8 @@ span.error {
 }
 
 @media only screen and (min-width: 768px) {
-  .home .set-of-posts .thumb, .home .post-snippet .thumb,
+  .home .set-of-posts .thumb,
+  .home .post-snippet .thumb,
   .blog .set-of-posts .thumb,
   .blog .post-snippet .thumb,
   .tmpl_type_category .set-of-posts .thumb,
@@ -4395,7 +4419,8 @@ span.error {
   }
 }
 
-.home .set-of-posts .thumb img, .home .post-snippet .thumb img,
+.home .set-of-posts .thumb img,
+.home .post-snippet .thumb img,
 .blog .set-of-posts .thumb img,
 .blog .post-snippet .thumb img,
 .tmpl_type_category .set-of-posts .thumb img,
@@ -4406,7 +4431,8 @@ span.error {
   height: auto;
 }
 
-.home .set-of-posts .meta-date, .home .post-snippet .meta-date,
+.home .set-of-posts .meta-date,
+.home .post-snippet .meta-date,
 .blog .set-of-posts .meta-date,
 .blog .post-snippet .meta-date,
 .tmpl_type_category .set-of-posts .meta-date,
@@ -4539,6 +4565,136 @@ span.error {
 
 .tmpl_type_single h1 {
   margin-bottom: 10px;
+}
+
+.search-bar {
+  background-color: #f8fbfd;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .search-bar {
+    margin-top: -40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.search-bar form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-bar label {
+  margin-right: 15px;
+  display: none;
+}
+
+@media only screen and (min-width: 1080px) {
+  .search-bar label {
+    display: block;
+    font-size: 22px;
+    line-height: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+}
+
+.search-bar .search-input {
+  border: none;
+  background: transparent;
+  margin-right: 10px;
+  border-radius: 10px;
+  border-radius: 0;
+  border-bottom: 1px solid #38c0e6;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1080px) {
+  .search-bar .search-input {
+    width: 250px;
+  }
+}
+
+.search-bar .button {
+  text-transform: uppercase;
+}
+
+.cat-select {
+  position: relative;
+}
+
+.cat-select .cat-options {
+  cursor: pointer;
+  background: transparent;
+  text-transform: uppercase;
+  color: #3271cd;
+  padding: 12px 40px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-right: 90px;
+}
+
+.cat-select .cat-options:after {
+  content: '';
+  background: url("images/svg/arrow-down.svg");
+  background-size: 19px 30px;
+  width: 19px;
+  height: 30px;
+  position: absolute;
+  bottom: 14px;
+  right: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .cat-select .cat-options {
+    margin-bottom: 0;
+  }
+}
+
+.cat-select .cats {
+  position: absolute;
+  display: none;
+  width: 250px;
+  z-index: 100;
+  background: #f8fbfd;
+  border: 1px solid #d0e4f2;
+  margin: 0;
+  list-style: none;
+  padding: 10px;
+  margin-top: -10px;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .cat-select .cats {
+    margin-top: 0;
+  }
+}
+
+.cat-select .cats li {
+  padding: 5px 20px;
+}
+
+.cat-select .cats li a {
+  color: #3271cd;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.cat-select .cats li a:hover {
+  text-decoration: underline;
 }
 
 /* ------------------------

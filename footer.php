@@ -6,14 +6,17 @@
         </div>
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-        Hi!  I'm DJ Misha -  If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br>  Please just let me know the date, location, occasion and approximate attendace for the event. 
-         I'll get back with you quickly with availability, cost estimate and complimentary event music consultation. <br />
-         Thank you - I look foward to hearing from you!
+        Hello!   If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br>  Please just let me know the date, location, occasion and approximate attendace for the event. 
+         I'll get back with you quickly with availability and an event music consultation. <br /><br />
+         Thanks for getting in touch - I look foward to hearing from you!<br /><br />
+         - DJ Misha, Creator of SanDiegoHouseMusic.com 
+
+         
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
     </div>
 
-    <section class="bg-hire will-parallax parallax-footer b-lazy"
-        data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg">
+    <section class="bg-hire b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg">
+    <!-- <section class="bg-hire will-parallax parallax-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg"> -->
         <div>
             <h2>Hire DJs for<br> Events, Party & Weddings</h2>
             <p>Artists specilizing in electronic-dance and house music, underground, techno and DJ music
