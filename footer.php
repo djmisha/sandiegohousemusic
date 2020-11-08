@@ -1,16 +1,14 @@
 <footer>
-
     <div id="overlay-contact-form">
         <div class="close-form">
             <i class="fal fa-times"></i>
         </div>
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-        Hello!   If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br> 
+         Hello!   If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br> 
          Please just let me know the date, location, occasion and approximate attendace for the event and I'll get back to you quickly. 
-        
          Thanks for getting in touch - I look foward to hearing from you!<br /><br />
-         - DJ Misha, Creator of sandiegohousemusic.com 
+         
 
          
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
@@ -21,7 +19,7 @@
         <div>
             <h2>Hire DJs for<br> Events, Party & Weddings</h2>
             <p>Artists specilizing in electronic-dance and house music, underground, techno and DJ music
-                for party and dancing. Inquire about DJ services in San Diego and beyond.
+                for party and dancing. Inquire about DJ services in San Diego and surrounding areas.
                 <a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a>
             </p>
         </div>
@@ -123,7 +121,7 @@
 
 <?php
     // Load Browser Sync only on Local
-    $browserSync 			= 'http://sdhmdev.local';
+    $browserSync 			= 'http://sandiegohousemusic.local';
     $browserSyncHdrs 		= @get_headers($browserSync);
     if ($browserSyncHdrs):
 ?>
