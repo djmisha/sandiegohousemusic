@@ -1,19 +1,36 @@
+/* Forms */
+
+.gform_confirmation_message_2 {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 10px solid $primaryColor;
+    padding: 40px;
+}
+
+.ginput_container.ginput_container_consent {
+    display: flex;
+}
+
+input#input_2_19_1 {
+    width: 40px;
+}
+
 /* ------------------------
 Common/UI elements (images, video, buttons, etc)
 ------------------------ */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 video {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 30px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
 }
 
 .back-to-top {
-  text-align: right;
-  display: block;
+    text-align: right;
+    display: block;
 }
 
 img.alignright,
@@ -21,48 +38,48 @@ img.alignleft,
 img.aligncenter,
 img.alignnone,
 .caption {
-  display: block;
-  height: auto;
-  margin: 0 auto 1em;
-  max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto 1em;
+    max-width: 100%;
 }
 
 // .content {
 img.alignright,
 img.alignleft {
-  float: none;
-  @include media($tablet) {
-    margin-bottom: 1em;
-    max-width: 50%;
-  }
+    float: none;
+    @include media($tablet) {
+        margin-bottom: 1em;
+        max-width: 50%;
+    }
 }
 img.alignleft {
-  @include media($tablet) {
-    float: left;
-    margin-right: 2.5em;
-  }
+    @include media($tablet) {
+        float: left;
+        margin-right: 2.5em;
+    }
 }
 img.alignright {
-  @include media($tablet) {
-    float: right;
-    margin-left: 2.5em;
-  }
+    @include media($tablet) {
+        float: right;
+        margin-left: 2.5em;
+    }
 }
 // }
 
 .wp-caption {
-  max-width: 95%;
-  img {
-    width: 100%;
-    height: auto;
-  }
+    max-width: 95%;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 img.alignleft,
 img.alignright,
 img.aligncenter,
 .yes-frame {
-  @extend %imgdefaults;
+    @extend %imgdefaults;
 }
 
 .button,
@@ -70,107 +87,103 @@ img.aligncenter,
 .submit-btn,
 .next-prev a,
 .after-review-sprinkle .button {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  text-decoration: none !important;
-  border: none;
-  font-size: 17px;
-  font-weight: 100 !important;
-  color: $secondaryColor;
-  border: 2px solid $secondaryColor;
-  text-transform: uppercase;
-  padding: 8px 20px;
-  transition: all 0.2s ease-in-out;
-  background: transparent;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    border: none;
+    font-size: 17px;
+    font-weight: 100 !important;
+    color: $secondaryColor;
+    border: 2px solid $secondaryColor;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    transition: all 0.2s ease-in-out;
+    background: transparent;
     &:hover {
-      text-decoration: none;
-      background-color: $secondaryAlt; 
-      color: #fff !important;
-      border: 2px solid $secondaryAlt;
-    &:before {
-      color: $darkColor;
+        text-decoration: none;
+        background-color: $secondaryAlt;
+        color: #fff !important;
+        border: 2px solid $secondaryAlt;
+        &:before {
+            color: $darkColor;
+        }
+        &:after {
+            color: $darkColor;
+        }
     }
-    &:after {
-      color: $darkColor;
-    }
-  }
 }
-
-
 
 .navigation-links {
-  a.page-numbers {
-    text-decoration: none;
-    padding: 5px 10px;
-    border: 2px solid $secondaryColor;
-    display: inline;
-    color: $darkColor;
-    &:hover {
-      color: $darkColor;
-      border: 2px solid $secondaryAlt;
+    a.page-numbers {
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 2px solid $secondaryColor;
+        display: inline;
+        color: $darkColor;
+        &:hover {
+            color: $darkColor;
+            border: 2px solid $secondaryAlt;
+        }
     }
-  }
-  span.page-numbers, 
-  span.dots {
-    padding: 0 5px;
-  } 
-  span.current {
-    color: $lightColor;
-    background: $secondaryColor;
-    padding: 10px 10px 6px 10px;
-    border: 2px solid $secondaryColor;
-  }
+    span.page-numbers,
+    span.dots {
+        padding: 0 5px;
+    }
+    span.current {
+        color: $lightColor;
+        background: $secondaryColor;
+        padding: 10px 10px 6px 10px;
+        border: 2px solid $secondaryColor;
+    }
 }
 
-
 .after-review-sprinkle .button {
-  &:hover {
-    color: $secondaryColor;
-  }
+    &:hover {
+        color: $secondaryColor;
+    }
 }
 
 .submit-btn {
-  // color: $secondaryColor;
-  text-transform: uppercase;
-  &:hover {
-    // back: $secondaryColor !important;
-    // background: darken($primaryColor , 10%) !important;
-  }
+    // color: $secondaryColor;
+    text-transform: uppercase;
+    &:hover {
+        // back: $secondaryColor !important;
+        // background: darken($primaryColor , 10%) !important;
+    }
 }
 
 .disclaimer {
-  font-size: 11px;
-  font-style: italic;
+    font-size: 11px;
+    font-style: italic;
 }
 
 .two-column {
-  @include media($tablet) {
-    column-count: 2;
-    column-gap: 40px;
-  }
+    @include media($tablet) {
+        column-count: 2;
+        column-gap: 40px;
+    }
 }
 
 .three-column {
-  @include media($tablet) {
-    column-count: 3;
-    column-gap: 20px;
-  }
+    @include media($tablet) {
+        column-count: 3;
+        column-gap: 20px;
+    }
 }
 
 ::selection {
-  background: $primaryColor;
+    background: $primaryColor;
 }
 
 // For jump links on a site with fixed header
 
 :target:before {
-  @include media($desktop) {
-    content: "";
-    display: block;
-    height: 86px; /* fixed header height*/
-    margin: -86px 0 0; /* negative fixed header height */
-  }
+    @include media($desktop) {
+        content: "";
+        display: block;
+        height: 86px; /* fixed header height*/
+        margin: -86px 0 0; /* negative fixed header height */
+    }
 }
-

@@ -822,6 +822,24 @@ li.model_ast:before {
   }
 }
 
+/* Forms */
+.gform_confirmation_message_2 {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 10px solid #3271cd;
+  padding: 40px;
+}
+
+.ginput_container.ginput_container_consent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input#input_2_19_1 {
+  width: 40px;
+}
+
 /* ------------------------
 Common/UI elements (images, video, buttons, etc)
 ------------------------ */
