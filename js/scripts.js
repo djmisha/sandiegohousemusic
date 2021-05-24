@@ -21,8 +21,8 @@
         var site_path = rm_data.siteUrl;
 
         /*=============================
-		=            Blazy            =
-		=============================*/
+	=            Blazy            =
+	=============================*/
 
         var bLazy = new Blazy();
 
@@ -38,8 +38,8 @@
             nav: true,
             dots: false,
             autoplay: true,
-            autoplayTimeout: 9000,
-            smartSpeed: 1000,
+            autoplayTimeout: 5000,
+            smartSpeed: 300,
             navText: [
                 "<span class=\"button\"><i class='fa fa-angle-left'></i></span>",
                 "<span class=\"button\"><i class='fa fa-angle-right'></i></span>",
