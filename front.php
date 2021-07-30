@@ -8,7 +8,7 @@
     <div class="content">
         <br clear="all">
         <br clear="all">
-        <h1 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals EDM and Live Streams</h1>
+        <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals EDM and Live Streams</h2>
         <div class="front-page-events">
             <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%"
                 height="1320" style="overflow: hidden;" scrolling="no"></iframe>
@@ -39,7 +39,7 @@
     <div class="overlay"></div>
     <div class="home-video"></div>
     <div class="welcome-cta">
-        <h2>Listen to DJ's House Music Mixes</h2>
+        <h1>Listen to DJ's House Music Mixes</h1>
         <span>dance music in San Diego and around the world</span>
         <ul>
             <li class="">
