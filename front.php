@@ -8,7 +8,7 @@
     <div class="content">
         <br clear="all">
         <br clear="all">
-        <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events and Live Streams</h2>
+        <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals EDM and Live Streams</h2>
         <div class="front-page-events">
             <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%"
                 height="1320" style="overflow: hidden;" scrolling="no"></iframe>
@@ -22,6 +22,15 @@
     </div>
 </div>
 
+
+<section>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6261738507723190"
+        data-ad-slot="2039607348" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</section>
 
 
 
@@ -113,19 +122,8 @@
             </script>
         </section>
 
-        <br clear="all">
-        <br clear="all">
-        <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming EDM Events and Live Streams</h2>
-        <div class="front-page-events">
-            <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%"
-                height="1320" style="overflow: hidden;" scrolling="no"></iframe>
-        </div>
 
-        <div class="get-events">
-            <a href="events.sandiegohousemusic.com" rel="nofollow" class=" button">More Events</a>
-        </div>
 
-        <br clear="all">
         <br clear="all">
         <br clear="all">
 
