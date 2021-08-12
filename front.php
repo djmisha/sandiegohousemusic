@@ -6,8 +6,6 @@
 
 <div class="interior">
     <div class="content">
-        <br clear="all">
-        <br clear="all">
         <h2 class="color-1"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals EDM and Live Streams</h2>
         <div class="front-page-events">
             <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%"
