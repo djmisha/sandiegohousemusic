@@ -6,6 +6,7 @@
 
 <div class="interior">
     <div class="content">
+        <br /> <br/>
         <h2 class="color-1" style="display:none;"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals EDM and Live Streams</h2>
             </div>
 </div>
