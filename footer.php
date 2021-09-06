@@ -1,12 +1,11 @@
 <footer>
 
- <!-- <?php if (is_page()) { ?> -->
     <div id="overlay-contact-form">
         <div class="close-form">
             <i class="fal fa-times"></i>
         </div>
-        <strong>Questions?</strong><br><br>
-          <br> Drop us a note and we'll get back to you shortly.<br> 
+        <strong>Questions or Comments? </strong><br><br>
+          <br>Drop us a note and we'll get back to you shortly.<br> 
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
         <br /><br />
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
@@ -16,6 +15,7 @@
          Thanks for getting in touch - I look foward to hearing from you!<br /><br />
     </div>
 
+ <?php if (is_page()) { ?>  
 
     <section class="bg-hire b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg">
     <!-- <section class="bg-hire will-parallax parallax-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg"> -->
@@ -114,8 +114,7 @@
 
     <!-- <div class="back-to-top"><a href="#the-top"><i class="far fa-angle-up"></i></a></div> -->
 
-<!-- <?php } ?> -->
-
+  <?php } ?>  
 
 </footer>
 
