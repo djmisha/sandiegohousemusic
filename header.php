@@ -94,7 +94,7 @@
     </section>
     <?php endif; ?>
 
-    <?php if((is_page() || is_single() )): // Single Page Title ?>
+    <?php if((is_page() )): // Single Page Title ?>
     <section class="page-title">
         <h1 class="color-<?php echo rand(1,6); ?>"><?php the_title();?></h1>
     </section>

@@ -4,13 +4,13 @@
 
 <?php get_header();?>
   
-<?php # Welcome Hero?>
+<?php # Welcome Hero ?>
 <div class="welcome">
     <div class="overlay"></div>
     <div class="home-video"></div>
     <div class="welcome-cta">
         <h1>House Music Events & DJ Mixes</h1>
-        <span>Discover dance music in a city near you, and around the world</span>
+        <span>Discover dance music in a city near you and around the world</span>
         <ul>
             <li class="">
                 <a href="#music" class="home-button button">Listen Now</a>
@@ -99,7 +99,7 @@
         
       <br />  <br /> 
       <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming House Music Events, Festivals & EDM Shows</h2>
-      <p>Discvoer dance music, edm shows and house music events in a city near you. </p>
+      <p>Find dance music, edm shows and house music events in a city near you. </p>
       
     <div class="front-page-events">
         <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com" frameborder="0" width="100%"
@@ -126,7 +126,7 @@
         <br clear="all">
         <br clear="all">
 
-        <h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from the Archives</h2>
+        <h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from our Archives</h2>
 
         <article class="set-of-posts owl-rotator owl-carousel">
             <?php
@@ -187,6 +187,4 @@
 
 </main>
 
-<?php get_footer();?><?php
-    // Template Name: Home
-?>
+<?php get_footer();?>
