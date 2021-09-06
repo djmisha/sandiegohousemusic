@@ -2136,7 +2136,7 @@ header .get-social a i {
   display: block;
   color: #eb0077;
   line-height: 1em;
-  font-size: 22px;
+  font-size: 35px;
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -2360,6 +2360,7 @@ header .get-social a i {
   display: none !important;
 }
 
+header .menu-item-10229 a,
 header .menu-item-9284 a,
 header .menu-item-7986 a,
 header .menu-item-9759 a,
@@ -2376,6 +2377,7 @@ header .menu-item-7265 a {
   position: relative;
 }
 
+header .menu-item-10229 a:before,
 header .menu-item-9284 a:before,
 header .menu-item-7986 a:before,
 header .menu-item-9759 a:before,
@@ -2403,6 +2405,7 @@ header .menu-item-7265 a:before {
 }
 
 @media only screen and (min-width: 1080px) {
+  header .menu-item-10229 a:before,
   header .menu-item-9284 a:before,
   header .menu-item-7986 a:before,
   header .menu-item-9759 a:before,
@@ -2423,6 +2426,7 @@ header .menu-item-7265 a:before {
 }
 
 @media only screen and (min-width: 1080px) {
+  header .menu-item-10229 a:hover:before,
   header .menu-item-9284 a:hover:before,
   header .menu-item-7986 a:hover:before,
   header .menu-item-9759 a:hover:before,
@@ -2475,6 +2479,10 @@ header .menu-item-9653 a:before {
 
 header .menu-item-9756 a:before {
   content: "\f0d1";
+}
+
+header .menu-item-10229 a:before {
+  content: "\f015";
 }
 
 /* ------------------------

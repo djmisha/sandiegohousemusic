@@ -1,29 +1,35 @@
 <footer>
+
+ <!-- <?php if (is_page()) { ?> -->
     <div id="overlay-contact-form">
         <div class="close-form">
             <i class="fal fa-times"></i>
         </div>
+        <strong>Questions?</strong><br><br>
+          <br> Drop us a note and we'll get back to you shortly.<br> 
+        <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
+        <br /><br />
         <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
          Hello!   If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br> 
          Please just let me know the date, location, occasion and approximate attendace for the event and I'll get back to you quickly. 
          Thanks for getting in touch - I look foward to hearing from you!<br /><br />
-         
-
-         
-        <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
     </div>
+
 
     <section class="bg-hire b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg">
     <!-- <section class="bg-hire will-parallax parallax-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg"> -->
         <div>
-            <h2>Hire DJs for<br> Events, Party & Weddings</h2>
+            <h2>Hire DJs for<br> Events, Party or Weddings</h2>
             <p>Artists specilizing in electronic-dance and house music, underground, techno and DJ music
-                for party and dancing. Inquire about DJ services in San Diego and surrounding areas.
+                for party, dancing, vestivals and edm shows. Inquire about DJ services in San Diego and surrounding areas.
                 <a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a>
             </p>
         </div>
     </section>
+
+
+
 
     <div class="footer-boxes">
         <div class="footer-nav">
@@ -54,6 +60,7 @@
             </div>
         </div> -->
     </div>
+    
 
     <section class="lower-footer">
         <div class="site-logo-footer">
@@ -75,19 +82,20 @@
             <?php do_action('reviews_markup'); ?>
         </div>
 
-        <?php if (is_page(array(9228,4027))) { ?>
         <div class="footer-show-form">
-            <a class="show-form">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ"
-                    class="b-lazy">HIRE DJ<br>
-                Let's Chat
-            </a>
+          <a class="show-form">
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ"
+            class="b-lazy">Questions?<br>
+            Let's Chat!
+          </a>
         </div>
-        <?php } ?>
+ 
+        <!-- <?php if (is_page(array(9228,4027))) { ?> -->
+        <!-- <?php } ?> -->
 
         <div class="copyright">Copyright &copy; <?=date("Y")?> <i class="fas fa-home"></i> <?php bloginfo('title');?>
-            California.<br>
+            <br>
             All rights reserved.
             <!-- | <a href="<?php bloginfo('url'); ?>/privacy-policy">Privacy Policy</a> --> &nbsp; <i
                 class="fas fa-balance-scale"></i> <a href="<?php bloginfo('url'); ?>/terms-of-use/"
@@ -95,12 +103,20 @@
                 href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a>
         </div>
 
-        <div class="amg-sig"><a href="https://www.asburymediagroup.com/" target="_blank" rel="noopener"
-                title="Web Design">Web Design</a> by <i class="fas fa-code"></i> <a
-                href="https://www.asburymediagroup.com/" target="_blank" rel="nofollow noopener"
-                title="Asbury Media Group">Asbury Media Group</a></div>
+        <div class="amg-sig">
+          <a href="https://www.asburymediagroup.com/" target="_blank" rel="noopener"
+                title="Web Development">Web Development</a> by 
+          <i class="fas fa-code"></i> 
+          <a href="https://www.asburymediagroup.com/" target="_blank" rel="nofollow noopener"
+                title="Asbury Media Group">Asbury Media Group</a>
+        </div>
     </section>
-    <div class="back-to-top"><a href="#the-top"><i class="far fa-angle-up"></i></a></div>
+
+    <!-- <div class="back-to-top"><a href="#the-top"><i class="far fa-angle-up"></i></a></div> -->
+
+<!-- <?php } ?> -->
+
+
 </footer>
 
 <?php // Only Show Ads on Homepage and Single Posts?>

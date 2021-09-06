@@ -140,6 +140,7 @@ $menuHeight: 60px;
 }
 
   header {
+    .menu-item-10229 a,
     .menu-item-9284 a,
     .menu-item-7986 a,
     .menu-item-9759 a,
@@ -206,5 +207,8 @@ $menuHeight: 60px;
   }
   .menu-item-9756 a:before {
     content: "\f0d1";
+  }
+  .menu-item-10229 a:before {
+    content: "\f015";
   }
 }

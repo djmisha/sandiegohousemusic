@@ -42,7 +42,7 @@
             <a href="<?php bloginfo('url'); ?>">
                 <?php echo is_front_page() ? '<h1>' : ''; ?>
                 <img src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg?fit=300%2C97&ssl=1"
-                    alt="San Diego DJs">
+                    alt="House Music Events & DJ Mixes">
                 <?php echo is_front_page() ? '</h1>' : ''; ?>
             </a>
         </div>
@@ -58,7 +58,7 @@
             <!-- <a rel="noopener" title="instagram"><i data-name="instagram" class="fab fa-instagram"></i></a> -->
             <!-- <a rel="noopener" title="facebook"><i data-name="facebook" class="fab fa-facebook"></i></a> -->
             <!-- <a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a> -->
-            <a class="show-form"><i class="fal fa-comments"></i></a>
+            <!-- <a class="show-form"><i class="fal fa-comments"></i></a> -->
         </div>
         <nav>
             <?php wp_nav_menu( array(

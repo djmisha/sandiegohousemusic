@@ -17,11 +17,23 @@
 				<div class="meta-data">
 					<i class="fas fa-clock"></i>  <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> 
 					<i class="fas fa-headphones"></i>  <?php the_category(', '); ?>
-					<i class="fas fa-home"></i>  <?php the_author(); ?>
+					<!-- <i class="fas fa-home"></i>  <?php the_author(); ?> -->
 				</div>
 				<div class="para">
 					<a href="<?php the_permalink(); ?>">
-						<?php my_excerpt(40); ?>
+						<?php my_excerpt(20); ?>
+            <php function the_tags( $before = null, $sep = ', ', $after = '' ) {
+                if ( null === $before ) {
+                    $before = __( 'Tags: ' );
+                }
+            
+                $the_tags = get_the_tag_list( $before, $sep, $after );
+            
+                if ( ! is_wp_error( $the_tags ) ) {
+                    echo $the_tags;
+                }
+            }
+          ?>
 					</a>
 				</div>
 				<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
