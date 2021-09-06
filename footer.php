@@ -4,7 +4,6 @@
         <div class="close-form">
             <i class="fal fa-times"></i>
         </div>
-        <strong>Questions or Comments? </strong><br><br>
           <br>Drop us a note and we'll get back to you shortly.<br> 
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
         <br /><br />
