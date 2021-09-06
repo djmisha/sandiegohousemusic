@@ -15,9 +15,9 @@
             <li class="">
                 <a href="#music" class="home-button button">Listen Now</a>
             </li>
-            <li class="">
+            <!-- <li class="">
                 <a href="#events" class="home-button button">Browse Events</a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </div>
