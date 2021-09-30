@@ -8,11 +8,11 @@
           <br>Drop us a note and we'll get back to you shortly.<br> 
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
         <br /><br />
-        <strong>DJ's Specilizing in electronic dance and house music</strong><br><br>
+        <strong>DJ's Specializing in electronic dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
          Hello!   If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br> 
-         Please just let me know the date, location, occasion and approximate attendace for the event and I'll get back to you quickly. 
-         Thanks for getting in touch - I look foward to hearing from you!<br /><br />
+         Please just let me know the date, location, occasion and approximate attendance for the event and I'll get back to you quickly. 
+         Thanks for getting in touch - I look forward to hearing from you!<br /><br />
     </div>
 
  <?php if (is_page()) { ?>  
@@ -20,9 +20,9 @@
     <section class="bg-hire b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg">
     <!-- <section class="bg-hire will-parallax parallax-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg"> -->
         <div>
-            <h2>Hire DJs for<br> Events, Party or Weddings</h2>
-            <p>Artists specilizing in electronic-dance and house music, underground, techno and DJ music
-                for party, dancing, vestivals and edm shows. Inquire about DJ services in San Diego and surrounding areas.
+            <h2>Hire DJs near you<br> Events, Party or Weddings</h2>
+            <p>Artists specializing in electronic-dance and house music, underground, techno and DJ music
+                for party, dancing, festivals and edm shows. Inquire about DJ services in San Diego and surrounding areas.
                 <a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a>
             </p>
         </div>
