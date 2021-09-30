@@ -105,9 +105,9 @@
             height="1320" style="overflow: hidden;" scrolling="no"></iframe>
     </div>
 
-    <div class="get-events">
+    <!-- <div class="get-events"> -->
         <a href="https://sandiegohousemusic.com/events" rel="nofollow" class=" button">More Events</a>
-    </div>
+    <!-- </div> -->
 
     <br clear="all">
     <br clear="all">
