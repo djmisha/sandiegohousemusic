@@ -101,12 +101,12 @@
       <p>Find dance music, edm shows and house music events in a city near you. </p>
   
     <div class="front-page-events">
-        <iframe class="b-lazy" data-src="https://sandiegohousemusic.com/shdm-homepage.html" frameborder="0" width="100%"
+        <iframe class="b-lazy" data-src="https://sandiegohousemusic.com/events/shdm-homepage.html" frameborder="0" width="100%"
             height="1320" style="overflow: hidden;" scrolling="no"></iframe>
     </div>
 
     <div class="get-events">
-        <a href="https://events.sandiegohousemusic.com" rel="nofollow" class=" button">More Events</a>
+        <a href="https://sandiegohousemusic.com/events" rel="nofollow" class=" button">More Events</a>
     </div>
 
     <br clear="all">
