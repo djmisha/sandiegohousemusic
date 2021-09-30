@@ -92,21 +92,21 @@
             </script>
         </section>
 
-    </div>
-
     <br />  
     <br /> 
     
-    <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming House Music Events, Festivals & EDM Shows</h2>
-      <p>Find dance music, edm shows and house music events in a city near you. </p>
+    <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals, Raves, EDM Shows</h2>
+      <p>Find dance music, edm shows and house music events in a city near you.</p>
+    </div>
+
   
     <div class="front-page-events">
-        <iframe class="b-lazy" data-src="https://sandiegohousemusic.com/events/sdhm-homepage.html" frameborder="0" width="100%"
+        <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com/sdhm-homepage.html" frameborder="0" width="100%"
             height="1320" style="overflow: hidden;" scrolling="no"></iframe>
     </div>
 
     <!-- <div class="get-events"> -->
-        <a href="https://sandiegohousemusic.com/events" rel="nofollow" class=" button">More Events</a>
+        <a href="https://events.sandiegohousemusic.com/" rel="nofollow" class=" button">More Events</a>
     <!-- </div> -->
 
     <br clear="all">
