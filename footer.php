@@ -8,7 +8,7 @@
           <br>Drop us a note and we'll get back to you shortly.<br> 
         <?php echo do_shortcode('[gravityform id="3" title="false" description="false"]'); ?>
         <br /><br />
-        <strong>DJ's Specilizing in electronic-dance and house music</strong><br><br>
+        <strong>DJ's Specilizing in electronic dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
          Hello!   If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br> 
          Please just let me know the date, location, occasion and approximate attendace for the event and I'll get back to you quickly. 
@@ -27,8 +27,6 @@
             </p>
         </div>
     </section>
-
-
 
 
     <div class="footer-boxes">
@@ -118,7 +116,7 @@
 
 </footer>
 
-<?php // Only Show Ads on Homepage and Single Posts?>
+<?php // Only Show Ads on Homepage and Single Posts ?>
 <?php if (is_single() || is_front_page()) { ?>
 <section class="auto-google-ads">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -132,24 +130,35 @@
 
 <?php wp_footer();?>
 
+    <?php
+        // Load Browser Sync only on Local
+        $browserSync 			= 'http://sandiegohousemusic.local';
+        $browserSyncHdrs 		= @get_headers($browserSync);
+        if ($browserSyncHdrs):
+    ?>
+
+    <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace(
+        "HOST", location.hostname));
+    //]]>
+    </script>
+
+    <?php endif; ?>
 
 
-<?php
-    // Load Browser Sync only on Local
-    $browserSync 			= 'http://sandiegohousemusic.local';
-    $browserSyncHdrs 		= @get_headers($browserSync);
-    if ($browserSyncHdrs):
-?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115514301-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
 
-<script id="__bs_script__">
-//<![CDATA[
-document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace(
-    "HOST", location.hostname));
-//]]>
-</script>
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-<?php endif; ?>
-
+    gtag('config', 'UA-115514301-1');
+    </script>
 
 
 </body>

@@ -13,21 +13,7 @@
     <?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Oswald:200,300,400,700|Roboto+Condensed:400,700|OpenSans:400' ); ?>
     <?php endif; ?>
 
-    <?php wp_head()?>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115514301-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115514301-1');
-    </script>
-
+    <?php wp_head(); ?>
 
 </head>
 
@@ -40,10 +26,10 @@
     <div class="nav-bar">
         <div class="site-logo">
             <a href="<?php bloginfo('url'); ?>">
-                <?php echo is_front_page() ? '<h1>' : ''; ?>
+                <?php // echo is_front_page() ? '<h1>' : ''; ?>
                 <img src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg?fit=300%2C97&ssl=1"
                     alt="House Music Events & DJ Mixes">
-                <?php echo is_front_page() ? '</h1>' : ''; ?>
+                <?php // echo is_front_page() ? '</h1>' : ''; ?>
             </a>
         </div>
         <div class="menu-trigger">
@@ -62,11 +48,11 @@
         </div>
         <nav>
             <?php wp_nav_menu( array(
-				'menu' 		=> 'Main',
-				'container_class' => 'menu-wrap menu-is-closed',
-				'menu_id'	=> 'menu-main',
-				'menu_class' => 'main-menu',
-				)); ?>
+              'menu' 		=> 'Main',
+              'container_class' => 'menu-wrap menu-is-closed',
+              'menu_id'	=> 'menu-main',
+              'menu_class' => 'main-menu',
+              )); ?>
         </nav>
     </div>
 </header>
@@ -75,34 +61,35 @@
 <div class="social-feed">
     <div class="close-feed"><i class="fa fa-times"></i></div>
     <div class="loadme">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
     <div class="the-feed">
-        <iframe src="" width="100%" height="" frameborder=0></iframe>
+      <iframe src="" width="100%" height="" frameborder=0></iframe>
     </div>
 </div>
 
-<div class="header-images-new header-<?php echo rand(1,9); ?>">
-    <?php if((is_home() or is_search() or is_category() or is_archive() )): ?>
-    <section class="page-title">
+<?php if(!is_home()) : ?>
+  <div class="header-images-new header-<?php echo rand(1,9); ?>">
+      <?php if((is_home() or is_search() or is_category() or is_archive() )): ?>
+      <section class="page-title">
         <h1 class="color-<?php echo rand(1,6); ?>"><?php single_cat_title();?></h1>
-    </section>
-    <?php endif; ?>
-    <?php if((is_page_template('page-landing.php'))): ?>
-    <section class="page-title">
+      </section>
+      <?php endif; ?>
+      <?php if((is_page_template('page-landing.php'))): ?>
+      <section class="page-title">
         <h1 class="color-<?php echo rand(1,6); ?>"><?php the_title();?></h1>
-    </section>
-    <?php endif; ?>
+      </section>
+      <?php endif; ?>
 
-    <?php if((is_page() )): // Single Page Title ?>
-    <section class="page-title">
+      <?php if((is_page() || is_single() )): // Single Page Title ?>
+      <section class="page-title">
         <h1 class="color-<?php echo rand(1,6); ?>"><?php the_title();?></h1>
-    </section>
-    <?php endif; ?>
+      </section>
+      <?php endif; ?>
+  </div>
 
-</div>
-
-
-<section class="site-crumbs">
+  <section class="site-crumbs">
     <?php echo __salaciouscrumb(); ?>
-</section>
+  </section>
+
+<?php endif; ?>

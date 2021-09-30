@@ -3,8 +3,8 @@
 <section class="interior">
 	<?php if (have_posts()) : while (have_posts()) : the_post();?>
 		<article class="content">
-
-    <h1 class="color-<?php echo rand(1, 6) ?>"><?php the_title(); ?></h1>
+   			<h1 class="color-<?php echo rand(1, 6) ?>"><?php the_title(); ?></h1>
+			
 			<div class="meta-data">
 				<i class="fas fa-clock"></i>  <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?> 
 				<i class="fas fa-headphones"></i>  <?php the_category(', '); ?>
@@ -18,19 +18,21 @@
 			<?php endif; ?>
 
 			<div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>" data-link="<?php the_permalink(); ?>"  data-count="<?php the_field('likecount'); ?>">
-					<div class="the-like-button">
-						<i class="fas fa-heart"></i>
-						<span class="the-like-counter"><?php the_field('likecount'); ?></span>
-					</div>
-					<div class="the-fire">🔥</div>
-					<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>
+				<div class="the-like-button">
+					<i class="fas fa-heart"></i>
+					<span class="the-like-counter"><?php the_field('likecount'); ?></span>
 				</div>
+				<div class="the-fire">🔥</div>
+				<div class="the-share-button" data-link="<?php the_permalink(); ?>"><i class="fas fa-share-square"></i></div>
+			</div>
 		  
-        <br><br>
+      		 <br><br>
 			
-      <?php the_content();?>
-			<?php edit_post_link($link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id); ?>
-      <?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+        	<?php the_content();?>
+
+  			<?php edit_post_link($link = __('<< EDIT >>'), $before = "<p>", $after ="</p>", $id); ?>
+
+		    <?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
 			<?php comments_template(); ?>
 			<div class="next-prev">

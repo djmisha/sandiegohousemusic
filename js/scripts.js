@@ -21,8 +21,8 @@
         var site_path = rm_data.siteUrl;
 
         /*=============================
-	=            Blazy            =
-	=============================*/
+    	=            Blazy            =
+    	=============================*/
 
         var bLazy = new Blazy();
 
@@ -38,7 +38,7 @@
             nav: true,
             dots: false,
             autoplay: true,
-            autoplayTimeout: 5000,
+            autoplayTimeout: 3000,
             smartSpeed: 300,
             navText: [
                 "<span class=\"button\"><i class='fa fa-angle-left'></i></span>",
@@ -433,7 +433,7 @@ function attachVideo() {
 
 setTimeout(function() {
     attachVideo();
-}, 5000);
+}, 0);
 
 /* Load Social Feeds */
 
