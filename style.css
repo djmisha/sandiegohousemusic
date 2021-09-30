@@ -1563,7 +1563,6 @@ main,
 .home header {
   position: relative;
   z-index: 9999 !important;
-  display: none;
 }
 
 header {
