@@ -605,11 +605,11 @@ function requestPostsAndAttachtoPage(category, numberofposts) {
 
 /* Susbribe Input Clear */
 
-var inputSearch = document.getElementById("email");
+// var inputSearch = document.getElementById("email");
 
-inputSearch.addEventListener("focusin", function(event) {
-    inputSearch.value = "";
-});
+// inputSearch.addEventListener("focusin", function(event) {
+//     inputSearch.value = "";
+// });
 
 /*Fire Off Featured Post slide in */
 // if (document.body.classList.contains('home')) { // only do on homepage
