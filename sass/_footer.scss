@@ -324,12 +324,11 @@ form {
         padding-bottom: 100px;
     }
     @include media($desktop) {
-        // background-attachment: scroll;
         background-size: cover;
     }
     div {
         margin: 0 auto;
-        max-width: 600px;
+        max-width: 640px;
         padding: 20px;
         background: rgba(#000, 0.5);
     }

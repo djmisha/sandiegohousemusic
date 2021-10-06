@@ -23,20 +23,16 @@
 
 <main class="interior" id="#skiptomaincontent">
     <div class="content">
-        <br clear="all">
-        <br clear="all">
         <h2 class="color-2" id="music"><i class="fas fa-compact-disc"></i> Listen to DJ Mixes, House Music and much more</h2>
         <article class="set-of-posts">
             <?php
-            $args = array(
-                'posts_per_page' => 12,
-                'cat' => 22,
-                'post_status'=>"publish",
-                'post_type'=>"post",
-                // 'orderby'=>"rand",
-                // 'year' => "2020, 2019"
-            );
-            $query1 = new WP_Query($args);
+                $args = array(
+                    'posts_per_page' => 12,
+                    'cat' => 22,
+                    'post_status'=>"publish",
+                    'post_type'=>"post",
+                );
+                $query1 = new WP_Query($args);
             ?>
             <?php if ($query1 -> have_posts()) : while ($query1 -> have_posts()) : $query1 -> the_post();?>
             <div class="excerpt bg-color-<?php echo rand(1, 6) ?>">
@@ -97,17 +93,21 @@
     
     <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals, Raves, EDM Shows</h2>
       <p>Find dance music, edm shows and house music events in a city near you.</p>
-    </div>
 
-  
-    <div class="front-page-events">
-        <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com/sdhm-homepage.html" frameborder="0" width="100%"
-            height="1320" style="overflow: hidden;" scrolling="no"></iframe>
     </div>
+</main>
 
-    <!-- <div class="get-events"> -->
-        <a href="https://events.sandiegohousemusic.com/" rel="nofollow" class=" button">More Events</a>
-    <!-- </div> -->
+<div class="front-page-events">
+    <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com/sdhm-homepage.html" frameborder="0" width="100%"
+        height="1320" style="overflow: hidden;" scrolling="no"></iframe>
+</div>
+
+<!-- <div class="get-events"> -->
+    <a href="https://events.sandiegohousemusic.com/" rel="nofollow" class=" button">More Events</a>
+<!-- </div> -->
+
+<main class="interior">
+    <div class="content">
 
     <br clear="all">
     <br clear="all">
