@@ -103,7 +103,7 @@
 </div>
 
 <!-- <div class="get-events"> -->
-    <a href="https://events.sandiegohousemusic.com/" rel="nofollow" class=" button">More Events</a>
+    <a href="https://sandiegohousemusic.com/events" rel="nofollow" class=" button">More Events</a>
 <!-- </div> -->
 
 <main class="interior">
