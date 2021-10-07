@@ -98,7 +98,7 @@
 </main>
 
 <div class="front-page-events">
-    <iframe class="b-lazy" data-src="https://events.sandiegohousemusic.com/sdhm-homepage.html" frameborder="0" width="100%"
+    <iframe class="b-lazy" data-src="https://sandiegohousemusic.com/events/sdhm-homepage.html" frameborder="0" width="100%"
         height="1320" style="overflow: hidden;" scrolling="no"></iframe>
 </div>
 
