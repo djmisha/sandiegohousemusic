@@ -10,9 +10,9 @@
         <br /><br />
         <strong>DJ's Specializing in electronic dance and house music</strong><br><br>
         <img src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ">
-         Hello!  If you're here looking for a dance music DJ services - I'd love to chat with you about your event or party! <br> <br> 
-         Please just let me know the date, location, occasion and approximate attendance for the event and I'll get back to you quickly. 
-         Thanks for getting in touch - I look forward to hearing from you!<br /><br />
+         Searching for a DJ? We'd love to chat with you about your event! <br> <br> 
+         Please send us the date, location, occasion and approximate attendance for the event and we'll get back to you quickly. 
+         <br /><br />
     </div>
 
  <?php if (is_page()) { ?>  
@@ -21,8 +21,8 @@
     <!-- <section class="bg-hire will-parallax parallax-footer b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/header-<?php echo rand(1, 9) ?>.jpg"> -->
         <div>
             <h2>Hire DJs near you<br> Events, Party or Weddings</h2>
-            <p>Artists specializing in electronic-dance and house music, techno and DJ music
-                for party, dancing, festivals and edm shows. Inquire about our DJ services.
+            <p>DJ's & Artists specializing in electronic-dance and house music
+                for  your party, wedding, private and corporate events. Inquire about our DJ services.
                 <a title="San Diego DJ" href="<?php bloginfo('url'); ?>/djs/" class="button home-button">Learn More</a>
             </p>
         </div>
@@ -118,7 +118,7 @@
 </footer>
 
 <?php // Only Show Ads on Homepage and Single Posts ?>
-<?php if (is_single() || is_front_page()) { ?>
+<?php if (is_single()) { ?>
 <section class="auto-google-ads">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6261738507723190" data-ad-slot="2039607348"

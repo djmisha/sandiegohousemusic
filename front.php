@@ -79,7 +79,7 @@
         <br clear="all">
         <br clear="all">
 
-        <section>
+   <!--      <section>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6261738507723190"
                 data-ad-slot="2039607348" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -89,7 +89,7 @@
         </section>
 
     <br />  
-    <br /> 
+    <br />  -->
     
     <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals, Raves, EDM Shows</h2>
       <p>Find dance music, edm shows and house music events in a city near you.</p>
@@ -115,14 +115,14 @@
         
     <div class="content">
     
-          <section>
+        <!--   <section>
               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
               <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6261738507723190"
                   data-ad-slot="2039607348" data-ad-format="auto" data-full-width-responsive="true"></ins>
               <script>
               (adsbygoogle = window.adsbygoogle || []).push({});
               </script>
-          </section> 
+          </section>  -->
 
         <br clear="all">
         <br clear="all">
