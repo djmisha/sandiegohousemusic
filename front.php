@@ -91,9 +91,7 @@
     <br />  
     <br />  -->
     
-    <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals, Raves, EDM Shows</h2>
-      <p>Find dance music, edm shows and house music events in a city near you.</p>
-
+        <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals, EDM Shows</h2>
     </div>
 </main>
 
@@ -101,6 +99,7 @@
     <iframe class="b-lazy" data-src="https://sandiegohousemusic.com/events/sdhm-homepage.html" frameborder="0" width="100%"
         height="1320" style="overflow: hidden;" scrolling="no"></iframe>
 </div>
+    <br clear="all">
 
 <!-- <div class="get-events"> -->
     <a href="https://sandiegohousemusic.com/events" rel="nofollow" class=" button">More Events</a>
@@ -124,7 +123,7 @@
               </script>
           </section>  -->
 
-        <br clear="all">
+        <!-- <br clear="all"> -->
         <br clear="all">
 
         <h2 class="color-2"><i class="fas fa-compact-disc"></i> DJ Mixes from our Archives</h2>

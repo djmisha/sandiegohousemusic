@@ -65,7 +65,7 @@
             <a href="<?php bloginfo('url'); ?>">
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                     data-src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg"
-                    class="b-lazy" alt="San Diego DJs">
+                    class="b-lazy" alt="House Music Events & DJ Mixes">
             </a>
         </div>
 
