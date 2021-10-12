@@ -30,6 +30,31 @@
 			Owl Carousel HomePage
 		-------------------------------------------------- */
 
+        $(".owl-rotator-new-mixes").owlCarousel({
+            items: 3,
+            margin: 20,
+            lazyLoad: true,
+            loop: true,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            smartSpeed: 300,
+            navText: [
+                "<span class=\"button\"><i class='fa fa-angle-left'></i></span>",
+                "<span class=\"button\"><i class='fa fa-angle-right'></i></span>",
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                768: {
+                    items: 3,
+                },
+            },
+        });
+
+
         $(".owl-rotator").owlCarousel({
             items: 3,
             margin: 20,
