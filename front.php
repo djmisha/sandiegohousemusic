@@ -25,7 +25,7 @@
     <div class="content">
         <h2 class="color-2" id="music"><i class="fas fa-compact-disc"></i> Listen to DJ Mixes, House Music and much more</h2>
 
-            <article class="set-of-posts owl-rotator-new-mixes owl-carousel">
+       <!--      <article class="set-of-posts owl-rotator-new-mixes owl-carousel">
             <?php
             
             $args = array(
@@ -71,8 +71,8 @@
             </div>
             <?php endwhile; endif;?>
         </article>
-
-     <!--    <article class="set-of-posts">
+ -->
+        <article class="set-of-posts">
             <?php
                 $args = array(
                     'posts_per_page' => 12,
@@ -118,7 +118,7 @@
                 
             </div>
             <?php endwhile; endif;?>
-        </article> -->
+        </article>
 
         <a href="<?php bloginfo('url'); ?>/category/music/" rel="nofollow" class="button">More Music</a>
         <a href="<?php bloginfo('url'); ?>/submit-your-dj-mix/" rel="nofollow" class="button">Submit DJ Mix</a>
