@@ -1794,10 +1794,6 @@ header .get-social {
   font-size: 35px;
 }
 
-.get-social a i.active {
-  bottom: 7px;
-}
-
 header .get-social a i {
   font-size: 25px;
 }
@@ -3473,6 +3469,10 @@ form input {
 
 .footer-social {
   margin-bottom: 40px;
+}
+
+.fa-twitch {
+  color: #9146FF;
 }
 
 .copyright,

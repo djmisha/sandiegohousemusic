@@ -59,7 +59,6 @@
         </div> -->
     </div>
     
-
     <section class="lower-footer">
         <div class="site-logo-footer">
             <a href="<?php bloginfo('url'); ?>">
@@ -69,11 +68,21 @@
             </a>
         </div>
 
+        <!-- 
         <div class="get-social footer-social">
             <a rel="noopener" title="instagr
             am"><i data-name="instagram" class="fab fa-instagram"></i></a>
             <a rel="noopener" title="facebook"><i data-name="facebook" class="fab fa-facebook"></i></a>
             <a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a>
+            <a class="show-form"><i class="fal fa-comments"></i></a>
+        </div> 
+        -->
+
+        <div class="get-social footer-social">
+            <a href="https://twitch.tv/sdhousemusic/" target="_blank" rel="noopener" title="twitch"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/sdhousemusic" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
             <a class="show-form"><i class="fal fa-comments"></i></a>
         </div>
 
@@ -85,8 +94,7 @@
           <a class="show-form">
             <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-src="<?php bloginfo('template_directory'); ?>/images/expert.png" alt="hire club DJ"
-            class="b-lazy">Questions?<br>
-            Let's Chat!
+            class="b-lazy">Questions?<br>Let's Chat!
           </a>
         </div>
  
@@ -151,17 +159,15 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115514301-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-115514301-1');
+        gtag('config', 'UA-115514301-1');
     </script>
 
-
 </body>
-
 </html>

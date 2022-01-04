@@ -186,7 +186,7 @@ a.show-form {
     transition: all 0.2s ease;
     bottom: 0;
     &.active {
-      bottom: 7px;
+      // bottom: 7px;
     }
     header & {
       font-size: 25px;

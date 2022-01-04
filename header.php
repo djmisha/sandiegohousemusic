@@ -41,10 +41,11 @@
             </div>
         </div>
         <div class="get-social">
-            <!-- <a rel="noopener" title="instagram"><i data-name="instagram" class="fab fa-instagram"></i></a> -->
-            <!-- <a rel="noopener" title="facebook"><i data-name="facebook" class="fab fa-facebook"></i></a> -->
-            <!-- <a rel="noopener" title="twitter"><i data-name="twitter" class="fab fa-twitter"></i></a> -->
-            <!-- <a class="show-form"><i class="fal fa-comments"></i></a> -->
+            <a href="https://twitch.tv/sdhousemusic/" target="_blank" rel="noopener" title="twitch"><i class="fab fa-twitch"></i></a>
+         <!--    <a href="https://www.instagram.com/sdhousemusic/" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/San-Diego-House-Music-135772356433768/" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/sdhousemusic" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
+            <a class="show-form"><i class="fal fa-comments"></i></a> -->
         </div>
         <nav>
             <?php wp_nav_menu( array(

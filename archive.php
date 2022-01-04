@@ -41,5 +41,5 @@
 	</article>
 	<?php get_sidebar();?>
 </main>
-<?wp_reset_postdata(); ?>
+<?php wp_reset_postdata(); ?>
 <?php get_footer();?>
