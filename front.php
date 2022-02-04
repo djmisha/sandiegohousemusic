@@ -25,53 +25,6 @@
     <div class="content">
         <h2 class="color-2" id="music"><i class="fas fa-compact-disc"></i> Listen to DJ Mixes, House Music and much more</h2>
 
-       <!--      <article class="set-of-posts owl-rotator-new-mixes owl-carousel">
-            <?php
-            
-            $args = array(
-                 'posts_per_page' => 12,
-                'cat' => 22,
-                'post_status'=>"publish",
-                'post_type'=>"post",
-            );
-
-            $query1 = new WP_Query($args); ?>
-
-            <?php if ($query1 -> have_posts()) : while ($query1 -> have_posts()) : $query1 -> the_post();?>
-            <div class="excerpt-rotator bg-color-<?php echo rand(1, 6) ?>">
-
-                <?php if (!empty(get_the_post_thumbnail())): ?>
-                <div class="thumb">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
-                        <?php the_post_thumbnail('', array('class' => 'b-lazy')); ?>
-                    </a>
-                </div>
-                <?php endif; ?>
-                <h3 class="blog-title color-<?php echo rand(1, 6) ?>"><a href="<?php the_permalink();?>"
-                        title="<?php the_title();?>"><?php the_title();?></a></h3>
-                <div class="meta-data">
-                    <i class="fas fa-clock"></i> <?php the_time('M');?> <?php the_time('j');?>, <?php the_time('Y'); ?>
-                    <i class="fas fa-headphones"></i> <?php the_category(', '); ?>
-                </div>
-                <div class="para">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title();?>" rel="nofollow">
-                        <?php my_excerpt(20); ?>
-                    </a>
-                </div>
-                <div class="engage-bar" data-id="<?php $id = get_the_ID(); echo $id; ?>"
-                    data-link="<?php the_permalink(); ?>" data-count="<?php the_field('likecount'); ?>">
-                    <div class="the-like-button">
-                        <i class="fas fa-heart"></i>
-                        <span class="the-like-counter"><?php the_field('likecount'); ?></span>
-                    </div>
-                    <div class="the-fire">🔥</div>
-                    <div class="the-share-button" data-link="<?php the_permalink(); ?>"><i
-                            class="fas fa-share-square"></i></div>
-                </div>
-            </div>
-            <?php endwhile; endif;?>
-        </article>
- -->
         <article class="set-of-posts">
             <?php
                 $args = array(
