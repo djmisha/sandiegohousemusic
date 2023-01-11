@@ -27,7 +27,7 @@
         <div class="site-logo">
             <a href="<?php bloginfo('url'); ?>">
                 <?php echo is_front_page() ? '<h1>' : ''; ?>
-                <img src="https://sandiegohousemusic.com/wordpress/wp-content/uploads/2015/11/logo1.jpg?fit=300%2C97&ssl=1"
+                <img src="https://music.sandiegohousemusic.com/wp-content/uploads/2015/11/logo1.jpg?fit=300%2C97&ssl=1"
                     alt="House Music Events & DJ Mixes">
                 <?php echo is_front_page() ? '</h1>' : ''; ?>
             </a>
