@@ -8,7 +8,7 @@
     <div class="overlay"></div>
     <div class="home-video"></div>
     <div class="welcome-cta">
-        <h1>House Music Events & DJ Mixes</h1>
+        <h1>Dance & House Music DJ Mixes</h1>
         <span>Discover dance music in a city near you and around the world</span>
         <ul>
             <li class="">
@@ -92,18 +92,18 @@
     <br />  
     <br />  -->
     
-        <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals, EDM Shows</h2>
+        <!-- <h2 class="color-1" id="events"><i class="fal fa-ticket-alt"></i> Upcoming Events, Festivals, EDM Shows</h2> -->
     </div>
 </main>
 
-<div class="front-page-events">
+<!-- <div class="front-page-events">
     <iframe class="b-lazy" data-src="https://sandiegohousemusic.com/events/sdhm-homepage.html" frameborder="0" width="100%"
         height="1320" style="overflow: hidden;" scrolling="no"></iframe>
 </div>
-    <br clear="all">
+    <br clear="all"> -->
 
 <!-- <div class="get-events"> -->
-    <a href="https://sandiegohousemusic.com/" rel="nofollow" class=" button">More Events</a>
+    <!-- <a href="https://sandiegohousemusic.com/" rel="nofollow" class=" button">More Events</a> -->
 <!-- </div> -->
 
 <main class="interior">
