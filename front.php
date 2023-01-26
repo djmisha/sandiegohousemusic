@@ -138,7 +138,7 @@
                 'post_status'=>"publish",
                 'post_type'=>"post",
                 'orderby'=>"rand",
-                'year' => "2021, 2020, 2019, 2018"
+                'year' => "2022, 2021, 2020, 2019, 2018"
             );
 
             $query1 = new WP_Query($args); ?>
